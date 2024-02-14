@@ -88,8 +88,8 @@ Table of Contents
               (HTCPCP/1.0)", RFC 2324, DOI 10.17487/RFC2324, April 1998,
               <https://www.rfc-editor.org/info/rfc2324>.
 
-   [STD69]    Internet Standard 69, <https://www.rfc-editor.org/info/
-              std69>.
+   [STD69]    Internet Standard 69,
+              <https://www.rfc-editor.org/info/std69>
               At the time of writing, this STD comprises the following:
 
               Hollenbeck, S., "Extensible Provisioning Protocol (EPP)",
@@ -123,8 +123,8 @@ Internet-Draft                   foobar                    February 2024
               DOI 10.17487/RFC5734, August 2009,
               <https://www.rfc-editor.org/info/rfc5734>.
 
-   [BCP201]   Best Current Practice 201, <https://www.rfc-
-              editor.org/info/bcp201>.
+   [BCP201]   Best Current Practice 201,
+              <https://www.rfc-editor.org/info/bcp201>
               At the time of writing, this BCP comprises the following:
 
               Housley, R., "Guidelines for Cryptographic Algorithm
@@ -132,8 +132,8 @@ Internet-Draft                   foobar                    February 2024
               BCP 201, RFC 7696, DOI 10.17487/RFC7696, November 2015,
               <https://www.rfc-editor.org/info/rfc7696>.
 
-   [FYI3]     For Your Information 3, <https://www.rfc-editor.org/info/
-              fyi3>.
+   [FYI3]     For Your Information 3,
+              <https://www.rfc-editor.org/info/fyi3>
               At the time of writing, this FYI comprises the following:
 
               Bowers, K., LaQuey, T., Reynolds, J., Roubicek, K., Stahl,
