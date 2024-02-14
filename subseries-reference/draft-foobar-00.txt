@@ -1,0 +1,224 @@
+
+
+
+
+Network Working Group                                             J. Doe
+Internet-Draft                                          14 February 2024
+Intended status: Experimental                                           
+Expires: 17 August 2024
+
+
+                                 Foobar
+                            draft-foobar-00
+
+Abstract
+
+   Foobar
+
+Status of This Memo
+
+   This Internet-Draft is submitted in full conformance with the
+   provisions of BCP 78 and BCP 79.
+
+   Internet-Drafts are working documents of the Internet Engineering
+   Task Force (IETF).  Note that other groups may also distribute
+   working documents as Internet-Drafts.  The list of current Internet-
+   Drafts is at https://datatracker.ietf.org/drafts/current/.
+
+   Internet-Drafts are draft documents valid for a maximum of six months
+   and may be updated, replaced, or obsoleted by other documents at any
+   time.  It is inappropriate to use Internet-Drafts as reference
+   material or to cite them other than as "work in progress."
+
+   This Internet-Draft will expire on 17 August 2024.
+
+Copyright Notice
+
+   Copyright (c) 2024 IETF Trust and the persons identified as the
+   document authors.  All rights reserved.
+
+   This document is subject to BCP 78 and the IETF Trust's Legal
+   Provisions Relating to IETF Documents (https://trustee.ietf.org/
+   license-info) in effect on the date of publication of this document.
+   Please review these documents carefully, as they describe your rights
+   and restrictions with respect to this document.  Code Components
+   extracted from this document must include Revised BSD License text as
+   described in Section 4.e of the Trust Legal Provisions and are
+   provided without warranty as described in the Revised BSD License.
+
+
+
+
+
+
+
+
+Doe                      Expires 17 August 2024                 [Page 1]
+
+Internet-Draft                   foobar                    February 2024
+
+
+Table of Contents
+
+   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
+   2.  Normative References  . . . . . . . . . . . . . . . . . . . .   2
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   4
+
+1.  Introduction
+
+   Single References: [RFC2324]
+
+   STD reference group with multiple RFCs: [STD69]
+
+   BCP reference group with single RFC: [BCP201]
+
+   FYI reference group with single RFC: [FYI3]
+
+   Custom FYI reference group with no reference group target: [FYI1]
+
+   Custom non-standard reference group with reference group target:
+   [ToldYouSo0]
+
+   Custom non-standard reference group with no reference group target:
+   [ToldYouSo1]
+
+2.  Normative References
+
+   [RFC2324]  Masinter, L., "Hyper Text Coffee Pot Control Protocol
+              (HTCPCP/1.0)", RFC 2324, DOI 10.17487/RFC2324, April 1998,
+              <https://www.rfc-editor.org/info/rfc2324>.
+
+   [STD69]    Internet Standard 69, <https://www.rfc-editor.org/info/
+              std69>.
+              At the time of writing, this STD comprises the following:
+
+              Hollenbeck, S., "Extensible Provisioning Protocol (EPP)",
+              STD 69, RFC 5730, DOI 10.17487/RFC5730, August 2009,
+              <https://www.rfc-editor.org/info/rfc5730>.
+
+              Hollenbeck, S., "Extensible Provisioning Protocol (EPP)
+              Domain Name Mapping", STD 69, RFC 5731,
+              DOI 10.17487/RFC5731, August 2009,
+              <https://www.rfc-editor.org/info/rfc5731>.
+
+              Hollenbeck, S., "Extensible Provisioning Protocol (EPP)
+              Host Mapping", STD 69, RFC 5732, DOI 10.17487/RFC5732,
+              August 2009, <https://www.rfc-editor.org/info/rfc5732>.
+
+
+
+
+
+Doe                      Expires 17 August 2024                 [Page 2]
+
+Internet-Draft                   foobar                    February 2024
+
+
+              Hollenbeck, S., "Extensible Provisioning Protocol (EPP)
+              Contact Mapping", STD 69, RFC 5733, DOI 10.17487/RFC5733,
+              August 2009, <https://www.rfc-editor.org/info/rfc5733>.
+
+              Hollenbeck, S., "Extensible Provisioning Protocol (EPP)
+              Transport over TCP", STD 69, RFC 5734,
+              DOI 10.17487/RFC5734, August 2009,
+              <https://www.rfc-editor.org/info/rfc5734>.
+
+   [BCP201]   Best Current Practice 201, <https://www.rfc-
+              editor.org/info/bcp201>.
+              At the time of writing, this BCP comprises the following:
+
+              Housley, R., "Guidelines for Cryptographic Algorithm
+              Agility and Selecting Mandatory-to-Implement Algorithms",
+              BCP 201, RFC 7696, DOI 10.17487/RFC7696, November 2015,
+              <https://www.rfc-editor.org/info/rfc7696>.
+
+   [FYI3]     For Your Information 3, <https://www.rfc-editor.org/info/
+              fyi3>.
+              At the time of writing, this FYI comprises the following:
+
+              Bowers, K., LaQuey, T., Reynolds, J., Roubicek, K., Stahl,
+              M., and A. Yuan, "FYI on where to start: A bibliography of
+              internetworking information", FYI 3, RFC 1175,
+              DOI 10.17487/RFC1175, August 1990,
+              <https://www.rfc-editor.org/info/rfc1175>.
+
+   [FYI1]     For Your Information 1.
+              At the time of writing, this FYI comprises the following:
+
+              Crocker, S., "Host Software", RFC 1, FYI 1,
+              DOI 10.17487/RFC0001, April 1969,
+              <https://www.rfc-editor.org/info/rfc1>.
+
+   [ToldYouSo0]
+              Sparks, R., "Multiple SIP Reason Header Field Values",
+              Work in Progress, Internet-Draft, draft-ietf-sipcore-
+              multiple-reasons-00, 25 July 2022,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-sipcore-
+              multiple-reasons-00>.
+
+              <https://xn--hpab415roxcba.fake.nz/>
+
+   [ToldYouSo1]
+
+
+
+
+
+
+Doe                      Expires 17 August 2024                 [Page 3]
+
+Internet-Draft                   foobar                    February 2024
+
+
+              Szigeti, T., Henry, J., and F. Baker, "Mapping Diffserv to
+              IEEE 802.11", Work in Progress, Internet-Draft, draft-
+              ietf-tsvwg-ieee-802-11-11, 18 December 2017,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-
+              ieee-802-11-11>.
+
+Author's Address
+
+   Jane Doe
+   New Zealand
+   Email: none@fake.nz
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Doe                      Expires 17 August 2024                 [Page 4]
