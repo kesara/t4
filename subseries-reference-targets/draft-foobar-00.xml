@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<rfc xmlns:xi="http://www.w3.org/2001/XInclude" ipr="trust200902" docName="draft-foobar-00" category="exp" submissionType="IETF">
+  <front>
+    <title abbrev="foobar">Foobar</title>
+    <author initials="J." surname="Doe" fullname="Jane Doe">
+      <address>
+        <postal>
+          <country>New Zealand</country>
+        </postal>
+        <email>none@fake.nz</email>
+      </address>
+    </author>
+
+    <abstract>
+      <t>Foobar</t>
+    </abstract>
+  </front>
+
+  <middle>
+    <section anchor="introduction" title="Introduction">
+      <t>
+        Single References:
+        <xref target="RFC2324" />
+      </t>
+      <t>
+        STD reference group with multiple RFCs:
+        <xref target="STD69" />
+      </t>
+      <t>
+        BCP reference group with single RFC:
+        <xref target="BCP201" />
+      </t>
+      <t>
+        FYI reference group with single RFC:
+        <xref target="FYI3" />
+      </t>
+      <t>
+        Custom FYI reference group with no reference group target:
+        <xref target="FYI1" />
+      </t>
+      <t>
+        Custom BCP reference group with no reference group target:
+        <xref target="BCP1" />
+      </t>
+      <t>
+        Custom STD reference group with no reference group target:
+        <xref target="STD1" />
+      </t>
+      <t>
+        Custom non-standard reference group with reference group target:
+        <xref target="ToldYouSo0" />
+      </t>
+      <t>
+        Custom non-standard reference group with no reference group target:
+        <xref target="ToldYouSo1" />
+      </t>
+    </section>
+  </middle>
+
+  <back>
+    <references>
+      <name>Normative References</name>
+      <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.2324.xml"/>
+      <xi:include href="https://bib.ietf.org/public/rfc/bibxml-rfcsubseries/reference.STD.0069.xml"/>
+      <xi:include href="https://bib.ietf.org/public/rfc/bibxml-rfcsubseries/reference.BCP.0201.xml"/>
+      <xi:include href="https://bib.ietf.org/public/rfc/bibxml-rfcsubseries/reference.FYI.0003.xml"/>
+      <referencegroup anchor="FYI1">
+        <reference anchor="RFC0001" target="https://www.rfc-editor.org/info/rfc1">
+          <front>
+            <title>Host Software</title>
+            <author fullname="S. Crocker" initials="S." surname="Crocker"/>
+            <date month="April" year="1969"/>
+          </front>
+          <seriesInfo name="RFC" value="1"/>
+          <seriesInfo name="FYI" value="1"/>
+          <seriesInfo name="DOI" value="10.17487/RFC0001"/>
+        </reference>
+      </referencegroup>
+      <referencegroup anchor="BCP1">
+        <reference anchor="RFC11111" target="https://www.rfc-editor.org/info/rfc11111">
+          <front>
+            <title>11111</title>
+            <author fullname="J. Doe" initials="J." surname="Doe"/>
+            <date month="April" year="1969"/>
+          </front>
+          <seriesInfo name="RFC" value="1"/>
+          <seriesInfo name="BCP" value="1"/>
+          <seriesInfo name="DOI" value="10.17487/RFC0001"/>
+        </reference>
+      </referencegroup>
+      <referencegroup anchor="STD1">
+        <reference anchor="RFC22222" target="https://www.rfc-editor.org/info/rfc22222">
+          <front>
+            <title>22222</title>
+            <author fullname="J. Doe" initials="J." surname="Doe"/>
+            <date month="April" year="1969"/>
+          </front>
+          <seriesInfo name="RFC" value="1"/>
+          <seriesInfo name="STD" value="1"/>
+          <seriesInfo name="DOI" value="10.17487/RFC0001"/>
+        </reference>
+      </referencegroup>
+      <referencegroup anchor="ToldYouSo0" target="https://xn--hpab415roxcba.fake.nz/">
+        <xi:include href="https://bib.ietf.org/public/rfc/bibxml-ids/reference.I-D.draft-ietf-sipcore-multiple-reasons-00.xml"/>
+      </referencegroup>
+      <referencegroup anchor="ToldYouSo1">
+        <xi:include href="https://bib.ietf.org/public/rfc/bibxml-ids/reference.I-D.ietf-tsvwg-ieee-802.xml"/>
+      </referencegroup>
+    </references>
+  </back>
+</rfc>
