@@ -3,9 +3,9 @@
 
 
 Network Working Group                                             J. Doe
-Internet-Draft                                          15 February 2024
+Internet-Draft                                          19 February 2024
 Intended status: Experimental                                           
-Expires: 18 August 2024
+Expires: 22 August 2024
 
 
                                  Foobar
@@ -30,7 +30,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 18 August 2024.
+   This Internet-Draft will expire on 22 August 2024.
 
 Copyright Notice
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Doe                      Expires 18 August 2024                 [Page 1]
+Doe                      Expires 22 August 2024                 [Page 1]
 
 Internet-Draft                   foobar                    February 2024
 
@@ -62,7 +62,7 @@ Table of Contents
 
    1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
    2.  Normative References  . . . . . . . . . . . . . . . . . . . .   2
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   4
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   5
 
 1.  Introduction
 
@@ -86,6 +86,12 @@ Table of Contents
    Custom non-standard reference group with no reference group target:
    [ToldYouSo1]
 
+   Custom non-standard reference group with reference group target
+   (multiple references): [TopSecret0]
+
+   Custom non-standard reference group with no reference group target
+   (multiple references): [TopSecret1]
+
 2.  Normative References
 
    [RFC2324]  Masinter, L., "Hyper Text Coffee Pot Control Protocol
@@ -93,26 +99,25 @@ Table of Contents
               <https://www.rfc-editor.org/info/rfc2324>.
 
    [STD69]    Internet Standard 69,
-              <https://www.rfc-editor.org/info/std69>
+              <https://www.rfc-editor.org/info/std69>.
               At the time of writing, this STD comprises the following:
 
               Hollenbeck, S., "Extensible Provisioning Protocol (EPP)",
               STD 69, RFC 5730, DOI 10.17487/RFC5730, August 2009,
               <https://www.rfc-editor.org/info/rfc5730>.
 
+
+
+
+Doe                      Expires 22 August 2024                 [Page 2]
+
+Internet-Draft                   foobar                    February 2024
+
+
               Hollenbeck, S., "Extensible Provisioning Protocol (EPP)
               Domain Name Mapping", STD 69, RFC 5731,
               DOI 10.17487/RFC5731, August 2009,
               <https://www.rfc-editor.org/info/rfc5731>.
-
-
-
-
-
-Doe                      Expires 18 August 2024                 [Page 2]
-
-Internet-Draft                   foobar                    February 2024
-
 
               Hollenbeck, S., "Extensible Provisioning Protocol (EPP)
               Host Mapping", STD 69, RFC 5732, DOI 10.17487/RFC5732,
@@ -128,7 +133,7 @@ Internet-Draft                   foobar                    February 2024
               <https://www.rfc-editor.org/info/rfc5734>.
 
    [BCP201]   Best Current Practice 201,
-              <https://www.rfc-editor.org/info/bcp201>
+              <https://www.rfc-editor.org/info/bcp201>.
               At the time of writing, this BCP comprises the following:
 
               Housley, R., "Guidelines for Cryptographic Algorithm
@@ -137,7 +142,7 @@ Internet-Draft                   foobar                    February 2024
               <https://www.rfc-editor.org/info/rfc7696>.
 
    [FYI3]     For Your Information 3,
-              <https://www.rfc-editor.org/info/fyi3>
+              <https://www.rfc-editor.org/info/fyi3>.
               At the time of writing, this FYI comprises the following:
 
               Bowers, K., LaQuey, T., Reynolds, J., Roubicek, K., Stahl,
@@ -147,7 +152,7 @@ Internet-Draft                   foobar                    February 2024
               <https://www.rfc-editor.org/info/rfc1175>.
 
    [FYI1]     For Your Information 1,
-              <https://www.rfc-editor.org/fyi/fyi1>
+              <https://www.rfc-editor.org/info/fyi1>.
               At the time of writing, this FYI comprises the following:
 
               Crocker, S., "Host Software", RFC 1, FYI 1,
@@ -155,21 +160,21 @@ Internet-Draft                   foobar                    February 2024
               <https://www.rfc-editor.org/info/rfc1>.
 
    [BCP1]     Best Current Practice 1,
-              <https://www.rfc-editor.org/bcp/bcp1>
+              <https://www.rfc-editor.org/info/bcp1>.
               At the time of writing, this BCP comprises the following:
 
-              Doe, J., "11111", RFC 1, BCP 1, DOI 10.17487/RFC0001,
-              April 1969, <https://www.rfc-editor.org/info/rfc11111>.
-
-   [STD1]     Internet Standard 1, <https://www.rfc-editor.org/std/std1>
 
 
-
-Doe                      Expires 18 August 2024                 [Page 3]
+Doe                      Expires 22 August 2024                 [Page 3]
 
 Internet-Draft                   foobar                    February 2024
 
 
+              Doe, J., "11111", RFC 1, BCP 1, DOI 10.17487/RFC0001,
+              April 1969, <https://www.rfc-editor.org/info/rfc11111>.
+
+   [STD1]     Internet Standard 1,
+              <https://www.rfc-editor.org/info/std1>.
               At the time of writing, this STD comprises the following:
 
               Doe, J., "22222", RFC 1, STD 1, DOI 10.17487/RFC0001,
@@ -190,6 +195,36 @@ Internet-Draft                   foobar                    February 2024
               ietf-tsvwg-ieee-802-11-11, 18 December 2017,
               <https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-
               ieee-802-11-11>.
+
+   [TopSecret0]
+              Iyengar, J., Ed. and M. Thomson, Ed., "QUIC: A UDP-Based
+              Multiplexed and Secure Transport", RFC 9000,
+              DOI 10.17487/RFC9000, May 2021,
+              <https://www.rfc-editor.org/info/rfc9000>.
+
+              Thomson, M., Ed. and S. Turner, Ed., "Using TLS to Secure
+              QUIC", RFC 9001, DOI 10.17487/RFC9001, May 2021,
+              <https://www.rfc-editor.org/info/rfc9001>.
+
+              <https://xn--hpab415roxcba.fake.nz/>
+
+   [TopSecret1]
+              Iyengar, J., Ed. and I. Swett, Ed., "QUIC Loss Detection
+              and Congestion Control", RFC 9002, DOI 10.17487/RFC9002,
+              May 2021, <https://www.rfc-editor.org/info/rfc9002>.
+
+              Snijders, J., Heitz, J., Scudder, J., and A. Azimov,
+              "Extended BGP Administrative Shutdown Communication",
+              RFC 9003, DOI 10.17487/RFC9003, January 2021,
+              <https://www.rfc-editor.org/info/rfc9003>.
+
+
+
+
+Doe                      Expires 22 August 2024                 [Page 4]
+
+Internet-Draft                   foobar                    February 2024
+
 
 Author's Address
 
@@ -221,4 +256,25 @@ Author's Address
 
 
 
-Doe                      Expires 18 August 2024                 [Page 4]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Doe                      Expires 22 August 2024                 [Page 5]

@@ -55,6 +55,14 @@
         Custom non-standard reference group with no reference group target:
         <xref target="ToldYouSo1" />
       </t>
+      <t>
+        Custom non-standard reference group with reference group target (multiple references):
+        <xref target="TopSecret0" />
+      </t>
+      <t>
+        Custom non-standard reference group with no reference group target (multiple references):
+        <xref target="TopSecret1" />
+      </t>
     </section>
   </middle>
 
@@ -106,6 +114,14 @@
       </referencegroup>
       <referencegroup anchor="ToldYouSo1">
         <xi:include href="https://bib.ietf.org/public/rfc/bibxml-ids/reference.I-D.ietf-tsvwg-ieee-802.xml"/>
+      </referencegroup>
+      <referencegroup anchor="TopSecret0" target="https://xn--hpab415roxcba.fake.nz/">
+        <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.9000.xml"/>
+        <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.9001.xml"/>
+      </referencegroup>
+      <referencegroup anchor="TopSecret1">
+        <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.9002.xml"/>
+        <xi:include href="https://bib.ietf.org/public/rfc/bibxml/reference.RFC.9003.xml"/>
       </referencegroup>
     </references>
   </back>
