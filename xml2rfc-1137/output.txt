@@ -1,0 +1,699 @@
+================================================================================
+command: find rfc -type f -name "*.xml" -exec xmllint --xpath '//li[*[1][self::ul or self::ol]]' {} \; -print 2>/dev/nul
+format:
+ <xml snippet>
+ <filename>
+================================================================================
+<li pn="section-3-6.2">
+          <ul empty="true" bare="false" spacing="normal" pn="section-3-6.2.1">
+            <li pn="section-3-6.2.1.1">L3 Neighbor System ID + pseudonode ID (7 octets)
+         </li>
+          </ul>
+          <ul empty="true" bare="false" spacing="normal" pn="section-3-6.2.2">
+            <li pn="section-3-6.2.2.1">
+              <dl spacing="compact" newline="false" pn="section-3-6.2.2.1.1">
+                <dt pn="section-3-6.2.2.1.1.1">Flags:</dt>
+                <dd pn="section-3-6.2.2.1.1.2">1-octet field of the following flags:</dd>
+              </dl>
+            </li>
+          </ul>
+          <ul empty="true" bare="false" spacing="normal" pn="section-3-6.2.3">
+            <li pn="section-3-6.2.3.1">
+              <ul empty="true" spacing="compact" bare="false" pn="section-3-6.2.3.1.1">
+                <li pn="section-3-6.2.3.1.1.1">
+                  <artwork name="" type="" align="left" alt="" pn="section-3-6.2.3.1.1.1.1"> 0 1 2 3 4 5 6 7
++-+-+-+-+-+-+-+-+ 
+|P|             | 
++-+-+-+-+-+-+-+-+</artwork>
+                </li>
+              </ul>
+              <ul empty="true" spacing="compact" bare="false" pn="section-3-6.2.3.1.2">
+                <li pn="section-3-6.2.3.1.2.1">where:
+          </li>
+              </ul>
+              <ul empty="true" spacing="compact" bare="false" pn="section-3-6.2.3.1.3">
+                <li pn="section-3-6.2.3.1.3.1">
+                  <dl spacing="compact" indent="9" newline="false" pn="section-3-6.2.3.1.3.1.1">
+                    <dt pn="section-3-6.2.3.1.3.1.1.1">P-Flag:</dt>
+                    <dd pn="section-3-6.2.3.1.3.1.1.2"> When set to 1, one of the sub-TLVs
+described in <xref target="L3-adj" format="default" sectionFormat="of" derivedContent="Section 3.1"/> immediately follows the flags field.  If the P-Flag
+is set to 0, then none of the sub-TLVs described in <xref target="L3-adj" format="default" sectionFormat="of" derivedContent="Section 3.1"/> are
+present.</dd>
+                  </dl>
+                </li>
+              </ul>
+              <ul empty="true" bare="false" spacing="normal" pn="section-3-6.2.3.1.4">
+                <li pn="section-3-6.2.3.1.4.1">
+                  <dl indent="9" newline="false" spacing="normal" pn="section-3-6.2.3.1.4.1.1">
+                    <dt pn="section-3-6.2.3.1.4.1.1.1">Other bits:</dt>
+                    <dd pn="section-3-6.2.3.1.4.1.1.2">
+                      <bcp14>MUST</bcp14> be zero when originated and ignored when received.</dd>
+                  </dl>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+<li pn="section-3-6.2.3.1">
+              <ul empty="true" spacing="compact" bare="false" pn="section-3-6.2.3.1.1">
+                <li pn="section-3-6.2.3.1.1.1">
+                  <artwork name="" type="" align="left" alt="" pn="section-3-6.2.3.1.1.1.1"> 0 1 2 3 4 5 6 7
++-+-+-+-+-+-+-+-+ 
+|P|             | 
++-+-+-+-+-+-+-+-+</artwork>
+                </li>
+              </ul>
+              <ul empty="true" spacing="compact" bare="false" pn="section-3-6.2.3.1.2">
+                <li pn="section-3-6.2.3.1.2.1">where:
+          </li>
+              </ul>
+              <ul empty="true" spacing="compact" bare="false" pn="section-3-6.2.3.1.3">
+                <li pn="section-3-6.2.3.1.3.1">
+                  <dl spacing="compact" indent="9" newline="false" pn="section-3-6.2.3.1.3.1.1">
+                    <dt pn="section-3-6.2.3.1.3.1.1.1">P-Flag:</dt>
+                    <dd pn="section-3-6.2.3.1.3.1.1.2"> When set to 1, one of the sub-TLVs
+described in <xref target="L3-adj" format="default" sectionFormat="of" derivedContent="Section 3.1"/> immediately follows the flags field.  If the P-Flag
+is set to 0, then none of the sub-TLVs described in <xref target="L3-adj" format="default" sectionFormat="of" derivedContent="Section 3.1"/> are
+present.</dd>
+                  </dl>
+                </li>
+              </ul>
+              <ul empty="true" bare="false" spacing="normal" pn="section-3-6.2.3.1.4">
+                <li pn="section-3-6.2.3.1.4.1">
+                  <dl indent="9" newline="false" spacing="normal" pn="section-3-6.2.3.1.4.1.1">
+                    <dt pn="section-3-6.2.3.1.4.1.1.1">Other bits:</dt>
+                    <dd pn="section-3-6.2.3.1.4.1.1.2">
+                      <bcp14>MUST</bcp14> be zero when originated and ignored when received.</dd>
+                  </dl>
+                </li>
+              </ul>
+            </li>
+<li pn="section-3-8.1">
+          <ul empty="true" spacing="normal" bare="false" pn="section-3-8.1.1">
+            <li pn="section-3-8.1.1.1">Length of L2 Bundle Attribute Descriptor (1 octet)
+         </li>
+            <li pn="section-3-8.1.1.2">
+              <ul empty="true" spacing="normal" bare="false" pn="section-3-8.1.1.2.1">
+                <li pn="section-3-8.1.1.2.1.1">NOTE: This includes all fields described below.
+               </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+<li pn="section-3-8.1.1.2">
+              <ul empty="true" spacing="normal" bare="false" pn="section-3-8.1.1.2.1">
+                <li pn="section-3-8.1.1.2.1.1">NOTE: This includes all fields described below.
+               </li>
+              </ul>
+            </li>
+<li pn="section-3-8.2">
+          <ul empty="true" spacing="normal" bare="false" pn="section-3-8.2.1">
+            <li pn="section-3-8.2.1.1">Number of L2 Bundle Member Descriptors (1 octet)
+         </li>
+          </ul>
+        </li>
+<li pn="section-3-8.3">
+          <ul empty="true" spacing="normal" bare="false" pn="section-3-8.3.1">
+            <li pn="section-3-8.3.1.1">
+             L2 Bundle Member Link Local Identifiers  (4 * Number of L2
+             Bundle Member Descriptors octets)
+         </li>
+          </ul>
+        </li>
+<li pn="section-3-8.4">
+          <ul empty="true" spacing="normal" bare="false" pn="section-3-8.4.1">
+            <li pn="section-3-8.4.1.1">
+              <ul empty="true" spacing="compact" bare="false" pn="section-3-8.4.1.1.1">
+                <li pn="section-3-8.4.1.1.1.1">NOTE: An L2 Bundle Member Descriptor is a Link Local
+              Identifier as defined in <xref target="RFC4202" format="default" sectionFormat="of" derivedContent="RFC4202"/>.
+              </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+<li pn="section-3-8.4.1.1">
+              <ul empty="true" spacing="compact" bare="false" pn="section-3-8.4.1.1.1">
+                <li pn="section-3-8.4.1.1.1.1">NOTE: An L2 Bundle Member Descriptor is a Link Local
+              Identifier as defined in <xref target="RFC4202" format="default" sectionFormat="of" derivedContent="RFC4202"/>.
+              </li>
+              </ul>
+            </li>
+<li pn="section-3-8.5">
+          <ul empty="true" spacing="normal" bare="false" pn="section-3-8.5.1">
+            <li pn="section-3-8.5.1.1">
+Sub-TLV(s) A sub-TLV may define an attribute common to all of the bundle
+members listed, or it may define an attribute unique to each bundle member.
+Use of these two classes of sub-TLVs is described in the following sections.
+
+         </li>
+          </ul>
+        </li>
+<li pn="section-4.1-2.5">
+            <ul empty="true" bare="false" spacing="normal" pn="section-4.1-2.5.1">
+              <li pn="section-4.1-2.5.1.1">
+                <dl indent="0" newline="false" spacing="normal" pn="section-4.1-2.5.1.1.1">
+                  <dt pn="section-4.1-2.5.1.1.1.1">SID/Index/Label:</dt>
+                  <dd pn="section-4.1-2.5.1.1.1.2">According to the V- and L-Flags, it contains either:</dd>
+                </dl>
+              </li>
+              <li pn="section-4.1-2.5.1.2">
+                <ul bare="false" empty="false" spacing="normal" pn="section-4.1-2.5.1.2.1">
+                  <li pn="section-4.1-2.5.1.2.1.1">A 3-octet local label where the 20 rightmost bits are used for encoding
+the label value.  In this case, the V- and L-Flags <bcp14>MUST</bcp14> be set.
+</li>
+                  <li pn="section-4.1-2.5.1.2.1.2"> A 4-octet index defining the offset in the SID/Label space advertised by
+this router. See <xref target="RFC8667" format="default" sectionFormat="of" derivedContent="RFC8667"/>. In this case, V- and L-Flags <bcp14>MUST</bcp14> be unset.
+</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+<li pn="section-4.1-2.5.1.2">
+                <ul bare="false" empty="false" spacing="normal" pn="section-4.1-2.5.1.2.1">
+                  <li pn="section-4.1-2.5.1.2.1.1">A 3-octet local label where the 20 rightmost bits are used for encoding
+the label value.  In this case, the V- and L-Flags <bcp14>MUST</bcp14> be set.
+</li>
+                  <li pn="section-4.1-2.5.1.2.1.2"> A 4-octet index defining the offset in the SID/Label space advertised by
+this router. See <xref target="RFC8667" format="default" sectionFormat="of" derivedContent="RFC8667"/>. In this case, V- and L-Flags <bcp14>MUST</bcp14> be unset.
+</li>
+                </ul>
+              </li>
+<li pn="section-4.2-3.5">
+            <ul empty="true" bare="false" spacing="normal" pn="section-4.2-3.5.1">
+              <li pn="section-4.2-3.5.1.1">
+                <dl indent="0" newline="false" spacing="normal" pn="section-4.2-3.5.1.1.1">
+                  <dt pn="section-4.2-3.5.1.1.1.1">SID/Index/Label:</dt>
+                  <dd pn="section-4.2-3.5.1.1.1.2">According to the V- and L-Flags, it contains either:</dd>
+                </dl>
+              </li>
+              <li pn="section-4.2-3.5.1.2">
+                <ul bare="false" empty="false" spacing="normal" pn="section-4.2-3.5.1.2.1">
+                  <li pn="section-4.2-3.5.1.2.1.1">A 3-octet local label where the 20 rightmost bits are used for encoding
+the label value.  In this case, the V- and L-Flags <bcp14>MUST</bcp14> be set.</li>
+                  <li pn="section-4.2-3.5.1.2.1.2"> A 4-octet index defining the offset in the SID/Label space advertised by
+this router. See <xref target="RFC8667" format="default" sectionFormat="of" derivedContent="RFC8667"/>. In this case, V- and L-Flags
+<bcp14>MUST</bcp14> be unset. </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+<li pn="section-4.2-3.5.1.2">
+                <ul bare="false" empty="false" spacing="normal" pn="section-4.2-3.5.1.2.1">
+                  <li pn="section-4.2-3.5.1.2.1.1">A 3-octet local label where the 20 rightmost bits are used for encoding
+the label value.  In this case, the V- and L-Flags <bcp14>MUST</bcp14> be set.</li>
+                  <li pn="section-4.2-3.5.1.2.1.2"> A 4-octet index defining the offset in the SID/Label space advertised by
+this router. See <xref target="RFC8667" format="default" sectionFormat="of" derivedContent="RFC8667"/>. In this case, V- and L-Flags
+<bcp14>MUST</bcp14> be unset. </li>
+                </ul>
+              </li>
+rfc/rfc8668.xml
+<li pn="section-5.8-3.1">
+            <ol spacing="normal" type="1" start="1" pn="section-5.8-3.1.1">
+              <li pn="section-5.8-3.1.1.1" derivedCounter="1.">
+	     The first approach is called "proxy mode". It requires E and P, but not the PLR, to have the knowledge of the egress protection schema. E and P advertise the context ID as a virtual proxy node (i.e., a logical node) connected to the two routers, with the link between the proxy node and E having more preferable IGP and TE metrics than the link between the proxy node and P. Therefore, all egress-protected tunnels destined for the context ID will automatically follow the IGP or TE paths to E. Each PLR will no longer view itself as a penultimate hop but rather as two hops away from the proxy node, via E. The PLR will be able to find a bypass path via P to the proxy node, while the bypass tunnel is actually terminated by P.
+	   </li>
+              <li pn="section-5.8-3.1.1.2" derivedCounter="2.">
+	     The second approach is called "alias mode". It requires P and the
+PLR, but not E, to have the knowledge of the egress protection schema. E simply
+advertises the context ID as an IP address. P advertises the context ID and the
+context label by using a "context ID label binding" advertisement. In both
+the routing domain and TE domain, the context ID is only reachable via
+E. Therefore, all egress-protected tunnels destined for the context ID will
+have E as the tail end. Based on the "context ID label binding" advertisement, the
+PLR can establish an egress-protection bypass tunnel in several manners (<xref target="bypass-estb" format="default" sectionFormat="of" derivedContent="Section 5.9"/>). The "context ID label binding" advertisement is
+defined as the IGP Mirroring Context segment in <xref target="RFC8402" format="default" sectionFormat="of" derivedContent="RFC8402"/> and <xref target="RFC8667" format="default" sectionFormat="of" derivedContent="RFC8667"/>. These IGP extensions are generic in nature and hence can be used for egress protection purposes. It is <bcp14>RECOMMENDED</bcp14> that a similar advertisement be defined for OSPF as well.
+	   </li>
+              <li pn="section-5.8-3.1.1.3" derivedCounter="3.">
+	     The third approach is called "stub link mode". In this mode, both E and P advertise the context ID as a link to a stub network, essentially modeling the context ID as an anycast IP address owned by the two routers. E, P, and the PLR do not need to have the knowledge of the egress protection schema. The correctness of the egress-protected tunnels and the bypass tunnels relies on the path computations for the anycast IP address performed by the ingress routers and PLR. Therefore, care <bcp14>MUST</bcp14> be taken for the applicability of this approach to a network.
+	   </li>
+            </ol>
+          </li>
+<li pn="section-5.9-3.1">
+            <ol spacing="normal" type="1" start="1" pn="section-5.9-3.1.1">
+              <li pn="section-5.9-3.1.1.1" derivedCounter="1.">It may be established by a signaling protocol (e.g., RSVP), with the context ID as the destination. The protector binds the context label to the bypass tunnel.
+        </li>
+              <li pn="section-5.9-3.1.1.2" derivedCounter="2."> It may be formed by a topology-driven protocol (e.g., LDP with various LFA mechanisms). The protector advertises the context ID as an IP prefix FEC, with the context label bound to it.
+        </li>
+              <li pn="section-5.9-3.1.1.3" derivedCounter="3.">It may be constructed as a hierarchical tunnel. When the protector uses the alias mode (<xref target="adv" format="default" sectionFormat="of" derivedContent="Section 5.8"/>), the PLR will have the knowledge of the context ID, context label, and protector (i.e., the advertiser). The PLR can then establish the bypass tunnel in a hierarchical manner, with the context label as a one-hop LSP over a regular bypass tunnel to the protector's IP address (e.g., loopback address). This regular bypass tunnel may be established by RSVP, LDP, Segment Routing, or another protocol.
+        </li>
+            </ol>
+          </li>
+<li pn="section-6-5.1">
+          <ol spacing="normal" type="1" start="1" pn="section-6-5.1.1">
+            <li pn="section-6-5.1.1.1" derivedCounter="1.">The first approach applies when the egress router does not know the service label allocated by the backup egress router. In this case, the egress router sets up the bypass forwarding state as a label push with the outgoing label of the egress-protection bypass tunnel. Rerouted packets will have the egress router's service label intact. Therefore, the protector <bcp14>MUST</bcp14> perform context label switching, and the bypass tunnel <bcp14>MUST</bcp14> be destined for the context ID of the protected egress {E, P} and established as described in <xref target="bypass-estb" format="default" sectionFormat="of" derivedContent="Section 5.9"/>. This approach is consistent with egress node protection. Hence, a protector can serve in egress node protection and egress link protection in a consistent manner, and both the co-located protector mode and the centralized protector mode are supported (see Figures <xref target="Figure-3" format="counter" sectionFormat="of" derivedContent="3"/> and <xref target="Figure-4" format="counter" sectionFormat="of" derivedContent="4"/>).
+	 </li>
+            <li pn="section-6-5.1.1.2" derivedCounter="2."> The second approach applies when the egress router knows the service label allocated by the backup egress router, via a label distribution protocol session. In this case, the backup egress router serves as the protector for egress link protection, regardless of the protector of egress node protection, which will be the same router in the co-located protector mode but a different router in the centralized protector mode. The egress router sets up the bypass forwarding state as a label swap from the incoming service label to the service label of the backup egress router (i.e., protector), followed by a push with the outgoing label (or label stack) of the egress link protection bypass tunnel. The bypass tunnel is a regular tunnel destined for an IP address of the protector, instead of the context ID of the protected egress {E, P}. The protector simply forwards rerouted service packets based on its own service label rather than performing context label switching. In this approach, only the co-located protector mode is applicable. 
+	 </li>
+          </ol>
+        </li>
+rfc/rfc8679.xml
+<li anchor="ecnencap_reframing_goal_proportion" pn="section-4.6-5.2" derivedCounter="2.">
+            <ol spacing="normal" type="a" indent="adaptive" start="1" pn="section-4.6-5.2.1"><li pn="section-4.6-5.2.1.1" derivedCounter="a.">
+                <t indent="0" pn="section-4.6-5.2.1.1.1">at high frequency of congestion
+            marking, approximate preservation of the proportion of congestion
+            marks arriving and departing;</t>
+              </li>
+              <li pn="section-4.6-5.2.1.2" derivedCounter="b.">
+                <t indent="0" pn="section-4.6-5.2.1.2.1">at low frequency of congestion
+              marking, approximate preservation of the timing of congestion
+              marks arriving and departing.</t>
+              </li>
+            </ol>
+          </li>
+rfc/rfc9599.xml
+<li pn="section-3-8.2">
+          <ol spacing="normal" type="1" start="1" pn="section-3-8.2.1">
+            <li pn="section-3-8.2.1.1" derivedCounter="1.">If T's destination address is from the same address family as the
+          OSPF instance associated with the LSDB, then the extensions defined
+          in this document do not apply.</li>
+            <li pn="section-3-8.2.1.2" derivedCounter="2.">Otherwise, it is a X-AF MPLS TE tunnel. Note the tunnel's destination
+          IP address.</li>
+            <li pn="section-3-8.2.1.3" derivedCounter="3.">Walk the X-AF IP addresses in the LSDBs of all connected areas.
+          If a matching IP address is found, advertised by router R in area A,
+          then mark the tunnel T as belonging to area A and terminating on
+          tail-end router R. Assign the intra-area SPF cost to reach router R
+          within area A as the IGP cost of tunnel T.</li>
+          </ol>
+        </li>
+rfc/rfc8687.xml
+<li pn="section-6.3-7.1">
+            <ul empty="true" spacing="normal" bare="false" pn="section-6.3-7.1.1">
+              <li pn="section-6.3-7.1.1.1">The syntax and semantics for fragment identifiers for a
+specific "xxx/yyy+cbor-seq" <bcp14>SHOULD</bcp14> be processed as follows:</li>
+              <li pn="section-6.3-7.1.1.2">
+                <ul spacing="normal" bare="false" empty="false" pn="section-6.3-7.1.1.2.1">
+                  <li pn="section-6.3-7.1.1.2.1.1">For cases defined in +cbor-seq, if the fragment
+identifier resolves per the +cbor-seq rules, then process as
+specified in +cbor-seq.</li>
+                  <li pn="section-6.3-7.1.1.2.1.2">For cases defined in +cbor-seq, if the fragment
+identifier does not resolve per the +cbor-seq rules, then
+process as specified in "xxx/yyy+cbor-seq".</li>
+                  <li pn="section-6.3-7.1.1.2.1.3">For cases not defined in +cbor-seq, process as
+specified in "xxx/yyy+cbor-seq".</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+<li pn="section-6.3-7.1.1.2">
+                <ul spacing="normal" bare="false" empty="false" pn="section-6.3-7.1.1.2.1">
+                  <li pn="section-6.3-7.1.1.2.1.1">For cases defined in +cbor-seq, if the fragment
+identifier resolves per the +cbor-seq rules, then process as
+specified in +cbor-seq.</li>
+                  <li pn="section-6.3-7.1.1.2.1.2">For cases defined in +cbor-seq, if the fragment
+identifier does not resolve per the +cbor-seq rules, then
+process as specified in "xxx/yyy+cbor-seq".</li>
+                  <li pn="section-6.3-7.1.1.2.1.3">For cases not defined in +cbor-seq, process as
+specified in "xxx/yyy+cbor-seq".</li>
+                </ul>
+              </li>
+rfc/rfc8742.xml
+<li pn="section-appendix.b-1.2">
+          <ul empty="true" spacing="compact" bare="false" pn="section-appendix.b-1.2.1">
+            <li pn="section-appendix.b-1.2.1.1">Orange
+</li>
+            <li pn="section-appendix.b-1.2.1.2">mohamed.boucadair@orange.com
+</li>
+          </ul>
+        </li>
+<li pn="section-appendix.b-2.2">
+          <ul empty="true" spacing="compact" bare="false" pn="section-appendix.b-2.2.1">
+            <li pn="section-appendix.b-2.2.1.1">Christopher_Gray3@cable.comcast.com  
+</li>
+          </ul>
+        </li>
+rfc/rfc8811.xml
+<li pn="section-3.2-3.1">
+            <ul empty="true" spacing="normal" bare="false" pn="section-3.2-3.1.1">
+              <li pn="section-3.2-3.1.1.1">Common aliases include: face.</li>
+            </ul>
+          </li>
+<li pn="section-3.2-6.1">
+            <ul empty="true" spacing="normal" bare="false" pn="section-3.2-6.1.1">
+              <li pn="section-3.2-6.1.1.1">Common aliases include: consumer, information consumer, data consumer, consumer of the content.</li>
+            </ul>
+          </li>
+<li pn="section-3.2-9.1">
+            <ul empty="true" spacing="normal" bare="false" pn="section-3.2-9.1.1">
+              <li pn="section-3.2-9.1.1.1">Common aliases include: producer, publisher, information publisher, data publisher, data producer.</li>
+            </ul>
+          </li>
+<li pn="section-3.2-12.1">
+            <ul empty="true" spacing="normal" bare="false" pn="section-3.2-12.1.1">
+              <li pn="section-3.2-12.1.1.1">Common aliases include: ICN router.</li>
+            </ul>
+          </li>
+<li pn="section-3.3-3.1">
+            <ul empty="true" spacing="normal" bare="false" pn="section-3.3-3.1.1">
+              <li pn="section-3.3-3.1.1.1">Common aliases include: ICN Data plane, ICN Forwarding.</li>
+            </ul>
+          </li>
+<li pn="section-3.3-6.1">
+            <ul empty="true" spacing="normal" bare="false" pn="section-3.3-6.1.1">
+              <li pn="section-3.3-6.1.1.1">Common aliases include: Interest forwarding strategy.</li>
+            </ul>
+          </li>
+<li pn="section-3.3-15.1">
+            <ul empty="true" spacing="normal" bare="false" pn="section-3.3-15.1.1">
+              <li pn="section-3.3-15.1.1.1">Common aliases include: Interest collapsing.</li>
+            </ul>
+          </li>
+<li pn="section-3.3-38.1">
+            <ul empty="true" spacing="normal" bare="false" pn="section-3.3-38.1.1">
+              <li pn="section-3.3-38.1.1.1">Common aliases include: on-path in-network caching.</li>
+            </ul>
+          </li>
+<li pn="section-3.3-41.1">
+            <ul empty="true" spacing="normal" bare="false" pn="section-3.3-41.1.1">
+              <li pn="section-3.3-41.1.1.1">Common aliases include: off-path in-network storage.</li>
+            </ul>
+          </li>
+<li pn="section-3.3-44.1">
+            <ul empty="true" spacing="normal" bare="false" pn="section-3.3-44.1.1">
+              <li pn="section-3.3-44.1.1.1">Common aliases include: repository, repo.</li>
+            </ul>
+          </li>
+<li pn="section-3.4-3.1">
+            <ul empty="true" spacing="normal" bare="false" pn="section-3.4-3.1.1">
+              <li pn="section-3.4-3.1.1.1">Common aliases include: Interest, Interest message, information request.</li>
+            </ul>
+          </li>
+<li pn="section-3.4-6.1">
+            <ul empty="true" spacing="normal" bare="false" pn="section-3.4-6.1.1">
+              <li pn="section-3.4-6.1.1.1">Common aliases include: network NACK, Interest return.</li>
+            </ul>
+          </li>
+<li pn="section-3.4-9.1">
+            <ul empty="true" spacing="normal" bare="false" pn="section-3.4-9.1.1">
+              <li pn="section-3.4-9.1.1.1">Common aliases include: data, data object, content object, content object packet, data message, named data object, named data.</li>
+            </ul>
+          </li>
+<li pn="section-3.4-12.1">
+            <ul empty="true" spacing="normal" bare="false" pn="section-3.4-12.1.1">
+              <li pn="section-3.4-12.1.1.1">Common aliases include: pointer.</li>
+            </ul>
+          </li>
+<li pn="section-3.5-3.1">
+            <ul empty="true" spacing="normal" bare="false" pn="section-3.5-3.1.1">
+              <li pn="section-3.5-3.1.1.1">Common aliases include: data name, interest name, content name.</li>
+            </ul>
+          </li>
+<li pn="section-3.5-6.1">
+            <ul empty="true" spacing="normal" bare="false" pn="section-3.5-6.1.1">
+              <li pn="section-3.5-6.1.1.1">Common aliases include: name segment (as in CCNx).</li>
+            </ul>
+          </li>
+<li pn="section-3.5-9.1">
+            <ul empty="true" spacing="normal" bare="false" pn="section-3.5-9.1.1">
+              <li pn="section-3.5-9.1.1.1">Common aliases include: implicit digest.</li>
+            </ul>
+          </li>
+<li pn="section-3.5-12.1">
+            <ul empty="true" spacing="normal" bare="false" pn="section-3.5-12.1.1">
+              <li pn="section-3.5-12.1.1.1">Common aliases include: interest selector, restrictor, interest restrictor.</li>
+            </ul>
+          </li>
+<li pn="section-3.5-21.1">
+            <ul empty="true" spacing="normal" bare="false" pn="section-3.5-21.1.1">
+              <li pn="section-3.5-21.1.1.1">Common aliases include: prefix.</li>
+            </ul>
+          </li>
+<li pn="section-3.6-3.1">
+            <ul empty="true" spacing="normal" bare="false" pn="section-3.6-3.1.1">
+              <li pn="section-3.6-3.1.1.1">Common aliases include: Naming scheme, ICN naming scheme, namespace convention.</li>
+            </ul>
+          </li>
+<li pn="section-3.6-6.1">
+            <ul empty="true" spacing="normal" bare="false" pn="section-3.6-6.1.1">
+              <li pn="section-3.6-6.1.1.1">Common aliases include: hierarchical naming, structured naming.</li>
+            </ul>
+          </li>
+<li pn="section-3.6-11.1">
+            <ul empty="true" spacing="normal" bare="false" pn="section-3.6-11.1.1">
+              <li pn="section-3.6-11.1.1.1">Common aliases include: chunking.</li>
+            </ul>
+          </li>
+<li pn="section-3.7-3.1">
+            <ul empty="true" spacing="normal" bare="false" pn="section-3.7-3.1.1">
+              <li pn="section-3.7-3.1.1.1">Common aliases include: directly securing Data packet.</li>
+            </ul>
+          </li>
+rfc/rfc8793.xml
+<li pn="section-4.3-4.2.1">
+              <ul bare="false" empty="false" indent="3" spacing="normal" pn="section-4.3-4.2.1.1">
+                <li pn="section-4.3-4.2.1.1.1">restarts the <tt>HoldTimer</tt> and</li>
+                <li pn="section-4.3-4.2.1.1.2">changes its state to Established.</li>
+              </ul>
+            </li>
+<li pn="section-4.3-6.2.1">
+              <ul bare="false" empty="false" indent="3" spacing="normal" pn="section-4.3-6.2.1.1">
+                <li pn="section-4.3-6.2.1.1.1">restarts the <tt>HoldTimer</tt>,</li>
+                <li pn="section-4.3-6.2.1.1.2">starts the <tt>SendHoldTimer</tt> if the <tt>SendHoldTime</tt> is non-zero, and</li>
+                <li pn="section-4.3-6.2.1.1.3">changes its state to Established.</li>
+              </ul>
+            </li>
+<li pn="section-4.3-9.2.1">
+              <ul bare="false" empty="false" indent="3" spacing="normal" pn="section-4.3-9.2.1.1">
+                <li pn="section-4.3-9.2.1.1.1">(optionally) sends a NOTIFICATION message with the BGP Error Code "Send Hold Timer Expired" if the local system can determine that doing so will not delay the following actions in this paragraph,</li>
+                <li pn="section-4.3-9.2.1.1.2">logs an error message in the local system with the BGP Error Code "Send Hold Timer Expired",</li>
+                <li pn="section-4.3-9.2.1.1.3">releases all BGP resources,</li>
+                <li pn="section-4.3-9.2.1.1.4">sets the ConnectRetryTimer to zero,</li>
+                <li pn="section-4.3-9.2.1.1.5">drops the TCP connection,</li>
+                <li pn="section-4.3-9.2.1.1.6">increments the ConnectRetryCounter by 1,</li>
+                <li pn="section-4.3-9.2.1.1.7">(optionally) performs peer oscillation damping if the DampPeerOscillations attribute is set to TRUE, and</li>
+                <li pn="section-4.3-9.2.1.1.8">changes its state to Idle.</li>
+              </ul>
+            </li>
+rfc/rfc9687.xml
+<li pn="section-3.3.5-3.1.3.2">
+                  <ul spacing="normal" bare="false" empty="false" indent="3" pn="section-3.3.5-3.1.3.2.1">
+                    <li pn="section-3.3.5-3.1.3.2.1.1">The instance is an array. Otherwise, the error indicator
+		for this case shall have an "instancePath" pointing to
+		the instance and a "schemaPath" pointing to the schema
+		member with the name "elements".</li>
+                    <li pn="section-3.3.5-3.1.3.2.1.2">If the instance is an array, then every element of the
+		instance must be accepted by <em>S</em>. Otherwise, the error
+		indicators for this case are the union of all the errors
+		arising from evaluating <em>S</em> against elements of the
+		instance.</li>
+                  </ul>
+                </li>
+rfc/rfc8927.xml
+<li pn="section-6.2.2-3.1">
+              <ul empty="true" spacing="normal" bare="false" pn="section-6.2.2-3.1.1">
+                <li pn="section-6.2.2-3.1.1.1">
+                  <ul empty="true" bare="false" spacing="normal" pn="section-6.2.2-3.1.1.1.1">
+                    <li pn="section-6.2.2-3.1.1.1.1.1">
+                      <figure anchor="fig-sfc-12" align="left" suppress-title="false" pn="figure-8">
+                        <name slugifiedName="name-registration-packet-format">Registration Packet Format</name>
+                        <artwork align="center" name="" type="" alt="" pn="section-6.2.2-3.1.1.1.1.1.1.1">+---------+------------------+----------------+
+|         |                  |                |
+|   R/D   |    hash(FQDN)    |    nSFF_ID     |
+| (1 bit) |    (16 bits)     |    (8 bits)    |
++---------+------------------+----------------+</artwork>
+                      </figure>
+                      <ul spacing="normal" bare="false" empty="false" pn="section-6.2.2-3.1.1.1.1.1.2">
+                        <li pn="section-6.2.2-3.1.1.1.1.1.2.1">
+               R/D: 1-bit length (0 for Register, 1 for Deregister)
+            </li>
+                        <li pn="section-6.2.2-3.1.1.1.1.1.2.2">
+	       hash(FQDN): 16-bit length for a hash over the FQDN of the SF
+		    </li>
+                        <li pn="section-6.2.2-3.1.1.1.1.1.2.3">
+	       nSFF_ID: 8-bit length for a system-unique identifier for the SFF related to the SF 
+	   </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li pn="section-6.2.2-3.1.1.2">
+                  <ul empty="true" bare="false" spacing="normal" pn="section-6.2.2-3.1.1.2.1">
+                    <li pn="section-6.2.2-3.1.1.2.1.1">
+We assume that the pathID towards the NR is known to the nSFF through configuration means.     
+</li>
+                    <li pn="section-6.2.2-3.1.1.2.1.2">          
+The NR maintains an internal table that associates the hash(FQDN), the nSFF_id
+information, as well as the pathID information being used for communication
+between nSFFs and NRs. The nSFF locally maintains a mapping of registered FQDNs
+to IP addresses for the latter using link-local private IP addresses.          
+</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+<li pn="section-6.2.2-3.1.1.1">
+                  <ul empty="true" bare="false" spacing="normal" pn="section-6.2.2-3.1.1.1.1">
+                    <li pn="section-6.2.2-3.1.1.1.1.1">
+                      <figure anchor="fig-sfc-12" align="left" suppress-title="false" pn="figure-8">
+                        <name slugifiedName="name-registration-packet-format">Registration Packet Format</name>
+                        <artwork align="center" name="" type="" alt="" pn="section-6.2.2-3.1.1.1.1.1.1.1">+---------+------------------+----------------+
+|         |                  |                |
+|   R/D   |    hash(FQDN)    |    nSFF_ID     |
+| (1 bit) |    (16 bits)     |    (8 bits)    |
++---------+------------------+----------------+</artwork>
+                      </figure>
+                      <ul spacing="normal" bare="false" empty="false" pn="section-6.2.2-3.1.1.1.1.1.2">
+                        <li pn="section-6.2.2-3.1.1.1.1.1.2.1">
+               R/D: 1-bit length (0 for Register, 1 for Deregister)
+            </li>
+                        <li pn="section-6.2.2-3.1.1.1.1.1.2.2">
+	       hash(FQDN): 16-bit length for a hash over the FQDN of the SF
+		    </li>
+                        <li pn="section-6.2.2-3.1.1.1.1.1.2.3">
+	       nSFF_ID: 8-bit length for a system-unique identifier for the SFF related to the SF 
+	   </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+<li pn="section-6.2.2-3.1.1.2">
+                  <ul empty="true" bare="false" spacing="normal" pn="section-6.2.2-3.1.1.2.1">
+                    <li pn="section-6.2.2-3.1.1.2.1.1">
+We assume that the pathID towards the NR is known to the nSFF through configuration means.     
+</li>
+                    <li pn="section-6.2.2-3.1.1.2.1.2">          
+The NR maintains an internal table that associates the hash(FQDN), the nSFF_id
+information, as well as the pathID information being used for communication
+between nSFFs and NRs. The nSFF locally maintains a mapping of registered FQDNs
+to IP addresses for the latter using link-local private IP addresses.          
+</li>
+                  </ul>
+                </li>
+rfc/rfc8677.xml
+<li pn="section-3.1-16.1">
+            <ul empty="true" spacing="normal" bare="false" pn="section-3.1-16.1.1">
+              <li pn="section-3.1-16.1.1.1">The originating router advertises the following ranges:</li>
+              <li pn="section-3.1-16.1.1.2">SR-Cap: range: 100, SID value: 100 </li>
+              <li pn="section-3.1-16.1.1.3">SR-Cap: range: 100, SID value: 1000</li>
+              <li pn="section-3.1-16.1.1.4">SR-Cap: range: 100, SID value: 500</li>
+            </ul>
+          </li>
+rfc/rfc8667.xml
+<li pn="section-4.2-2.2">
+            <ul empty="true" bare="false" spacing="normal" pn="section-4.2-2.2.1">
+              <li pn="section-4.2-2.2.1.1">set d_base = +INFINITY
+</li>
+              <li pn="section-4.2-2.2.1.2">set p_loss = 0
+</li>
+              <li pn="section-4.2-2.2.1.3">set p_mark = 0
+</li>
+              <li pn="section-4.2-2.2.1.4">set r_recv = 0
+</li>
+              <li pn="section-4.2-2.2.1.5">set both t_last and t_curr as current time in milliseconds
+</li>
+            </ul>
+          </li>
+<li pn="section-4.2-2.4">
+            <ul empty="true" bare="false" spacing="normal" pn="section-4.2-2.4.1">
+              <li pn="section-4.2-2.4.1.1">obtain current timestamp t_curr from system clock
+</li>
+              <li pn="section-4.2-2.4.1.2">obtain from packet header sending time stamp t_sent
+</li>
+              <li pn="section-4.2-2.4.1.3">obtain one-way delay measurement: d_fwd = t_curr - t_sent
+</li>
+              <li pn="section-4.2-2.4.1.4">update baseline delay: d_base = min(d_base, d_fwd)
+</li>
+              <li pn="section-4.2-2.4.1.5">update queuing delay:  d_queue = d_fwd - d_base
+</li>
+              <li pn="section-4.2-2.4.1.6">update packet loss ratio estimate p_loss
+</li>
+              <li pn="section-4.2-2.4.1.7">update packet marking ratio estimate p_mark
+</li>
+              <li pn="section-4.2-2.4.1.8">update measurement of receiving rate r_recv
+</li>
+            </ul>
+          </li>
+<li pn="section-4.2-2.6">
+            <ul empty="true" bare="false" spacing="normal" pn="section-4.2-2.6.1">
+              <li pn="section-4.2-2.6.1.1">calculate non-linear warping of delay d_tilde if packet loss exists
+</li>
+              <li pn="section-4.2-2.6.1.2">calculate current aggregate congestion signal x_curr
+</li>
+              <li pn="section-4.2-2.6.1.3">determine mode of rate adaptation for sender: rmode
+</li>
+              <li pn="section-4.2-2.6.1.4">send feedback containing values of: rmode, x_curr, and r_recv
+</li>
+              <li pn="section-4.2-2.6.1.5">update t_last = t_curr
+</li>
+            </ul>
+          </li>
+<li pn="section-4.3-2.2">
+            <ul empty="true" bare="false" spacing="normal" pn="section-4.3-2.2.1">
+              <li pn="section-4.3-2.2.1.1">set r_ref = RMIN
+</li>
+              <li pn="section-4.3-2.2.1.2">set rtt = 0
+</li>
+              <li pn="section-4.3-2.2.1.3">set x_prev = 0
+</li>
+              <li pn="section-4.3-2.2.1.4">set t_last and t_curr as current system clock time
+</li>
+            </ul>
+          </li>
+<li pn="section-4.3-2.4">
+            <ul empty="true" bare="false" spacing="normal" pn="section-4.3-2.4.1">
+              <li pn="section-4.3-2.4.1.1">obtain current timestamp from system clock: t_curr
+</li>
+              <li pn="section-4.3-2.4.1.2">obtain values of rmode, x_curr, and r_recv from feedback report
+</li>
+              <li pn="section-4.3-2.4.1.3">update estimation of rtt
+</li>
+              <li pn="section-4.3-2.4.1.4">measure feedback interval: delta = t_curr - t_last
+</li>
+              <li pn="section-4.3-2.4.1.5">if rmode == 0:
+</li>
+              <li pn="section-4.3-2.4.1.6">
+                <ul empty="true" bare="false" spacing="normal" pn="section-4.3-2.4.1.6.1">
+                  <li pn="section-4.3-2.4.1.6.1.1">update r_ref following accelerated ramp-up rules
+</li>
+                </ul>
+              </li>
+              <li pn="section-4.3-2.4.1.7">else:
+</li>
+              <li pn="section-4.3-2.4.1.8">
+                <ul empty="true" bare="false" spacing="normal" pn="section-4.3-2.4.1.8.1">
+                  <li pn="section-4.3-2.4.1.8.1.1">update r_ref following gradual update rules
+</li>
+                </ul>
+              </li>
+              <li pn="section-4.3-2.4.1.9">clip rate r_ref within the range of minimum rate (RMIN) and maximum rate
+(RMAX).
+</li>
+              <li pn="section-4.3-2.4.1.10">set x_prev = x_curr
+</li>
+              <li pn="section-4.3-2.4.1.11">set t_last = t_curr
+</li>
+            </ul>
+          </li>
+<li pn="section-4.3-2.4.1.6">
+                <ul empty="true" bare="false" spacing="normal" pn="section-4.3-2.4.1.6.1">
+                  <li pn="section-4.3-2.4.1.6.1.1">update r_ref following accelerated ramp-up rules
+</li>
+                </ul>
+              </li>
+<li pn="section-4.3-2.4.1.8">
+                <ul empty="true" bare="false" spacing="normal" pn="section-4.3-2.4.1.8.1">
+                  <li pn="section-4.3-2.4.1.8.1.1">update r_ref following gradual update rules
+</li>
+                </ul>
+              </li>
+rfc/rfc8698.xml
+<li pn="section-2-16.1">
+          <ul spacing="normal" bare="false" empty="false" indent="3" pn="section-2-16.1.1">
+            <li pn="section-2-16.1.1.1">Version of the YANG instance data format (if not explicitly present, the default value is used).</li>
+          </ul>
+        </li>
+<li pn="section-2-18.1">
+          <ul spacing="normal" bare="false" empty="false" indent="3" pn="section-2-18.1.1">
+            <li pn="section-2-18.1.1.1">Name of the data set.</li>
+            <li pn="section-2-18.1.1.2">Content-schema specification (i.e., the "content-schema" node).</li>
+            <li pn="section-2-18.1.1.3">Description of the instance data set. The description <bcp14>SHOULD</bcp14> 
+            contain information on whether and how the data can change during 
+            the lifetime of the server.
+          </li>
+            <li pn="section-2-18.1.1.4">An indication of whether default values are included. 
+            The default handling uses the concepts defined in <xref target="RFC6243" format="default" sectionFormat="of" derivedContent="RFC6243"/>;
+            however, as only concepts are re-used, users of instance data sets
+            do not need to support <xref target="RFC6243" format="default" sectionFormat="of" derivedContent="RFC6243"/>.
+          </li>
+          </ul>
+        </li>
+rfc/rfc9195.xml
