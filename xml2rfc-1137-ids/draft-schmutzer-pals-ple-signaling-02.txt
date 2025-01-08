@@ -1,0 +1,616 @@
+
+
+
+
+Network Working Group                                  C. Schmutzer, Ed.
+Internet-Draft                                       Cisco Systems, Inc.
+Intended status: Standards Track                         20 October 2024
+Expires: 23 April 2025
+
+
+         LDP Extensions to Support Private Line Emulation (PLE)
+                 draft-schmutzer-pals-ple-signaling-02
+
+Abstract
+
+   This document defines extension to the Pseudowire Emulation Edge-to-
+   Edge (PWE3) control protocol [RFC4447] required for the setup of
+   Private Line Emulation (PLE) pseudowires in MPLS networks.
+
+Status of This Memo
+
+   This Internet-Draft is submitted in full conformance with the
+   provisions of BCP 78 and BCP 79.
+
+   Internet-Drafts are working documents of the Internet Engineering
+   Task Force (IETF).  Note that other groups may also distribute
+   working documents as Internet-Drafts.  The list of current Internet-
+   Drafts is at https://datatracker.ietf.org/drafts/current/.
+
+   Internet-Drafts are draft documents valid for a maximum of six months
+   and may be updated, replaced, or obsoleted by other documents at any
+   time.  It is inappropriate to use Internet-Drafts as reference
+   material or to cite them other than as "work in progress."
+
+   This Internet-Draft will expire on 23 April 2025.
+
+Copyright Notice
+
+   Copyright (c) 2024 IETF Trust and the persons identified as the
+   document authors.  All rights reserved.
+
+   This document is subject to BCP 78 and the IETF Trust's Legal
+   Provisions Relating to IETF Documents (https://trustee.ietf.org/
+   license-info) in effect on the date of publication of this document.
+   Please review these documents carefully, as they describe your rights
+   and restrictions with respect to this document.  Code Components
+   extracted from this document must include Revised BSD License text as
+   described in Section 4.e of the Trust Legal Provisions and are
+   provided without warranty as described in the Revised BSD License.
+
+
+
+
+
+
+Schmutzer                 Expires 23 April 2025                 [Page 1]
+
+Internet-Draft           LDP Extensions for PLE             October 2024
+
+
+Table of Contents
+
+   1.  Introduction and Motivation . . . . . . . . . . . . . . . . .   2
+   2.  Requirements Notation . . . . . . . . . . . . . . . . . . . .   2
+   3.  Terminology . . . . . . . . . . . . . . . . . . . . . . . . .   3
+   4.  Service Types . . . . . . . . . . . . . . . . . . . . . . . .   3
+     4.1.  Ethernet Service Types  . . . . . . . . . . . . . . . . .   3
+     4.2.  Fibre Channel Service Types . . . . . . . . . . . . . . .   3
+     4.3.  OTN Service Types . . . . . . . . . . . . . . . . . . . .   4
+     4.4.  SONET/SDH Service Types . . . . . . . . . . . . . . . . .   4
+   5.  PW FEC for Setup of PLE Pseudowires . . . . . . . . . . . . .   5
+   6.  Interface Parameters for PLE Pseudowires  . . . . . . . . . .   5
+     6.1.  Overview  . . . . . . . . . . . . . . . . . . . . . . . .   5
+     6.2.  PLE/CEP/TDM Payload Bytes . . . . . . . . . . . . . . . .   6
+     6.3.  PLE/CEP/TDM Bit-Rate  . . . . . . . . . . . . . . . . . .   6
+     6.4.  PLE/CEP Options . . . . . . . . . . . . . . . . . . . . .   7
+   7.  LDP Status Codes  . . . . . . . . . . . . . . . . . . . . . .   8
+   8.  Using the PW Status TLV . . . . . . . . . . . . . . . . . . .   8
+   9.  Security Considerations . . . . . . . . . . . . . . . . . . .   9
+   10. IANA Considerations . . . . . . . . . . . . . . . . . . . . .   9
+   11. Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .   9
+   12. References  . . . . . . . . . . . . . . . . . . . . . . . . .   9
+     12.1.  Normative References . . . . . . . . . . . . . . . . . .   9
+     12.2.  Informative References . . . . . . . . . . . . . . . . .  10
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  10
+
+1.  Introduction and Motivation
+
+   [RFC5287] has already specified extensions to the Label Distribution
+   Protocol (LDP) for the setup of structure-agnostic TDM pseudowires
+   specified in [RFC4533], structure-aware pseudowires specified in
+   [RFC5086] and SONET/SDH Circuit Emulation over Packet (CEP)
+   pseudowires in [RFC4842].
+
+   Private Line Emulation pseudowires are specified in
+   [I-D.ietf-pals-ple].  This document focuses on the LDP definitions
+   and extensions required for the setup of PLE pseudowires taking
+   [RFC5287] and Section 12 of [RFC4842] as a starting point.
+
+2.  Requirements Notation
+
+   The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+   "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
+   "OPTIONAL" in this document are to be interpreted as described in
+   BCP14 [RFC2119] [RFC8174] when, and only when, they appear in all
+   capitals, as shown here.
+
+
+
+
+
+Schmutzer                 Expires 23 April 2025                 [Page 2]
+
+Internet-Draft           LDP Extensions for PLE             October 2024
+
+
+3.  Terminology
+
+   to be added
+
+4.  Service Types
+
+   The following sections list all possible service types that are
+   supported by PLE and the proposed signalling mechanisms.
+
+4.1.  Ethernet Service Types
+
+     +==============+=========+==============+======================+
+     | Service Type | PW Type | PLE/CEP Type | PLE/CEP/TDM Bit-rate |
+     +==============+=========+==============+======================+
+     | 1000Base-X   | TBD1    | 0x3          | 1,250,000            |
+     +--------------+---------+--------------+----------------------+
+     | 10GBASE-R    | TBD1    | 0x3          | 10,312,500           |
+     +--------------+---------+--------------+----------------------+
+     | 25GBASE-R    | TBD1    | 0x3          | 25,791,300           |
+     +--------------+---------+--------------+----------------------+
+     | 40GBASE-R    | TBD1    | 0x3          | 41,250,000           |
+     +--------------+---------+--------------+----------------------+
+     | 50GBASE-R    | TBD1    | 0x3          | 51,562,500           |
+     +--------------+---------+--------------+----------------------+
+     | 100GBASE-R   | TBD1    | 0x3          | 103,125,000          |
+     +--------------+---------+--------------+----------------------+
+     | 200GBASE-R   | TBD1    | 0x3          | 212,500,000          |
+     +--------------+---------+--------------+----------------------+
+     | 400GBASE-R   | TBD1    | 0x3          | 425,000,000          |
+     +--------------+---------+--------------+----------------------+
+
+                     Table 1: Ethernet Service Types
+
+4.2.  Fibre Channel Service Types
+
+     +==============+=========+==============+======================+
+     | Service Type | PW Type | PLE/CEP Type | PLE/CEP/TDM Bit-rate |
+     +==============+=========+==============+======================+
+     | 1GFC         | TBD1    | 0x3          | 1,062,500            |
+     +--------------+---------+--------------+----------------------+
+     | 2GFC         | TBD1    | 0x3          | 2,125,000            |
+     +--------------+---------+--------------+----------------------+
+     | 4GFC         | TBD1    | 0x3          | 4,250,000            |
+     +--------------+---------+--------------+----------------------+
+     | 8GFC         | TBD1    | 0x3          | 8,500,000            |
+     +--------------+---------+--------------+----------------------+
+     | 10GFC        | TBD1    | 0x3          | 10,518,750           |
+     +--------------+---------+--------------+----------------------+
+
+
+
+Schmutzer                 Expires 23 April 2025                 [Page 3]
+
+Internet-Draft           LDP Extensions for PLE             October 2024
+
+
+     | 16GFC        | TBD1    | 0x3          | 14,025,000           |
+     +--------------+---------+--------------+----------------------+
+     | 32GFC        | TBD1    | 0x3          | 28,050,000           |
+     +--------------+---------+--------------+----------------------+
+     | 64GFC        | TBD1    | 0x3          | 57,800,000           |
+     +--------------+---------+--------------+----------------------+
+     | 128GFC       | TBD1    | 0x3          | 112,200,000          |
+     +--------------+---------+--------------+----------------------+
+
+                   Table 2: Fibre Channel Service Types
+
+4.3.  OTN Service Types
+
+     +==============+=========+==============+======================+
+     | Service Type | PW Type | PLE/CEP Type | PLE/CEP/TDM Bit-rate |
+     +==============+=========+==============+======================+
+     | ODU0         | TBD1    | 0x4          | 1,244,160            |
+     +--------------+---------+--------------+----------------------+
+     | ODU1         | TBD1    | 0x4          | 2,498,775            |
+     +--------------+---------+--------------+----------------------+
+     | ODU2         | TBD1    | 0x4          | 10,037,273           |
+     +--------------+---------+--------------+----------------------+
+     | ODU2e        | TBD1    | 0x4          | 10,399,525           |
+     +--------------+---------+--------------+----------------------+
+     | ODU3         | TBD1    | 0x4          | 40,319,218           |
+     +--------------+---------+--------------+----------------------+
+     | ODU4         | TBD1    | 0x4          | 104,794,445          |
+     +--------------+---------+--------------+----------------------+
+
+                        Table 3: OTN Service Types
+
+4.4.  SONET/SDH Service Types
+
+     +==============+=========+==============+======================+
+     | Service Type | PW Type | PLE/CEP Type | PLE/CEP/TDM Bit-rate |
+     +==============+=========+==============+======================+
+     | OC3/STM1     | TBD1    | 0x3          | 155,520              |
+     +--------------+---------+--------------+----------------------+
+     | OC12/STM4    | TBD1    | 0x3          | 622,080              |
+     +--------------+---------+--------------+----------------------+
+     | OC48/STM16   | TBD1    | 0x3          | 2,488,320            |
+     +--------------+---------+--------------+----------------------+
+     | OC192/STM64  | TBD1    | 0x3          | 9,953,280            |
+     +--------------+---------+--------------+----------------------+
+     | OC768/STM256 | TBD1    | 0x3          | 39,813,120           |
+     +--------------+---------+--------------+----------------------+
+
+                     Table 4: Ethernet Service Types
+
+
+
+Schmutzer                 Expires 23 April 2025                 [Page 4]
+
+Internet-Draft           LDP Extensions for PLE             October 2024
+
+
+5.  PW FEC for Setup of PLE Pseudowires
+
+   [RFC4447] does define two types of PW Forwarding Equivalent Classes
+   (FECs)
+
+   *  PWId FEC (FEC 128)
+
+   *  Generalized PW FEC (FEC 129)
+
+   The Group ID and the Interface Parameters are contained in separate
+   TLVs, called the PW Grouping TLV and the Interface Parameters TLV.
+
+   Either of these types of PW FEC MAY be used for the setup of PLE PWs
+   with the PW type TBD1 and appropriate interface parameters.
+
+   Using the generalized PW FEC allows for uniquely identifying both PW
+   endpoints and misconnection detection.
+
+   The two endpoints MUST agree on the PW type, as both directions of
+   the PW are required to be of the same type.
+
+   The Control bit MUST be set as PLE PW encapsulation uses a control
+   word.
+
+6.  Interface Parameters for PLE Pseudowires
+
+6.1.  Overview
+
+   The interface parameters that are relevant for the setup of PLE
+   pseudowires are listed in Table 5
+
+      +===========================+=========+========+=============+
+      | Interface Parameter       | Sub-TLV | Length | Description |
+      +===========================+=========+========+=============+
+      | PLE/CEP/TDM Payload Bytes | 0x04    | 4      | Section 6.2 |
+      +---------------------------+---------+--------+-------------+
+      | PLE/CEP/TDM Bit-Rate      | 0x07    | 6      | Section 6.3 |
+      +---------------------------+---------+--------+-------------+
+      | PLE/CEP Options           | 0x05    | 4      | Section 6.4 |
+      +---------------------------+---------+--------+-------------+
+
+                  Table 5: Relevant Interface Parameters
+
+
+
+
+
+
+
+
+
+Schmutzer                 Expires 23 April 2025                 [Page 5]
+
+Internet-Draft           LDP Extensions for PLE             October 2024
+
+
+6.2.  PLE/CEP/TDM Payload Bytes
+
+   The payload byte sub-TLV already defined in [RFC5287] does also apply
+   to PLE and MAY be included if a non-default payload size is to be
+   used.  If this TLV is omitted then the default payload size defined
+   in [I-D.ietf-pals-ple] MUST be assumed.  The format of the PLE/CEP/
+   TDM Payload Bytes sub-TLV is shown in Figure 1.
+
+    0                   1                   2                   3
+    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |  Sub-TLV Type |     Length    |  PLE/CEP/TDM Payload Bytes    |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+                Figure 1: PLE/CEP/TDM Payload Bytes sub-TLV
+
+   Type : 4
+
+   Length : 4
+
+      The total length in octets of the value portion of the TLV.
+
+   PLE/CEP/TDM Payload Bytes :
+
+      A two byte field denoting the desired payload size to be used.
+
+6.3.  PLE/CEP/TDM Bit-Rate
+
+   The bit-rate sub-TLV already defined in [RFC5287] is MANDATORY for
+   PLE pseudowires in order to unambiguously indicate the attachment
+   circuit type.  The format of the PLE/CEP/TDM Bit-Rate sub-TLV is
+   shown in Figure 2.
+
+    0                   1                   2                   3
+    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |  Sub-TLV Type |     Length    |      PLE/CEP/TDM Bit-rate     |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |     PLE/CEP/TDM Bit-rate      |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+                   Figure 2: PLE/CEP/TDM Bit-Rate sub-TLV
+
+   Type : 7
+
+   Length : 6
+
+      The total length in octets of the value portion of the TLV.
+
+
+
+Schmutzer                 Expires 23 April 2025                 [Page 6]
+
+Internet-Draft           LDP Extensions for PLE             October 2024
+
+
+   PLE/CEP/TDM Bit-rate :
+
+      A four byte field denoting the data rate in units of 1-kbps
+
+6.4.  PLE/CEP Options
+
+   The options sub-TLV already defined in Section 12.3 of [RFC4842] MUST
+   be present when signaling PLE pseudowires.  The format of the PLE/CEP
+   options sub-TLV is shown in Figure 3.
+
+    0                   1                   2                   3
+    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |  Sub-TLV Type |     Length    |         PLE/CEP Options       |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+                     Figure 3: PLE/CEP Options sub-TLV
+
+   Type : 5
+
+   Length : 4
+
+      The total length in octets of the value portion of the TLV.
+
+   PLE/CEP Options :
+
+      A two byte field with the format as shown in Figure 4
+
+    0                                       1
+    0   1   2   3   4   5   6   7   8   9   0   1   2   3   4   5
+   +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+   |AIS|UNE|RTP|EBM|      Reserved [0:6]       |  PLE/CEP  | Async |
+   |   |   |   |   |                           |    Type   |T3 |E3 |
+   +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+                         Figure 4: PLE/CEP Options
+
+   AIS, UNE, RTP, EBM :
+
+      These bits MUST be set to zero and ignored by the receiver.
+
+   Reserved :
+
+      7-bit field for future use.  MUST be set to ZERO and ignored by
+      receiver.
+
+   CEP/PLE Type :
+
+
+
+
+Schmutzer                 Expires 23 April 2025                 [Page 7]
+
+Internet-Draft           LDP Extensions for PLE             October 2024
+
+
+      Indicates the connection type for CEP and PLE.  CEP connection
+      types are defined in [RFC4842].  Two new values for PLE are
+      defined in this document:
+
+      -  0x3 - Basic PLE payload
+
+      -  0x4 - Byte aligned PLE payload
+
+   Async :
+
+      These bits MUST be set to zero and ignored by the receiver.
+
+7.  LDP Status Codes
+
+   Per [RFC4447] in case of incompatible bit-rate the LDP status code
+   0x00000026 (incompatible bit-rate) and in case of incompatible PLE
+   options the LDP status code 0x00000027 (CEP-TDM mis-configuration)
+   has to be used to indicate the reason of failure to establish the
+   pseudowire.
+
+   Setting of the Control bit to zero MUST result in an LDP status of
+   0x00000024 (Illegal C-Bit).
+
+8.  Using the PW Status TLV
+
+   The PLE PW control word carries status indications for both
+   attachment circuits (L bit) and the PSN (R bit) indication (see
+   [I-D.ietf-pals-ple]).  Similar functionality is available via use of
+   the PW Status TLV (see Section 5.4.2 of [RFC4447]).  If the latter
+   mechanism is employed, the signaling PE sends its peer a PW Status
+   TLV for this PW, setting the appropriate bits (see Section 3.5 of
+   [RFC4446]):
+
+   *  Pseudowire Not Forwarding
+
+   *  Local Attachment Circuit (ingress) Receive Fault
+
+   *  Local Attachment Circuit (egress) Transmit Fault
+
+   *  Local PSN-facing PW (ingress) Receive Fault
+
+   *  Local PSN-facing PW (egress) Transmit Fault
+
+
+
+
+
+
+
+
+
+Schmutzer                 Expires 23 April 2025                 [Page 8]
+
+Internet-Draft           LDP Extensions for PLE             October 2024
+
+
+   As long as the TDM PW interworking function is operational, usage of
+   the Status TLV is NOT RECOMMENDED in order to avoid contention
+   between status indications reported by the data and control plane.
+   However, if the TDM PW interworking function (IWF) itself fails while
+   the PWE3 control plane remains operational, a Status TLV with all of
+   the above bits set SHOULD be sent.
+
+9.  Security Considerations
+
+   This document does not have any additional impact on the security of
+   PWs above that of basic LDP-based setup of PWs specified in
+   [RFC4447].
+
+10.  IANA Considerations
+
+   As already indicated in section 10 of
+   [I-D.schmutzer-bess-bitstream-vpws-signalling], IANA is requested to
+   assign a PW type (value TBD1) for PLE pseudowires from the "MPLS
+   Pseudowire Types" registry.
+
+11.  Acknowledgements
+
+   to be added
+
+12.  References
+
+12.1.  Normative References
+
+   [I-D.ietf-pals-ple]
+              Gringeri, S., Whittaker, J., Leymann, N., Schmutzer, C.,
+              and C. Brown, "Private Line Emulation over Packet Switched
+              Networks", Work in Progress, Internet-Draft, draft-ietf-
+              pals-ple-09, 18 October 2024,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-pals-
+              ple-09>.
+
+   [I-D.schmutzer-bess-bitstream-vpws-signalling]
+              Gringeri, S., Whittaker, J., Schmutzer, C., Vasudevan, B.,
+              and P. Brissette, "Ethernet VPN Signalling Extensions for
+              Bit-stream VPWS", Work in Progress, Internet-Draft, draft-
+              schmutzer-bess-bitstream-vpws-signalling-02, 18 October
+              2024, <https://datatracker.ietf.org/doc/html/draft-
+              schmutzer-bess-bitstream-vpws-signalling-02>.
+
+   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
+              Requirement Levels", BCP 14, RFC 2119,
+              DOI 10.17487/RFC2119, March 1997,
+              <https://www.rfc-editor.org/rfc/rfc2119>.
+
+
+
+Schmutzer                 Expires 23 April 2025                 [Page 9]
+
+Internet-Draft           LDP Extensions for PLE             October 2024
+
+
+   [RFC4447]  Martini, L., Ed., Rosen, E., El-Aawar, N., Smith, T., and
+              G. Heron, "Pseudowire Setup and Maintenance Using the
+              Label Distribution Protocol (LDP)", RFC 4447,
+              DOI 10.17487/RFC4447, April 2006,
+              <https://www.rfc-editor.org/rfc/rfc4447>.
+
+   [RFC4842]  Malis, A., Pate, P., Cohen, R., Ed., and D. Zelig,
+              "Synchronous Optical Network/Synchronous Digital Hierarchy
+              (SONET/SDH) Circuit Emulation over Packet (CEP)",
+              RFC 4842, DOI 10.17487/RFC4842, April 2007,
+              <https://www.rfc-editor.org/rfc/rfc4842>.
+
+   [RFC5287]  Vainshtein, A. and Y. Stein, "Control Protocol Extensions
+              for the Setup of Time-Division Multiplexing (TDM)
+              Pseudowires in MPLS Networks", RFC 5287,
+              DOI 10.17487/RFC5287, August 2008,
+              <https://www.rfc-editor.org/rfc/rfc5287>.
+
+   [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
+              2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
+              May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
+
+12.2.  Informative References
+
+   [RFC1925]  Callon, R., "The Twelve Networking Truths", RFC 1925,
+              DOI 10.17487/RFC1925, April 1996,
+              <https://www.rfc-editor.org/rfc/rfc1925>.
+
+   [RFC4446]  Martini, L., "IANA Allocations for Pseudowire Edge to Edge
+              Emulation (PWE3)", BCP 116, RFC 4446,
+              DOI 10.17487/RFC4446, April 2006,
+              <https://www.rfc-editor.org/rfc/rfc4446>.
+
+   [RFC4533]  Zeilenga, K. and J.H. Choi, "The Lightweight Directory
+              Access Protocol (LDAP) Content Synchronization Operation",
+              RFC 4533, DOI 10.17487/RFC4533, June 2006,
+              <https://www.rfc-editor.org/rfc/rfc4533>.
+
+   [RFC5086]  Vainshtein, A., Ed., Sasson, I., Metz, E., Frost, T., and
+              P. Pate, "Structure-Aware Time Division Multiplexed (TDM)
+              Circuit Emulation Service over Packet Switched Network
+              (CESoPSN)", RFC 5086, DOI 10.17487/RFC5086, December 2007,
+              <https://www.rfc-editor.org/rfc/rfc5086>.
+
+Author's Address
+
+
+
+
+
+
+Schmutzer                 Expires 23 April 2025                [Page 10]
+
+Internet-Draft           LDP Extensions for PLE             October 2024
+
+
+   Christian Schmutzer (editor)
+   Cisco Systems, Inc.
+   Austria
+   Email: cschmutz@cisco.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Schmutzer                 Expires 23 April 2025                [Page 11]

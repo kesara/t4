@@ -1,0 +1,952 @@
+
+
+
+
+DMM Working Group                                               Z.W. Yan
+Internet-Draft                                                     CNNIC
+Intended status: Informational                                  T. Jiang
+Expires: 11 July 2024                                       China Mobile
+                                                               J.F. Guan
+                                                                T. Huang
+                                                                    BUPT
+                                                               J.-H. Lee
+                                                       Sejong University
+                                                          8 January 2024
+
+
+                    Mobility Capability Negotiation
+                          draft-yan-dmm-man-14
+
+Abstract
+
+   Mobile peers exchange signals with networks, for both wireline and
+   wireless domains, to negotiate capabilities for mobile registration,
+   connection management, session establishment, service provisioning,
+   etc.  Generally, mobility capabilities include the supported and
+   provisioned resources along with associated protocols for certain
+   mobility management scenarios.  While devices in the mobile wireline
+   (IP) domain would mostly focus on the IP-related negotiation, devices
+   in the wireless domain, e.g., the 5G system (5GS), embrace both
+   mobile IP-related resources as well as wireless-specific
+   capabilities.  Regarding both the mobile-IP and wireless domains, we
+   have generalized two protocol categories for mobility capability
+   negotiation & management, i.e., the host-initiated category that
+   involves the direct & active engagement of mobile end devices vs. the
+   network-based category over which mobile endpoints play almost no
+   role in the process.  The classification and then the application of
+   the two categories help us analyze the mobility capability
+   negotiation for both the mobile IPv6 and the 3GPP 5G system.  The
+   comparison of the capability negotiation under both the Home-Routed
+   (HR) and the Local BreakOut (LBO) roaming cases in 5GS further
+   reflects the feasibility of the protocol dichotomy.
+
+Status of This Memo
+
+   This Internet-Draft is submitted in full conformance with the
+   provisions of BCP 78 and BCP 79.
+
+   Internet-Drafts are working documents of the Internet Engineering
+   Task Force (IETF).  Note that other groups may also distribute
+   working documents as Internet-Drafts.  The list of current Internet-
+   Drafts is at https://datatracker.ietf.org/drafts/current/.
+
+
+
+
+Yan, et al.               Expires 11 July 2024                  [Page 1]
+
+Internet-Draft                     MCN                      January 2024
+
+
+   Internet-Drafts are draft documents valid for a maximum of six months
+   and may be updated, replaced, or obsoleted by other documents at any
+   time.  It is inappropriate to use Internet-Drafts as reference
+   material or to cite them other than as "work in progress."
+
+   This Internet-Draft will expire on 11 July 2024.
+
+Copyright Notice
+
+   Copyright (c) 2024 IETF Trust and the persons identified as the
+   document authors.  All rights reserved.
+
+   This document is subject to BCP 78 and the IETF Trust's Legal
+   Provisions Relating to IETF Documents (https://trustee.ietf.org/
+   license-info) in effect on the date of publication of this document.
+   Please review these documents carefully, as they describe your rights
+   and restrictions with respect to this document.  Code Components
+   extracted from this document must include Revised BSD License text as
+   described in Section 4.e of the Trust Legal Provisions and are
+   provided without warranty as described in the Revised BSD License.
+
+Table of Contents
+
+   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   3
+     1.1.  Terminologies . . . . . . . . . . . . . . . . . . . . . .   3
+     1.2.  Protocol Categories for Management and Negotiation  . . .   3
+     1.3.  General Procedure of Negotiation  . . . . . . . . . . . .   5
+   2.  Mobility capability negotiation in wireline domain: Mobile
+           IPv6  . . . . . . . . . . . . . . . . . . . . . . . . . .   6
+   3.  Mobility capability negotiation in wireless domain: 5GS
+           General . . . . . . . . . . . . . . . . . . . . . . . . .   8
+     3.1.  5GS Mobility Capability Negotiation: Wireless-specific  .   8
+     3.2.  5GS IP-address Negotiation: Mobile Entities . . . . . . .  10
+   4.  Mobility capability negotiation in wireless domain:
+           5GS-roaming . . . . . . . . . . . . . . . . . . . . . . .  11
+     4.1.  Mobility Capability Negotiation in Home-Routed (HR)
+           Roaming . . . . . . . . . . . . . . . . . . . . . . . . .  11
+     4.2.  Mobility Capability Negotiation in Local Break Out (LBO)
+           Roaming . . . . . . . . . . . . . . . . . . . . . . . . .  13
+   5.  Security Considerations . . . . . . . . . . . . . . . . . . .  14
+   6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  14
+   7.  References  . . . . . . . . . . . . . . . . . . . . . . . . .  14
+     7.1.  Normative References  . . . . . . . . . . . . . . . . . .  14
+     7.2.  Informative References  . . . . . . . . . . . . . . . . .  16
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  16
+
+
+
+
+
+
+Yan, et al.               Expires 11 July 2024                  [Page 2]
+
+Internet-Draft                     MCN                      January 2024
+
+
+1.  Introduction
+
+   Mobile communication is the use of various technological systems to
+   communicate while two or more communicating peers do not stay always
+   in the same fixed locations.  In order to pass on messages
+   successfully, mobile peers have to go through a procedure that would
+   be mostly comprised of registration, connection management and
+   paging, session establishment and management, service provisioning,
+   dialogue, etc.  This process would involve the signalling exchange
+   and capability negotiation among mobile peers.
+
+   Generally, mobility capabilities include the supported and
+   provisioned resources along with the associated protocols for certain
+   mobility management scenarios.  While the scenarios are applicable to
+   both the wireline and wireless domains, there do exist discrepancies
+   between them.  For devices in the wireline domain (i.e., mobile IP ),
+   they would mostly focus on the negotiation of IP-related address
+   allocation & provisioning, traffic switching and redirection, as well
+   as resource optimization.  While for devices in the wireless domain,
+   e.g., 5G system (5GS), apart from the previously-mentioned mobile IP-
+   related capabilities, there are other wireless-specific settings to
+   be negotiated, e.g., the radio, the MM (Mobile Management) core
+   network (MM CN), and the SM (Session Management) core network (SM CN)
+   capabilities [TS.23.501].
+
+1.1.  Terminologies
+
+   *  Home network in wireless: the home public land mobile network
+      (H-PLMN) in which a mobile subscriber’s profile is held.  Mobile
+      subscribers roaming to other networks (or the so-named visited
+      network) will receive subscription information from the home
+      network.
+
+   *  Visited network in wireless: the visited public land mobile
+      network (V-PLMN) to which the mobile subscriber has roamed when
+      leaving its home public land mobile network.
+
+1.2.  Protocol Categories for Management and Negotiation
+
+   There exist different mobility management protocols.  These protocols
+   have been standardized for versatile mobile scenarios.  A mobile
+   node, i.e., so-called User Entity or UE, has to adopt some
+   protocol(s) to negotiate, for certain scenarios like in the roaming
+   case, via the visited mobile (access) network, with its home network
+   for pre-configured or dynamically-provisioned mobility capabilities.
+   The successful negotiation would help achieve the requirments of
+   service connectivity and communication performance, for potential
+   cases like the IP-domain roaming as well as the UE handover and
+
+
+
+Yan, et al.               Expires 11 July 2024                  [Page 3]
+
+Internet-Draft                     MCN                      January 2024
+
+
+   migration in wireless network.
+
+   Regardless, for either the IP-mobility or the wireless like 5GS, both
+   the IP-related resource allocation and provisioning, e.g., IP
+   addresses, mobile-IP tunnels, IP prefixes in visited domains, etc.,
+   and the wireless related capabilities like the radio, MM CN, and SM
+   CN [TS.23.501], etc., depend on the selection and application of the
+   mobility management protocols.  These protocols could be deployed in
+   the fields of both the home and the visited networks, including both
+   the (access) networks and the UE entities themselves.  However, the
+   objectives of achieving this type of homogenous mobility and the
+   ubiquitous connections might be impaired by the diversified
+   capabilities and requirements of the networks and/or the host
+   entities.  Accordingly, a scheme and a procedure shall be in place to
+   support the negotiation and selection of the mobility management
+   protocol which a mobile host, i.e., either IP or wireless one, could
+   adopt to access the network.
+
+   While the scheme aims to guarantee the optimal and the most suitable
+   mobility management protocol will be selected, the procedure is for
+   the effective application of the protocol.  Though the selection
+   procedure and notification scheme might be implementation-dependent
+   because the home & visited networks, and UE entities have certainly
+   different capabilities and preferences (e.g., subject to the settings
+   of the mobility pattern of a 5G host [TS.23.501]), there are two
+   general aspects to be considered:
+
+   *  What principles should be followed for the protocol negotiation
+      and selection?
+
+   *  What procedure should be adopted for the protocol negotiation and
+      selection?
+
+   In this draft, the descriptions so far lead to two different protocol
+   categories for mobility management, i.e., the host-initiated and the
+   network-based protocols.  They are defined as follows:
+
+   *  Host-initiated protocols: defining the mobility management
+      protocols that require the involvement of mobile end devices in
+      order to accomplish the mobility management.
+
+   *  Network-based protocols: indicating the mobility management
+      protocols that require the non-involvement of mobile end devices
+      in order to accomplish the mobility management.
+
+
+
+
+
+
+
+Yan, et al.               Expires 11 July 2024                  [Page 4]
+
+Internet-Draft                     MCN                      January 2024
+
+
+   In order to inherit the features of the corresponding mobility
+   management protocols, the capability negotiation modes are also
+   mapped into these two categories.  That is, the host-initiated
+   protocol accommodates the host-initiated negotiation while the
+   network-based protocol embraces the network-based negotiation.
+
+   Obviously, the difference between the two categories lies on the role
+   of mobile end devices in the mobility management process.  We will
+   explain in the next two sections how this dichotomy would be applied
+   to the negotiation in both the mobile IPv6 domain (i.e., wireline)
+   and the 3GPP 5G system (i.e., wireless).
+
+1.3.  General Procedure of Negotiation
+
+   The protocol negotiation could be included in the MN_ATTACH Function
+   [MN-AR.IF] and the implementation may be based on new or extended
+   signalling messages (e.g., ICMPv6, Diameter, and RADIUS).  Besides
+   these, other protocols could also be used in certain specified
+   scenarios, such as for extended IEEE 802.21 primitives, UE providing
+   the supported protocol list to Access and Mobility Management
+   Function (AMF) in 5GS registration and/or update procedures, etc.  In
+   summary, the general procedure for protocol negotiation and selection
+   might be:
+
+   (a)  Because networks bear generally higher trustworthiness than end
+        devices, upon the initialization of mobile devices, the network-
+        based protocol shall be used as the default mobility management
+        protocol once the network supports it, depending on local policy
+        configuration.
+
+   (b)  If a mobile node or UE prefers the host-initiated protocol and
+        the local policy also grants it, then the protocol negotiation
+        will be conducted to switch from the network-based to the host-
+        initiated protocol.
+
+   (c)  After the initial attachment (or registration in 5GS term) of a
+        host, a mobile profile could be generated in the UE’s management
+        repository, e.g., HSS for 4G and UDM for 5G, to store the
+        selected protocol.
+
+   (d)  If the UE migration or roaming happens, the network will check
+        the currently-selected or the UE preferred protocol during the
+        re-registration process.  The network also needs to notify the
+        host if the selected protocol cannot be supported herein.
+
+   Evidently, when a mobile host accesses the network, authentication
+   shall be executed before any mobility management service would be
+   honored.  In order to support the mobility management protocol
+
+
+
+Yan, et al.               Expires 11 July 2024                  [Page 5]
+
+Internet-Draft                     MCN                      January 2024
+
+
+   selection, new data, e.g., authentication vector or AV for 4G/5G,
+   would be recorded by the network after the successful authentication.
+   The newly introduced information shows the selected mobility
+   management protocol and shall be updated when the adopted protocol
+   changes.
+
+2.  Mobility capability negotiation in wireline domain: Mobile IPv6
+
+   Based on the host-initiated and network-based categories, this
+   section analyzes the mobility capability negotiation on the mobile
+   IPv6 domain.
+
+   Fundamentally, there are four types of mobile IPv6-based mobility
+   management protocols:
+
+   (a)  Mobile IPv6 (MIPv6) protocol: the mobility management scheme
+        based on [RFC6275]
+
+   (b)  MIPv6 suit protocols: Based on the MIPv6 protocol, there are
+        multiple extension protocols that have been standardized.  These
+        protocols can be classified into two types: protocols for
+        function extension and protocols for performance enhancement.
+        In the context of MIPv6 suit protocols, any location update will
+        be initiated by a mobile host and a redirection tunnel is
+        established between the UE’s home network and the UE in the
+        visited network.
+
+        *  The protocols for function extension are proposed to support
+           some specific scenarios or functions, such as the Dual-stack
+           Mobile IPv6 (DSMIPv6) [RFC5555] for mobility of the dual-
+           stack nodes, the Multiple Care-of-Address (MCoA) [RFC5648]
+           for hosts with multiple access interfaces, as well as the
+           Network Mobility (NEMO) [RFC3963] for mobility of sub-
+           network.
+
+        *  The protocol type for performance enhancement of mobility
+           management, such as the Fast Mobile IPv6 (FMIP6) [RFC5568]
+           for fast handover, the Hierarchical Mobile IPv6 (HMIPv6)
+           [RFC5380] for hierarchical mobility optimization.
+
+   (c)  Proxy Mobile IPv6 (PMIPv6) protocol: the mobility management
+        scheme based on [RFC5213].
+
+   (d)  PMIPv6 suit protocols: in order to reduce the protocol cost and
+        further enhance the handover performance, this suit of proxy-
+        based mobility management protocols is proposed.  Based on
+        PMIPv6, the suit is comprised of a series of standardized
+        extensions, such as the Dual-stack Proxy Mobile IPv6 (DS-PMIPv6)
+
+
+
+Yan, et al.               Expires 11 July 2024                  [Page 6]
+
+Internet-Draft                     MCN                      January 2024
+
+
+        [RFC5844], and the Distributed Mobility Management Proxy Mobile
+        IPv6 (DMM-PMIPv6) [RFC7333].  Different from the MIPv6 suit
+        protocols, the location update of the PMIPv6 suit protocols is
+        triggered by the network entity and the transport tunnel is
+        established between the anchor point and the UE’s current
+        visited network entity.  The mobile host itself needs to do
+        nothing about the signaling exchange during the mobility (or
+        roaming).  Particularly, the mobility is transparent to the IP
+        layer of the host.
+
+   Based on definitions from the Section 1.2, the above four types can
+   be bucketed into either host-initiated or network-based protocols:
+
+   *  Host-initiated protocols: Including the MIPv6 and MIPv6 suit
+      protocols, along with some other solutions, e.g., the Host
+      Identity Protocol (HIP) [RFC7401] and the IKEv2 Mobility and
+      Multihoming Protocol (MOBIKE) [RFC4555].
+
+   *  Network-based protocols: Including the PMIPv6 and PMIPv6 suit
+      protocols, along with some other solutions, e.g., the GPRS
+      Tunneling Protocol (GTP) [TS.29274][TS.29281].
+
+   Figure 1 illustrates the scopes of the above different categories as
+   well as their belongings to either Host- or Network- types:
+
+       +----------------+        +----------------+
+       | Network-based  |        | Host-based     |
+       |+--------------+|        |+--------------+|
+       ||PMIPv6 suit   ||        ||MIPv6 suit    ||
+       ||+------------+||        ||+------------+||
+       |||PMIPv6      |||        |||MIPv6       |||
+       ||+------------+||        ||+------------+||
+       |+--------------+|        |+--------------+|
+       +----------------+        +----------------+
+
+
+                Figure 1: Scopes of different protocol types
+
+   In reality, the host-initiated protocols and the network-based
+   protocols can certainly co-exist in fields, which might lead to the
+   configurations of multiple protocol daemons on the mattered network
+   entities and mobile hosts.  This bodes well for the need of schemes
+   to support the negotiation and selection of the suitable mobility
+   management protocol when a mobile host registers with an access
+   network initially or triggers the handover & roaming later
+   [PaperCombiningMobilityStandards].
+
+
+
+
+
+Yan, et al.               Expires 11 July 2024                  [Page 7]
+
+Internet-Draft                     MCN                      January 2024
+
+
+   In the procedure described in the Section 1.3, the network-based
+   protocol is listed as the default selection.  However, in the mobile
+   IPv6 domain, we believe the protocols bearing function extensions
+   shall be given higher priority than those targeting for the
+   performance enhancement.
+
+3.  Mobility capability negotiation in wireless domain: 5GS General
+
+   As we have discussed in the Section 1.2, for 5G wireless devices,
+   apart from the normal mobile IP-related capabilities like addressing,
+   provisioning, traffic switching and redirection, there are other
+   wireless-specific categories to be negotiated, e.g., the radio, the
+   MM core network (MM CN), and the SM core network (SM CN) capabilities
+   [TS.23.501].  Further, the Section 1.2 elucidates that the host-
+   initiated protocol requires the involvement of mobile devices
+   themselves, and the network-based one puts the negotiation burden on
+   network entities.  While the mobile IP-domain has been conforming
+   near perfectly to this dichotomy, the 5G wireless system oversees the
+   seamless integration of both types of protocols upon the IP-related
+   and the wireless-specific capabilities.  That is, the 5GS mobility
+   capability negotiation is subject to the control and management of
+   both types of protocols.  Here, it must be clarified that, different
+   from the common recognition in the IP domain, the term 'network' in
+   5GS indicates both the wireless access network (i.e., RAN) and the 5G
+   core system.
+
+3.1.  5GS Mobility Capability Negotiation: Wireless-specific
+
+   According to 3GPP TS 23.501 [TS.23.501], the 5GS mobility
+   capabilities are comprised of the UE radio, the UE 5GMM core network
+   (5GMM CN), and the UE 5GSM core network (SM CN) capabilities.  The
+   negotiation handling is between the mobile device (i.e., UE) and many
+   5G network functions (NFs), e.g., AMF, SMF, UDM, etc., as shown in
+   the Figure 2:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Yan, et al.               Expires 11 July 2024                  [Page 8]
+
+Internet-Draft                     MCN                      January 2024
+
+
+    +------+  +-----+  +------+     +-----+  +-----+  +------+  +---------+
+    | NSSF |  | NEF |  |  NRF |     | PCF |  | UDM |  |  AF  |  |  EASDF  |
+    +------+  +-----+  +-----+|     +-----+  +-----+  +------+  +---------+
+        |        |        |            |        |        |           |
+  Nnssf |   Nnef |   Nnrf |       Npcf |   Nudm |    Naf |    Neasdf |
+        |        |        |            |        |        |           |
+        ----+----+---+----+---+------+-----+----+---+-----+--+-------+---+-----
+             |        |          |          |         |          |
+             |        |          |          |         |          |
+    Nnssaaf  |  Nausf |     Namf |     Nsmf |         |   Nnsact |
+        +--------+ +-----+  +-------+     +-----+  +-----+  +---------+
+        | NSSAAF | | AUSF|  |  AMF  |     | SMF |  | SCP |  |  NSACF  |
+        +--------+ +-----+  +-------+     +-----+  +-----+  +---------+                            /    |            |
+                           N1   N2           N4
+                          /      |            |
+                         /       |            |
+                    +------+  +-------+ N3 +-----+     N6    +--------+
+                    |  UE  |--| (R)AN |----| UPF |-----------|   DN   |
+                    +------+  +-------+    +-----+           +--------+
+                                            |   |
+                                            +-N9+
+
+
+   Figure 2: 5GS Wireless-specific Mobility Capability Negotiation
+
+   The UE Radio Capability information is defined in
+   TS 38.300 [TS.38.300] , which contains a great deal of information on
+   the Radio Access Types or RATs that the UE supports, e.g. power
+   class, frequency bands, etc.  During the negotiation phase, this
+   radio information can be sent by a UE and the AMF shall store the
+   capabilities to avoid unnecessary radio overhead.  The UE 5GMM CN
+   Capability is related to 5G core network and defined in
+   TS 24.501 [TS.24.501].  It contains mainly non-radio related UE
+   capabilities, e.g. the network-slice information, the NAS security
+   algorithms, etc., which are transferred only upon the AMF to AMF
+   changes.  During the initial negotiation as well as the mobility
+   update (i.e., regarding the registration procedure), the UE shall
+   send its 5GMM CN capability information to the AMF and the AMF shall
+   store it.  The UE 5GSM CN capability is related to 5G PDU session
+   establishment and management, requiring the involvement from the
+   critical function SMF.  It contains the supporting indications of
+   reflective QoS, multi-home IPv6, ATSSS, etc.
+
+
+
+
+
+
+
+
+
+Yan, et al.               Expires 11 July 2024                  [Page 9]
+
+Internet-Draft                     MCN                      January 2024
+
+
+   As it can be seen, the UE radio, the UE 5GMM CN and the 5GSM CN
+   capability handlings involve both the UE itself and the 5G system.
+   An UE initiates the process by providing its capabilities to the
+   network (i.e., the 5GS) and the network (via 5G NFs) negotiates based
+   on the system settings.  This wireless-specific negotiation procedure
+   is clearly an integration of the host-initiated and the network-based
+   modes.
+
+3.2.  5GS IP-address Negotiation: Mobile Entities
+
+   As one of the UE mobility capabilities, the 5G UE IP address
+   management is very flexible [TS.23.501].  It includes the allocation,
+   release and the renewal of the IP addresses.  Based on the DNN
+   configuration, UE subscription data and/or 5GS operator policies,
+   along with the PDU session type as selected by the 5G function SMF, a
+   UE could be allocated either IPv4 address or IPv6 prefix or both IPv4
+   and IPv6 prefix/addresses.  While the allocation mode as determined
+   by the UE subscription data bears the static nature of host-
+   initiated, the operator policies, DNN-configuration and the selected
+   PDU session type bode well for the dynamic network-based negotiation.
+   Here, we want to emphasize again that the network in 5GS indicates
+   both the wireless access network (i.e., RAN) and the 5G core system.
+
+   For the network-based dynamic mode, based on a UE indication, the UE
+   IPv4 address (and the IPv6 prefix) along with their (IPv4 and IPv6)
+   parameters could be negotiated via three different ways:
+
+   (a)  To be allocated by the SMF (of a PDU session), e.g., retrieved
+        from the address pool corresponding to the PSA UPF for the said
+        PDU session;
+
+   (b)  To be allocated via DHCPv4/DHCPv6 with the SMF itself being the
+        DHCP server;
+
+   (c)  To be allocated via DHCPv4/DHCPv6 with external DHCP servers.
+        In this case, the SMF will serve as the DHCP relay agent toward
+        the DHCP server located in an external network.
+
+   For the static host-initiated mode, a static IPv4 address and/or an
+   IPv6 prefix could be negotiated and allocated by 5GC based on a UE
+   subscription record stored in the UDM/UDR, or based on the per-DNN
+   per-S-NSSAI record of a UE stored in the DHCP/DN-AAA server that is
+   located either in the 5G core network or in the external domain.
+
+   Actually, both negotiation modes may co-exist in the 5GS.  For
+   example, the UDM/UDR can have a UE subscription record to fulfill the
+   host-initiated allocation, and simultaneously a SMF might provide the
+   network-based IP address management via DHCP/DN-AAA servers.  So, we
+
+
+
+Yan, et al.               Expires 11 July 2024                 [Page 10]
+
+Internet-Draft                     MCN                      January 2024
+
+
+   might ask which negotiation mode will prevail in an operator network.
+   While the existence of multiple modes is not uncommon in field,
+   unfortunately, there is no definite prioritization specified in 5G
+   standards to address the potential confliction.  In practice, the
+   final determination is based on the locally configured policies in
+   operator networks.  Of course, the (core) network settings might be
+   more authentic than an individual UE subscription record, but it
+   never excludes from giving the preference to the UE.
+
+4.  Mobility capability negotiation in wireless domain: 5GS-roaming
+
+   The Section 3 describes the general 5GS mobility capability
+   negotiation procedure when a UE is located in and registered with its
+   home mobile network.  However, when a UE roams to another network, or
+   the so-called visited network, the UE still needs to negotiate its
+   mobility capabilities.  The 5GS has defined two roaming
+   architectures, i.e., Home-routed (HR) vs. Local Break Out (LBO).
+
+4.1.  Mobility Capability Negotiation in Home-Routed (HR) Roaming
+
+   According to 5G TS 23.501, in Home-Routed (HR) roaming, when a UE
+   resides in the visited network, the visiting network data traffic is
+   routed to the destination data network (DN) via the subscriber home
+   network.  While HR provides more control to the operators upon
+   offering roaming services, policies and charging the subscribers,
+   however, it adds extra layer of complexity and lag in the network
+   because of the extra traffic redirection.  The following Figure 3
+   shows the HR-based roaming architecture.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Yan, et al.               Expires 11 July 2024                 [Page 11]
+
+Internet-Draft                     MCN                      January 2024
+
+
+    +------+  +-----+  +------+     +-----+          |               +-----+  +-----+  +-----+  +------+  +-------+
+    | NSSF |  | NEF |  |  NRF |     | PCF |          |               | UDM |  | NRF |  | NEF |  | NSSF |  | NSACF |
+    +------+  +-----+  +-----+|     +-----+          |               +-----+  +-----+  +-----+  +------+  +-------+
+        |        |        |            |             |                  |        |        |        |          |
+  Nnssf |   Nnef |   Nnrf |       Npcf |             |             Nudm |    Nnrf|    Nnef|   Nnssf|    Nnsacf|
+        |        |        |            |  +-------+  |   +-------+      |        |        |        |          |
+        ----+----+---+----+---+--------+--+ vSEPP |-N32--| hSEPP |------++-------+-+------+----+---+-----+----+--+--
+             |        |            |      +-------+  |   +------ +       |         |           |         |       |
+             |        |            |                 |                   |         |           |         |       |
+    Nnssaaf  |  Nausf |        Nsmf|                 |              Nsmf |    Nausf|     Nnsaaf|     Npcf|    Naf|
+        +-------+  +-----+       +-----+             |                +-----+  +------+  +--------+   +-----+  +----+
+        | NSACF |  | AMF |       | SMF |             |                | SMF |  | AUSF |  | NSSAAF |   | PCF |  | AF |
+        +-------+  +-----+       +-----+             |                +-----+  +------+  +--------+   +-----+  +----+
+                     /    |            |             |                   |
+                    N1   N2           N4             |                  N4
+                   /      |            |             |                   |
+                  /       |            |             |                   |
+             +------+  +-------+    +-------+        |              +--------+                   +--------+
+             |  UE  |--| (R)AN |-N3-|  UPF  |--------N9-------------|   UPF  |--------N6 --------|   DN   |
+             +------+  +-------+    +-------+        |              +--------+                   +--------+
+                                     |     |         |                |    |
+                                     +--N9-+         |                +-N9-+
+                                           VPLMN     |      HPLMN
+
+
+Figure 3: Mobility Capability Negotiation in Home-Routed (HR) Roaming
+
+   The UE is in the visited network (left).  There exists an N9 GTP-
+   tunnel between the V-UPF and the H-UPF for traffic redirection.
+
+   In the HR-roaming mode, the UE IP address negotiation and allocation
+   are similar to the general 5GS scenario as in the Section 3.2.  When
+   a mobile subscriber roams to the visited network, there are also two
+   address management modes, i.e., the host-initiated static mode vs.
+   the network-based dynamic mode.
+
+   *  Network-based mode: while the UE is in visited network (i.e., the
+      VPLMN as shown in the figure), it has to, via the visited 5GC,
+      connect back to its home 5GC for address and parameters
+      negotiation.  When the CP connectivity is established toward the
+      home network, the three different ways for address management as
+      explained in the Section 3.2 can be applied.  Please note that the
+      mentioned SMF, UPF, DHCP, etc. are network functions in the home
+      (wireless) network, which can be marked as H-SMF, H-UPF, or H-DHCP
+      mode.
+
+
+
+
+
+
+Yan, et al.               Expires 11 July 2024                 [Page 12]
+
+Internet-Draft                     MCN                      January 2024
+
+
+   *  Host-initiated mode: in this case, while an UE is in the visited
+      network, the UE subscriber record must be retrieved from the UDM/
+      UDR located in the home network (or so marked as H-UDM/H-UDR).
+
+   Regardless of being host-initiated or network-based, the IP address
+   negotiation and allocation are determined by the home-network side.
+   A roamed UE has always to talk to its home network functions for
+   mobility capability negotiation.  In the HR-roaming, the home UPF or
+   H-UPF behaves like a Home Agent or HA in the mobile IP domain.  For
+   example, as shown in the Figure 3, any data traffic destined to the
+   UE must be transported from the home DN, going thru the H-UPF (N6),
+   then tunneled to the visited UPF or V-UPF (N9), then thru the GTP-
+   Tunnel (N3) to the visited (R)AN, and finally delivered to the UE
+   (located in the visited network).
+
+4.2.  Mobility Capability Negotiation in Local Break Out (LBO) Roaming
+
+   Different from the HR-based roaming, in LBO roaming architecture, the
+   data session of a roaming subscriber is anchored in the visited
+   network, without the need of redirecting toward the subscriber home
+   network.  The following Figure 4 shows the LBO-based roaming
+   architecture.  It shows clearly the N9 GTP-tunnel in the HR-based
+   roaming does not exist anymore.
+
+    +------+  +-----+  +------+  +-----+  +----+                      |     +-----+  +-----+  +--------+
+    | NSSF |  | NEF |  |  NRF |  | PCF |  | AF |                      |     | UDM |  | NRF |  | NSSAAF |
+    +------+  +-----+  +-----+|  +-----+  +----+                      |     +-----+  +-----+  +--------+
+        |        |        |         |        |                        |        |        |        |
+  Nnssf |   Nnef |   Nnrf |    Npcf |     Naf|                        |    Nudm|    Nnrf|        | Nnssaaf
+        |        |        |         |        |     +-------+  N32 +-------+    |        |        |
+        ----+----+---+----+---+---------++-------+-| vSEPP |------| hSEPP |----+-+------+-+------++-----+--
+             |        |              |             +-------+      +------ +      |        |       |     |
+             |        |              |                                |          |        |       |     |
+       Namf  |   Nsmf |        Nnsacf|                                |     Nausf|    Npcf|   Nnef|     |Nnsacf
+        +-------+  +-------+     +-------+                            |    +-----+  +-----+  +-----+  +-----+
+        |  AMF  |  |  SMF  |     | NSACF |                            |    | AUSF|  | PCF |  | NEF |  |NSACF|
+        +-------+  +-------+     +-------+                            |    +-----+  +-----+  +-----+  +-----+
+                     /    |           |                               |
+                    N1    N2         N4                               |
+                   /      |           |                               |
+                  /       |           |                               |
+            +------+  +-------+    +-------+        +----+            |
+            |  UE  |--| (R)AN |-N3-|  UPF  |---N6---| DN |            |
+            +------+  +-------+    +-------+        +----+            |
+                                    |    |                            |
+                                    +-N9-+                            |
+                                           VPLMN                      |      HPLMN
+
+
+
+
+Yan, et al.               Expires 11 July 2024                 [Page 13]
+
+Internet-Draft                     MCN                      January 2024
+
+
+     Figure 4: Mobility Capability Negotiation in Local Break Out
+                            (LBO) Roaming
+
+   Also, similar to the general 5GS scenario as in the Section 3.2, in
+   LBO roaming, the UE IP address negotiation and allocation are
+   dynamically managed by the SMF, UPF, and/or DHCP mode in the visited
+   network (marked as V-SMF, V-UPF and V-DHCP).  This is different from
+   the HR-roaming because the decision of HR-roaming belongs to the home
+   network side.
+
+   Another discrepancy of the LBO- from the HR- roaming is that the
+   visited PCF or V-PCF cannot access a UE subscriber record information
+   from the UE home network.  That is, there is no retrieval of the
+   host-based IP address settings from the home UDM/UDR or H-UDM/H-UDR.
+   This excludes fundamentally the host-initiated scheme for IP
+   capability negotiation (from the home network), and only leaves the
+   network-based scheme (as provided by the visited network) with the
+   consideration of the rules generated by V-PCF based on locally-
+   configured policies according to the roaming agreement between the
+   visited and the home networks.
+
+   In the LBO-roaming, there is no need for a roamed UE to talk to its
+   home network functions for IP capability negotiation.  Thus, the
+   visited UPF or V-UPF behaves like a Mobile Access Gateway or MAG in
+   the mobile IP domain.  For example, as shown in the Figure 4, the
+   data traffic destined to the (roamed) UE will only transport through
+   the visited DN, going toward the V-UPF (N6), then tunneled thru the
+   GTP (N3) to the visited (R)AN, and finally delivered to the UE
+   (located in the visited network).  This shows clearly no involvement
+   of the traffic redirection (via any HA or Home Agent) as in the HR-
+   roaming case.
+
+5.  Security Considerations
+
+   Generally, this function will not incur additional security issues.
+
+6.  IANA Considerations
+
+   A new authentication option or other signaling message option may be
+   used based on the specific implementation.
+
+7.  References
+
+7.1.  Normative References
+
+   [MN-AR.IF] Laganier, J., Narayanan, S., and P. McCann, "Interface
+              between a Proxy MIPv6 Mobility Access Gateway and a Mobile
+              Node",  draft-ietf-netlmm-mn-ar-if-03, February 2008.
+
+
+
+Yan, et al.               Expires 11 July 2024                 [Page 14]
+
+Internet-Draft                     MCN                      January 2024
+
+
+   [RFC3963]  Devarapalli, V., Wakikawa, R., Petrescu, A., and P.
+              Thubert, "Network Mobility (NEMO) Basic Support Protocol",
+              RFC 3963, DOI 10.17487/RFC3963, January 2005,
+              <https://www.rfc-editor.org/info/rfc3963>.
+
+   [RFC4555]  Eronen, P., "IKEv2 Mobility and Multihoming Protocol
+              (MOBIKE)", RFC 4555, DOI 10.17487/RFC4555, June 2006,
+              <https://www.rfc-editor.org/info/rfc4555>.
+
+   [RFC5213]  Gundavelli, S., Ed., Leung, K., Devarapalli, V.,
+              Chowdhury, K., and B. Patil, "Proxy Mobile IPv6",
+              RFC 5213, DOI 10.17487/RFC5213, August 2008,
+              <https://www.rfc-editor.org/info/rfc5213>.
+
+   [RFC5380]  Soliman, H., Castelluccia, C., ElMalki, K., and L.
+              Bellier, "Hierarchical Mobile IPv6 (HMIPv6) Mobility
+              Management", RFC 5380, DOI 10.17487/RFC5380, October 2008,
+              <https://www.rfc-editor.org/info/rfc5380>.
+
+   [RFC5555]  Soliman, H., Ed., "Mobile IPv6 Support for Dual Stack
+              Hosts and Routers", RFC 5555, DOI 10.17487/RFC5555, June
+              2009, <https://www.rfc-editor.org/info/rfc5555>.
+
+   [RFC5568]  Koodli, R., Ed., "Mobile IPv6 Fast Handovers", RFC 5568,
+              DOI 10.17487/RFC5568, July 2009,
+              <https://www.rfc-editor.org/info/rfc5568>.
+
+   [RFC5648]  Wakikawa, R., Ed., Devarapalli, V., Tsirtsis, G., Ernst,
+              T., and K. Nagami, "Multiple Care-of Addresses
+              Registration", RFC 5648, DOI 10.17487/RFC5648, October
+              2009, <https://www.rfc-editor.org/info/rfc5648>.
+
+   [RFC5844]  Wakikawa, R. and S. Gundavelli, "IPv4 Support for Proxy
+              Mobile IPv6", RFC 5844, DOI 10.17487/RFC5844, May 2010,
+              <https://www.rfc-editor.org/info/rfc5844>.
+
+   [RFC6275]  Perkins, C., Ed., Johnson, D., and J. Arkko, "Mobility
+              Support in IPv6", RFC 6275, DOI 10.17487/RFC6275, July
+              2011, <https://www.rfc-editor.org/info/rfc6275>.
+
+   [RFC7333]  Chan, H., Ed., Liu, D., Seite, P., Yokota, H., and J.
+              Korhonen, "Requirements for Distributed Mobility
+              Management", RFC 7333, DOI 10.17487/RFC7333, August 2014,
+              <https://www.rfc-editor.org/info/rfc7333>.
+
+
+
+
+
+
+
+Yan, et al.               Expires 11 July 2024                 [Page 15]
+
+Internet-Draft                     MCN                      January 2024
+
+
+   [RFC7401]  Moskowitz, R., Ed., Heer, T., Jokela, P., and T.
+              Henderson, "Host Identity Protocol Version 2 (HIPv2)",
+              RFC 7401, DOI 10.17487/RFC7401, April 2015,
+              <https://www.rfc-editor.org/info/rfc7401>.
+
+   [TS.23.288]
+              "3GPP TS 23.288 (V17.3.0): Architecture enhancements for
+              5G System (5GS) to support network data analytics
+              services",  3GPP TS 23.288, December 2021.
+
+   [TS.23.501]
+              "3GPP TS 23.501 (V17.0.0): System Architecture for 5G
+              System; Stage 2",  3GPP TS 23.501, March 2021.
+
+   [TS.24.501]
+              "3GPP TS 24.501: Non-Access-Stratum (NAS) protocol for 5G
+              System (5GS)",  3GPP TS 24.501, September 2022.
+
+   [TS.29274] "3GPP Evolved Packet System (EPS); Evolved General Packet
+              Radio Service (GPRS) Tunnelling Protocol for Control plane
+              (GTPv2-C); Stage 3",  3GPP TS 29.274 8.10.0, June 2011.
+
+   [TS.29281] "General Packet Radio System (GPRS) Tunnelling Protocol
+              User Plane (GTPv1-U)",  3GPP TS 29.281 10.3.0, September
+              2011.
+
+   [TS.38.300]
+              "3GPP TS 38.300: NR and NG-RAN Overall description",  3GPP
+              TS 38.300, September 2022.
+
+7.2.  Informative References
+
+   [PaperCombiningMobilityStandards]
+              Oliva, A., Soto, I., Calderon, M., Bernardos, C., and M.
+              Sanchez, "The costs and benefits of combining different IP
+              mobility standards",  Computer Standards and Interfaces,
+              February 2013.
+
+Authors' Addresses
+
+   Zhiwei Yan
+   CNNIC
+   No.4 South 4th Street, Zhongguancun
+   Beijing
+   100190
+   China
+   Email: yan@cnnic.cn
+
+
+
+
+Yan, et al.               Expires 11 July 2024                 [Page 16]
+
+Internet-Draft                     MCN                      January 2024
+
+
+   Tianji Jiang
+   China Mobile
+   Email: tianjijiang@chinamobile.com
+
+
+   Jianfeng Guan
+   BUPT
+   No.10 Xitucheng Road, Haidian District
+   Beijing
+   100876
+   China
+   Email: jfguan@bupt.edu.cn
+
+
+   Tao Huang
+   BUPT
+   No.10 Xitucheng Road, Haidian District
+   Beijing
+   100876
+   China
+   Email: htao@bupt.edu.cn
+
+
+   Jong-Hyouk Lee
+   Sejong University
+   209, Neungdong-ro, Gwangjin-gu
+   Seoul
+   05006
+   Republic of Korea
+   Email: jonghyouk@sejong.ac.kr
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Yan, et al.               Expires 11 July 2024                 [Page 17]

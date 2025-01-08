@@ -1,0 +1,1512 @@
+
+
+
+
+INTAREA                                                     R. Moskowitz
+Internet-Draft                                            HTT Consulting
+Intended status: Informational                                   S. Card
+Expires: 11 July 2024                                 AX Enterprize, LLC
+                                                          8 January 2024
+
+
+                 The DRIP DET public Key Infrastructure
+                         draft-ietf-drip-dki-03
+
+Abstract
+
+   The DRIP Entity Tag (DET) public Key Infrastructure (DKI) is a
+   specific variant of classic Public Key Infrastructures (PKI) where
+   the organization is around the DET, in place of X.520 Distinguished
+   Names.  Further, the DKI uses DRIP Endorsements in place of X.509
+   certificates for establishing trust within the DKI.
+
+   There are two X.509 profiles for shadow PKI behind the DKI, with many
+   of their X.509 fields mirroring content in the DRIP Endorsements.
+   This PKI can at times be used where X.509 is expected and non-
+   constrained communication links are available that can handle their
+   larger size.
+
+   C509 (CBOR) encoding of all X.509 certificates are also provided as
+   an alternative for where there are gains in reduced object size.
+
+Status of This Memo
+
+   This Internet-Draft is submitted in full conformance with the
+   provisions of BCP 78 and BCP 79.
+
+   Internet-Drafts are working documents of the Internet Engineering
+   Task Force (IETF).  Note that other groups may also distribute
+   working documents as Internet-Drafts.  The list of current Internet-
+   Drafts is at https://datatracker.ietf.org/drafts/current/.
+
+   Internet-Drafts are draft documents valid for a maximum of six months
+   and may be updated, replaced, or obsoleted by other documents at any
+   time.  It is inappropriate to use Internet-Drafts as reference
+   material or to cite them other than as "work in progress."
+
+   This Internet-Draft will expire on 11 July 2024.
+
+Copyright Notice
+
+   Copyright (c) 2024 IETF Trust and the persons identified as the
+   document authors.  All rights reserved.
+
+
+
+Moskowitz & Card          Expires 11 July 2024                  [Page 1]
+
+Internet-Draft                  DRIP DKI                    January 2024
+
+
+   This document is subject to BCP 78 and the IETF Trust's Legal
+   Provisions Relating to IETF Documents (https://trustee.ietf.org/
+   license-info) in effect on the date of publication of this document.
+   Please review these documents carefully, as they describe your rights
+   and restrictions with respect to this document.  Code Components
+   extracted from this document must include Revised BSD License text as
+   described in Section 4.e of the Trust Legal Provisions and are
+   provided without warranty as described in the Revised BSD License.
+
+Table of Contents
+
+   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   3
+     1.1.  The DKI without an Apex Entity  . . . . . . . . . . . . .   5
+       1.1.1.  RAA Trust lists . . . . . . . . . . . . . . . . . . .   5
+       1.1.2.  RAA Cross-endorsements  . . . . . . . . . . . . . . .   6
+       1.1.3.  Bridge RAA with cross-endorsements to RAAs  . . . . .   6
+     1.2.  The C509 encoding of X.509 Certificates . . . . . . . . .   7
+   2.  Terms and Definitions . . . . . . . . . . . . . . . . . . . .   7
+     2.1.  Requirements Terminology  . . . . . . . . . . . . . . . .   7
+     2.2.  Definitions . . . . . . . . . . . . . . . . . . . . . . .   7
+   3.  The DET public Key Infrastructure (DKI) . . . . . . . . . . .   8
+     3.1.  The DKI Levels  . . . . . . . . . . . . . . . . . . . . .   8
+       3.1.1.  The Apex  . . . . . . . . . . . . . . . . . . . . . .   8
+       3.1.2.  The RAAs  . . . . . . . . . . . . . . . . . . . . . .   8
+       3.1.3.  The HDAs  . . . . . . . . . . . . . . . . . . . . . .   9
+     3.2.  The Offline Requirement for Authentication DETs . . . . .   9
+     3.3.  DNS view of DKI . . . . . . . . . . . . . . . . . . . . .  10
+     3.4.  Managing DET Revocation . . . . . . . . . . . . . . . . .  10
+     3.5.  The Offline cache of HDA Issuing Endorsements . . . . . .  11
+       3.5.1.  HDA Offline Trust cache . . . . . . . . . . . . . . .  11
+   4.  The DKI's Shadow PKI  . . . . . . . . . . . . . . . . . . . .  11
+     4.1.  Shadow Lite-PKI with minimal content Certificates . . . .  12
+       4.1.1.  DRIP Lite X.509 certificate profile . . . . . . . . .  12
+       4.1.2.  DRIP Lite Manditory Certificate Content . . . . . . .  12
+       4.1.3.  DRIP Lite Optional CA Certificate Content . . . . . .  14
+     4.2.  Abandoned: Shadow PKI with PKIX-like Certificates . . . .  14
+   5.  The DKI and the ICAO IAC PKI  . . . . . . . . . . . . . . . .  15
+   6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  15
+   7.  Security Considerations . . . . . . . . . . . . . . . . . . .  15
+     7.1.  Protecting against DKI/PKI compromise . . . . . . . . . .  16
+   8.  References  . . . . . . . . . . . . . . . . . . . . . . . . .  16
+     8.1.  Normative References  . . . . . . . . . . . . . . . . . .  16
+     8.2.  Informative References  . . . . . . . . . . . . . . . . .  16
+   Appendix A.  Test DETs and Endorsements . . . . . . . . . . . . .  18
+     A.1.  Test DNS  . . . . . . . . . . . . . . . . . . . . . . . .  20
+   Appendix B.  Test X.509 certificates  . . . . . . . . . . . . . .  21
+     B.1.  Test Lite X.509 certificates  . . . . . . . . . . . . . .  21
+     B.2.  Test Lite C509 certificates . . . . . . . . . . . . . . .  26
+
+
+
+Moskowitz & Card          Expires 11 July 2024                  [Page 2]
+
+Internet-Draft                  DRIP DKI                    January 2024
+
+
+   Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . .  27
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  27
+
+1.  Introduction
+
+   A DRIP Entity Tag (DET, [RFC9374]) public Key Infrastructure (DKI) is
+   designed as a strict hierarchy, governed by the administrator of the
+   DET prefix [IPv6-SPECIAL] and having the authority to authorize RAAs.
+   RAAs in turn authorize HDAs within their domain.  This authorization
+   is managed via a set of DETs whose sole use is to define the DKI.
+   The RAA Authorization DETs MUST reside in HID = RAA#|0 (Apex
+   Authorization DET in HID = 0|0).
+
+   There are three main classifications/types of DETs:
+
+      Authorization DETs
+         Used to assert the authorization of a DKI level.
+
+      Issuing DETs
+         Used to assert operations within DKI level.
+
+      Operational DETs
+         Used by operational entities within DKI level
+
+   All DETs exist in DET-Endorsements (Appendix B of [drip-registries]).
+   These DET-Endorsements provide the proof of registration and thus
+   trust.  These DETs, through chained Endorsements define the DKI as
+   follows:
+
+                          +----------+
+                          |   Auth   |
+                          +-o------o-+
+                            |      |
+                            |    +-o-----+
+           Apex             |   +--o----+|
+                            |   | Issue |+
+                            |   +---o---+
+                            |      |
+                            |    +-o-----+
+                            |   +--o----+|
+                            |   |CRL,Srv|+
+                            |   +-------+
+                            |
+          ******************|************************************
+                          +-o--------+
+                         +-o--------+|
+                         |   Auth   |+
+                         +--o-----o-+
+
+
+
+Moskowitz & Card          Expires 11 July 2024                  [Page 3]
+
+Internet-Draft                  DRIP DKI                    January 2024
+
+
+                            |     |
+                            |   +-o-----+
+           RAAs             |  +--o----+|
+                            |  | Issue |+
+                            |  +---o---+
+                            |     |
+                            |   +-o--------+
+                            |  +--o-------+|
+                            |  |  CRL,Srv |+
+                            |  |Oper,Pilot|+
+                            |  +----------+
+                            |
+          ******************|************************************
+                          +-o--------+
+                         +-o--------+|
+                         |   Auth   |+
+                         +----o-----+
+                              |
+                            +-o-----+
+           HDAs            +--o----+|
+                           | Issue |+
+                           +---o---+
+                               |
+                             +-o-------+
+                            +--o------+|
+                            | CRL,Srv ||
+                            |   UAS   |+
+                            +---------+
+
+          *******************************************************
+
+
+                       Figure 1: The DKI Endorsements
+
+   The Authorization DETs exist in a set of DET-Authorization-
+   Endorsements.  The lifetime of these endorsements SHOULD be no less
+   than 1 year, recommended 5 years, and should not exceed 10 years.
+   Endorsements SHOULD be reissued prior to expiry (may be for a new
+   DET).  DETs used to define this authorization are replaced per
+   undetermined policy (note these DETs do very little signing, see
+   Section 7.1).
+
+   This separation of DET type roles reduce the risk of private key loss
+   for the critical Authentication DETs by making them infrequently used
+   and only used in offline operations.  It does make the chain of trust
+   for a HDA customers' Operational DETs to be 4 Endorsements.
+
+
+
+
+
+Moskowitz & Card          Expires 11 July 2024                  [Page 4]
+
+Internet-Draft                  DRIP DKI                    January 2024
+
+
+1.1.  The DKI without an Apex Entity
+
+   The hierarchical design of the DKI is the most efficient possible
+   with the least data transmission overhead.  But it requires the
+   participation of an Entity, in the role of the Apex, trusted by all
+   the RAAs.  The logical Entity for this role is the International
+   Civil Aviation Authority (ICAO), but the processes for ICAO to take
+   on this role are complex.  Work is ongoing with the ICAO, but timing
+   is indeterminate and immediately implementable alternatives are
+   needed.
+
+   The DKI can work by the RAAs establishing mutual trust within a
+   geographic region.  It is envisioned that the initial RAA assignments
+   will follow Section 6.2.1 of [drip-registries], Table 1.  Without an
+   Apex, each RAA self-endorses its Authentication DET, acting as its
+   own apex.  However, RAAs issued DETs (via their HDAs) will not exist
+   in the air by themselves (except perhaps for some small island
+   nations), thus a geographic regional consortium of RAAs will need to
+   deploy some mechanism for mutual trust for their End Entities to fly
+   together.
+
+   There are three reasonable approaches for RAAs to manage their mutual
+   trust and it is likely that all will occur:
+
+      1.  RAA Trust lists
+
+      2.  RAA Cross-endorsements
+
+      3.  Bridge RAA with cross-endorsements to RAAs
+
+   It is recommended that the RAA Trust List be used during initial DKI
+   testing.  The cross-endorsing options will need their own testing to
+   work out how best to deploy them.
+
+1.1.1.  RAA Trust lists
+
+   A consortium of RAAs MAY choose to maintain a list of RAAs they
+   trust.  It is recommended that this list consist of the RAA's
+   Authentication DET and HI.  Each RAA in the consortium SHOULD
+   maintain its own list, signed with its Authentication DET.
+
+   This Trust List MAY contain each RAA's Authentication DET self-
+   endorsement validity dates.  If a trusted RAA has more than one self-
+   endorsement (most likely to support key rollover), including these
+   dates makes it easier to have an RAA duplicated in the list.
+
+
+
+
+
+
+Moskowitz & Card          Expires 11 July 2024                  [Page 5]
+
+Internet-Draft                  DRIP DKI                    January 2024
+
+
+   How the RAAs communicate between themselves to maintain these lists
+   is out of scope here.  Each RAA SHOULD include validity dates in its
+   Trust List.  Frequency of Trust List updates is also out of scope
+   here.
+
+   Trust Lists is the simplest method to implement, but may not be the
+   simplest to maintain over time.
+
+   There is a natural Trust List of ALL RAAs, based on what is allocated
+   in the DRIP DNS tree.
+
+1.1.2.  RAA Cross-endorsements
+
+   A consortium of RAAs MAY choose to cross-endorse each's
+   Authentication DET.  This is done by one RAA endorsing for its
+   community, an other's Authentication DET.  This establishes one-way
+   trust; thus, in practice, each RAA needs to cross-endorse each RAA's
+   Authentication DET within the consortium.
+
+   RAA Cross-endorsements definitely has a scaling (n^2) problem.  It
+   works for a starting point or for a very small group of RAAs.
+
+   How these RAA Cross-endorsements are discovered has not been defined
+   at this point.  One potential is via a to-be-defined DNS HHIT RR
+   within the endorsing RAA's zone.  This information would need to be
+   cached by any potential offline entity.
+
+1.1.3.  Bridge RAA with cross-endorsements to RAAs
+
+   A consortium of RAAs MAY select one RAA to function as a "Bridge"
+   between all members of the consortium.  In this approach, the "Bridge
+   RAA" does not authorize any sub-HDAs.  Its sole purpose is the cross-
+   endorse to member RAAs.  The Bridge and each RAA cross endorse as in
+   Section 1.1.2.
+
+   Bridge RAA Cross-endorsementing reduces the scaling challenge to only
+   the number of RAAs in the consortium.  Plus there is little need to
+   communicate any changes in the cross-endorsementing to the various
+   parties within the consortium.  Thus this option scales the best out
+   of the three alternatives to DKI Apex hierarchy.
+
+   How these RAA Cross-endorsements are discovered has not been defined
+   at this point.  The Bridge RAA will have to be known to all parties
+   within the consortium.  One potential, as above, is via a to-be-
+   defined DNS HHIT RR (Appendix A of [drip-registries]) within the
+   endorsing RAA's zone.  This information would need to be cached by
+   any potential offline entity.
+
+
+
+
+Moskowitz & Card          Expires 11 July 2024                  [Page 6]
+
+Internet-Draft                  DRIP DKI                    January 2024
+
+
+1.2.  The C509 encoding of X.509 Certificates
+
+   A price in object size is paid in the ASN.1 encoding of X.509
+   certificates.  This is often a barrier for use over constrained links
+   and even storage demands on constrained processing platforms.  The
+   [C509-Certificates] provides an alternative encoding in two different
+   manners:
+
+      1.  An invertible CBOR re-encoding of DER encoded X.509
+          certificates [RFC5280], which can be reversed to obtain the
+          original DER encoded X.509 certificate.
+
+      2.  Natively signed C509 certificates, where the signature is
+          calculated over the CBOR encoding instead of over the DER
+          encoding as in 1.  This removes the need for ASN.1 and DER
+          parsing and the associated complexity but they are not
+          backwards compatible with implementations requiring DER
+          encoded X.509.
+
+   The invertible CBOR encoding is recommended for use here.  This can
+   be readily implemented through libraries that do the translation, as
+   needed, between X.509 and c509.
+
+2.  Terms and Definitions
+
+2.1.  Requirements Terminology
+
+   The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+   "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
+   "OPTIONAL" in this document are to be interpreted as described in BCP
+   14 [RFC2119] [RFC8174] when, and only when, they appear in all
+   capitals, as shown here.
+
+2.2.  Definitions
+
+   This document uses the terms defined in Section 2.2 of Drip
+   Requirements and Terminology [RFC9153] and in Section 2 of Drip
+   Architecture [RFC9434].  The following new terms are used in the
+   document:
+
+   Authorization DETs
+      DETs whose use is to define a hierarchy level and endorse lower
+      hierarchy level Authorization DETs and finally Issuing DETs at
+      this hierarchy level.  They the DETs in the Authentication
+      Endorsements and X.509 certificates.
+
+
+
+
+
+
+Moskowitz & Card          Expires 11 July 2024                  [Page 7]
+
+Internet-Draft                  DRIP DKI                    January 2024
+
+
+   DKI
+      A DRIP Entity Tag (DET) public Key Infrastructure.  Similar to an
+      X.509 PKI, but built on the DRIP Endorsements.
+
+   International Aviation Trust Framework (IATF)
+      The ICAO IATF is comprised of a set of policies, requirements, and
+      best practices that will enable resilient and secured ground-
+      ground, air-ground, and air-air exchange of digital information,
+      and among both traditional and newly-emerging system stakeholders.
+
+   Issuing DETs
+      DETs whose use is to sign Endorsements and X.509 certificates for
+      Operational DETs that are at the same hierarchy level as the
+      Issuing DET.
+
+   Operational DETs
+      DETs used by various entities in DRIP protocols and as non-
+      routable IPv6 addresses.  A partial list of such entities
+      includes: GCS, Infrastructure (e.g. wireless tower systems), UAS
+      Operators, Pilots-in-command, Servers, UA.
+
+   System Wide Information Management (SWIM)
+      The ICAO SWIM consists of Standards, Infrastructure and Governance
+      enabling the management of Air Navigation Systems (ANS) related
+      information and its exchange between qualified parties via
+      interoperable services.
+
+3.  The DET public Key Infrastructure (DKI)
+
+3.1.  The DKI Levels
+
+3.1.1.  The Apex
+
+   The Apex Authorization DET is used to endorse RAA Authorization DETs
+   and its own Apex Issuing DETs; it has no other use.  This is the case
+   for all Authorization DETs.  Apex Issuing DETs are used to endorse
+   DETs, with HID= 0|0, used by Apex services.
+
+   The DET Apex may be only theoretical if no Entity steps forward to
+   provide this role.
+
+3.1.2.  The RAAs
+
+   Each RAA use its Authorization DET (HID = RAA#|0) to endorse its RAA
+   Issuing DET(s) (also HID = RAA#|0) and for signing its HDA
+   Authorization DETs (HID = RAA#|HDA#).
+
+
+
+
+
+Moskowitz & Card          Expires 11 July 2024                  [Page 8]
+
+Internet-Draft                  DRIP DKI                    January 2024
+
+
+   An RAA may have multiple Issuing DETs (HID = RAA#|0), each for a
+   different use (e.g.  CRL signing, RAA server signing).  It is
+   expected that, over time, an RAA will rollover its Issuing DETs, thus
+   at times there will be more than ONE Issuing DET per role in use.
+
+   These Issuing DETs, like those at the Apex level, constitute an
+   implicit HDA.  There is no Authorization DET for this implicit HDA,
+   but other than only signing for entities like servers needed by the
+   RAA, it should be considered as an HDA in terms of policies.
+
+   The initial RAA range assignments are defined in Section 6.2.1 of
+   [drip-registries], Table 1.  It is anticipated that DRIP usage will
+   expand to use into General/Civil Aviation.  Thus at some point a
+   block of RAAs will be set aside much like for the CTA-2063A
+   [CTA2063A] range.
+
+3.1.3.  The HDAs
+
+   Each HDA use its Authorization DET to endorse its HDA Issuing DETs
+   (e.g.  RAA=267, HDA=567).
+
+   An HDA Issuing DET is used to endorse Operational DETs; those used by
+   the HDA for its services (e.g.  USS) and for Devices (e.g.  UA, GCS,
+   ground infrastructure) partaking in the HDA's services.
+
+   If the Operational DET is a Manufacturer DET, the "valid not after"
+   date (vna) MUST be 99991231235959Z.
+
+3.2.  The Offline Requirement for Authentication DETs
+
+   The Authentication DETs private keys MUST NEVER be on a system with
+   any network connectivity.  Also efforts MUST be taken to limit any
+   external digital media connections to these offline systems.
+   Compromise of an Authentication DET compromises its and all lower
+   hierarchy levels.  Such a compromise could result in a major re-
+   signing effort with a new Authentication DET.  Also, during the time
+   of compromise, fraudulent additions to the DKI could have occurred.
+
+   This means that the process whereby the Authentication DET is used to
+   sign the Endorsement/X.509 certificate of its level's Issuing DET(s)
+   and lower level Authentication DETs MUST be conducted in an offline
+   manner.
+
+   This offline process need not be onerous.  For example, QR codes
+   could be used to pass CSR objects to the offline Authentication DET
+   system, and this system could produce QR codes containing the
+   Endorsements and X.509 certificates it signed.
+
+
+
+
+Moskowitz & Card          Expires 11 July 2024                  [Page 9]
+
+Internet-Draft                  DRIP DKI                    January 2024
+
+
+   A video conference between the parties could have one side show its
+   QR code and the other copy and print it to move between the video
+   conferencing system and the offline system.  This is a simplification
+   of a larger signing operation, but shows how such a signing need not
+   require travel and expensive hand-off methodologies.
+
+   It should be noted that the endorsement of Issuing DETs follow the
+   same restriction, as it is done with the Authentication DET.  It MUST
+   be conducted in an offline manner.
+
+3.3.  DNS view of DKI
+
+   The primary view of the DKI is within DNS.  This is in the
+   3.0.0.1.0.0.2.ip6.arpa zone (Apex level of the DRIP IPv6 DET format).
+
+   In the DET DNS structure, only the Apex and RAA levels MUST be DNSSEC
+   signed.  The HDA level may be too dynamic for DNSSEC signing (e.g.
+   hundreds of new EE Operational DETs per hour); trust in the EE
+   Operational DETs within the HDA level comes through inclusion of the
+   HDA Endorsement of EE object.  A slow-churn HDA MAY use DNSSEC.  The
+   RAA and HDA levels MUST contain their Endorsement by higher object;
+   this provides the needed trust in the Endorsement of EE objects.  The
+   Apex level Endorsement is self-signed, thus trust in it is only
+   possible via DNSSEC.
+
+   Endorsements are expected to be stored in DNS HHIT RR (Appendix A of
+   [drip-registries]) will soon provide an alternative and specifically
+   designed RR for this purpose.  Other RR within these levels will
+   vary.  There also may be HIP, TLSA, and/or URI RR.
+
+   Each level continues on down the 3.0.0.1.0.0.2.ip6.arpa zone for its
+   Authorization DET and Issuing DET(s).  RR with FQDNs for services
+   offered may also be present in various forms (e.g. a URI for the
+   commercial FQDN for the DKI Entity).  TLSA RR of DET SPKI may be
+   directly included here.  Same with HIP RR.  The Authorization
+   Endorsement SHOULD be present, as SHOULD be Issuing Endorsements.
+
+3.4.  Managing DET Revocation
+
+   For Operational DETs, there is no direct concept of DET revocation.
+   Operational DETs are either discoverable via DNS or not valid despite
+   being in a non-expired Endorsement signed an Issuing DET.  Thus if an
+   Issuing Entity needs to "revoke" an Operational DET it removes all
+   entries for it from DNS, so a short TTL on those records is
+   recommended.
+
+
+
+
+
+
+Moskowitz & Card          Expires 11 July 2024                 [Page 10]
+
+Internet-Draft                  DRIP DKI                    January 2024
+
+
+   Authorization and Issuing DETs are not so easily "revoked"; something
+   akin to an X.509 CRL mechanism is needed.  This could best be dealt
+   with by Endorsements managed in the new DET RR that includes
+   revocation status.  Thus Appendix A of [drip-registries] defines the
+   specific RR for Endorsements that will be used here.  Minimally, at
+   least the revocation status and revocation date(s) need to be in this
+   RR.  Until this RR is available, there is no mechanism, other than
+   removal for Authorization and Issuing DET revocations.
+
+3.5.  The Offline cache of HDA Issuing Endorsements
+
+   The Offline cache of HDA Issuing Endorsements, used to verify various
+   EE signed objects without needing DNS access, SHOULD consist of the
+   HDA Authentication DET Endorsements of the HDA Issuing DETs.  Thus
+   the receiver has a trusted source of the HDA Issuing DET Public Key
+   (HI) in a DRIP standard object (136 bytes).  If the DKI DNS tree
+   includes GEO location data and coverage, a receiver could query some
+   service for a trusted cache within some radius of its location.  Such
+   as, please tell me of all HDAs within 100KM of...
+
+   This cache MAY contain the full chain up to the Apex.  This could be
+   helpful in limited connectivity environments when encountering an HDA
+   Issuing DET under a unknown Authenticated HDA or RAA.  The needed
+   trust chain could be shorter.
+
+3.5.1.  HDA Offline Trust cache
+
+   There are situations where a list of specific HDAs for an entity to
+   trust for some application is needed.  This can best be met by
+   maintaining a cache as above but only of the trusted HDA Issuing
+   Endorsements.  How a list of this limited trust is maintain and
+   distributed is out of scope of this document and is left to those
+   needing this specific feature.
+
+4.  The DKI's Shadow PKI
+
+   The following defines the components of a DKI's shadow PKI built from
+   X.509 certificates with content that mirrors that in the DKI
+   Endorsements.  There are two profiles provided; both may be used, or
+   the community may select one for deployment.  In both cases, the PKI
+   tree mirrors that of the DKI levels (Section 3.1).
+
+   At this point in defining the shadow PKIs, alternatives to a strict
+   hierarchy is still an open work item.  This work will follow the
+   pattern set in Section 1.1.
+
+
+
+
+
+
+Moskowitz & Card          Expires 11 July 2024                 [Page 11]
+
+Internet-Draft                  DRIP DKI                    January 2024
+
+
+4.1.  Shadow Lite-PKI with minimal content Certificates
+
+   The Lite-PKI is designed to fully mirror the DKI in the smallest
+   reasonable X.509 certificates (e.g. 240 bytes for DER), but still
+   adhere to [RFC5280] MUST field usage.
+
+4.1.1.  DRIP Lite X.509 certificate profile
+
+   The following is the profile for the DRIP X.509 Lite certificates
+
+   Certificate:
+       Data:
+           Version: 3 (0x2)
+           Serial Number:
+           Signature Algorithm: ED25519
+           Issuer: CN =
+           Validity
+               Not Before:
+               Not After :
+           Subject: {CN = or Empty}
+           Subject Public Key Info:
+               Public Key Algorithm: ED25519
+                   ED25519 Public-Key:
+                   pub:
+           X509v3 extensions: {Operation Certs ONLY}
+               X509v3 Subject Alternative Name: critical
+                   IP Address:
+       Signature Algorithm: ED25519
+       Signature Value:
+
+                      Figure 2: The X.509 Lite Profile
+
+4.1.2.  DRIP Lite Manditory Certificate Content
+
+   The following detail the Manditory to include content in all DRIP
+   Lite certificates.
+
+4.1.2.1.  Serial Number
+
+   The Serial Number is a MUST field, but it has no usage in this Lite-
+   PKI.  It is 1-byte in size and thus duplicates are guaranteed.  To
+   drop this field could make many X.509 parsing libraries fail.
+
+   However, CA certificate's Serial Number MAY be the common 20 bytes.
+   This is to avoid possible issues with general softward expecting this
+   size Serial Numbers for CAs.
+
+
+
+
+
+Moskowitz & Card          Expires 11 July 2024                 [Page 12]
+
+Internet-Draft                  DRIP DKI                    January 2024
+
+
+4.1.2.2.  Subject
+
+   The Subject field is only used in Authentication and Issuing
+   Certificates.  For Entity Certificates, the Subject is Empty and the
+   DET will be in Subject Alternative Name (SAN).  In the SAN, the DET
+   can be properly encoded as an IPv6 address.
+
+   The Subject field in Authentication and Issuing Certificates uses the
+   following format:
+
+                  DRIP-{APEX|RAA|HDA}-{A|I}[-RAA#][-HDA#]
+
+                  Examples:
+
+                      DRIP-RAA-A-16376
+                      DRIP-HDA-I-16376-16376
+
+
+
+             Figure 3: Lite CA Certificate Subject Name Format
+
+   The CA Subject Name serves a duo purpose: foremostly, to place the CA
+   within the DKI tree, but secondly for outside of DRIP usage to tag
+   that this CA's function is to serve DRIP Entities.
+
+4.1.2.3.  Subject Alternative Name
+
+   Subject Alternative Name is only used in Operational (End Entity)
+   certificates.  It is used to provide the DET as an IP address with an
+   Empty Subject (SAN MUST be flagged as Critical).
+
+   The Subject Alternative Name is also used in Manufacturer DET
+   certificates.  These may contain the hardwareModuleName as described
+   in [IEEE 802.1AR] that references [RFC4108].
+
+   Per [RFC5280] and [IEEE 802.1AR], Manufacturer DET certificates with
+   hardwareModuleName MUST have the notAfter date as 99991231235959Z.
+
+4.1.2.4.  Issuer
+
+   The Issuer MUST be the higher level's DET.
+
+   The Issuer for the Apex Authentication certificate MUST be the
+   Subject (indicating self-signed).
+
+   The Issuer content of its DET assists in finding this specific Issuer
+   in the DRIP ip6.arpa.  DNS tree and any additional information.
+
+
+
+
+Moskowitz & Card          Expires 11 July 2024                 [Page 13]
+
+Internet-Draft                  DRIP DKI                    January 2024
+
+
+4.1.2.5.  The test DKI and Lite PKI
+
+   The test DKI and Lite PKI, (Appendix A/Appendix B), were created
+   using the python scripts at [drip_scripts].  First csr-gen.py is used
+   to create an X.509 CSR (and optionally the EdDSA keypair).  This CSR
+   is minimal in content.  For example, a UA might only have knowledge
+   of its Manufacturer Serial Number and can generate its keypair.  Per
+   [drip-registration-cwt], this CSR may be sent to the CA with
+   additional information provided by the Operator, for example desired
+   validityDates.  The raa-endorse.py and hda-endorse.py scripts are
+   provided to produce the DRIP Endorsements and X.509 certificates.
+
+   At this time, with no Apex level, each RAA Authorization CA is self-
+   signed.  These are created using the RAA's CSR and its own keypair as
+   input to the raa-endorse.py script.  Normally, the raa-endorse.py
+   script is used to create the HDA's Authorization and Issuing CAs and
+   the hda-endorse.py script for the End Entity certificates.
+
+4.1.3.  DRIP Lite Optional CA Certificate Content
+
+   The following detail the Optional content for DRIP Lite CA
+   certificates.  Inclusion of these objects are based on the policies
+   of the CA using them and CAs higher in the trust chain.
+
+4.1.3.1.  CA Subject Alternative Name URI
+
+   This is the one exception to Section 4.1.2.3.  A CA certificate MAY
+   have a SAN URI, containing a pointer where additional information on
+   the CA and certificates under its control.  For example, an
+   authorized authority may access EE PII like an Oberator phone number
+   through this URI link.
+
+4.1.3.2.  CA Policy OIDs
+
+   The CA MAY have policy OIDs defining rules for EEs within its domain.
+   The OIDs used here will tend to be within ICAO's arc of 1.3.9.16.
+
+4.2.  Abandoned: Shadow PKI with PKIX-like Certificates
+
+   Author's Note: The PKIX-like Certificate model has been abandoned for
+   now due to lack of interest in these larger ~400 bytes for DER) size.
+   For information on these certificates, please review the first draft
+   of this document.
+
+
+
+
+
+
+
+
+Moskowitz & Card          Expires 11 July 2024                 [Page 14]
+
+Internet-Draft                  DRIP DKI                    January 2024
+
+
+5.  The DKI and the ICAO IAC PKI
+
+   The ICAO has defined an International Aviation Common PKI (IAC) PKI
+   in their ICAO Doc 10169 Aviation Common Certificate Policy (ACCP).  A
+   test version of this PKI is rolling out for testing the Aviation
+   System Wide Information Management (SWIM) environment.
+
+   Currently, this PKI is using ECDSA P-256 in its certificates.  This
+   is equivalent to DET SuiteID of "3".  The subjectNames in use can
+   readily by mapped to RAAs (Section 6.2.1 of [drip-registries],
+   Table 1) and HDAs.  Thus it is a potential straight-forward technical
+   work item to add DET support into the PKI.
+
+   The DETs can readily be stored in subjectAltName or more
+   interestingly in subjectKeyIdentifier (and thus
+   authorityKeyIdentifier).
+
+   There are a number of advantages in the IATF and SWIM to have DETs
+   and the matching DNS available.  For example, the "cost" of adding
+   DETs to these certificates could result in moving much of their
+   content into DNS SRV RR and potentially reduce their size by 1/3rd.
+   DETs as the authorityKeyIdentifier would enable DNS for Trust Chain
+   discovery.
+
+   Another approach is direct inclusion in this PKI of the DET "Lite" EE
+   certificates for constrained A2A communications.
+
+   Discussions are ongoing with those involved with the IATF PKI and
+   this could open up DET usage into General/Civil Aviation.
+
+6.  IANA Considerations
+
+   TBD
+
+7.  Security Considerations
+
+   Risks in the DKI are similar to those in any X.509 PKI.  The
+   methodologies to mitigate risk in PKI management should be considered
+   and implemented as appropriate.
+
+
+
+
+
+
+
+
+
+
+
+
+Moskowitz & Card          Expires 11 July 2024                 [Page 15]
+
+Internet-Draft                  DRIP DKI                    January 2024
+
+
+   The DKI presents a tree-breath problem that is rarely seen in PKIs
+   and needs practical solutions to minimize cost of operations and not
+   introduce risks needlessly.  Consider that there can be 16,384 RAAs.
+   Assume only 10,000 RAAs, each of which Authentication DET Endorsement
+   has a 10 year validity period.  This means that, on average, 1,000
+   RAAs per year need to rekey their Authentication DET Endorsement, or
+   on average, 3 per day.  Current witnessed key signing processes will
+   not scale to this volume.  Some virtual method (like in Section 3.2)
+   is needed.
+
+7.1.  Protecting against DKI/PKI compromise
+
+   There is always a risk of key compromise that could be a major
+   setback to the operation of a PKI and likewise the DRIP DKI.  To
+   mitigate this risk, the Authentication DETs MUST only be used in
+   offline signing operations.  They MUST NEVER be used on connected
+   systems.  The information needed to create the Endorsements and X.509
+   certificates are brought to them on media that cannot transfer code,
+   for example in a QR code.  The objects that are created are then
+   transferred away from the offline system to be used where needed.
+
+   It should be noted that this offline process MUST be followed down
+   the DKI/PKI tree.  That is, the Apex has offline operations that
+   include signing the RAA Authentication DET that will be used in the
+   RAA's set up.
+
+8.  References
+
+8.1.  Normative References
+
+   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
+              Requirement Levels", BCP 14, RFC 2119,
+              DOI 10.17487/RFC2119, March 1997,
+              <https://www.rfc-editor.org/info/rfc2119>.
+
+   [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
+              2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
+              May 2017, <https://www.rfc-editor.org/info/rfc8174>.
+
+8.2.  Informative References
+
+   [C509-Certificates]
+              Mattsson, J. P., Selander, G., Raza, S., Höglund, J., and
+              M. Furuhed, "CBOR Encoded X.509 Certificates (C509
+              Certificates)", Work in Progress, Internet-Draft, draft-
+              ietf-cose-cbor-encoded-cert-12, 8 January 2025,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-cose-
+              cbor-encoded-cert-12>.
+
+
+
+Moskowitz & Card          Expires 11 July 2024                 [Page 16]
+
+Internet-Draft                  DRIP DKI                    January 2024
+
+
+   [CTA2063A] ANSI/CTA, "ANSI/CTA 2063-A Small Unmanned Aerial Systems
+              Numbers", September 2019, <https://shop.cta.tech/products/
+              small-unmanned-aerial-systems-serial-numbers>.
+
+   [drip-registration-cwt]
+              Wiethuechter, A., "DRIP Entity Tag (DET) Registration
+              using CoAP & CWTs", Work in Progress, Internet-Draft,
+              draft-wiethuechter-drip-det-registration-coap-cwt-00, 27
+              September 2024, <https://datatracker.ietf.org/doc/html/
+              draft-wiethuechter-drip-det-registration-coap-cwt-00>.
+
+   [drip-registries]
+              Wiethuechter, A. and J. Reid, "DRIP Entity Tags (DET) in
+              the Domain Name System (DNS)", Work in Progress, Internet-
+              Draft, draft-ietf-drip-registries-21, 12 December 2024,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-drip-
+              registries-21>.
+
+   [drip_scripts]
+              "Python scripts to generate DETs and Endorsements", April
+              2023, <https://github.com/ietf-wg-drip/drip-scripts>.
+
+   [IEEE 802.1AR]
+              IEEE, "IEEE Standard for Local and Metropolitan Area
+              Networks - Secure Device Identity",
+              DOI 10.1109/ieeestd.2018.8423794, 31 July 2018,
+              <https://doi.org/10.1109/ieeestd.2018.8423794>.
+
+   [IPv6-SPECIAL]
+              IANA, "IANA IPv6 Special-Purpose Address Registry",
+              <https://www.iana.org/assignments/iana-ipv6-special-
+              registry/>.
+
+   [RFC4108]  Housley, R., "Using Cryptographic Message Syntax (CMS) to
+              Protect Firmware Packages", RFC 4108,
+              DOI 10.17487/RFC4108, August 2005,
+              <https://www.rfc-editor.org/info/rfc4108>.
+
+   [RFC5280]  Cooper, D., Santesson, S., Farrell, S., Boeyen, S.,
+              Housley, R., and W. Polk, "Internet X.509 Public Key
+              Infrastructure Certificate and Certificate Revocation List
+              (CRL) Profile", RFC 5280, DOI 10.17487/RFC5280, May 2008,
+              <https://www.rfc-editor.org/info/rfc5280>.
+
+
+
+
+
+
+
+
+Moskowitz & Card          Expires 11 July 2024                 [Page 17]
+
+Internet-Draft                  DRIP DKI                    January 2024
+
+
+   [RFC9153]  Card, S., Ed., Wiethuechter, A., Moskowitz, R., and A.
+              Gurtov, "Drone Remote Identification Protocol (DRIP)
+              Requirements and Terminology", RFC 9153,
+              DOI 10.17487/RFC9153, February 2022,
+              <https://www.rfc-editor.org/info/rfc9153>.
+
+   [RFC9374]  Moskowitz, R., Card, S., Wiethuechter, A., and A. Gurtov,
+              "DRIP Entity Tag (DET) for Unmanned Aircraft System Remote
+              ID (UAS RID)", RFC 9374, DOI 10.17487/RFC9374, March 2023,
+              <https://www.rfc-editor.org/info/rfc9374>.
+
+   [RFC9434]  Card, S., Wiethuechter, A., Moskowitz, R., Zhao, S., Ed.,
+              and A. Gurtov, "Drone Remote Identification Protocol
+              (DRIP) Architecture", RFC 9434, DOI 10.17487/RFC9434, July
+              2023, <https://www.rfc-editor.org/info/rfc9434>.
+
+Appendix A.  Test DETs and Endorsements
+
+   The following are test DETs and Endorsements for the test DKI.  This
+   testing environment is open to all.  There are 4 RAAs available for
+   others to build out.  HDAs under the 4 preset RAAs, or under any of
+   the 4, built out by others, are available.  Finally the test HDA is
+   available for setting up a handful of entities.  Any tester wanting
+   more than a few DETs for entities should plan on doing that under
+   their own HDA.
+
+   The following are the test values and objects.  They were generated
+   using the csr-gen.py, raa-endorse.py, and hda-endorse.py scripts
+   available at [drip_scripts].
+
+   Note, that as there is no APEX level at this time, the RAA
+   Endorsement is self-signed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Moskowitz & Card          Expires 11 July 2024                 [Page 18]
+
+Internet-Draft                  DRIP DKI                    January 2024
+
+
+   raa16376
+       Authorizing DET  (HID=16376|0)
+
+   # SN is there just because script needs it.
+   python csr-gen.py --keyname=raa16376 --serialnumber=0 --raa=16376/
+    --hda=0
+   python raa-endorse.py --commandfile=raa16376
+
+       HI: 32528c1c115d004d1f008d07ac507a2d83bbab746040522ea6cdc786fa
+           bc8057
+       DET: 2001003ffe00000506ab58754f68e6b3
+       DET: 2001:003f:fe00:0005:06ab:5875:4f68:e6b3
+       vnb="09/01/2024"
+       vna="08/31/2026"
+       Endorsement(136 bytes): 66d3e6c06a94fc402001003ffe00000506ab58
+       754f68e6b332528c1c115d004d1f008d07ac507a2d83bbab746040522ea6cd
+       c786fabc80572001003ffe00000506ab58754f68e6b3f5d13f1074171192f8
+       f5e4b25f200cf3cc5ef6a8cc10d0c93e91ab882a888ccd7fb970c56c20e97e
+       22f60b7d1179d214a7c9fa8c70081c3482667add575d0a08
+   hda16376-16376
+       Authorizing DET  (HID=16376|16376)
+   # SN is there just because script needs it.
+   python csr-gen.py --keyname=hda16376-16376A --serialnumber=0
+   python raa-endorse.py --commandfile=hda16376-16376A
+
+       HI: 4293a3ec0639737e65db3979fb3dab83a97510cfb52e83d5ecaea40adf
+           45585d
+       DET: 2001003ffe3ff805ce4d71fcd8a27a9d
+       DET: 2001:003f:fe3f:f805:ce4d:71fc:d8a2:7a9d
+       DETofRAA=2001003ffe00000506ab58754f68e6b3
+       vnb="09/15/2024"
+       vna="07/01/2026"
+
+       Endorsement(136 bytes): 66e65bc06a4490c02001003ffe3ff805ce4d71
+       fcd8a27a9d4293a3ec0639737e65db3979fb3dab83a97510cfb52e83d5ecae
+       a40adf45585d2001003ffe00000506ab58754f68e6b3a96328ac620f9dd7d1
+       2a7d9f6e94424b69e59584116d73763145be04ef743bbada14d11f158ee32e
+       ff33296fb8cc6cad8d3cdfee866e27a720b685c731edde07
+
+
+
+
+
+
+
+
+
+
+
+
+
+Moskowitz & Card          Expires 11 July 2024                 [Page 19]
+
+Internet-Draft                  DRIP DKI                    January 2024
+
+
+       Issuing DET  (HID=16376|16376)
+
+   # SN is there just because script needs it.
+   python csr-gen.py --keyname=hda16376-16376I --serialnumber=0
+   python raa-endorse.py --commandfile=hda16376-16376I
+
+       HI: 95f4a64fc559a17092c738f7be02a9ed7aef51b152e4eb2c8b0a0dc175
+           80b7e0
+       DET: 2001003ffe3ff8059f5514beac58f8db
+       DET: 2001:003f:fe3f:f805:9f55:14be:ac58:f8db
+       DETofHDA=0x2001003ffe3ff805ce4d71fcd8a27a9d
+       vnb="09/15/2024"
+       vna="07/01/2026"
+
+       Endorsement(136 bytes): 66e65bc06a4490c02001003ffe3ff8059f5514
+       beac58f8db95f4a64fc559a17092c738f7be02a9ed7aef51b152e4eb2c8b0a
+       0dc17580b7e02001003ffe3ff805ce4d71fcd8a27a9dea50c3de79536ea208
+       fe792a3e7241d0d8c67fc8a94ec925709a3b19e8b7eaa4c1714762f4c83ea2
+       0e10c4dc5ea049b22a51cfbbae39be5874c31fd5bf9e4f00
+       UA DET in 16376.16376
+
+   python csr-gen.py --keyname=ua1-16376-16376/
+    --serialnumber=x1224AABBCCDDEE56789
+   python hda-endorse.py --commandfile=ua1-16376-16376
+
+       DET: 2001003ffe3ff80578cc488c41b52b28
+       DET: 2001:003f:fe3f:f805:78cc:488c:41b5:2b28
+       SN:  x1224AABBCCDDEE56789
+       DETofHDA=0x2001003ffe3ff8059f5514beac58f8db
+       vnb="09/19/2024"
+       vna="09/20/2025"
+       Endorsement(136 bytes): 66eba1c068ce26c02001003ffe3ff80578cc48
+       8c41b52b2888f5e2d5c7161b5b15a590b4a56c4759fe46cb1bbad11f070eb3
+       ec7bdd28a9692001003ffe3ff8059f5514beac58f8db861d2e2a41193aac09
+       8d96c6e23611733cfbbace751e66f3c1e525e0864fa249e2dc3e48e3477256
+       770d02dfb0d83ec29ae7887851c2031c907a90f966b05d0d
+
+                  Figure 4: Test DKI DETs and Endorsements
+
+A.1.  Test DNS
+
+   The DNS tree(s) for the above test data is still in limbo and will be
+   added in a later version of this draft with the proposed DET RR from
+   [drip-registries].
+
+
+
+
+
+
+
+Moskowitz & Card          Expires 11 July 2024                 [Page 20]
+
+Internet-Draft                  DRIP DKI                    January 2024
+
+
+Appendix B.  Test X.509 certificates
+
+B.1.  Test Lite X.509 certificates
+
+   The following the test DRIP X.509 certificates that mirror the test
+   Endorsements.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Moskowitz & Card          Expires 11 July 2024                 [Page 21]
+
+Internet-Draft                  DRIP DKI                    January 2024
+
+
+     raa16376.pem (der is 334 bytes)
+
+   -----BEGIN CERTIFICATE-----
+   MIIBSjCB/aADAgECAhR3h9ip63LkGZCv25TKeVSCy5PSxTAFBgMrZXAwKzEpMCcG
+   A1UEAwwgMjAwMTAwM2ZmZTAwMDAwNTA2YWI1ODc1NGY2OGU2YjMwHhcNMjQwOTAx
+   MDAwMTAwWhcNMjYwODMxMjM1OTAwWjAbMRkwFwYDVQQDDBBEUklQLVJBQS1BLTE2
+   Mzc2MCowBQYDK2VwAyEAMlKMHBFdAE0fAI0HrFB6LYO7q3RgQFIups3Hhvq8gFej
+   QzBBMB4GA1UdEQEB/wQUMBKHECABAD/+AAAFBqtYdU9o5rMwDwYDVR0TAQH/BAUw
+   AwEB/zAOBgNVHQ8BAf8EBAMCAgQwBQYDK2VwA0EA7+m7dHX/Mv9yLszLuWfBa2kO
+   mQCEhxyu4yPKaRPEdzzTGsbq8ECF+CGDBiWwt2jiOIK52x6TGtvUbmBpmfbhDw==
+   -----END CERTIFICATE-----
+
+   Certificate: 509 bytes
+       Data:
+           Version: 3 (0x2)
+           Serial Number:
+             77:87:d8:a9:eb:72:e4:19:90:af:db:94:ca:79:54:82:cb:93:d2:c5
+           Signature Algorithm: ED25519
+           Issuer: CN = 2001003ffe00000506ab58754f68e6b3
+           Validity
+               Not Before: Sep  1 00:01:00 2024 GMT
+               Not After : Aug 31 23:59:00 2026 GMT
+           Subject: CN = DRIP-RAA-A-16376
+           Subject Public Key Info:
+               Public Key Algorithm: ED25519
+                   ED25519 Public-Key:
+                   pub:
+                       32:52:8c:1c:11:5d:00:4d:1f:00:8d:07:ac:50:7a:
+                       2d:83:bb:ab:74:60:40:52:2e:a6:cd:c7:86:fa:bc:
+                       80:57
+           X509v3 extensions:
+               X509v3 Subject Alternative Name: critical
+                   IP Address:2001:3F:FE00:5:6AB:5875:4F68:E6B3
+               X509v3 Basic Constraints: critical
+                   CA:TRUE
+               X509v3 Key Usage: critical
+                   Certificate Sign
+       Signature Algorithm: ED25519
+       Signature Value:
+           ef:e9:bb:74:75:ff:32:ff:72:2e:cc:cb:b9:67:c1:6b:69:0e:
+           99:00:84:87:1c:ae:e3:23:ca:69:13:c4:77:3c:d3:1a:c6:ea:
+           f0:40:85:f8:21:83:06:25:b0:b7:68:e2:38:82:b9:db:1e:93:
+           1a:db:d4:6e:60:69:99:f6:e1:0f
+
+
+
+
+
+
+
+
+Moskowitz & Card          Expires 11 July 2024                 [Page 22]
+
+Internet-Draft                  DRIP DKI                    January 2024
+
+
+     Authentication hda16376-16376.pem (der is 341 bytes)
+
+   -----BEGIN CERTIFICATE-----
+   MIIBUTCCAQOgAwIBAgIUWffmfHh1wD4kx1sh/voUrCHqYEQwBQYDK2VwMCsxKTAn
+   BgNVBAMMIDIwMDEwMDNmZmUwMDAwMDUwNmFiNTg3NTRmNjhlNmIzMB4XDTI0MDkx
+   NTAwMDEwMFoXDTI2MDcwMTIzNTkwMFowITEfMB0GA1UEAwwWRFJJUC1IREEtQS0x
+   NjM3Ni0xNjM3NjAqMAUGAytlcAMhAEKTo+wGOXN+Zds5efs9q4OpdRDPtS6D1eyu
+   pArfRVhdo0MwQTAeBgNVHREBAf8EFDAShxAgAQA//j/4Bc5NcfzYonqdMA8GA1Ud
+   EwEB/wQFMAMBAf8wDgYDVR0PAQH/BAQDAgIEMAUGAytlcANBACHQ+i1C56CwyE6d
+   rjq7Ogrez4vfylAXgB6xSTXl7Uh85TI9B+jUl3BJPlvFJS5KXXw4mc1Fa3L7hIGd
+   zSQWPQc=
+   -----END CERTIFICATE-----
+
+   Certificate:   518 bytes
+       Data:
+           Version: 3 (0x2)
+           Serial Number:
+             59:f7:e6:7c:78:75:c0:3e:24:c7:5b:21:fe:fa:14:ac:21:ea:60:44
+           Signature Algorithm: ED25519
+           Issuer: CN = 2001003ffe00000506ab58754f68e6b3
+           Validity
+               Not Before: Sep 15 00:01:00 2024 GMT
+               Not After : Jul  1 23:59:00 2026 GMT
+           Subject: CN = DRIP-HDA-A-16376-16376
+           Subject Public Key Info:
+               Public Key Algorithm: ED25519
+                   ED25519 Public-Key:
+                   pub:
+                       42:93:a3:ec:06:39:73:7e:65:db:39:79:fb:3d:ab:
+                       83:a9:75:10:cf:b5:2e:83:d5:ec:ae:a4:0a:df:45:
+                       58:5d
+           X509v3 extensions:
+               X509v3 Subject Alternative Name: critical
+                   IP Address:2001:3F:FE3F:F805:CE4D:71FC:D8A2:7A9D
+               X509v3 Basic Constraints: critical
+                   CA:TRUE
+               X509v3 Key Usage: critical
+                   Certificate Sign
+       Signature Algorithm: ED25519
+       Signature Value:
+           21:d0:fa:2d:42:e7:a0:b0:c8:4e:9d:ae:3a:bb:3a:0a:de:cf:
+           8b:df:ca:50:17:80:1e:b1:49:35:e5:ed:48:7c:e5:32:3d:07:
+           e8:d4:97:70:49:3e:5b:c5:25:2e:4a:5d:7c:38:99:cd:45:6b:
+           72:fb:84:81:9d:cd:24:16:3d:07
+
+
+
+
+
+
+
+Moskowitz & Card          Expires 11 July 2024                 [Page 23]
+
+Internet-Draft                  DRIP DKI                    January 2024
+
+
+     Issuing hda16376-16376.pem (der is 341 bytes)
+
+   -----BEGIN CERTIFICATE-----
+   MIIBUTCCAQOgAwIBAgIURlST/Y7ug5+XOsyX0nxxMubKnmkwBQYDK2VwMCsxKTAn
+   BgNVBAMMIDIwMDEwMDNmZmUzZmY4MDVjZTRkNzFmY2Q4YTI3YTlkMB4XDTI0MDkx
+   NTAwMDEwMFoXDTI2MDcwMTIzNTkwMFowITEfMB0GA1UEAwwWRFJJUC1IREEtSS0x
+   NjM3Ni0xNjM3NjAqMAUGAytlcAMhAJX0pk/FWaFwksc4974Cqe1671GxUuTrLIsK
+   DcF1gLfgo0MwQTAeBgNVHREBAf8EFDAShxAgAQA//j/4BZ9VFL6sWPjbMA8GA1Ud
+   EwEB/wQFMAMBAf8wDgYDVR0PAQH/BAQDAgIEMAUGAytlcANBANXZXfdkuaUGbHzS
+   To8zHiNLL/EVBJYfX65JafReppAEDdcu22nHykZpLJS+gVv4BHY8fI+MwsFqkXn5
+   iWr3PQE=
+   -----END CERTIFICATE-----
+
+   Certificate:    518 bytes
+       Data:
+           Version: 3 (0x2)
+           Serial Number:
+             46:54:93:fd:8e:ee:83:9f:97:3a:cc:97:d2:7c:71:32:e6:ca:9e:69
+           Signature Algorithm: ED25519
+           Issuer: CN = 2001003ffe3ff805ce4d71fcd8a27a9d
+           Validity
+               Not Before: Sep 15 00:01:00 2024 GMT
+               Not After : Jul  1 23:59:00 2026 GMT
+           Subject: CN = DRIP-HDA-I-16376-16376
+           Subject Public Key Info:
+               Public Key Algorithm: ED25519
+                   ED25519 Public-Key:
+                   pub:
+                       95:f4:a6:4f:c5:59:a1:70:92:c7:38:f7:be:02:a9:
+                       ed:7a:ef:51:b1:52:e4:eb:2c:8b:0a:0d:c1:75:80:
+                       b7:e0
+           X509v3 extensions:
+               X509v3 Subject Alternative Name: critical
+                   IP Address:2001:3F:FE3F:F805:9F55:14BE:AC58:F8DB
+               X509v3 Basic Constraints: critical
+                   CA:TRUE
+               X509v3 Key Usage: critical
+                   Certificate Sign
+       Signature Algorithm: ED25519
+       Signature Value:
+           d5:d9:5d:f7:64:b9:a5:06:6c:7c:d2:4e:8f:33:1e:23:4b:2f:
+           f1:15:04:96:1f:5f:ae:49:69:f4:5e:a6:90:04:0d:d7:2e:db:
+           69:c7:ca:46:69:2c:94:be:81:5b:f8:04:76:3c:7c:8f:8c:c2:
+           c1:6a:91:79:f9:89:6a:f7:3d:01
+
+
+
+
+
+
+
+Moskowitz & Card          Expires 11 July 2024                 [Page 24]
+
+Internet-Draft                  DRIP DKI                    January 2024
+
+
+     UA1-16376-16376 CSR
+
+   Certificate Request:
+       Data:
+           Version: 1 (0x0)
+           Subject: serialNumber = x1224AABBCCDDEE56789
+           Subject Public Key Info:
+               Public Key Algorithm: ED25519
+                   ED25519 Public-Key:
+                   pub:
+                       88:f5:e2:d5:c7:16:1b:5b:15:a5:90:b4:a5:6c:47:
+                       59:fe:46:cb:1b:ba:d1:1f:07:0e:b3:ec:7b:dd:28:
+                       a9:69
+           Attributes:
+               (none)
+               Requested Extensions:
+       Signature Algorithm: ED25519
+       Signature Value:
+           e1:18:e8:0f:78:ef:99:47:8f:ce:12:c7:f0:fa:48:eb:17:3b:
+           7e:b8:0d:25:46:0e:ca:ff:bb:48:54:ea:d0:8b:52:89:9c:49:
+           8a:4c:35:be:8f:b2:77:ff:9d:64:e4:1e:cf:23:12:5b:8b:24:
+           e2:0f:ac:07:33:39:b9:10:eb:00
+
+     UA1-16376-16376.pem (der is 255 bytes)
+
+   -----BEGIN CERTIFICATE-----
+   MIH8MIGvoAMCAQICAiIOMAUGAytlcDArMSkwJwYDVQQDDCAyMDAxMDAzZmZlM2Zm
+   ODA1OWY1NTE0YmVhYzU4ZjhkYjAeFw0yNDA5MTkwMDAxMDBaFw0yNTA5MjAyMzU5
+   MDBaMAAwKjAFBgMrZXADIQCI9eLVxxYbWxWlkLSlbEdZ/kbLG7rRHwcOs+x73Sip
+   aaMiMCAwHgYDVR0RAQH/BBQwEocQIAEAP/4/+AV4zEiMQbUrKDAFBgMrZXADQQB1
+   g4Yw/Rer9hISVLVUvad8dKJSe2giAaNOZbDtexeWhsZEXMWNWuhGkEefKk5IbAM9
+   cs9islWR1bX+o91HMXcB
+   -----END CERTIFICATE-----
+
+   Certificate:    400 bytes
+       Data:
+           Version: 3 (0x2)
+           Serial Number: 8718 (0x220e)
+           Signature Algorithm: ED25519
+           Issuer: CN = 2001003ffe3ff8059f5514beac58f8db
+           Validity
+               Not Before: Sep 19 00:01:00 2024 GMT
+               Not After : Sep 20 23:59:00 2025 GMT
+           Subject:
+           Subject Public Key Info:
+               Public Key Algorithm: ED25519
+                   ED25519 Public-Key:
+                   pub:
+
+
+
+Moskowitz & Card          Expires 11 July 2024                 [Page 25]
+
+Internet-Draft                  DRIP DKI                    January 2024
+
+
+                       88:f5:e2:d5:c7:16:1b:5b:15:a5:90:b4:a5:6c:47:
+                       59:fe:46:cb:1b:ba:d1:1f:07:0e:b3:ec:7b:dd:28:
+                       a9:69
+           X509v3 extensions:
+               X509v3 Subject Alternative Name: critical
+                   IP Address:2001:3F:FE3F:F805:78CC:488C:41B5:2B28
+       Signature Algorithm: ED25519
+       Signature Value:
+           75:83:86:30:fd:17:ab:f6:12:12:54:b5:54:bd:a7:7c:74:a2:
+           52:7b:68:22:01:a3:4e:65:b0:ed:7b:17:96:86:c6:44:5c:c5:
+           8d:5a:e8:46:90:47:9f:2a:4e:48:6c:03:3d:72:cf:62:b2:55:
+           91:d5:b5:fe:a3:dd:47:31:77:01
+
+                   Figure 5: Test Lite X.509 certificates
+
+B.2.  Test Lite C509 certificates
+
+   The CBOR Encoded X.509 Certificates (C509 Certificates)
+   [C509-Certificates] provides a standards-based approach to reduce the
+   size of X.509 certificates both on-the-wire and in storage.
+
+   These C509 certificates MAY be stored in the DET RR, but are more
+   likely to by used in over-the-air protocols and exist only for
+   transmission, being converted from/to their source X.509
+   certificates.
+
+   Author's Note: This section is still a Work in Progress.  The CBOR
+   diagnostic tool is currently not working, and that content should be
+   added back in on a later revision.  Further note that we think there
+   is a bug in the c509 code, making the certificate version = 1, not 3.
+
+   The following are examples of a C509 cert.
+
+     raa16376.cert CBOR:
+
+   COSE_X509 (212 bytes)
+   8B 01 54 77 87 D8 A9 EB 72 E4 19 90 AF DB 94 CA 79 54 82 CB 93 D2 C5
+   78 20 32 30 30 31 30 30 33 66 66 65 30 30 30 30 30 35 30 36 61 62 35
+   38 37 35 34 66 36 38 65 36 62 33 1A 66 D3 AE BC 1A 6A 96 15 44 70 44
+   52 49 50 2D 52 41 41 2D 41 2D 31 36 33 37 36 0A 58 20 32 52 8C 1C 11
+   5D 00 4D 1F 00 8D 07 AC 50 7A 2D 83 BB AB 74 60 40 52 2E A6 CD C7 86
+   FA BC 80 57 86 22 82 07 50 20 01 00 3F FE 00 00 05 06 AB 58 75 4F 68
+   E6 B3 23 20 21 18 20 0C 58 40 EF E9 BB 74 75 FF 32 FF 72 2E CC CB B9
+   67 C1 6B 69 0E 99 00 84 87 1C AE E3 23 CA 69 13 C4 77 3C D3 1A C6 EA
+   F0 40 85 F8 21 83 06 25 B0 B7 68 E2 38 82 B9 DB 1E 93 1A DB D4 6E 60
+   69 99 F6 E1 0F
+
+
+
+
+
+Moskowitz & Card          Expires 11 July 2024                 [Page 26]
+
+Internet-Draft                  DRIP DKI                    January 2024
+
+
+     ua1-16376-16376.cert CBOR:
+
+   COSE_X509 (173 bytes)
+   8B 01 42 22 0E 78 20 32 30 30 31 30 30 33 66 66 65 33 66 66 38 30 35
+   39 66 35 35 31 34 62 65 61 63 35 38 66 38 64 62 1A 66 EB 69 BC 1A 68
+   CF 3F C4 80 0A 58 20 88 F5 E2 D5 C7 16 1B 5B 15 A5 90 B4 A5 6C 47 59
+   FE 46 CB 1B BA D1 1F 07 0E B3 EC 7B DD 28 A9 69 82 22 82 07 50 20 01
+   00 3F FE 3F F8 05 78 CC 48 8C 41 B5 2B 28 0C 58 40 75 83 86 30 FD 17
+   AB F6 12 12 54 B5 54 BD A7 7C 74 A2 52 7B 68 22 01 A3 4E 65 B0 ED 7B
+   17 96 86 C6 44 5C C5 8D 5A E8 46 90 47 9F 2A 4E 48 6C 03 3D 72 CF 62
+   B2 55 91 D5 B5 FE A3 DD 47 31 77 01
+
+                   Figure 6: Test Lite C.509 certificates
+
+Acknowledgments
+
+   Many people assisted in creating the python scripts for making DETs
+   and DRIP Endorsements.  Any roughness in the scripts is all my doing.
+
+   The openssl-user mailing list provided needed help in getting openssl
+   command line to do what was needed to build the test PKI.
+
+   The COSE C509 authors are providing active help in creating the C509
+   equivalent objects.
+
+Authors' Addresses
+
+   Robert Moskowitz
+   HTT Consulting
+   Oak Park, MI 48237
+   United States of America
+   Email: rgm@labs.htt-consult.com
+
+
+   Stuart W. Card
+   AX Enterprize, LLC
+   4947 Commercial Drive
+   Yorkville, NY 13495
+   United States of America
+   Email: stu.card@axenterprize.com
+
+
+
+
+
+
+
+
+
+
+
+Moskowitz & Card          Expires 11 July 2024                 [Page 27]
