@@ -1,0 +1,3880 @@
+================================================================================
+command: find internet-drafts -type f -name "*.xml" -exec xmllint --xpath '//li[*[1][self::ul or self::ol]]' {} \; -print 2> /dev/null
+format:
+ <xml snippet>
+ <filename>
+================================================================================
+<li>
+        <ol spacing="normal" indent="5">
+          <li>Metric-type (1 octet): Value of metric-type from IGP-Protocol 
+              registry for metric-types.</li>
+          <li>Metric-flags (1 octet): Bits defined below.</li>
+          <li>metric-value (8 octets): Value range (0 - 0xffffffffffffffff)</li>
+        </ol>
+       </li>
+<li>
+             <ul spacing="normal">
+               <li>The procedures for the BGP speaker S to send NHC attribute
+             for a route R with next hop N as described in section 2.2 of
+             <xref target="I-D.ietf-idr-entropy-label"/> MUST be followed while
+             encoding AMetric.</li>
+      
+               <li>A BGP speaker S MUST NOT add the AMetric to NHC attribute for
+             a route R whose path leads outside the AMetric administrative 
+             domain. When S as an ASBR, advertises the route to peers inside 
+             the AS by setting itself as next hop, it MUST add AMetric to NHC. 
+             S MUST NOT add AMetric to NHC for route advertisements to 
+             neighboring AS that are not part of AMetric administrative 
+             domain.</li>
+          
+               <li>The BGP speaker S MUST not encode the AMetric in the NHC
+             attribute for a route R for which S does not set itself as the 
+             next hop.</li>
+        
+               <li>In section 3.4 of <xref target="RFC7311"/> whenever AIGP
+             TLV is referred to, it MUST be treated as AMetric. Whenever AIGP 
+             attribute is referred to, it MUST be treated as NHC attribute. 
+             The procedures outlined in section 3.4 of
+             <xref target="RFC7311"/> MUST be followed for creation of
+             AMetric that is encoded in NHC attribute. Similarly, the procedures
+             outlined in 3.4 of <xref target="RFC7311"/> MUST be followed for 
+             the modifications of AMetric in NHC attribute by the originator and
+             non-originator of the route.</li>
+
+               <li>Repeated metric changes may cause large number of BGP 
+             updates to be generated and propagated throughout the network. 
+             To avoid this, a configurable threshold for the metric is defined.
+             If the difference between the new metric-value and the advertised 
+             metric-value is less than the configured threshold, the update 
+             MAY be suppressed. For each of type of metric used in the domain,
+             if the new metric-value encoded in AMetric is above the configured 
+             threshold, a new BGP update containing the new set of 
+             metric-values SHOULD be advertised.</li>
+
+               <li>Procedures for defining the cost to reach a next hop for
+             various metric-types is outside the scope of this document.</li>
+             </ul>
+            </li>
+<li>
+                   <ul spacing="normal">
+                       <li>The BGP Speaker S MUST encode the type of metric as 
+                    specified in the IGP Protocol registry in the metric-type 
+                    sub-field. This metric type should represent the intent 
+                    required for establishing the end-to-end path.</li>
+    
+                       <li>The BGP Speaker S MUST encode the value of the 
+                   metric or cost to reach the next hop N in the metric-value 
+                   sub-field.  The cost may be normalized if required.</li>
+  
+                       <li>If a domain adopts more than one metric type to 
+                   represent an intent, the BGP speaker S may encode more than 
+                   one AMetric, each encoding different type of metric as 
+                   defined in the IGP Protocol Registry.</li>
+  
+                       <li>The "D" bit of the metric-flags MUST be set to zero.
+                   If the domain internal cost to reach the next hop is 
+                   normalized to the type of metric in the metric-type 
+                   sub-field, the "N" bit of the metric-flags MUST be set to 
+                   1, else it MUST be set to zero.</li>
+                  </ul>
+                 </li>
+<li>
+                   <ul spacing="normal">
+                     <li>The BGP speaker S MUST retain all the received 
+                 AMetric and for each of the AMetric received, it MUST perform 
+                 following procedures.</li>
+
+                     <li>If the type of the metric used in local domain is same 
+                 as the metric-type of the AMetric, the BGP speaker S MUST add 
+                 the metric or cost to reach the next hop N to the metric-value
+                 sub-field of the AMetric.</li>
+
+                     <li>If the type of the metric used in the local domain is 
+                 different from the metric-type of the AMetric, the BGP speaker 
+                 S MUST normalize the metric or cost to reach the next hop N 
+                 before adding to the metric-value sub-field of the AMetric. 
+                 The metric-value sub-field MUST be increased by a non-zero 
+                 amount.</li> 
+
+                     <li>If the local domain's internal cost to reach the next 
+                 hop is normalized to the type of metric in the metric-type 
+                 sub-field, then "N" bit MUST be set to 1. If the BGP speaker 
+                 S does not understand the type of metric, then "D" bit MUST 
+                 be set to 1.</li>
+                 </ul>
+                </li>
+<li>
+              <ul spacing="normal">
+                 <li>A BGP speaker S MUST perform the procedures described in 
+               section 2.3 of <xref target="I-D.ietf-idr-entropy-label"/> for 
+               processing the NHC attribute.</li>
+
+                 <li>For a given metric-type, if there are more than one
+               AMetric in the NHC attribute, first occurrence MUST be 
+               processed, and the other occurrences MUST be ignored.</li>
+
+                 <li>There may be more than one AMetric, each carrying 
+               different types of metrics. For each AMetric, if the BGP speaker 
+               S recognizes the type of the metric encoded in the metric-type 
+               sub-field, it MUST process the metric-value and metric-flags 
+               sub-fields as per following.</li>
+
+               <li>If the type of the metric used in the local domain (for
+               resolving the next hop N) matches with the metric-type of
+               AMetric of NHC attribute, then the metric-value sub-field MUST 
+               be used in the AIGP-enhanced interior cost computation as 
+               specified in <xref target="Sec-9"/>.</li>
+
+                  <li>If the type of the metric used in the local domain (for
+                resolving the next hop N) does not match with the metric-type of
+                AMetric of the NHC attribute, then the BGP speaker S may 
+                normalize the cost of the path used for resolving
+                the next hop before using it in the AIGP-enhanced cost 
+                computation. A policy may be used to provide the metric 
+                normalization.</li>
+              </ul>
+            </li>
+<li>
+          <ul spacing="normal">
+          <li>The <xref target="RFC7311"/> introduces only one TLV: AIGP TLV. 
+        Some vendors propagate the only AIGP TLV and drop other unrecognized 
+        TLV if any.</li>
+          <li>The <xref target="RFC7311"/> specifies only one type of metric:
+        IGP-metric. However, some vendors provide option to encode different 
+        types of metrics in AIGP TLV other than default IGP-metric type.</li>
+          <li>Some vendors do not propagate AIGP attribute if AIGP TLV is not
+        present in it.</li>
+          </ul>
+        </li>
+internet-drafts/draft-ietf-idr-bgp-generic-metric-00.xml
+<li>
+          <ul empty="true" spacing="normal">
+            <li>
+              <t>    0                   1                   2                   3
+    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1</t>
+            </li>
+          </ul>
+        </li>
+internet-drafts/draft-dutt-nvo3-rfc7348bis-00.xml
+<li>
+            <ul empty="true">
+              <li>
+                <ol spacing="normal" type="1"><li>
+                    <t>Assigning WBA identities to ANPs and IDPs.</t>
+                  </li>
+                  <li>
+                    <t>Operating an issuing intermediate certificate authority under the WBA's PKI and issuing certificates to ANPs and IDPs.</t>
+                  </li>
+                  <li>
+                    <t>Operating a registration authority to a third party operated issuing intermediate certificate authority under WBA's PKI to enable certificates to be issued to ANPs and IDPs.</t>
+                  </li>
+                </ol>
+              </li>
+            </ul>
+          </li>
+<li>
+                <ol spacing="normal" type="1"><li>
+                    <t>Assigning WBA identities to ANPs and IDPs.</t>
+                  </li>
+                  <li>
+                    <t>Operating an issuing intermediate certificate authority under the WBA's PKI and issuing certificates to ANPs and IDPs.</t>
+                  </li>
+                  <li>
+                    <t>Operating a registration authority to a third party operated issuing intermediate certificate authority under WBA's PKI to enable certificates to be issued to ANPs and IDPs.</t>
+                  </li>
+                </ol>
+              </li>
+internet-drafts/draft-tomas-openroaming-04.xml
+<li>
+	      <ol type="%c)">
+		<li>
+		  If the <tt>FindApproximate</tt> flag was not set in
+		  the query and the <tt>BTYPE</tt> enabled the
+		  implementation to compute the key from the block,
+		  the computed key must exactly match the
+		  <tt>QUERY_HASH</tt>, otherwise the result does not
+		  match the pending query and processing continues
+		  with the next pending table entry.
+                </li>
+		<li>
+                  If the <tt>BTYPE</tt> is supported, result block
+                  <bcp14>MUST</bcp14> be validated against the
+                  specific query using the respective
+                  <tt>FilterBlockResult</tt> function. This function
+                  <bcp14>MUST</bcp14> update the result filter if a
+                  result is returned to the originator of the query.
+                </li>
+	        <li>
+		  If the <tt>BTYPE</tt> is not supported, filtering of
+		  exact duplicate replies <bcp14>MUST</bcp14> still be
+		  performed before forwarding the reply.  Such
+		  duplicate filtering <bcp14>MAY</bcp14> be
+		  implemented probabilistically, for example using a
+		  Bloom filter.  The result of this duplicate
+		  filtering is always either <tt>FILTER_MORE</tt> or
+		  <tt>FILTER_DUPLICATE</tt>.
+                </li>
+		<li>
+		  If the <tt>RecordRoute</tt> flag is set in
+		  <tt>FLAGS</tt>, the local peer identity
+		  <bcp14>MUST</bcp14> be appended to the
+		  <tt>GETPATH</tt> of the message and the respective
+		  signature <bcp14>MUST</bcp14> be set using the query
+		  origin as the <tt>PEER SUCCESSOR</tt> and the
+		  response origin as the <tt>PEER PREDECESSOR</tt>.
+		  If the flag is not set, the <tt>GETPATH_L</tt> and
+		  <tt>PUTPATH_L</tt> <bcp14>MUST</bcp14> be set to
+		  zero when forwarding the result.
+                </li>
+                <li>
+		  If the result filter result is either
+		  <tt>FILTER_MORE</tt> or <tt>FILTER_LAST</tt>, the
+		  message is forwarded to the origin of the query as
+		  defined in the entry which may either be the local
+		  peer or a remote peer.  In case this is a query of
+		  the local peer the result may have to be provided to
+		  applications through the overlay API.  Otherwise,
+		  the result is forwarded using <tt>SEND(P,
+		  ResultMessage')</tt> where <tt>ResultMessage'</tt>
+		  is the now modified message.  If the result was
+		  <tt>FILTER_LAST</tt>, the query <bcp14>MUST</bcp14>
+		  be removed from the pending table.
+	        </li>
+              </ol>
+            </li>
+internet-drafts/draft-schanzen-r5n-06.xml
+<li>
+		<ol>
+			<li>
+				RAA Trust lists
+			</li>
+			<li>
+				RAA Cross-endorsements
+			</li>
+			<li>
+				Bridge RAA with cross-endorsements to RAAs
+			</li>
+		</ol>
+ 	</li>
+<li>
+		<ol>
+			<li>
+				An invertible CBOR re-encoding of DER encoded X.509 
+				certificates <xref target="RFC5280"/>, which can be 
+				reversed to obtain the original DER encoded X.509 
+				certificate.
+			</li>
+			<li>
+				Natively signed C509 certificates, where the signature 
+				is calculated over the CBOR encoding instead of over 
+				the DER encoding as in 1. This removes the need for 
+				ASN.1 and DER parsing and the associated complexity but 
+				they are not backwards compatible with implementations 
+				requiring DER encoded X.509.
+			</li>
+		</ol>
+ 	</li>
+internet-drafts/draft-ietf-drip-dki-03.xml
+<li>DF_CALC on CALCULATED: Mark the election result for the VLAN or
+        VLAN Bundle.
+        <ol type="9.%d">
+        <li>If an SCT timestamp is present during the RCVD_ES event of Action 11, wait until the
+        time indicated by the SCT minus skew before proceeding to step 9.3.</li>
+        <li>If an SCT timestamp is present during the RCVD_ES event of Action 11, wait until the
+        time indicated by the SCT before proceeding to step 9.4.</li>
+        <li>Assume the role of NDF for the local PE concerning the VLAN or VLAN Bundle, and transition to the DF_DONE state.</li>
+        <li>Assume the role of DF for the local PE concerning the VLAN or VLAN Bundle, and transition to the DF_DONE state.</li>
+        </ol>
+        </li>
+internet-drafts/draft-ietf-bess-evpn-fast-df-recovery-12.xml
+<li>
+        A "validationOutputFilters" member whose value is an object.
+        The object MUST contain exactly three members:
+        <ul>
+          <li>A "prefixFilters" member, see Section 3.3.1 <xref target="RFC8416"/></li>
+          <li>A "bgpsecFilters" member, see section 3.3.2 <xref target="RFC8416"/></li>
+          <li>An "aspaFilters" member, see <xref target="aspaFilters"/></li>
+        </ul>
+      </li>
+<li>
+        A "locallyAddedAssertions" member whose value is an object.
+        The object MUST contain exactly three members:
+        <ul>
+          <li>A "prefixAssertions" member, see Section 3.4.1 <xref target="RFC8416"/></li>
+          <li>A "bgpsecAssertions" member, see Section 3.4.2 <xref target="RFC8416"/></li>
+          <li>An "aspaAssertions" member, see <xref target="aspaAssertions"/></li>
+        </ul>
+      </li>
+internet-drafts/draft-ietf-sidrops-aspa-slurm-02.xml
+<li>
+        A "validationOutputFilters" member whose value is an object.
+        The object MUST contain exactly three members:
+        <ul>
+          <li>A "prefixFilters" member, see Section 3.3.1 <xref target="RFC8416"/></li>
+          <li>A "bgpsecFilters" member, see section 3.3.2 <xref target="RFC8416"/></li>
+          <li>A "aspaFilters" member, see <xref target="aspaFilters"/></li>
+        </ul>
+      </li>
+<li>
+        A "locallyAddedAssertions" member whose value is an object.
+        The object MUST contain exactly three members:
+        <ul>
+          <li>A "prefixAssertions" member, see Section 3.4.1 <xref target="RFC8416"/></li>
+          <li>A "bgpsecAssertions" member, see Section 3.4.2 <xref target="RFC8416"/></li>
+          <li>A "aspaAssertions" member, see <xref target="aspaAssertions"/></li>
+        </ul>
+      </li>
+internet-drafts/draft-spaghetti-sidrops-aspa-slurm-03.xml
+<li> Action: 8 bits.
+              <ul spacing="normal">
+                 <li>0 - Inclusive List indicates that one or more link identifiers are included in the
+                 Link Set. Each identifies a separate link that is part of the set.</li>
+
+                 <li>1 - Inclusive Range indicates that the Link Set defines a range of links.  It
+                 contains two link identifiers. The first identifier indicates the start of the range
+                 (inclusive). The second identifier indicates the end of the range (inclusive). All
+                 links with numeric values between the bounds are considered to be part of the set. A
+                 value of zero in either position indicates that there is no bound on the corresponding
+                 portion of the range. Note that the Action field can be set to 0 when unnumbered link
+                 identifier is used.</li>
+              </ul></li>
+<li>M (Mode): 1 bit
+             <ul spacing="normal">
+               <li>0 indicates the allocation is under Explicit Label Control.</li>
+               <li>1 indicates the allocation is expressed in Label Sets.</li>
+             </ul></li>
+internet-drafts/draft-ietf-pce-flexible-grid-11.xml
+<li>
+              <ul spacing="normal">
+                <li>
+                  <t>The <tt>environment</tt> field is populated with a Target Environment identifier.</t>
+                </li>
+                <li>
+                  <t>The <tt>element-list</tt> field is populated with the measurements collected by an Attesting Environment.</t>
+                </li>
+                <li>
+                  <t>The <tt>authority</tt> field is populated with the identity of the entity that asserted (e.g., signed) the Conceptual Message.</t>
+                </li>
+                <li>
+                  <t>The <tt>cmtype</tt> field is set based on the type of Conceptual Message inputted or to be output.</t>
+                </li>
+                <li>
+                  <t>The <tt>profile</tt> field is set based on the <tt>corim-map</tt> <tt>profile</tt> value.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <t><strong>copy</strong>(<tt>environment-map</tt>, <tt>rv</tt>.<tt>condition</tt>.<tt>environment</tt>.<tt>environment-map</tt>)</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <t><strong>copy</strong>(<tt>environment-map</tt>, <tt>rv</tt>.<tt>addition</tt>.<tt>environment</tt>.<tt>environment-map</tt>)</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <t><strong>copy</strong>(e.<tt>measurement-map</tt>, <tt>rv</tt>.<tt>addition</tt>.<tt>element-list</tt>.<tt>element-map</tt>)</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <t><strong>copy</strong>(<tt>environment-map</tt>, <tt>ev</tt>.<tt>condition</tt>.<tt>environment</tt>.<tt>environment-map</tt>)</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <t><strong>copy</strong>(<tt>environment-map</tt>, <tt>ev</tt>.<tt>addition</tt>.<tt>environment</tt>.<tt>environment-map</tt>)</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <t><strong>copy</strong>(e.<tt>endorsement</tt>.<tt>measurement-map</tt>, <tt>ev</tt>.<tt>addition</tt>.<tt>element-list</tt>.<tt>element-map</tt>)</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <t><strong>copy</strong>(e.<tt>stateful-environment-record</tt>.<tt>environment</tt>.<tt>environment-map</tt>, <tt>ev</tt>.<tt>condition</tt>.<tt>environment</tt>.<tt>environment-map</tt>)</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <t><strong>copy</strong>(e.<tt>stateful-environment-record</tt>.<tt>claims-list</tt>.<tt>measurement-map</tt>, <tt>ev</tt>.<tt>condition</tt>.<tt>element-list</tt>.<tt>element-map</tt>)</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <t><strong>copy</strong>(e.<tt>endorsed-triple-record</tt>.<tt>condition</tt>.<tt>environment-map</tt>, <tt>ev</tt>.<tt>addition</tt>.<tt>environment</tt>.<tt>environment-map</tt>)</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <t><strong>copy</strong>(e.<tt>endorsed-triple-record</tt>.<tt>endorsement</tt>.<tt>measurement-map</tt>, <tt>ev</tt>.<tt>addition</tt>.<tt>element-list</tt>.<tt>element-map</tt>)</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <t><strong>copy</strong>(<tt>stateful-environment-record</tt>.<tt>environment</tt>.<tt>environment-map</tt>, <tt>evs</tt>.<tt>condition</tt>.<tt>environment</tt>.<tt>environment-map</tt>)</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <t><strong>copy</strong>(<tt>stateful-environment-record</tt>.<tt>claims-list</tt>.<tt>measurement-map</tt>, <tt>evs</tt>.<tt>condition</tt>.<tt>element-list</tt>.<tt>element-map</tt>)</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <t><strong>copy</strong>(<tt>evs</tt>.<tt>condition</tt>.<tt>environment</tt>.<tt>environment-map</tt>, <tt>evs</tt>.<tt>series</tt>.<tt>selection</tt>.<tt>environment</tt>.<tt>environment-map</tt>)</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <t><strong>copy</strong>(e.<tt>conditional-series-record</tt>.<tt>selection</tt>.<tt>measurement</tt>.<tt>measurement-map</tt>, <tt>evs</tt>.<tt>series</tt>.<tt>selection</tt>.<tt>element-list</tt>.<tt>element-map</tt>)</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <t><strong>copy</strong>(<tt>evs</tt>.<tt>condition</tt>.<tt>environment</tt>.<tt>environment-map</tt>, <tt>evs</tt>.<tt>series</tt>.<tt>addition</tt>.<tt>environment</tt>.<tt>environment-map</tt>)</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <t><strong>copy</strong>(e.<tt>conditional-series-record</tt>.<tt>addition</tt>.<tt>measurement-map</tt>, <tt>evs</tt>.<tt>series</tt>.<tt>addition</tt>.<tt>element-list</tt>.<tt>element-map</tt>)</t>
+                  </li>
+                </ul>
+              </li>
+internet-drafts/draft-ietf-rats-corim-06.xml
+<li>
+            <ul spacing="normal">
+              <li>
+                <t>Initial draft version</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul spacing="normal">
+              <li>
+                <t>Updated terminology to align with the FIDO/WebAuthn terminology</t>
+              </li>
+              <li>
+                <t>Reword introduction</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul spacing="normal">
+              <li>
+                <t>Rewording of introduction - better description under which circumstances the current practice is flawed.</t>
+              </li>
+              <li>
+                <t>Add Section describing client and server configuration</t>
+              </li>
+              <li>
+                <t>Add <tt>eap-fido-authentication.&lt;RPID&gt;</tt> as default server identity.</t>
+              </li>
+              <li>
+                <t>Refine wording around server name verification</t>
+              </li>
+              <li>
+                <t>Adjust message formats and attribute mapkeys to not transmit the RPID any more.</t>
+              </li>
+              <li>
+                <t>Add first few paragraphs on error handling</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul spacing="normal">
+              <li>
+                <t>First WG draft</t>
+              </li>
+              <li>
+                <t>Update way FIDO client data is constructed (include protocol binding at the very beginning, before exported key material from TLS)</t>
+              </li>
+              <li>
+                <t>Change auth requirements attribute to array of ints or text string, with text strings used for experimental features</t>
+              </li>
+              <li>
+                <t>Update IANA section for registry of auth requirement ints</t>
+              </li>
+            </ul>
+          </li>
+internet-drafts/draft-ietf-emu-eap-fido-00.xml
+<li>MIPv6 suit protocols: Based on the MIPv6 protocol, there are multiple extension protocols that have been standardized. These protocols can be classified into two types: protocols for function extension and protocols for performance enhancement. In the context of MIPv6 suit protocols, any location update will be initiated by a mobile host and a redirection tunnel is established between the UE’s home network and the UE in the visited network.
+			
+			      <ul spacing="normal">
+			 	      <li>The protocols for function extension are proposed to support some specific scenarios or functions, such as the Dual-stack Mobile IPv6 (DSMIPv6) <xref target="RFC5555"/> for mobility of the dual-stack nodes, the Multiple Care-of-Address (MCoA) <xref target="RFC5648"/> for hosts with multiple access interfaces, as well as the Network Mobility (NEMO) <xref target="RFC3963"/> for mobility of sub-network.</li>
+				      <li>The protocol type for performance enhancement of mobility management, such as the Fast Mobile IPv6 (FMIP6) <xref target="RFC5568"/> for fast handover, the Hierarchical Mobile IPv6 (HMIPv6) <xref target="RFC5380"/> for hierarchical mobility optimization.  </li>
+			      </ul>
+			    </li>
+internet-drafts/draft-yan-dmm-man-14.xml
+<li>
+                      <ol spacing="normal" type="1">
+                          <li>remove TIE from TIES_RTX if present </li>
+                        <li>
+                          <t>if TIE with same key is found on TIES_ACK then
+                          </t>
+                          <ol spacing="normal" type="a">
+                              <li>if TIE is same or newer than TIE do nothing else </li>
+                            <li>remove TIE from TIES_ACK and add TIE to TIES_TX</li>
+                          </ol>
+                        </li>
+                        <li>else insert TIE into TIES_TX</li>
+                      </ol>
+                    </li>
+internet-drafts/draft-ietf-rift-rift-24.xml
+<li>
+            <ol spacing="normal" type="1"><li>PSK identities provided via an administration interface are enforced to be only UTF-8 on both client and server.</li>
+              <li>The client treats session tickets received from the server as opaque blobs.</li>
+              <li>When the server issues session tickets for resumption, the server ensures that they are not valid UTF-8.</li>
+              <li>One way to do this is to use stateless resumption with a forced non-UTF-8 key_name per <xref section="4" sectionFormat="comma" target="RFC5077"/>, such as by setting one octet to 0x00.</li>
+            </ol>
+            <t>5 When receiving TLS, the server receives Client-Hello containing a PSK, and checks if the identity is valid UTF-8.</t>
+            <ul empty="true">
+              <li>
+                <t>5.1. If yes, it searches for a pre-configured client which matches that identity.</t>
+                <ul empty="true">
+                  <li>
+                    <t>5.1.1. If the identity is found, authenticates the client via PSK.</t>
+                    <t>5.1.2. else the identity is invalid, and the server closes the connection.</t>
+                  </li>
+                </ul>
+                <t>5.2 If the identity is not UTF-8, try resumption, which is usually be handled by a TLS library.</t>
+                <ul empty="true">
+                  <li>
+                    <t>5.2.1 If the TLS library verifies the session ticket, resumption has happened, and the connection is established.</t>
+                    <t>5.2.2. else the server ignores the session ticket, and performs normal TLS handshake with a certificate.</t>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+internet-drafts/draft-ietf-radext-tls-psk-11.xml
+<li><ul>
+              <li>
+		Source Link-Layer Address option: Including this option whenever possible is RECOMMENDED. The load balancing use case
+		in <xref target="RFC4861" section="6.2.3" sectionFormat="of"/> is out of scope for this document and is not generally
+		expected to be applicable. The benefit of including this option is that it eliminates the need to do neighbor discovery
+		on the SNAC router's link-local address in order to get its link-layer address.</li>
+              <li>
+		MTU option: the SNAC router is not managing the link, and hence SHOULD NOT send this option.</li>
+              <li> Prefix Information options: when there is no suitable prefix (See <xref target="suitable"/>) on the
+		infrastructure link, some SNAC router will need to send a PIO. However, unless they are able to cooperate in
+		choosing a PIO, only one SNAC routers will send it PIO. How this decision is made is described in
+		<xref target="suitable-prefix-state-machine"/>. When a SNAC router sents this option, the following settings
+		apply:</li>
+              <li><ul>
+                <li> In the 'L' flag bit (on-link): 1.</li>
+                <li> In the 'A' flag bit (Autonomous address configuration): 1</li>
+                <li> In the Valid Lifetime field: normally STUB_PROVIDED_PREFIX_LIFETIME (see <xref target="constants"/>), but see
+		  <xref target="state-deprecating"/>.</li>
+                <li> In the Preferred Lifetime field: normally STUB_PROVIDED_PREFIX_LIFETIME (see <xref target="constants"/>), but see
+		  <xref target="state-deprecating"/>.</li>
+	      </ul></li>
+	      <li> Route Information Option: an active SNAC router always provides a Route Information Option for each prefix that
+		is valid on the stub network. This provides a route from the infrastructure network to the stub network. The
+		following settings apply:</li>
+	      <li><ul>
+		<li> Prefix Length: 64</li>
+		<li> Route Preference: low</li>
+		<li> Route Lifetime: STUB_NETWORK_REACHABLE_TIME (TBD: what about deprecated prefixes? Add reference to new proposed text that addresses issue #67 on github)</li>
+		<li> Prefix: the prefix advertised on the stub network</li>
+	      </ul></li>
+	    </ul></li>
+<li><ul>
+                <li> In the 'L' flag bit (on-link): 1.</li>
+                <li> In the 'A' flag bit (Autonomous address configuration): 1</li>
+                <li> In the Valid Lifetime field: normally STUB_PROVIDED_PREFIX_LIFETIME (see <xref target="constants"/>), but see
+		  <xref target="state-deprecating"/>.</li>
+                <li> In the Preferred Lifetime field: normally STUB_PROVIDED_PREFIX_LIFETIME (see <xref target="constants"/>), but see
+		  <xref target="state-deprecating"/>.</li>
+	      </ul></li>
+<li><ul>
+		<li> Prefix Length: 64</li>
+		<li> Route Preference: low</li>
+		<li> Route Lifetime: STUB_NETWORK_REACHABLE_TIME (TBD: what about deprecated prefixes? Add reference to new proposed text that addresses issue #67 on github)</li>
+		<li> Prefix: the prefix advertised on the stub network</li>
+	      </ul></li>
+<li><ul>
+              <li>
+		Source Link-Layer Address option: Including this option whenever possible is RECOMMENDED. The load balancing use case
+		in <xref target="RFC4861" section="6.2.3" sectionFormat="of"/> is out of scope for this document and is not generally
+		expected to be applicable. The benefit of including this option is that it eliminates the need to do neighbor discovery
+		on the SNAC router's link-local address in order to get its link-layer address.</li>
+              <li>
+		MTU option: the SNAC router is managing the link, and hence MAY send this option.</li>
+              <li> Some SNAC router will need to send a PIO. Normally, only one SNAC router will send a PIO. How this decision is made is described in
+		<xref target="stub-addressability"/>. When a SNAC router sents this option, the following settings
+		apply:</li>
+              <li><ul>
+                <li> In the 'L' flag bit (on-link): 1.</li>
+                <li> In the 'A' flag bit (Autonomous address configuration): 1</li>
+                <li> In the Valid Lifetime field: normally STUB_PROVIDED_PREFIX_LIFETIME (see <xref target="constants"/>), but see
+		  <xref target="state-deprecating"/>.</li>
+                <li> In the Preferred Lifetime field: normally STUB_PROVIDED_PREFIX_LIFETIME (see <xref target="constants"/>), but see
+		  <xref target="state-deprecating"/>.</li>
+	      </ul></li>
+	      <li> <t>Route Information Option: when a SNAC router is not advertising a default route, it MUST include one or more
+		RIO options in router advertisements on the stub network to provide reachability to infrastructure. This is discussed in
+		<xref target="stub-reachability"/>. The following settings apply:</t>
+	      <ul>
+		<li> Prefix Length: the length of the prefix covered by the route, not necessarily 64.</li>
+		<li> Route Preference: low</li>
+		<li> Route Lifetime: The lifetime of the prefix on the infrastructure link, but no more than STUB_NETWORK_REACHABLE_TIME</li>
+		<li> Prefix: the prefix that is known to be reachable on the infrastructure network</li>
+	      </ul></li>
+	    </ul></li>
+<li><ul>
+                <li> In the 'L' flag bit (on-link): 1.</li>
+                <li> In the 'A' flag bit (Autonomous address configuration): 1</li>
+                <li> In the Valid Lifetime field: normally STUB_PROVIDED_PREFIX_LIFETIME (see <xref target="constants"/>), but see
+		  <xref target="state-deprecating"/>.</li>
+                <li> In the Preferred Lifetime field: normally STUB_PROVIDED_PREFIX_LIFETIME (see <xref target="constants"/>), but see
+		  <xref target="state-deprecating"/>.</li>
+	      </ul></li>
+internet-drafts/draft-ietf-snac-simple-06.xml
+<li>
+The ICR sends a query to all (but currently used) ECRs of the domain, or a subset selected based on the location of the ICR. This query may include the following parameters:       
+          <ol type="i">
+
+            <li>
+Service ID: an identifier of the service requested by the terminal. This allows to check if the service can be instantiated or it is already instantiated.
+            </li>
+
+            <li>
+Terminal ID: an identifier of the terminal requesting the service. This is useful for example for affinity purposes. It might not include information that can be used to identify the user.
+            </li>
+
+            <li>
+ICR ID: identifier of the requesting ICR.
+            </li>
+
+            <li>
+CATS requirements: list of requirements, e.g., connectivity and computing requirements.
+            </li>
+
+          </ol>
+ 
+        </li>
+<li>
+Each ECR, possibly after checking with the CATS agent of the site(s) it provides connectivity, responds, including the following information:
+
+          <ol type="i">
+
+            <li>
+The ICR sends a query to all ECRs of the domain, or a subset selected based on the location of the ICR. This query may include the following parameters:
+
+              <ol type="i">
+              
+                <li>
+Service ID.
+                </li>
+
+                <li>
+Terminal ID.
+                </li>
+
+                <li>
+ECR ID: identifier of the ECR sending the response.
+                </li>
+
+                <li>
+CATS conditions: how the site meets each of the requirements included in the request.
+                </li>
+
+                <li>
+(Optional): URI to get to the service instance.
+                </li>
+
+              </ol>
+
+A CATS agent at a site might be collocated with the ECR. Examples of a CATS agent at a site are network controllers or orchestrators at the site. Note that the way a CATS agent at an ECR may interact with the CATS agent of the site is out of the scope of this document. Examples include using monitoring and telemetry interfaces with an orchestrator managing the site.
+            </li>
+
+            <li>
+Based on the received responses, and considering both networking and computing metrics and policies, the ICR selects an ECR (#n).
+            </li>
+
+            <li>
+The ICR requests the proposed/selected ECR to establish a traffic steering session with it, sending a CATS request. This request includes the same information that was included in the CATS query (to facilitate stateless operation of the ECRs while being queried), plus the following additional parameters:
+
+              <ul>
+              
+                <li>
+ECR prefix: currently in use IP prefix IP to the terminal to reach the service instance.
+                </li>
+
+                <li>
+Lifetime: requested duration for the association between the ICR and the ECR.
+                </li>
+
+              </ul>
+
+            </li>
+
+            
+            <li>
+The selected ECR responds back with an acknowledgement, including the following information:
+
+              <ol type="i">
+              
+                <li>
+Service ID. 
+
+                </li>
+
+                <li>
+Terminal ID. 
+                </li>
+
+                <li>
+ECR ID: identifier of the ECR sending the response. 
+                </li>
+
+                <li>
+CATS conditions: how the site meets each of the requirements included in the request. 
+                </li>
+
+                <li>
+IP prefix assigned for the terminal to use to reach the service instance. It should match the one included in the request.
+                </li>
+
+                <li>
+Lifetime: granted duration of the association between the ICR and the ECR.
+                </li>
+        
+              </ol>
+
+            </li>
+
+            <li>
+An IP tunnel is established between the ICR and the new ECR. Optionally (not shown in the figure), the ICR might send a CATS request with cero lifetime to the old ECR to remove the old tunnel.
+            </li>
+
+            <li>
+The previous message triggers the service migration (from site #n to site #n-1). The specific mechanism is out of the scope of this document. Note that some preparation/migration steps might be conducted in parallel (e.g., after messages #1 and #3) to accelerate the process, making this step just the final trigger for the service migration.
+At site #n, the prefix used by the terminal for accessing the service is configured to be used by migrated instance. This might requires routing updates to be perfomed in the site, potentially controlled by a CATS agent running in the site.
+            </li>
+
+            <li>
+Traffic of the service for this terminal is steered using the IP tunnel.
+            </li>
+           
+          </ol>
+
+        </li>
+<li>
+The ICR sends a query to all ECRs of the domain, or a subset selected based on the location of the ICR. This query may include the following parameters:
+
+              <ol type="i">
+              
+                <li>
+Service ID.
+                </li>
+
+                <li>
+Terminal ID.
+                </li>
+
+                <li>
+ECR ID: identifier of the ECR sending the response.
+                </li>
+
+                <li>
+CATS conditions: how the site meets each of the requirements included in the request.
+                </li>
+
+                <li>
+(Optional): URI to get to the service instance.
+                </li>
+
+              </ol>
+
+A CATS agent at a site might be collocated with the ECR. Examples of a CATS agent at a site are network controllers or orchestrators at the site. Note that the way a CATS agent at an ECR may interact with the CATS agent of the site is out of the scope of this document. Examples include using monitoring and telemetry interfaces with an orchestrator managing the site.
+            </li>
+<li>
+The ICR requests the proposed/selected ECR to establish a traffic steering session with it, sending a CATS request. This request includes the same information that was included in the CATS query (to facilitate stateless operation of the ECRs while being queried), plus the following additional parameters:
+
+              <ul>
+              
+                <li>
+ECR prefix: currently in use IP prefix IP to the terminal to reach the service instance.
+                </li>
+
+                <li>
+Lifetime: requested duration for the association between the ICR and the ECR.
+                </li>
+
+              </ul>
+
+            </li>
+<li>
+The selected ECR responds back with an acknowledgement, including the following information:
+
+              <ol type="i">
+              
+                <li>
+Service ID. 
+
+                </li>
+
+                <li>
+Terminal ID. 
+                </li>
+
+                <li>
+ECR ID: identifier of the ECR sending the response. 
+                </li>
+
+                <li>
+CATS conditions: how the site meets each of the requirements included in the request. 
+                </li>
+
+                <li>
+IP prefix assigned for the terminal to use to reach the service instance. It should match the one included in the request.
+                </li>
+
+                <li>
+Lifetime: granted duration of the association between the ICR and the ECR.
+                </li>
+        
+              </ol>
+
+            </li>
+internet-drafts/draft-bernardos-cats-anchoring-service-mobility-01.xml
+<li>
+          <ol>
+            <li>
+              to make the storage device aware of the association between
+              the metadata-server-chosen stateid and the filehandle and
+              delegation type it represents
+            </li>
+
+            <li>
+              to break such an association.
+            </li>
+          </ol>
+        </li>
+internet-drafts/draft-haynes-nfsv4-flexfiles-v2-00.xml
+<li>
+            <ul spacing="normal">
+              <li>
+                <t>For PLE [PLE] the bitrate MUST be set to the data rate in units of 1-kbps of the PLE payload.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul spacing="normal">
+              <li>
+                <t>Guidelines for setting the bitrate for SAToP VPWS and CESoP VPWS can be found in <xref target="RFC5287"/>.  And for CEP VPWS in <xref target="RFC4842"/>.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul spacing="normal">
+              <li>
+                <t>0x3 - Basic PLE payload</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul spacing="normal">
+              <li>
+                <t>0x4 - Byte aligned PLE payload</t>
+              </li>
+            </ul>
+          </li>
+internet-drafts/draft-schmutzer-bess-bitstream-vpws-signalling-02.xml
+<li><ul>
+		<li>the name to which the "Delete all RRsets from a name" applies does not exist, or</li>
+		<li>there is an existing KEY RR on that name, which matches the key with which the SRP Update was
+		  signed.</li></ul></li>
+internet-drafts/draft-ietf-dnssd-srp-25.xml
+<li>
+The terminal sends a Service request to the ICR, including a service ID and, optionally, if the terminal is CATS aware, a list of CATS requirements. Note that this request might be addressed to an ICR or just intercepted by an ICR. If present, the list of CATS requirements might include information such as (not limited to any particular combination of parameters): 
+       
+          <ol type="a">
+
+            <li>
+Target bounded latency. 
+            </li>
+
+            <li>
+Target minimum bandwidth. 
+            </li>
+
+            <li>
+Target computing latency (type of operation, offered load). 
+            </li>
+
+            <li>
+Target required computing resources (e.g., hardware specific features). 
+            </li>
+
+            <li>
+Affinity constraints (e.g., "not to execute where function Y is already running"). 
+            </li>
+
+            <li>
+Etc.
+            </li>
+
+          </ol>
+ 
+        </li>
+<li>
+OPTION 1: 
+
+          <ol type="a">
+
+            <li>
+The ICR sends a query to all ECRs of the domain, or a subset selected based on the location of the ICR. This query may include the following parameters:
+
+              <ol type="i">
+              
+                <li>
+Service ID: an identifier of the service requested by the terminal. This allows to check if the service can be instantiated or it is already instantiated. 
+                </li>
+
+                <li>
+Terminal ID: an identifier of the terminal requesting the service. This is useful for example for affinity purposes. It might not include information that can be used to identify the user.
+                </li>
+
+                <li>
+ICR ID: identifier of the requesting ICR. 
+                </li>
+
+                <li>
+CATS requirements: list of requirements, e.g., connectivity and computing requirements. 
+                </li>
+                
+              </ol>
+
+            </li>
+
+            <li>
+Each ECR, possibly after checking with the CATS agent of the site(s) it provides connectivity, responds, including the following information: 
+
+              <ol type="i">
+              
+                <li>
+Service ID. 
+
+                </li>
+
+                <li>
+Terminal ID. 
+                </li>
+
+                <li>
+ECR ID: identifier of the ECR sending the response. 
+                </li>
+
+                <li>
+CATS conditions: how the site meets each of the requirements included in the request. 
+                </li>
+
+                <li>
+(Optional): URI to get to the service instance. 
+                </li>
+                
+              </ol>
+
+A CATS agent at a site might be collocated with the ECR. Examples of a CATS agent at a site are network controllers or orchestrators at the site. Note that the way a CATS agent at an ECR may interact with the CATS agent of the site is out of the scope of this document. Examples include using monitoring and telemetry interfaces with an orchestrator managing the site. 
+
+Based on the received responses, the ICR selects an ECR. (step 4). 
+            </li>
+            
+          </ol>
+
+        </li>
+<li>
+The ICR sends a query to all ECRs of the domain, or a subset selected based on the location of the ICR. This query may include the following parameters:
+
+              <ol type="i">
+              
+                <li>
+Service ID: an identifier of the service requested by the terminal. This allows to check if the service can be instantiated or it is already instantiated. 
+                </li>
+
+                <li>
+Terminal ID: an identifier of the terminal requesting the service. This is useful for example for affinity purposes. It might not include information that can be used to identify the user.
+                </li>
+
+                <li>
+ICR ID: identifier of the requesting ICR. 
+                </li>
+
+                <li>
+CATS requirements: list of requirements, e.g., connectivity and computing requirements. 
+                </li>
+                
+              </ol>
+
+            </li>
+<li>
+Each ECR, possibly after checking with the CATS agent of the site(s) it provides connectivity, responds, including the following information: 
+
+              <ol type="i">
+              
+                <li>
+Service ID. 
+
+                </li>
+
+                <li>
+Terminal ID. 
+                </li>
+
+                <li>
+ECR ID: identifier of the ECR sending the response. 
+                </li>
+
+                <li>
+CATS conditions: how the site meets each of the requirements included in the request. 
+                </li>
+
+                <li>
+(Optional): URI to get to the service instance. 
+                </li>
+                
+              </ol>
+
+A CATS agent at a site might be collocated with the ECR. Examples of a CATS agent at a site are network controllers or orchestrators at the site. Note that the way a CATS agent at an ECR may interact with the CATS agent of the site is out of the scope of this document. Examples include using monitoring and telemetry interfaces with an orchestrator managing the site. 
+
+Based on the received responses, the ICR selects an ECR. (step 4). 
+            </li>
+<li>
+OPTION 2: 
+
+          <ol type="a">
+
+            <li>
+The ICR sends a query to a CATS controller in the domain, including the following parameters: 
+              <ol type="i">
+              
+                <li>
+Service ID: an identifier of the service requested by the terminal. This allows to check if the service can be instantiated or it is already instantiated. 
+                </li>
+
+                <li>
+Terminal ID: an identifier of the terminal requesting the service. This is useful for example for affinity purposes. It might not include information that can be used to identify the user. 
+                </li>
+
+                <li>
+ICR ID: identifier of the requesting ICR.
+                </li>
+
+                <li>
+CATS requirements: list of requirements, e.g., connectivity and computing requirements.
+                </li>
+                
+              </ol>
+
+            </li>
+
+            <li>
+The CATS controller, which has the overall view of all the sites and ECRs of the domain, responds back including the following information: 
+
+              <ol type="i">
+              
+                <li>
+Service ID. 
+
+                </li>
+
+                <li>
+Terminal ID. 
+                </li>
+
+                <li>
+CATS conditions: how the site meets each of the requirements included in the request. 
+                </li>
+
+                <li>
+Selected ECR: IP address of the selected ECR. 
+                </li>
+                
+              </ol>
+
+            </li>
+
+          </ol>
+
+        </li>
+<li>
+The ICR sends a query to a CATS controller in the domain, including the following parameters: 
+              <ol type="i">
+              
+                <li>
+Service ID: an identifier of the service requested by the terminal. This allows to check if the service can be instantiated or it is already instantiated. 
+                </li>
+
+                <li>
+Terminal ID: an identifier of the terminal requesting the service. This is useful for example for affinity purposes. It might not include information that can be used to identify the user. 
+                </li>
+
+                <li>
+ICR ID: identifier of the requesting ICR.
+                </li>
+
+                <li>
+CATS requirements: list of requirements, e.g., connectivity and computing requirements.
+                </li>
+                
+              </ol>
+
+            </li>
+<li>
+The CATS controller, which has the overall view of all the sites and ECRs of the domain, responds back including the following information: 
+
+              <ol type="i">
+              
+                <li>
+Service ID. 
+
+                </li>
+
+                <li>
+Terminal ID. 
+                </li>
+
+                <li>
+CATS conditions: how the site meets each of the requirements included in the request. 
+                </li>
+
+                <li>
+Selected ECR: IP address of the selected ECR. 
+                </li>
+                
+              </ol>
+
+            </li>
+<li>
+The selected ECR, if it accepts the request, responds back with an acknowledgement, including the following information:
+
+          <ul>
+
+            <li>
+Service ID. 
+            </li>
+            
+            <li>
+Terminal ID. 
+            </li>
+            
+            <li>
+ECR ID: identifier of the ECR sending the response. 
+            </li>
+            
+            <li>
+CATS conditions: how the site meets each of the requirements included in the request. 
+            </li>
+
+            <li>
+IP prefix assigned for the terminal to use to reach the service instance. 
+            </li>
+
+            <li>
+(Optional): URI to get to the service instance.
+            </li>
+
+          </ul>
+
+        </li>
+<li>
+CR ID Format: 8-bit unsigned integer. Identifies the format of the CR ID. Possibles values:
+
+            <ul>
+            
+              <li>
+0: Reserved.
+              </li>
+
+              <li>
+1: IP address (v4 or v6, determined by CR ID Length).
+              </li>
+
+              <li>
+2: L2 address (48 or 64 bit, determined by CR ID Length).
+              </li>
+
+              <li>
+3: URI.
+              </li>
+
+              <li>
+4-255: reserved for future use.
+              </li>
+              
+            </ul>
+            
+          </li>
+internet-drafts/draft-bernardos-cats-ip-address-anchoring-02.xml
+<li>
+            <ul spacing="normal">
+              <li>
+                <t>0x3 - Basic PLE payload</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul spacing="normal">
+              <li>
+                <t>0x4 - Byte aligned PLE payload</t>
+              </li>
+            </ul>
+          </li>
+internet-drafts/draft-schmutzer-pals-ple-signaling-02.xml
+<li>
+  <ul empty="true"><li>
+
+    <t><list style="symbols">
+      <t>name: A YANG leaf that holds the named path constraint entry. This is unique in the list
+and used as a key.</t>
+      <t>te-bandwidth: A YANG container that holds the technology agnostic TE bandwidth constraint.</t>
+      <t>link-protection: A YANG leaf that holds the link protection type constraint required for the links to be included in the computed path.</t>
+      <t>setup/hold priority: YANG leafs that hold the LSP setup and hold admission priority as defined in <xref target="RFC3209"/>.</t>
+      <t>signaling-type: A YANG leaf that holds the LSP setup type, such as RSVP-TE or SR.</t>
+      <t>path-metric-bounds: A YANG container that holds the set of metric bounds applicable on the
+computed TE tunnel path.</t>
+      <t>path-affinities-values: A YANG container that holds the set of affinity values and
+mask to be used during path computation.</t>
+      <t>path-affinity-names: A YANG container that holds the set of named affinity constraints and
+corresponding inclusion or exclusion instructions for each to be used during path computation.</t>
+      <t>path-srlgs-lists: A YANG container that holds the set of SRLG values and
+corresponding inclusion or exclusion instructions to be used during path computation.</t>
+      <t>path-srlgs-names: A YANG container that holds the set of named SRLG constraints and
+corresponding inclusion or exclusion instructions for each to be used during path computation.</t>
+      <t>disjointness: The level of resource disjointness constraint that the secondary path
+of a TE tunnel has to adhere to.</t>
+      <t>explicit-route-objects: A YANG container that holds path constraints in the form of route entries present in following two lists:      <list style="symbols">
+          <t>'route-object-exclude-always': a list of route entries that are always excluded from the path computation. The exclusion of a route entry in this list
+during path computation is not order sensitive.</t>
+          <t>'route-object-include-exclude': a list of route entries to include or exclude route entry constraints for the path computation. The constraint type (include or exclude)
+is specified with each route entry. The path computation considers route entry constraints in the order they appear in this list. Once a route entry
+constraint is consumed from this list, it is not considered any further in the computation of the path.</t>
+        </list></t>
+    </list></t>
+  </li></ul>
+</li>
+<li>
+  <ul empty="true"><li>
+    <ul empty="true"><li>
+      <t>The 'route-object-include-exclude' is used to configure constraints on which route objects (e.g., nodes, links) are included or excluded in the path computation.</t>
+    </li></ul>
+  </li></ul>
+</li>
+<li>
+    <ul empty="true"><li>
+      <t>The 'route-object-include-exclude' is used to configure constraints on which route objects (e.g., nodes, links) are included or excluded in the path computation.</t>
+    </li></ul>
+  </li>
+<li>
+  <ul empty="true"><li>
+    <ul empty="true"><li>
+      <t>The interpretation of an empty 'route-object-include-exclude' list depends on the TE Tunnel (end-to-end or Tunnel Segment) and on the specific path, according to the following rules:</t>
+    </li></ul>
+  </li></ul>
+</li>
+<li>
+    <ul empty="true"><li>
+      <t>The interpretation of an empty 'route-object-include-exclude' list depends on the TE Tunnel (end-to-end or Tunnel Segment) and on the specific path, according to the following rules:</t>
+    </li></ul>
+  </li>
+<li>
+  <ul empty="true"><li>
+    <ul empty="true"><li>
+
+      <t><list style="numbers">
+        <t>An empty 'route-object-include-exclude' list for the primary path of an end-to-end TE Tunnel indicates that there are no route objects to be included or excluded in the path computation.</t>
+        <t>An empty 'route-object-include-exclude' list for the primary path of a TE Tunnel Segment indicates that no primary LSP is required for that TE Tunnel.</t>
+        <t>An empty 'route-object-include-exclude' list for a reverse path means it always follows the forward path (i.e., the TE Tunnel is co-routed). When the 'route-object-include-exclude' list is not empty, the reverse path is routed independently of the forward path.</t>
+        <t>An empty 'route-object-include-exclude' list for the secondary (forward) path indicates that the secondary path has the same endpoints as the primary path.</t>
+      </list></t>
+    </li></ul>
+
+    <t><list style="symbols">
+      <t>path-in-segment: A YANG container that contains a list of label restrictions
+that have to be taken into considerations when crossing domains. This TE
+tunnel segment in this case is being stitched to the upstream TE tunnel segment.</t>
+      <t>path-out-segment: A YANG container that contains a list of label restrictions
+that have to be taken into considerations when crossing domains. The TE
+tunnel segment in this case is being stitched to the downstream TE tunnel segment.</t>
+    </list></t>
+  </li></ul>
+</li>
+<li>
+    <ul empty="true"><li>
+
+      <t><list style="numbers">
+        <t>An empty 'route-object-include-exclude' list for the primary path of an end-to-end TE Tunnel indicates that there are no route objects to be included or excluded in the path computation.</t>
+        <t>An empty 'route-object-include-exclude' list for the primary path of a TE Tunnel Segment indicates that no primary LSP is required for that TE Tunnel.</t>
+        <t>An empty 'route-object-include-exclude' list for a reverse path means it always follows the forward path (i.e., the TE Tunnel is co-routed). When the 'route-object-include-exclude' list is not empty, the reverse path is routed independently of the forward path.</t>
+        <t>An empty 'route-object-include-exclude' list for the secondary (forward) path indicates that the secondary path has the same endpoints as the primary path.</t>
+      </list></t>
+    </li></ul>
+
+    <t><list style="symbols">
+      <t>path-in-segment: A YANG container that contains a list of label restrictions
+that have to be taken into considerations when crossing domains. This TE
+tunnel segment in this case is being stitched to the upstream TE tunnel segment.</t>
+      <t>path-out-segment: A YANG container that contains a list of label restrictions
+that have to be taken into considerations when crossing domains. The TE
+tunnel segment in this case is being stitched to the downstream TE tunnel segment.</t>
+    </list></t>
+  </li>
+<li>
+  <ul empty="true"><li>
+
+    <t><list style="symbols">
+      <t>dependency-tunnels: A set of hierarchical TE Tunnels provisioned or to be
+provisioned in the immediate lower layer that this TE tunnel depends on for
+multi-layer path computation. A dependency TE Tunnel is provisioned if and
+only if it is used (selected by path computation) at least by one client
+layer TE Tunnel. The TE link in the client layer network topology supported
+by a dependent TE Tunnel is dynamically created only when the dependency TE
+Tunnel is actually provisioned.</t>
+      <t>hierarchical-link: A YANG container that holds the identity of the
+hierarchical link (in the client layer) that is supported by this TE Tunnel.
+The endpoints of the hierarchical link are defined by TE tunnel source and
+destination node endpoints. The hierarchical link can be identified by its source
+and destination link termination point identifiers.</t>
+    </list></t>
+  </li></ul>
+</li>
+internet-drafts/draft-ietf-teas-yang-te-37.xml
+<li>
+	  An endpoints array with one element can be one of
+	  three things:
+	<ol>
+	  <li>
+	    An empty object, which the ZF should take to be an HTTPS record
+	    with inferred SvcPriority, a TargetName equal to ".", and no ECH
+	    support. This can can be useful as a simple way to make use of
+	    the HTTPS RR type's HSTS behavior.
+	  </li>
+	  <li>
+	      A ServiceMode entry, containing at least one key from the JSON
+	      HTTP Origin Info registry (see <xref target="iana">IANA
+	      Considerations</xref>, below).
+	  </li>
+	  <li>
+	    An AliasMode entry that points to another DNS name that must
+	    be resolved.
+	  </li>
+	  </ol>
+      </li>
+internet-drafts/draft-ietf-tls-wkech-06.xml
+<li>
+            <ul empty="true">
+              <li>
+                <t>End-Entity (EE) refers to the entity that owns a key pair and for
+   whom a certificate is issued.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>Registration Authority (RA) or Local RA (LRA) refers to an entity
+   that acts as an intermediary between the EE and the CA. Multiple
+   RAs can exist between the end-entity and the Certification
+   Authority. RAs may perform additional services such as key
+   generation or key archival. This document uses the term RA for
+   both RA and LRA.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>Certification Authority (CA) refers to the entity that issues
+   certificates.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>Client refers to an entity that creates a PKI Request. In this
+   document, both RAs and EEs can be clients.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>Server refers to the entities that process PKI Requests and create
+    PKI Responses. In this document, both CAs and RAs can be servers.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>PKCS #10 refers to the Public Key Cryptography Standard #10
+   <xref target="PKCS10"/> which defines a certification request syntax.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>CRMF refers to the Certificate Request Message Format RFC <xref target="CRMF"/>.
+   CMC uses this certification request syntax defined in this
+   document as part of the protocol.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>CMS refers to the Cryptographic Message Syntax RFC <xref target="CMS"/>. This
+   document provides for basic cryptographic services including
+   encryption and signing with and without key management.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>PKI Request/Response refers to the requests/responses described in
+   this document. PKI Requests include certification requests,
+   revocation requests, etc. PKI Responses include certs-only
+   messages, failure messages, etc.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>Proof-of-Identity refers to the client proving they are who they say
+   that they are to the server.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>Enrollment or certification request refers to the process of a
+   client requesting a certificate. A certification request is a
+   subset of the PKI Requests.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>Proof-of-Possession (POP) refers to a value that can be used to
+   prove that the private key corresponding to a public key is in the
+   possession and can be used by an end-entity. The different types
+   of POP are:</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <ul spacing="normal">
+                  <li>
+                    <t>Signature provides the required POP by a signature operation over
+   some data.</t>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+<li>
+                <ul spacing="normal">
+                  <li>
+                    <t>Signature provides the required POP by a signature operation over
+   some data.</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+            <ul empty="true">
+              <li>
+                <ul spacing="normal">
+                  <li>
+                    <t>Direct provides the required POP operation by an encrypted
+   challenge/response mechanism.</t>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+<li>
+                <ul spacing="normal">
+                  <li>
+                    <t>Direct provides the required POP operation by an encrypted
+   challenge/response mechanism.</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+            <ul empty="true">
+              <li>
+                <ul spacing="normal">
+                  <li>
+                    <t>Indirect provides the required POP operation by returning the
+   issued certificate in an encrypted state.  (This method is not
+   used by CMC.)</t>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+<li>
+                <ul spacing="normal">
+                  <li>
+                    <t>Indirect provides the required POP operation by returning the
+   issued certificate in an encrypted state.  (This method is not
+   used by CMC.)</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+            <ul empty="true">
+              <li>
+                <ul spacing="normal">
+                  <li>
+                    <t>Publish provides the required POP operation by providing the
+   private key to the certificate issuer. (This method is not
+   currently used by CMC. It would be used by Key Generation or
+   Key Escrow extensions.)</t>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+<li>
+                <ul spacing="normal">
+                  <li>
+                    <t>Publish provides the required POP operation by providing the
+   private key to the certificate issuer. (This method is not
+   currently used by CMC. It would be used by Key Generation or
+   Key Escrow extensions.)</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+            <ul empty="true">
+              <li>
+                <ul spacing="normal">
+                  <li>
+                    <t>Attested provides the required POP operation by allowing a
+   trusted entity to assert that the POP has been proven by one of
+   the above methods.</t>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+<li>
+                <ul spacing="normal">
+                  <li>
+                    <t>Attested provides the required POP operation by allowing a
+   trusted entity to assert that the POP has been proven by one of
+   the above methods.</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>Object IDentifier (OID) is a primitive type in Abstract Syntax
+   Notation One (ASN.1).</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>Simple PKI Response on success.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>Full PKI Response on failure. The server <bcp14>MAY</bcp14> choose not to return a
+   PKI Response in this case.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>Simple PKI Response if the enrollment was successful and only
+   certificates are returned. (A CMCStatusInfoV2 control with
+   success is implied.)</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>Full PKI Response if the enrollment was successful and information
+   is returned in addition to certificates, if the enrollment is
+   pending, or if the enrollment failed.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t><tt>controlSequence</tt> is a sequence of controls. The controls defined in
+   this document are found in <xref target="Controls"/>. Controls can be defined by
+   other parties. Details on the TaggedAttribute structure can be
+   found in <xref target="ControlSyntax"/>.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t><tt>reqSequence</tt> is a sequence of certification requests. The
+   certification requests can be a CertificationRequest (PKCS #10), a
+   CertReqMsg (CRMF), or an externally defined PKI request. Full
+   details are found in <xref target="CertificationRequestFormats"/>. If an externally defined
+   certification request is present, but the server does not
+   understand the certification request (or will not process it), a
+   CMCStatus of noSupport <bcp14>MUST</bcp14> be returned for the certification
+   request item and no other certification requests are processed.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t><tt>cmsSequence</tt> is a sequence of <xref target="CMS"/> message objects. See
+   <xref target="ContentInfoObjects"/> for more details.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t><tt>otherMsgSequence</tt> is a sequence of arbitrary data objects. Data
+   objects placed here are referred to by one or more controls. This
+   allows for controls to use large amounts of data without the data
+   being embedded in the control. See <xref target="OtherMessageBodies"/> for more
+   details.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <t>bodyPartID is a unique integer that identifies this control.</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <t>attrType is the OID that identifies the control.</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <t>attrValues is the data values used in processing the control. The
+   structure of the data is dependent on the specific
+   control.</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <t><tt>tcr</tt> is a certification request that uses the PKCS #10 syntax.
+   Details on PKCS #10 are found in <xref target="PKCS10CertificationSyntax"/>.</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <t><tt>crm</tt> is a certification request that uses the CRMF syntax. Details
+   on CRMF are found in <xref target="CRMFCertificationSyntax"/>.</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <t><tt>orm</tt> is an externally defined certification request. One example is
+    an attribute certification request.  The fields of this structure
+    are:</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <ul spacing="normal">
+                      <li>
+                        <t><tt>bodyPartID</tt> is the identifier number for this certification
+    request. Details on body part identifiers are found in
+    <xref target="BodyPartIdentification"/>.</t>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+<li>
+                    <ul spacing="normal">
+                      <li>
+                        <t><tt>bodyPartID</tt> is the identifier number for this certification
+    request. Details on body part identifiers are found in
+    <xref target="BodyPartIdentification"/>.</t>
+                      </li>
+                    </ul>
+                  </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <ul spacing="normal">
+                      <li>
+                        <t><tt>requestMessageType</tt> identifies the other request type. These
+   values are defined outside of this document.</t>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+<li>
+                    <ul spacing="normal">
+                      <li>
+                        <t><tt>requestMessageType</tt> identifies the other request type. These
+   values are defined outside of this document.</t>
+                      </li>
+                    </ul>
+                  </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <ul spacing="normal">
+                      <li>
+                        <t><tt>requestMessageValue</tt> is the data associated with the other request
+   type.</t>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+<li>
+                    <ul spacing="normal">
+                      <li>
+                        <t><tt>requestMessageValue</tt> is the data associated with the other request
+   type.</t>
+                      </li>
+                    </ul>
+                  </li>
+<li>
+                  <ul empty="true">
+                    <li>
+                      <t><tt>bodyPartID</tt> is the identifier number for this certification request.
+   Details on body part identifiers are found in <xref target="BodyPartIdentification"/>.</t>
+                    </li>
+                  </ul>
+                </li>
+<li>
+                  <ul empty="true">
+                    <li>
+                      <t><tt>certificationRequest</tt> contains the PKCS-#10-based certification
+   request.  Its fields are described in <xref target="PKCS10"/>.</t>
+                    </li>
+                  </ul>
+                </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <t><tt>bodyPartID</tt> is a unique integer that identifies this content info
+   object.</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <t><tt>contentInfo</tt> is a ContentInfo object (defined in <xref target="CMS"/>).</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>bodyPartPath is the path pointing to the control associated with
+   this data. When an RA moves the control in an unsigned or
+   unauthenticated attribute up one level as part of wrapping the
+   data in a new SignedData or AuthenticatedData, the body part
+   identifier of the embedded item in the PKIData is prepended to the
+   bodyPartPath sequence.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>identifier is the OID that defines the associated data.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>content is the data.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>controlSequence is a sequence of controls. The controls defined in
+   this document are found in Section 6. Controls can be defined by
+   other parties. Details on the TaggedAttribute structure are found
+  in <xref target="ControlSyntax"/>.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>cmsSequence is a sequence of <xref target="CMS"/> message objects. See
+   <xref target="ContentInfoObjects"/> for more details.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>otherMsgSequence is a sequence of arbitrary data objects. Data
+   objects placed here are referred to by one or more controls. This
+   allows for controls to use large amounts of data without the data
+   being embedded in the control. See <xref target="OtherMessageBodies"/> for more
+   details.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>cMCStatus contains the returned status value. Details are in
+   <xref target="CMCStatusValues"/>.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>bodyList identifies the controls or other elements to which the
+   status value applies. If an error is returned for a Simple PKI
+   Request, this field is the bodyPartID choice of BodyPartReference
+   with the single integer of value 1.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>statusString contains additional description information. This
+   string is human readable.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>otherInfo contains additional information that expands on the CMC
+   status code returned in the cMCStatus field.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>failInfo is described in <xref target="CMCFailInfo"/>. It provides an error code
+   that details what failure occurred. This choice is present only
+   if cMCStatus contains the value failed.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>pendInfo contains information about when and how the client should
+   request the result of this request. It is present when the
+   cMCStatus is either pending or partial. pendInfo uses the
+   structure PendInfo, which has the fields:</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <ul spacing="normal">
+                    <li>
+                      <t>pendToken is the token used in the Query Pending control
+   (<xref target="QueryPendingControl"/>).</t>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+<li>
+                  <ul spacing="normal">
+                    <li>
+                      <t>pendToken is the token used in the Query Pending control
+   (<xref target="QueryPendingControl"/>).</t>
+                    </li>
+                  </ul>
+                </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <ul spacing="normal">
+                    <li>
+                      <t>pendTime contains the suggested time the server wants to be
+   queried about the status of the certification request.</t>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+<li>
+                  <ul spacing="normal">
+                    <li>
+                      <t>pendTime contains the suggested time the server wants to be
+   queried about the status of the certification request.</t>
+                    </li>
+                  </ul>
+                </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>extendedFailInfo includes application-dependent detailed error
+   information.  This choice is present only if cMCStatus contains
+   the value failed.  Caution should be used when defining new values
+   as they may not be correctly recognized by all clients and
+   servers.  The CMCFailInfo value of internalCAError may be assumed
+   if the extended error is not recognized.  This field uses the type
+   ExtendedFailInfo.  ExtendedFailInfo has the fields:</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <ul spacing="normal">
+                    <li>
+                      <t>failInfoOID contains an OID that is associated with a set of
+   extended error values.</t>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+<li>
+                  <ul spacing="normal">
+                    <li>
+                      <t>failInfoOID contains an OID that is associated with a set of
+   extended error values.</t>
+                    </li>
+                  </ul>
+                </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <ul spacing="normal">
+                    <li>
+                      <t>failInfoValue contains an extended error code from the defined
+   set of extended error codes.</t>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+<li>
+                  <ul spacing="normal">
+                    <li>
+                      <t>failInfoValue contains an extended error code from the defined
+   set of extended error codes.</t>
+                    </li>
+                  </ul>
+                </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>cMCStatus contains the returned status value. Details are in
+   <xref target="CMCStatusValues"/>.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>bodyList contains the list of controls or other elements to which
+   the status value applies. If an error is being returned for a
+   Simple PKI Request, this field contains a single integer of value 1.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>statusString contains additional description information. This
+   string is human readable.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>otherInfo provides additional information that expands on the CMC
+   status code returned in the cMCStatus field.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <ul spacing="normal">
+                    <li>
+                      <t>failInfo is described in <xref target="CMCFailInfo"/>. It provides an error
+   code that details what failure occurred. This choice is
+   present only if cMCStatus is failed.</t>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+<li>
+                  <ul spacing="normal">
+                    <li>
+                      <t>failInfo is described in <xref target="CMCFailInfo"/>. It provides an error
+   code that details what failure occurred. This choice is
+   present only if cMCStatus is failed.</t>
+                    </li>
+                  </ul>
+                </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <ul spacing="normal">
+                    <li>
+                      <t>pendInfo uses the PendInfo ASN.1 structure in <xref target="extCMCStatusInfo"/>. It
+   contains information about when and how the client should
+   request results of this request. The pendInfo field <bcp14>MUST</bcp14> be
+   populated for a cMCStatus value of pending or partial. Further
+   details can be found in <xref target="extCMCStatusInfo"/> (Extended CMC Status Info
+   Control) and <xref target="QueryPendingControl"/> (Query Pending Control ).</t>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+<li>
+                  <ul spacing="normal">
+                    <li>
+                      <t>pendInfo uses the PendInfo ASN.1 structure in <xref target="extCMCStatusInfo"/>. It
+   contains information about when and how the client should
+   request results of this request. The pendInfo field <bcp14>MUST</bcp14> be
+   populated for a cMCStatus value of pending or partial. Further
+   details can be found in <xref target="extCMCStatusInfo"/> (Extended CMC Status Info
+   Control) and <xref target="QueryPendingControl"/> (Query Pending Control ).</t>
+                    </li>
+                  </ul>
+                </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>success indicates the request was granted or the action was
+   completed.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>failed indicates the request was not granted or the action was not
+   completed. More information is included elsewhere in the
+   response.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>pending indicates the PKI Request has yet to be processed. The
+   requester is responsible to poll back on this Full PKI request.
+   pending may only be returned for certification request operations.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>noSupport indicates the requested operation is not supported.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>confirmRequired indicates a Confirm Certificate Acceptance control
+   (<xref target="ConfirmCertificateAcceptanceControl"/>) must be returned before the certificate can be
+   used.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>popRequired indicates a direct POP operation is required
+   (<xref target="POPLinkRandomControl"/>).</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>partial indicates a partial PKI Response is returned. The requester
+   is responsible to poll back for the unfulfilled portions of the
+   Full PKI Request.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>badAlg indicates unrecognized or unsupported algorithm.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>badMessageCheck indicates integrity check failed.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>badRequest indicates transaction was not permitted or supported.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>badTime indicates message time field was not sufficiently close to
+   the system time.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>badCertId indicates no certificate could be identified matching the
+   provided criteria.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>unsupportedExt indicates a requested X.509 extension is not
+   supported by the recipient CA.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>mustArchiveKeys indicates private key material must be supplied.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>badIdentity indicates identification control failed to verify.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>popRequired indicates server requires a POP proof before issuing
+   certificate.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>popFailed indicates POP processing failed.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>noKeyReuse indicates server policy does not allow key reuse.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>internalCAError indicates that the CA had an unknown internal
+  failure.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>tryLater indicates that the server is not accepting requests at this
+   time and the client should try at a later time.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>authDataFail indicates failure occurred during processing of
+   authenticated data.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>hashAlgID is the identifier and parameters for the hash algorithm
+   used to convert the shared-secret into a key for the MAC
+   algorithm.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>macAlgID is the identifier and the parameters for the message
+   authentication code algorithm used to compute the value of the
+   witness field.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>witness is the identity proof.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <t>keyGenAlgorithm contains the algorithm used to generate the key for
+   the MAC algorithm. This will generally be a hash algorithm, but
+   could be a more complex algorithm.</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <t>macAlgorithm contains the algorithm used to create the witness
+   value.</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <t>witness contains the computed witness value.</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>pkiDataReference is the path to the PKI Request containing
+   certification request(s) to be modified.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>certReferences refers to one or more certification requests in the
+   PKI Request referenced by pkiDataReference to be modified. Each
+   BodyPartID of the certReferences sequence <bcp14>MUST</bcp14> be equal to either
+   the bodyPartID of a TaggedCertificationRequest (PKCS #10) or the
+   certReqId of the CertRequest within a CertReqMsg (CRMF). By
+   definition, the certificate extensions included in the
+   certTemplate field are applied to every certification request
+   referenced in the certReferences sequence. If a request
+   corresponding to bodyPartID cannot be found, the CMCFailInfo with
+   a value of badRequest is returned that references this control.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>replace specifies if the target certification request is to be
+  modified by replacing or deleting fields. If the value is TRUE,
+  the data in this control replaces the data in the target
+  certification request. If the value is FALSE, the data in the
+  target certification request is deleted. The action is slightly
+  different for the extensions field of certTemplate; each extension
+  is treated individually rather than as a single unit.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>certTemplate is a certificate template object <xref target="CRMF"/>. If a field is
+   present and replace is TRUE, it replaces that field in the
+   certification request. If the field is present and replace is
+   FALSE, the field in the certification request is removed. If the
+   field is absent, no action is performed. Each extension is
+   treated as a single field.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>pkiDataReference contains the body part identity of the embedded
+   certification request.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>certReferences is a list of references to one or more of the
+   certification requests contained within a PKIData. Each body part
+   identifier of the certReferences sequence <bcp14>MUST</bcp14> be equal to either
+   the bodyPartID of a TaggedCertificationRequest (PKCS #10) or the
+   certReqId of the CertRequest within a CertReqMsg (CRMF). By
+   definition, the listed extensions are to be applied to every
+   certification request referenced in the certReferences sequence.
+   If a certification request corresponding to bodyPartID cannot be
+   found, the CMCFailInfo with a value of badRequest is returned
+   referencing this control.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>extensions is a sequence of extensions to be applied to the
+   referenced certification requests.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>pkiDataBodyid contains the body part identifier of the nested
+   TaggedContentInfo containing the client's Full PKI Request.
+   pkiDataBodyid is set to 0 if the request is in the current
+   PKIData.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>bodyIds is a list of certification requests for which the RA has
+   performed an out-of-band authentication. The method of
+   authentication could be archival of private key material,
+   challenge-response, or other means.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>issuerName is the name of the certificate issuer.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>serialNumber identifies the certificate to be retrieved.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>issuerName is the name of the CRL issuer.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>cRLName may be the value of CRLDistributionPoints in the subject
+   certificate or equivalent value in the event the certificate does
+   not contain such a value.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>time is used by the client to specify from among potentially several
+   issues of CRL that one whose thisUpdate value is less than but
+   nearest to the specified time. In the absence of a time
+   component, the CA always returns with the most recent CRL.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>reasons is used to specify from among CRLs partitioned by revocation
+   reason. Implementers should bear in mind that while a specific
+   revocation request has a single CRLReason code -- and consequently
+   entries in the CRL would have a single CRLReason code value -- a
+   single CRL can aggregate information for one or more reasonFlags.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>issuerName is the issuerName of the certificate to be revoked.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>serialNumber is the serial number of the certificate to be revoked.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>reason is the suggested CRLReason code for why the certificate is
+   being revoked. The CA can use this value at its discretion in
+   building the CRL.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>invalidityDate is the suggested value for the Invalidity Date CRL
+   Extension. The CA can use this value at its discretion in
+   building the CRL.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>sharedSecret is a secret value registered by the EE when the
+   certificate was obtained to allow for revocation of a certificate
+   in the event of key loss.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>seqNumber is an integer indicating the location within a sequence of
+   updates.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>hashAlgorithm is the identifier and parameters for the hash
+   algorithm that is used in computing the values of the anchorHashes
+   field. All implementations <bcp14>MUST</bcp14> implement SHA-256 for this field.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>anchorHashes are the hashes for the certificates that are to be
+   treated as trust anchors by the client. The actual certificates
+   are transported in the certificate bag of the containing
+   SignedData structure.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>hashAlg is the algorithm identifier of the hash algorithm used to
+   compute the values in certHashes.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>certHashes are the hashes of the certificates for which publication
+   is to change.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>pubInfo is the information where and how the certificates should be
+   published. The fields in pubInfo (taken from <xref target="CRMF"/>) have the
+   following meanings:</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <ul spacing="normal">
+                  <li>
+                    <t>action indicates the action the service should take. It has two
+   values:</t>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+<li>
+                <ul spacing="normal">
+                  <li>
+                    <t>action indicates the action the service should take. It has two
+   values:</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+            <ul empty="true">
+              <li>
+                <ul empty="true">
+                  <li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>dontPublish indicates that the PKI should not publish the
+    certificate (this may indicate that the requester intends to
+    publish the certificate him/herself). dontPublish has the
+    added connotation of removing from publication the
+    certificate if it is already published.</t>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>dontPublish indicates that the PKI should not publish the
+    certificate (this may indicate that the requester intends to
+    publish the certificate him/herself). dontPublish has the
+    added connotation of removing from publication the
+    certificate if it is already published.</t>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+<li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>dontPublish indicates that the PKI should not publish the
+    certificate (this may indicate that the requester intends to
+    publish the certificate him/herself). dontPublish has the
+    added connotation of removing from publication the
+    certificate if it is already published.</t>
+                      </li>
+                    </ul>
+                  </li>
+<li>
+            <ul empty="true">
+              <li>
+                <ul empty="true">
+                  <li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>pleasePublish indicates that the PKI <bcp14>MAY</bcp14> publish the
+    certificate using whatever means it chooses unless pubInfos
+    is present. Omission of the CMC Publication Info control
+    results in the same behavior.</t>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>pleasePublish indicates that the PKI <bcp14>MAY</bcp14> publish the
+    certificate using whatever means it chooses unless pubInfos
+    is present. Omission of the CMC Publication Info control
+    results in the same behavior.</t>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+<li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>pleasePublish indicates that the PKI <bcp14>MAY</bcp14> publish the
+    certificate using whatever means it chooses unless pubInfos
+    is present. Omission of the CMC Publication Info control
+    results in the same behavior.</t>
+                      </li>
+                    </ul>
+                  </li>
+<li>
+            <ul empty="true">
+              <li>
+                <ul spacing="normal">
+                  <li>
+                    <t>pubInfos pubInfos indicates how (e.g., X500, Web, IP Address) the
+   PKI <bcp14>SHOULD</bcp14> publish the certificate.</t>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+<li>
+                <ul spacing="normal">
+                  <li>
+                    <t>pubInfos pubInfos indicates how (e.g., X500, Web, IP Address) the
+   PKI <bcp14>SHOULD</bcp14> publish the certificate.</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>bodyList is a series of body part identifiers that form a path to
+   each of the controls that were processed by the RA. This control
+   is only needed for those controls that are not part of this
+   standard and thus would cause an error condition of a server
+   attempting to deal with a control not defined in this document.
+   No error status is needed since an error causes the RA to return
+   the request to the client with the error rather than passing the
+   request on to the next server in the processing list.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>cmc-raIdentityWitness is a CMC-CONTROL associating the object
+   identifier id-cmc-raIdentityWitness and the type BodyPartPath.
+   This object is omitted from the 1988 module.  The object is added
+   to the object set Cmc-Control-Set.  The control is permitted to
+   appear only in the control sequence of a PKIData object.  It <bcp14>MUST
+   NOT</bcp14> appear in the control sequence of a PKIResponse.  The control
+   is permitted to be used only by an RA.  The control may appear
+   multiple times in a control sequence with each occurrence pointing
+   to a different object.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>id-cmc-raIdentityWitness is the object identifier used to identify
+   this CMC control.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>BodyPartPath is the type structure associated with the control.  The
+   syntax of BodyPartPath is defined in <xref target="BodyPartIdentification"/>.  The path
+   contains a sequence of body part identifiers leading to one of the
+   following items:</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <ul spacing="normal">
+                  <li>
+                    <t>Identity Proof control if the RA verified the identity proof in
+   this control.</t>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+<li>
+                <ul spacing="normal">
+                  <li>
+                    <t>Identity Proof control if the RA verified the identity proof in
+   this control.</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+            <ul empty="true">
+              <li>
+                <ul spacing="normal">
+                  <li>
+                    <t>Identity Proof Version 2 control if the RA verified the identity
+   proof in this control.</t>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+<li>
+                <ul spacing="normal">
+                  <li>
+                    <t>Identity Proof Version 2 control if the RA verified the identity
+   proof in this control.</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+            <ul empty="true">
+              <li>
+                <ul spacing="normal">
+                  <li>
+                    <t>Full PKI Request if the RA performed an out-of-band identity
+   proof for this request.  The request <bcp14>SHOULD NOT</bcp14> contain either
+   Identity Proof control.</t>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+<li>
+                <ul spacing="normal">
+                  <li>
+                    <t>Full PKI Request if the RA performed an out-of-band identity
+   proof for this request.  The request <bcp14>SHOULD NOT</bcp14> contain either
+   Identity Proof control.</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+            <ul empty="true">
+              <li>
+                <ul spacing="normal">
+                  <li>
+                    <t>Simple PKI Request  if the RA performed an out-of-band identity
+   proof for this request.</t>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+<li>
+                <ul spacing="normal">
+                  <li>
+                    <t>Simple PKI Request  if the RA performed an out-of-band identity
+   proof for this request.</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>cmc-responseBody  is a CMC-CONTROL associating the object identifier
+   id-cmc-responseBody with the type BodyPartPath.  This object is
+   omitted from the 1988 module.  The object is added to the object
+   set Cmc-Control-Set.  The control is permitted to appear only in
+   the control sequence of a PKIResponse.  The control <bcp14>MUST NOT</bcp14>
+   appear in the control sequence of a PKIData.  It is expected that
+   only an intermediary RA will use this control; a CA generally does
+   not need the control as it is creating the original innermost
+   message.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>id-cmc-responseBody is the object identifier used to identify this
+   CMC control.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>BodyPartPath is the type structure associated with the control.  The
+   syntax of BodyPartPath is defined in <xref target="BodyPartIdentification"/>.  The path
+   contains a sequence of body part identifiers leading to a
+   cmsSequence item which contains a PKIResponse within it.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>subject  contains the requested subject name for the new certificate.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>subjectAlt  contains the requested subject alternative name for the
+   new certificate.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>CMC Certification Authorities  are identified by the id-kp-cmcCA
+   extended key usage.  The certificate may be the same as or
+   different than the CA certificate.  If a different certificate is
+   used, the certificates containing the id-kp-cmcCA extended key
+   usage <bcp14>SHOULD</bcp14> have the same name as the certificate used for
+   issuing the certificates.  (Using a separate key pair for CMC
+   protocol operations and for issuing certificates and CRLs
+   decreases the number of operations for which the private key used
+   to sign certificates and CRLs would be used.)</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>CMC Registration Authorities  are identified by the id-kp-cmcRA
+   extended key usage.  This usage is placed into RA certificates.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>CMC Archive Servers  are identified by the id-kp-cmcArchive extended
+   key usage.  CMC Archive Servers and the associated protocol are to
+   be defined in a future document.</t>
+              </li>
+            </ul>
+          </li>
+internet-drafts/draft-ietf-lamps-rfc5272bis-01.xml
+<li>
+            <ul spacing="normal">
+              <li>
+                <t>00b : reserved</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul spacing="normal">
+              <li>
+                <t>01b : simple mode as defined in <xref target="simplemode"/></t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul spacing="normal">
+              <li>
+                <t>10b : low-delay mode as defined in <xref target="lowdelaymode"/></t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul spacing="normal">
+              <li>
+                <t>11b : reserved</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t><em>For simple mode (OM == '01b')</em></t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <ul empty="true">
+                  <li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>00b: neither the first payload nor the last payload</t>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>00b: neither the first payload nor the last payload</t>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+<li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>00b: neither the first payload nor the last payload</t>
+                      </li>
+                    </ul>
+                  </li>
+<li>
+            <ul empty="true">
+              <li>
+                <ul empty="true">
+                  <li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>01b: the last payload of a frame</t>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>01b: the last payload of a frame</t>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+<li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>01b: the last payload of a frame</t>
+                      </li>
+                    </ul>
+                  </li>
+<li>
+            <ul empty="true">
+              <li>
+                <ul empty="true">
+                  <li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>10b: the first payload of a frame</t>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>10b: the first payload of a frame</t>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+<li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>10b: the first payload of a frame</t>
+                      </li>
+                    </ul>
+                  </li>
+<li>
+            <ul empty="true">
+              <li>
+                <ul empty="true">
+                  <li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>11b: reserved</t>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>11b: reserved</t>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+<li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>11b: reserved</t>
+                      </li>
+                    </ul>
+                  </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t><em>For low delay mode (OM == '10b')</em></t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <ul empty="true">
+                  <li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>00b: neither the first payload nor the last payload</t>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>00b: neither the first payload nor the last payload</t>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+<li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>00b: neither the first payload nor the last payload</t>
+                      </li>
+                    </ul>
+                  </li>
+<li>
+            <ul empty="true">
+              <li>
+                <ul empty="true">
+                  <li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>01b: the last payload of a tile</t>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>01b: the last payload of a tile</t>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+<li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>01b: the last payload of a tile</t>
+                      </li>
+                    </ul>
+                  </li>
+<li>
+            <ul empty="true">
+              <li>
+                <ul empty="true">
+                  <li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>10b: the first payload of a tile</t>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>10b: the first payload of a tile</t>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+<li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>10b: the first payload of a tile</t>
+                      </li>
+                    </ul>
+                  </li>
+<li>
+            <ul empty="true">
+              <li>
+                <ul empty="true">
+                  <li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>11b: reserved</t>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>11b: reserved</t>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+<li>
+                    <ul spacing="normal">
+                      <li>
+                        <t>11b: reserved</t>
+                      </li>
+                    </ul>
+                  </li>
+internet-drafts/draft-lim-rtp-apv-00.xml
+<li>For a given BD, if a PE receives IMET route with E-Tree EC that has only Leaf-Indication set 
+	         and with a valid VNI, then:
+	         <ul>
+	           <li>If the receiving PE is Root-only or Root-and-Leaf, and it is configured for 
+		           ingress-replication tunnel for that BD, then it adds the advertising PE to its 
+		           "All-PEs" flood list and excludes the advertising PE from its "non-Leaf" flood list.
+			       If the receiving PE is configured for P2MP tunnel for that BD, it joins that tree.
+			       The receiving PEs also configure their leaf ACs (if not already
+			       configured) for egress filtering of BUM traffic matching Leaf VNI.</li>
+			   <li>If the receiving PE is Leaf-only, and it is configured for ingress-replication
+				   tunnel for that BD, it excludes the advertising PE from its flood list. If the
+				   receiving PE is configured for P2MP tunnel for that BD, it does not join that tree.</li>
+			 </ul></li>
+<li>For ingress replication:
+	         <ul> 
+		         <li>BUM traffic coming from a leaf AC on the local PE uses "non-Leaf" flood list</li>
+		         <li>BUM traffic coming from a root AC uses "All-PEs" flood list</li>
+		     </ul></li>
+<li>For P2MP or MP2MP tunnels:
+	         <ul> 
+		         <li>Leaf-only PEs, do not join the multicast tunnels from other Leaf PEs</li>
+		         <li>Root-only or Root-and-Leaf PEs join the multicast tunnels from Leaf PEs</li>
+		         <li>All PEs join the multicast tunnels from Root-only and Root-and-Leaf PEs</li>
+		     </ul></li>
+<li>For all multicast tunnels, imposition PEs:
+	         <ul> 
+		         <li>BUM traffic coming from a leaf AC on the local PE uses leaf VNI</li>
+		         <li>BUM traffic coming from a root AC on the local PE uses baseline VNI</li>
+		     </ul></li>
+<li>For all multicast tunnels, disposition PEs:
+	         <ul> 
+		         <li>BUM traffic received with leaf VNI is only sent to root ACs</li>
+		         <li>BUM traffic received with base VNI is sent to both root and leaf ACs per baseline procedure</li>
+		     </ul></li>
+internet-drafts/draft-sajassi-bess-rfc8317bis-03.xml
+<li>Type 1 (T=0x01) - When IEEE 802.1AX LACP is used between the PEs
+        and CEs, this ESI type indicates an auto-generated ESI value
+        determined from LACP by concatenating the following parameters:
+
+            <ul>
+                <li>CE LACP System MAC address (6 octets).
+                The CE LACP System MAC address MUST be encoded in the high-order
+                6 octets of the ESI Value field.</li>
+
+                <li>CE LACP Port Key (2 octets).
+                The CE LACP port key MUST be encoded in the 2 octets next to
+                the System MAC address.</li>
+
+                <li>The remaining octet SHOULD be set to 0x00.</li>
+            </ul>
+
+        As far as the CE is concerned, it would treat the multiple PEs that
+        it is connected to as the same switch. This allows the CE to
+        aggregate links that are attached to different PEs in the same
+        bundle.
+        <br/>
+        This mechanism could be used only if it produces ESIs that satisfy
+        the uniqueness requirement specified above.
+        </li>
+<li>Type 2 (T=0x02) - This type is used in the case of indirectly
+        connected hosts via a bridged LAN between the CEs and the PEs. The
+        ESI Value is auto-generated and determined based on the Layer 2
+        bridge protocol as follows: If the Multiple Spanning Tree Protocol
+        (MSTP) is used in the bridged LAN, then the value of the ESI is
+        derived by listening to Bridge PDUs (BPDUs) on the Ethernet
+        segment. To achieve this, the PE is not required to run MSTP.
+        However, the PE must learn the Root Bridge MAC address and Bridge
+        Priority of the root of the Internal Spanning Tree (IST) by
+        listening to the BPDUs. The ESI Value is constructed as follows:
+            
+            <ul>
+                <li>Root Bridge MAC address (6 octets).
+                The Root Bridge MAC address MUST be encoded in the high-order
+                6 octets of the ESI Value field.</li>
+
+                <li>Root Bridge Priority (2 octets).
+                The CE Root Bridge Priority MUST be encoded in the 2 octets
+                next to the Root Bridge MAC address.</li>
+
+                <li>The remaining octet SHOULD be set to 0x00.</li>
+            </ul>
+
+        This mechanism could be used only if it produces ESIs that satisfy
+        the uniqueness requirement specified above.
+        </li>
+<li>Type 3 (T=0x03) - This type indicates a MAC-based
+        ESI Value that can be auto-generated or configured by the operator.
+        The ESI Value is constructed as follows:
+        
+            <ul>
+                <li>System MAC address (6 octets).
+                The PE MAC address MUST be
+                encoded in the high-order 6 octets of the ESI Value field.</li>
+
+                <li>Local Discriminator value (3 octets).
+                The Local Discriminator value MUST be encoded in the low-order
+                3 octets of the ESI Value.</li>
+            </ul>
+
+        This mechanism could be used only if it produces ESIs that satisfy
+        the uniqueness requirement specified above.
+        </li>
+<li>Type 4 (T=0x04) - This type indicates a router-ID ESI Value that
+        can be auto-generated or configured by the operator. The ESI Value
+        is constructed as follows:
+        
+            <ul>
+                <li>Router ID (4 octets).
+                The system router ID MUST be encoded in
+                the high-order 4 octets of the ESI Value field.</li>
+
+                <li>Local Discriminator value (4 octets).
+                The Local Discriminator value MUST be encoded in the 4 octets
+                next to the IP address.</li>
+
+                <li>The low-order octet of the ESI Value SHOULD be set to 0x00.</li>
+            </ul>
+
+        This mechanism could be used only if it produces ESIs that satisfy
+        the uniqueness requirement specified above.
+        </li>
+<li>A PE detecting a locally attached MAC address
+            for which it had
+            previously received a MAC/IP Advertisement route with the same
+            non&nbhy;zero Ethernet segment identifier advertises it with:
+
+            <ol>
+                <li>no MAC Mobility extended community,
+                if the received route did not carry said extended community.</li>
+
+                <li>a MAC Mobility extended community
+                with the sequence number equal to the highest of the 
+                sequence number(s) in the received MAC/IP Advertisement route(s),
+                if the received route(s) is (are) tagged with a MAC Mobility
+                extended community.</li>
+            </ol>
+            </li>
+internet-drafts/draft-ietf-bess-rfc7432bis-10.xml
+<li>
+          <ul spacing="normal">
+            <li>
+              <t>Do not use RADIUS/UDP or RADIUS/TCP across the wider Internet</t>
+            </li>
+          </ul>
+          <t>Exposing user identifiers, device identifiers, and locations is a privacy and security issue.</t>
+        </li>
+<li>
+          <ul spacing="normal">
+            <li>
+              <t>Avoid RADIUS/UDP or RADIUS/TCP in other networks, too.</t>
+            </li>
+          </ul>
+          <t>It can take time to upgrade equipment, but the long-term goal is to entirely deprecate RADIUS/UDP.</t>
+        </li>
+<li>
+          <ul spacing="normal">
+            <li>
+              <t>Implement the BlastRADIUS mitigations</t>
+            </li>
+          </ul>
+          <t>Both Implementers and administrators should implement the mitigations in order to secure Access-Request packets.</t>
+        </li>
+<li>
+          <ul spacing="normal">
+            <li>
+              <t>Use strong shared secrets</t>
+            </li>
+          </ul>
+          <t>Shared secrets should be generated from a cryptographically strong pseudo-random number generator.  They should contain at least 128 bits of entropy.  Each RADIUS client should have a unique shared secret.</t>
+        </li>
+<li>
+          <ul spacing="normal">
+            <li>
+              <t>Minimize the use of RADIUS proxies.</t>
+            </li>
+          </ul>
+          <t>More proxies means more systems which could be compromised, and more systems which can see private or secret data.</t>
+        </li>
+<li>
+          <ul spacing="normal">
+            <li>
+              <t>Do not proxy from secure to insecure transports</t>
+            </li>
+          </ul>
+          <t>If user information (credentials or identities) is received over a secure transport (IPsec, RADIUS/TLS, TLS-based EAP method), then proxying the protected data over RADIUS/UDP or RADIUS/TCP degrades security and privacy.</t>
+        </li>
+<li>
+          <ul spacing="normal">
+            <li>
+              <t>Prefer EAP authentication methods to non-EAP methods.</t>
+            </li>
+          </ul>
+          <t>EAP authentication methods are better at hiding user credentials from observers.</t>
+        </li>
+<li>
+          <ul spacing="normal">
+            <li>
+              <t>For EAP, use anonymous outer identifiers</t>
+            </li>
+          </ul>
+          <t>There are few reasons to use individual identities for EAP.  Identifying the realm is usually enough.</t>
+          <t><xref target="RFC7542"/> Section 2.4 recommends that "@realm" is preferable to "anonymous@realm", which is in turn preferable to "user@realm".</t>
+        </li>
+<li>
+          <ul spacing="normal">
+            <li>
+              <t>Prefer using PAP over CHAP or MS-CHAP.</t>
+            </li>
+          </ul>
+          <t>PAP allows for credentials to be stored securely "at rest" in a user database.  CHAP and MS-CHAP do not.</t>
+        </li>
+<li>
+          <ul spacing="normal">
+            <li>
+              <t>Do not use MS-CHAP outside of TLS-based EAP methods.</t>
+            </li>
+          </ul>
+          <t>MS-CHAP can be cracked with minimal effort.  This information has been known for two decades.</t>
+        </li>
+<li>
+          <ul spacing="normal">
+            <li>
+              <t>Store passwords in "crypt"ed form</t>
+            </li>
+          </ul>
+          <t>Where is is necessary to store passwords, use systems such as PBKDF2 (<xref target="RFC8018"/>.</t>
+        </li>
+<li>
+          <ul spacing="normal">
+            <li>
+              <t>Regularly update to the latest cryptographic methods.</t>
+            </li>
+          </ul>
+          <t>TLS 1.0 with RC4 was acceptable at one point in time.  It is no longer acceptable.  Similarly, the current cryptographic methods will at some point will be deprecated, and replaced by updated methods.  Upgrading to recent cryptographic methods should be a normal part of operating a RADIUS server.</t>
+        </li>
+<li>
+          <ul spacing="normal">
+            <li>
+              <t>Regularly deprecate older cryptographic methods.</t>
+            </li>
+          </ul>
+          <t>Administrators should actively deprecate the use of older cryptographic methods.  If no system is using older methods, then those methods should be disabled or removed entirely.  Leaving old methods enabled makes the server more vulnerable to attacks.</t>
+        </li>
+<li>
+          <ul spacing="normal">
+            <li>
+              <t>Send the minimum amount of information which is needed,.</t>
+            </li>
+          </ul>
+          <t>Where proxying is used, it is a common practice is to simply forward all of the information from a NAS to other RADIUS servers.  Instead, the proxy closest to the NAS should filter out any attributes or data which are not needed by the "next hop" proxies, or by the home server.</t>
+        </li>
+internet-drafts/draft-ietf-radext-deprecating-radius-05.xml
+<li>Three separate things need to be identified
+      by information carried within a packet: <ul>
+          <li>Forwarding path (e.g. the next-hop)</li>
+
+          <li>NRP</li>
+
+          <li>Topology (i.e., filtered topology)</li>
+        </ul>How this information is encoded (using separate fields, the same
+      field, or overloading existing fields) forms part of the solution
+      work.</li>
+<li>A solution that can be deployed at large scale needs to be
+          provided. We should acknowledge that:<ul>
+              <li>Some extensions to the data/control/management plane may be
+              needed to achieve this result. I.e., it may be that this cannot
+              be done today with existing tools.</li>
+
+              <li>The scalable solution might not be optimal everywhere.</li>
+            </ul></li>
+<li>A solution may be optimal for specific environments, but: <ul>
+              <li>Might not work in some environments.</li>
+
+              <li>May have scalability issues in some other environments.</li>
+            </ul></li>
+internet-drafts/draft-ietf-teas-nrp-scalability-06.xml
+<li>
+            <ul spacing="normal">
+              <li>
+                <t>Observation: This restriction is the primary focus of this draft. It is proposed here that the breadth of applications can benefit significantly from a multipoint uni/bi definition as described in this draft.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul spacing="normal">
+              <li>
+                <t>Observation: But it is clear that, as the properties defined in the current RFC are "require-instance false", a link can be described in valid YANG that has no source and no destination, i.e., no termination points.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul spacing="normal">
+              <li>
+                <t>Observation: But in the YANG the reference can have a node alone. Under some circumstances, this may be a valid choice, although it is not clear whether the specific usages currently defined can tolerate this.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul spacing="normal">
+              <li>
+                <t>Observation: But, as will become apparent, the multipoint uni/bi model is equally generic and arguably as simple whilst covering all cases of link including unidirectional point to point. Hence, this draft considers the restriction of the current RFC, to allow only point to point unidirectional, a limitation, not an efficiency.</t>
+              </li>
+              <li>
+                <t>Observation: Multipoint uni/bi supports point to point (only two points declared) unidirectional (directionality selection) and hence can cover all cases covered by RFC8345 today as well as multipoint cases.</t>
+              </li>
+              <li>
+                <t>Observation: Existing models could be transformed to the multipoint uni/bi form and, where appropriate, the multipoint uni/bi form could be used to represent multipoint cases as a set of point to point links (as is done using the current model).</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul spacing="normal">
+              <li>
+                <t>Observation: The model is targeted at interface transfer. From practical experience it is clearly always necessary to perform some level of graph transformation prior to use by an algorithm in an application. The transformation from multipoint uni/bi has been shown to be straight forward in real solutions.</t>
+              </li>
+              <li>
+                <t>Observation: Other transformations that are required include the interface entity becoming one or more transitional links in the topology (so as to produce a flat topology for multilayer routing). These transformation, whilst still quite straight forward are clearly more complex than the multipoint uni/bi transformation.</t>
+              </li>
+              <li>
+                <t>Observation: Some graph applications work with bidirectional multipoint models. The multipoint construct, the hyperedge, appears in hypergraph theory which actually better reflect the reality of networking.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul spacing="normal">
+              <li>
+                <t>Observation: Whilst true, this doubles the number of instances for many applications, which is especially significant considering that bidirectional usages are very common.</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul spacing="normal">
+              <li>
+                <t>Observation: But multipoint link constructs appear from multipoint servers. There are many practical/real cases of multipoint links. Many years of deployment of management/control solutions have exposed both the reality and the benefit of multipoint constructs which is why TM Forum developed the concept and adopted it in interface models and why ONF took the lessons and adopted the same construct pattern both in the core model [ONF TR-512] and in TAPI [ONF TAPI].</t>
+              </li>
+              <li>
+                <t>Observation: Adding a pseudo node further increases the number of instances and does not address the challenge of the partial connectability of many constructs such as root-leaf. The multipoint solution is essentially the pseudo node without the need for the links. The connectability restrictions need to be described in associated metadata (specification such as described in [ONF TR-512.7] (in the sections on ForwardingConstruct specification).</t>
+              </li>
+              <li>
+                <t>Observation: The relative efficiency of the multipoint uni/bi solution will become clear in later sections.</t>
+              </li>
+            </ul>
+          </li>
+internet-drafts/draft-davis-nmop-some-refinements-to-rfc8345-00.xml
+<li>
+              <ul spacing="normal">
+                <li>
+                  <t>FrameWidthInSamplesY = frame_width</t>
+                </li>
+                <li>
+                  <t>FrameHeightInSamplesY = frame_height</t>
+                </li>
+                <li>
+                  <t>FrameWidthInMbsY = ceil(FrameWidthInSamplesY / MbWidth)</t>
+                </li>
+                <li>
+                  <t>FrameHeightInMbsY = ceil(FrameHeightInSamplesY / MbHeight)</t>
+                </li>
+                <li>
+                  <t>FrameWidthInSamplesC = FrameWidthInSamplesY // SubWidthC</t>
+                </li>
+                <li>
+                  <t>FrameHeightInSamplesC = FrameHeightInSamplesY // SubHeightC</t>
+                </li>
+                <li>
+                  <t>FrameSizeInMbsY = FrameWidthInMbsY * FrameHeightInMbsY</t>
+                </li>
+                <li>
+                  <t>FrameSizeInSamplesY = FrameWidthInSamplesY * FrameHeightInSamplesY</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <ul spacing="normal">
+                    <li>
+                      <t>BitDepth   = bit_depth_minus8 + 8</t>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+<li>
+                  <ul spacing="normal">
+                    <li>
+                      <t>BitDepth   = bit_depth_minus8 + 8</t>
+                    </li>
+                  </ul>
+                </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <ul spacing="normal">
+                    <li>
+                      <t>QpBdOffset = bit_depth_minus8 * 6</t>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+<li>
+                  <ul spacing="normal">
+                    <li>
+                      <t>QpBdOffset = bit_depth_minus8 * 6</t>
+                    </li>
+                  </ul>
+                </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <ul spacing="normal">
+                    <li>
+                      <t>Qp[i] = tile_qp[i] - QpBdOffset</t>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+<li>
+                  <ul spacing="normal">
+                    <li>
+                      <t>Qp[i] = tile_qp[i] - QpBdOffset</t>
+                    </li>
+                  </ul>
+                </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <ul spacing="normal">
+                    <li>
+                      <t>Qp[i] MUST be in the range of -QpBdOffset to 51, inclusive.</t>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+<li>
+                  <ul spacing="normal">
+                    <li>
+                      <t>Qp[i] MUST be in the range of -QpBdOffset to 51, inclusive.</t>
+                    </li>
+                  </ul>
+                </li>
+<li>
+          <ul spacing="normal">
+            <li>
+              <t>The cropping rectangle contains the luma samples with horizontal frame coordinates from 0 to FrameWidthInSampleY - 1 and vertical frame coordinates from 0 to FrameHeightInSampleY - 1, inclusive.</t>
+            </li>
+          </ul>
+        </li>
+<li>
+          <ul spacing="normal">
+            <li>
+              <t>The cropping rectangle contains the two chroma arrays having frame coordinates (x//SubWidthC, y//SubHeightC), where (x,y) are the frame coordinates of the specified luma samples.</t>
+            </li>
+          </ul>
+        </li>
+<li>
+            <ul empty="true">
+              <li>
+                <ul spacing="normal">
+                  <li>
+                    <t>numBlkX = nBlkW // TrSize</t>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+<li>
+                <ul spacing="normal">
+                  <li>
+                    <t>numBlkX = nBlkW // TrSize</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+            <ul empty="true">
+              <li>
+                <ul spacing="normal">
+                  <li>
+                    <t>numBlkY = nBlkH // TrSize</t>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+<li>
+                <ul spacing="normal">
+                  <li>
+                    <t>numBlkY = nBlkH // TrSize</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+            <ul empty="true">
+              <li>
+                <ul spacing="normal">
+                  <li>
+                    <t>For xIdx = 0..numBlkX - 1, the following applies:</t>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+<li>
+                <ul spacing="normal">
+                  <li>
+                    <t>For xIdx = 0..numBlkX - 1, the following applies:</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+            <ul empty="true">
+              <li>
+                <ul spacing="normal">
+                  <li>
+                    <t>xBlk = xMb // (cIdx==0? 1: SubWidthC) + xIdx*TrSize</t>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+<li>
+                <ul spacing="normal">
+                  <li>
+                    <t>xBlk = xMb // (cIdx==0? 1: SubWidthC) + xIdx*TrSize</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+            <ul empty="true">
+              <li>
+                <ul spacing="normal">
+                  <li>
+                    <t>yBlk = yMb // (cIdx==0? 1: SubHeightC) + yIdx*TrSize</t>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+<li>
+                <ul spacing="normal">
+                  <li>
+                    <t>yBlk = yMb // (cIdx==0? 1: SubHeightC) + yIdx*TrSize</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>recSamples[(xIdx * TrSize) + i, (yIdx * TrSize) + j] = r[i,j], with i=0..TrSize-1, j=0..TrSize-1</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>qP = Qp[cIdx] + QpBdOffset</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>bdShift = 20 - BitDepth</t>
+              </li>
+            </ul>
+          </li>
+<li>
+            <ul empty="true">
+              <li>
+                <t>r[x][y] = clip(0, (1 &lt;&lt; BitDepth)-1, ((r[x][y]+(1 &lt;&lt; (bdShift-1)))&gt;&gt;bdShift) + (1 &lt;&lt; (BitDepth-1)))</t>
+              </li>
+            </ul>
+          </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>bdShift = BitDepth + ((log2(nBlkW) + log2(nBlkH)) // 2) - 5</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>levelScale[k] = {40, 45, 51, 57, 64, 71} with k = 0..5.</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>d[x][y] = clip(-32768, 32767, ((TransCoeff[cIdx][xBlkY][yBlkY] * QMatrix[cIdx][x][y] * levelScale[qP % 6] &lt;&lt; (qP//6)) + (1 &lt;&lt; (bdShift-1)) &gt;&gt; bdShift))</t>
+                </li>
+              </ul>
+            </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <t>g[x][y] = (e[x][y] + 64) &gt;&gt; 7</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+                <ul empty="true">
+                  <li>
+                    <t>y[i] = sum(j = 0, nTbS - 1, transMatrix[i][j] * x[j])</t>
+                  </li>
+                </ul>
+              </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>kParam = clip(0, 5, PrevDcDiff &gt;&gt; 1)</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>kParam = clip(0, 2, PrevRun &gt;&gt; 2)</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>kParam = clip(0, 4, PrevLevel &gt;&gt; 2)</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>kParam = clip(0, 5, PrevDcDiff &gt;&gt; 1)</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>kParam = clip(0, 2, PrevRun &gt;&gt; 2)</t>
+                </li>
+              </ul>
+            </li>
+<li>
+              <ul empty="true">
+                <li>
+                  <t>kParam = clip(0, 4, PrevLevel &gt;&gt; 2)</t>
+                </li>
+              </ul>
+            </li>
+internet-drafts/draft-lim-apv-03.xml
