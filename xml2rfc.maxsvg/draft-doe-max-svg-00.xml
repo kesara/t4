@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rfc ipr="trust200902" docName="draft-doe-max-svg-00"  category="exp" submissionType= "independent" version="3">
+  <front>
+    <title abbrev="name">Maximum SVG</title>
+    <author fullname="Jane Doe">
+      <address>
+        <postal>
+          <country>NZ</country>
+        </postal>
+        <email>doe@example.org</email>
+      </address>
+    </author>
+
+    <abstract>
+      <t>max-svg</t>
+    </abstract>
+  </front>
+
+  <middle>
+    <section title="SVG without figure caption">
+      <artwork type="svg" name="max box">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200">
+          <rect x="0" y="0" width="900" height="1200" stroke="black" stroke-width="10" fill="none" />
+        </svg>
+      </artwork>
+    </section>
+    <section title="SVG with figure caption">
+      <figure>
+        <name>SVG without caption</name>
+        <artwork type="svg" name="max box">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200">
+            <rect x="0" y="0" width="900" height="1200" stroke="black" stroke-width="10" fill="none" />
+          </svg>
+        </artwork>
+      </figure>
+    </section>
+  </middle>
+
+  <back>
+  </back>
+</rfc>
