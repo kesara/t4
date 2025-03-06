@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rfc ipr="trust200902" docName="draft-doe-long-url-00"  category="exp" submissionType= "independent" version="3">
+  <front>
+    <title abbrev="name">long-url Draft</title>
+    <author fullname="Jane Doe">
+      <address>
+        <postal>
+          <country>NZ</country>
+        </postal>
+        <email>doe@example.org</email>
+      </address>
+    </author>
+
+    <abstract>
+      <t>long-url</t>
+    </abstract>
+  </front>
+
+  <middle>
+    <section anchor="introduction" title="Introduction">
+      <t>
+        foobar
+        <xref target="A"/>
+        <xref target="B"/>
+        <xref target="C"/>
+      </t>
+    </section>
+  </middle>
+
+  <back>
+    <references>
+      <name>Informative References</name>
+      <reference anchor="A" target="https://www.iso.org/standard/82075.html">
+        <front>
+          <title>Information technology - Programming languages - C</title>
+          <author>
+            <organization>International Organization for Standardization</organization>
+          </author>
+          <date year="2024" month="October"/>
+        </front>
+        <seriesInfo name="ISO/IEC" value="9899:2024"/>
+        <annotation>Technically equivalent specification text is available at <eref target="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3220.pdf" brackets="angle"/>.</annotation>
+        <refcontent>Fourth Edition</refcontent>
+      </reference>
+      <reference anchor="B" target="https://www.iso.org/standard/82075.html">
+        <front>
+          <title>Information technology - Programming languages - C</title>
+          <author>
+            <organization>International Organization for Standardization</organization>
+          </author>
+          <date year="2024" month="October"/>
+        </front>
+        <seriesInfo name="ISO/IEC" value="9899:2024"/>
+        <annotation>Technically equivalent specification text is available at <eref target="https://web.archive.org/web/20250212071536/https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3220.pdf" brackets="angle"/>.</annotation>
+        <refcontent>Fourth Edition</refcontent>
+      </reference>
+      <reference anchor="C" target="https://web.archive.org/web/20250212071536/https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3220.pdf">
+        <front>
+          <title>Information technology - Programming languages - C</title>
+          <author>
+            <organization>International Organization for Standardization</organization>
+          </author>
+          <date year="2024" month="October"/>
+        </front>
+        <seriesInfo name="ISO/IEC" value="9899:2024"/>
+        <annotation>Technically equivalent specification text is available at <eref target="https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3220.pdf" brackets="angle"/>.</annotation>
+        <refcontent>Fourth Edition</refcontent>
+      </reference>
+    </references>
+  </back>
+</rfc>
