@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rfc ipr="trust200902" docName="draft-doe-dd-blockquote-00"  category="exp" submissionType= "independent" version="3">
+  <front>
+    <title abbrev="name">blockquote inside dd</title>
+    <author fullname="Jane Doe">
+      <address>
+        <postal>
+          <country>NZ</country>
+        </postal>
+        <email>doe@example.org</email>
+      </address>
+    </author>
+
+    <abstract>
+      <t>Minimal</t>
+    </abstract>
+  </front>
+
+  <middle>
+    <section anchor="introduction" title="Introduction">
+      <t>&lt;blockquote&gt; inside &lt;section&gt;:</t>
+      <blockquote quotedFrom="RFC 865">
+        There is no specific syntax for the quote.
+      </blockquote>
+      <t>&lt;blockquote&gt; inside &lt;dd&gt;:</t>
+      <dl>
+        <dt>Definition list with &lt;blockquote&gt; in &lt;dd&gt;:</dt>
+        <dd>
+          <blockquote quotedFrom="RFC 865">
+            There is no specific syntax for the quote.
+          </blockquote>
+        </dd>
+      </dl>
+    </section>
+  </middle>
+
+  <back>
+  </back>
+</rfc>
