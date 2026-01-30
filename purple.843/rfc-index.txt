@@ -105,6 +105,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 0013 Zero Text Length EOF Message. V. Cerf. August 1969. (Format: TXT,
      HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0013)
 
+0014 Not Issued.
+
 0015 Network subsystem for time sharing hosts. C.S. Carr. September 1969.
      (Format: TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0015)
 
@@ -140,6 +142,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 
 0025 No High Link Numbers. S.D. Crocker. October 1969. (Format: TXT, HTML)
      (Status: UNKNOWN) (DOI: 10.17487/RFC0025)
+
+0026 Not Issued.
 
 0027 Documentation Conventions. S.D. Crocker. December 1969. (Format: TXT,
      HTML) (Updates RFC0010, RFC0016, RFC0024) (Updated by RFC0030)
@@ -364,6 +368,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 
 0091 Proposed User-User Protocol. G.H. Mealy. December 1970. (Format: TXT,
      HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0091)
+
+0092 Not Issued.
 
 0093 Initial Connection Protocol. A.M. McKenzie. January 1971. (Format:
      TXT, HTML) (Updates RFC0066, RFC0080) (Status: UNKNOWN) (DOI:
@@ -610,6 +616,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
      (Format: TXT, HTML) (Obsoleted by RFC0495) (Updates RFC0139) (Updated
      by RFC0318) (Status: UNKNOWN) (DOI: 10.17487/RFC0158)
 
+0159 Not Issued.
+
 0160 RFC brief list. Network Information Center. Stanford Research
      Institute. May 1971. (Format: TXT, HTML) (Obsoleted by RFC0200,
      RFC0999) (Updates RFC6716) (Status: UNKNOWN) (DOI: 10.17487/RFC0160)
@@ -758,6 +766,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 0200 RFC list by number. J.B. North. August 1971. (Format: TXT, HTML)
      (Obsoletes RFC0160, RFC0170) (Status: UNKNOWN) (DOI: 10.17487/RFC0200)
 
+0201 Not Issued.
+
 0202 Possible Deadlock in ICP. S.M. Wolfe, J. Postel. July 1971. (Format:
      TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0202)
 
@@ -818,6 +828,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 
 0219 User's View of the Datacomputer. R. Winter. September 1971. (Format:
      TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0219)
+
+0220 Not Issued.
 
 0221 Mail Box Protocol: Version 2. R.W. Watson. August 1971. (Format: TXT,
      HTML) (Obsoletes RFC0196) (Obsoleted by RFC0278) (Status: UNKNOWN)
@@ -903,6 +915,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
      (Format: TXT, HTML) (Obsoleted by RFC0290) (Status: UNKNOWN) (DOI:
      10.17487/RFC0243)
 
+0244 Not Issued.
+
 0245 Reservations for Network Group meeting. C. Falls. October 1971.
      (Format: TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0245)
 
@@ -912,6 +926,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 0247 Proffered set of standard host names. P.M. Karp. October 1971.
      (Format: TXT, HTML) (Obsoletes RFC0226) (Status: UNKNOWN) (DOI:
      10.17487/RFC0247)
+
+0248 Not Issued.
 
 0249 Coordination of equipment and supplies purchase. R.F. Borelli. October
      1971. (Format: TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0249)
@@ -938,6 +954,18 @@ See the RFC Editor Web page http://www.rfc-editor.org
 
 0256 IMPSYS change notification. B. Cosell. November 1971. (Format: TXT,
      HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0256)
+
+0257 Not Issued.
+
+0258 Not Issued.
+
+0259 Not Issued.
+
+0260 Not Issued.
+
+0261 Not Issued.
+
+0262 Not Issued.
 
 0263 "Very Distant" Host interface. A.M. McKenzie. December 1971. (Format:
      TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0263)
@@ -975,19 +1003,27 @@ See the RFC Editor Web page http://www.rfc-editor.org
 0271 IMP System change notifications. B. Cosell. January 1972. (Format:
      TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0271)
 
+0272 Not Issued.
+
 0273 More on standard host names. R.W. Watson. October 1971. (Format: TXT,
      HTML) (Obsoletes RFC0237) (Status: UNKNOWN) (DOI: 10.17487/RFC0273)
 
 0274 Establishing a local guide for network usage. E. Forman. November
      1971. (Format: TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0274)
 
+0275 Not Issued.
+
 0276 NIC course. R.W. Watson. November 1971. (Format: TXT, HTML) (Status:
      UNKNOWN) (DOI: 10.17487/RFC0276)
+
+0277 Not Issued.
 
 0278 Revision of the Mail Box Protocol. A.K. Bhushan, R.T. Braden, E.
      Harslem, J.F. Heafner, A.M. McKenzie, J.T. Melvin, R.L. Sundberg, R.W.
      Watson, J.E. White. November 1971. (Format: TXT, HTML) (Obsoletes
      RFC0221) (Status: UNKNOWN) (DOI: 10.17487/RFC0278)
+
+0279 Not Issued.
 
 0280 A Draft of Host Names. R.W. Watson. November 1971. (Format: TXT, HTML)
      (Status: UNKNOWN) (DOI: 10.17487/RFC0280)
@@ -1002,6 +1038,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 0283 NETRJT: Remote Job Service Protocol for TIPS. R.T. Braden. December
      1971. (Format: TXT, HTML) (Updates RFC0189) (Status: UNKNOWN) (DOI:
      10.17487/RFC0283)
+
+0284 Not Issued.
 
 0285 Network graphics. D. Huff. December 1971. (Format: TXT, HTML) (Status:
      UNKNOWN) (DOI: 10.17487/RFC0285)
@@ -1185,6 +1223,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 0336 Level 0 Graphic Input Protocol. I.W. Cotton. May 1972. (Format: TXT,
      HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0336)
 
+0337 Not Issued.
+
 0338 EBCDIC/ASCII Mapping for Network RJE. R.T. Braden. May 1972. (Format:
      TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0338)
 
@@ -1193,6 +1233,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 
 0340 Proposed Telnet Changes. T.C. O'Sullivan. May 1972. (Format: TXT,
      HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0340)
+
+0341 Not Issued.
 
 0342 Network Host Status. E. Westheimer. May 1972. (Format: TXT, HTML)
      (Obsoletes RFC0332) (Obsoleted by RFC0344) (Status: UNKNOWN) (DOI:
@@ -1248,6 +1290,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 
 0357 Echoing strategy for satellite links. J. Davidson. June 1972. (Format:
      TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0357)
+
+0358 Not Issued.
 
 0359 Status of the Release of the New IMP System (2600). D.C. Walden. June
      1972. (Format: TXT, HTML) (Obsoletes RFC0343) (Status: UNKNOWN) (DOI:
@@ -1306,6 +1350,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 0374 IMP System Announcement. A.M. McKenzie. July 1972. (Format: TXT, HTML)
      (Status: UNKNOWN) (DOI: 10.17487/RFC0374)
 
+0375 Not Issued.
+
 0376 Network Host Status. E. Westheimer. August 1972. (Format: TXT, HTML)
      (Updates RFC0370) (Status: UNKNOWN) (DOI: 10.17487/RFC0376)
 
@@ -1319,12 +1365,16 @@ See the RFC Editor Web page http://www.rfc-editor.org
 0379 Using TSO at CCN. R. Braden. August 1972. (Format: TXT, HTML) (Status:
      UNKNOWN) (DOI: 10.17487/RFC0379)
 
+0380 Not Issued.
+
 0381 Three aids to improved network operation. J.M. McQuillan. July 1972.
      (Format: TXT, HTML) (Updated by RFC0394) (Status: UNKNOWN) (DOI:
      10.17487/RFC0381)
 
 0382 Mathematical Software on the ARPA Network. L. McDaniel. August 1972.
      (Format: TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0382)
+
+0383 Not Issued.
 
 0384 Official site idents for organizations in the ARPA Network. J.B.
      North. August 1972. (Format: TXT, HTML) (Obsoletes RFC0289) (Status:
@@ -1372,6 +1422,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 0396 Network Graphics Working Group Meeting - Second Iteration. S. Bunch.
      November 1972. (Format: TXT, HTML) (Updated by RFC0474) (Status:
      UNKNOWN) (DOI: 10.17487/RFC0396)
+
+0397 Not Issued.
 
 0398 UCSB Online Graphics. J.R. Pickens, E. Faeh. September 1972. (Format:
      TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0398)
@@ -1461,11 +1513,17 @@ See the RFC Editor Web page http://www.rfc-editor.org
      December 1972. (Format: TXT, HTML) (Obsoletes RFC0389) (Status:
      UNKNOWN) (DOI: 10.17487/RFC0423)
 
+0424 Not Issued.
+
 0425 "But my NCP costs $500 a day". R.D. Bressler. December 1972. (Format:
      TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0425)
 
 0426 Reconnection Protocol. R. Thomas. January 1973. (Format: TXT, HTML)
      (Status: UNKNOWN) (DOI: 10.17487/RFC0426)
+
+0427 Not Issued.
+
+0428 Not Issued.
 
 0429 Character Generator Process. J. Postel. December 1972. (Format: TXT,
      HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0429)
@@ -1516,6 +1574,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 
 0443 Traffic statistics (December 1972). A.M. McKenzie. January 1973.
      (Format: TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0443)
+
+0444 Not Issued.
 
 0445 IMP/TIP preventive maintenance schedule. A.M. McKenzie. January 1973.
      (Format: TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0445)
@@ -1583,6 +1643,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 0464 Resource notebook framework. M.D. Kudlick. February 1973. (Format:
      TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0464)
 
+0465 Not Issued.
+
 0466 Telnet logger/server for host LL-67. J.M. Winett. February 1973.
      (Format: TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0466)
 
@@ -1632,6 +1694,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 0480 Host-dependent FTP parameters. J.E. White. March 1973. (Format: TXT,
      HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0480)
 
+0481 Not Issued.
+
 0482 Traffic statistics (February 1973). A.M. McKenzie. March 1973.
      (Format: TXT, HTML) (Updated by RFC0497) (Status: UNKNOWN) (DOI:
      10.17487/RFC0482)
@@ -1639,6 +1703,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 0483 Cancellation of the resource notebook framework meeting. M.D. Kudlick.
      March 1973. (Format: TXT, HTML) (Status: UNKNOWN) (DOI:
      10.17487/RFC0483)
+
+0484 Not Issued.
 
 0485 MIX and MIXAL at UCSB. J.R. Pickens. March 1973. (Format: TXT, HTML)
      (Status: UNKNOWN) (DOI: 10.17487/RFC0485)
@@ -1696,6 +1762,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 0501 Un-muddling "free file transfer". K.T. Pogran. May 1973. (Format: TXT,
      HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0501)
 
+0502 Not Issued.
+
 0503 Socket number list. N. Neigus, J. Postel. April 1973. (Format: TXT,
      HTML) (Obsoletes RFC0433) (Obsoleted by RFC0739) (Status: UNKNOWN)
      (DOI: 10.17487/RFC0503)
@@ -1708,6 +1776,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 
 0506 FTP command naming problem. M.A. Padlipsky. June 1973. (Format: TXT,
      HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0506)
+
+0507 Not Issued.
 
 0508 Real-time data transmission on the ARPANET. L. Pfeifer, J. McAfee. May
      1973. (Format: TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0508)
@@ -1736,6 +1806,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 
 0516 Lost message detection. J. Postel. May 1973. (Format: TXT, HTML)
      (Status: UNKNOWN) (DOI: 10.17487/RFC0516)
+
+0517 Not Issued.
 
 0518 ARPANET accounts. N. Vaughan, E.J. Feinler. June 1973. (Format: TXT,
      HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0518)
@@ -1797,6 +1869,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 0535 Comments on File Access Protocol. R. Thomas. July 1973. (Format: TXT,
      HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0535)
 
+0536 Not Issued.
+
 0537 Announcement of NGG meeting July 16-17. S. Bunch. June 1973. (Format:
      TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0537)
 
@@ -1807,6 +1881,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
 0539 Thoughts on the mail protocol proposed in RFC 524. D. Crocker, J.
      Postel. July 1973. (Format: TXT, HTML) (Status: UNKNOWN) (DOI:
      10.17487/RFC0539)
+
+0540 Not Issued.
+
+0541 Not Issued.
 
 0542 File Transfer Protocol. N. Neigus. August 1973. (Format: TXT, HTML)
      (Obsoletes RFC0354) (Obsoleted by RFC0765) (Updated by RFC0614,
@@ -1846,6 +1924,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 0553 Draft design for a text/graphics protocol. C.H. Irby, K. Victor. July
      1973. (Format: TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0553)
 
+0554 Not Issued.
+
 0555 Responses to critiques of the proposed mail protocol. J.E. White. July
      1973. (Format: TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0555)
 
@@ -1854,6 +1934,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 
 0557 REVELATIONS IN NETWORK HOST MEASUREMENTS. B.D. Wessler. August 1973.
      (Format: TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0557)
+
+0558 Not Issued.
 
 0559 Comments on The New Telnet Protocol and its Implementation. A.K.
      Bushan. August 1973. (Format: TXT, HTML) (Status: UNKNOWN) (DOI:
@@ -1873,6 +1955,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 
 0563 Comments on the RCTE Telnet option. J. Davidson. August 1973. (Format:
      TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0563)
+
+0564 Not Issued.
 
 0565 Storing network survey data at the datacomputer. D. Cantor. August
      1973. (Format: TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0565)
@@ -1899,12 +1983,16 @@ See the RFC Editor Web page http://www.rfc-editor.org
 0571 TENEX FTP PROBLEM. R. Braden. November 1973. (Format: TXT, HTML)
      (Status: UNKNOWN) (DOI: 10.17487/RFC0571)
 
+0572 Not Issued.
+
 0573 DATA AND FILE TRANSFER - SOME MEASUREMENT RESULTS. A. Bhushan.
      September 1973. (Format: TXT, HTML) (Status: UNKNOWN) (DOI:
      10.17487/RFC0573)
 
 0574 Announcement of a Mail Facility at UCSB. M. Krilanovich. September
      1973. (Format: TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0574)
+
+0575 Not Issued.
 
 0576 Proposal for modifying linking. K. Victor. September 1973. (Format:
      TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0576)
@@ -1931,6 +2019,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 0582 Comments on RFC 580: Machine readable protocols. R. Clements. November
      1973. (Format: TXT, HTML) (Updates RFC0580) (Status: UNKNOWN) (DOI:
      10.17487/RFC0582)
+
+0583 Not Issued.
 
 0584 Charter for ARPANET Users Interest Working Group. J. Iseli, D.
      Crocker, N. Neigus. November 1973. (Format: TXT, HTML) (Status:
@@ -2007,6 +2097,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 0604 Assigned link numbers. J. Postel. December 1973. (Format: TXT, HTML)
      (Obsoletes RFC0317) (Obsoleted by RFC0739) (Status: UNKNOWN) (DOI:
      10.17487/RFC0604)
+
+0605 Not Issued.
 
 0606 Host names on-line. L.P. Deutsch. December 1973. (Format: TXT, HTML)
      (Status: UNKNOWN) (DOI: 10.17487/RFC0606)
@@ -2120,8 +2212,12 @@ See the RFC Editor Web page http://www.rfc-editor.org
      (Format: TXT, HTML) (Obsoletes RFC0633) (Status: UNKNOWN) (DOI:
      10.17487/RFC0638)
 
+0639 Not Issued.
+
 0640 Revised FTP reply codes. J. Postel. June 1974. (Format: TXT, HTML)
      (Updates RFC0542) (Status: UNKNOWN) (DOI: 10.17487/RFC0640)
+
+0641 Not Issued.
 
 0642 Ready line philosophy and implementation. J.D. Burchfiel. July 1974.
      (Format: TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0642)
@@ -2137,9 +2233,17 @@ See the RFC Editor Web page http://www.rfc-editor.org
      (Format: TXT, HTML) (Obsoletes RFC0615) (Status: UNKNOWN) (DOI:
      10.17487/RFC0645)
 
+0646 Not Issued.
+
 0647 Proposed protocol for connecting host computers to ARPA-like networks
      via front end processors. M.A. Padlipsky. November 1974. (Format: TXT,
      HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0647)
+
+0648 Not Issued.
+
+0649 Not Issued.
+
+0650 Not Issued.
 
 0651 Revised Telnet status option. D. Crocker. October 1974. (Format: TXT,
      HTML) (Obsoleted by RFC0859) (Status: UNKNOWN) (DOI: 10.17487/RFC0651)
@@ -2188,6 +2292,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
 0663 Lost message detection and recovery protocol. R. Kanodia. November
      1974. (Format: TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0663)
 
+0664 Not Issued.
+
+0665 Not Issued.
+
 0666 Specification of the Unified User-Level Protocol. M.A. Padlipsky.
      November 1974. (Format: TXT, HTML) (Status: UNKNOWN) (DOI:
      10.17487/RFC0666)
@@ -2195,9 +2303,13 @@ See the RFC Editor Web page http://www.rfc-editor.org
 0667 Host Ports. S.G. Chipman. December 1974. (Format: TXT, HTML) (Status:
      UNKNOWN) (DOI: 10.17487/RFC0667)
 
+0668 Not Issued.
+
 0669 November, 1974, survey of New-Protocol Telnet servers. D.W. Dodds.
      December 1974. (Format: TXT, HTML) (Updates RFC0702) (Updated by
      RFC0679) (Status: UNKNOWN) (DOI: 10.17487/RFC0669)
+
+0670 Not Issued.
 
 0671 Note on Reconnection Protocol. R. Schantz. December 1974. (Format:
      TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0671)
@@ -2205,12 +2317,16 @@ See the RFC Editor Web page http://www.rfc-editor.org
 0672 Multi-site data collection facility. R. Schantz. December 1974.
      (Format: TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0672)
 
+0673 Not Issued.
+
 0674 Procedure call documents: Version 2. J. Postel, J.E. White. December
      1974. (Format: TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0674)
 
 0675 Specification of Internet Transmission Control Program. V. Cerf, Y.
      Dalal, C. Sunshine. December 1974. (Format: TXT, HTML) (Obsoleted by
      RFC7805) (Status: UNKNOWN) (DOI: 10.17487/RFC0675)
+
+0676 Not Issued.
 
 0677 Maintenance of duplicate databases. P.R. Johnson, R. Thomas. January
      1975. (Format: TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0677)
@@ -2228,6 +2344,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 
 0681 Network UNIX. S. Holmgren. March 1975. (Format: TXT, HTML) (Status:
      UNKNOWN) (DOI: 10.17487/RFC0681)
+
+0682 Not Issued.
 
 0683 FTPSRV - Tenex extension for paged files. R. Clements. April 1975.
      (Format: TXT, HTML) (Updates RFC0354) (Status: UNKNOWN) (DOI:
@@ -2264,6 +2382,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 0692 Comments on IMP/Host Protocol changes (RFCs 687 and 690). S.M. Wolfe.
      June 1975. (Format: TXT, HTML) (Updates RFC0690) (Status: UNKNOWN)
      (DOI: 10.17487/RFC0692)
+
+0693 Not Issued.
 
 0694 Protocol information. J. Postel. June 1975. (Format: TXT, HTML)
      (Updates RFC0661) (Status: UNKNOWN) (DOI: 10.17487/RFC0694)
@@ -2318,6 +2438,12 @@ See the RFC Editor Web page http://www.rfc-editor.org
 0708 Elements of a Distributed Programming System. J.E. White. January
      1976. (Format: TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0708)
 
+0709 Not Issued.
+
+0710 Not Issued.
+
+0711 Not Issued.
+
 0712 Distributed Capability Computing System (DCCS). J.E. Donnelley.
      February 1976. (Format: TXT, HTML) (Status: UNKNOWN) (DOI:
      10.17487/RFC0712)
@@ -2327,6 +2453,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 
 0714 Host-Host Protocol for an ARPANET-Type Network. A.M. McKenzie. April
      1976. (Format: TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0714)
+
+0715 Not Issued.
 
 0716 Interim Revision to Appendix F of BBN 1822. D.C. Walden, J. Levin. May
      1976. (Format: TXT, HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0716)
@@ -2351,6 +2479,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 0722 Thoughts on Interactions in Distributed Services. J. Haverty.
      September 1976. (Format: TXT, HTML) (Status: UNKNOWN) (DOI:
      10.17487/RFC0722)
+
+0723 Not Issued.
 
 0724 Proposed official standard for the format of ARPA Network messages. D.
      Crocker, K.T. Pogran, J. Vittal, D.A. Henderson. May 1977. (Format:
@@ -2821,6 +2951,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 
 0852 ARPANET short blocking feature. A.G. Malis. April 1983. (Format: TXT,
      HTML) (Status: UNKNOWN) (DOI: 10.17487/RFC0852)
+
+0853 Not Issued.
 
 0854 Telnet Protocol Specification. J. Postel, J.K. Reynolds. May 1983.
      (Format: TXT, HTML) (Obsoletes RFC0764) (Updated by RFC5198) (Status:
@@ -3604,6 +3736,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
      HTML) (Obsoletes RFC1010) (Obsoleted by RFC1340) (Updated by RFC1349)
      (Status: UNKNOWN) (DOI: 10.17487/RFC1060)
 
+1061 Not Issued.
+
 1062 Internet numbers. S. Romano, M.K. Stahl, M. Recker. August 1988.
      (Format: TXT, HTML) (Obsoletes RFC1020) (Obsoleted by RFC1117,
      RFC1166) (Status: UNKNOWN) (DOI: 10.17487/RFC1062)
@@ -4082,6 +4216,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 1181 RIPE Terms of Reference. R. Blokzijl. September 1990. (Format: TXT,
      HTML) (Status: INFORMATIONAL) (DOI: 10.17487/RFC1181)
 
+1182 Not Issued.
+
 1183 New DNS RR Definitions. C. Everhart, L. Mamakos, R. Ullmann, P.
      Mockapetris. October 1990. (Format: TXT, HTML) (Updates RFC1034,
      RFC1035) (Updated by RFC5395, RFC5864, RFC6195, RFC6895) (Status:
@@ -4386,6 +4522,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 1259 Building the open road: The NREN as test-bed for the national public
      network. M. Kapor. September 1991. (Format: TXT, HTML) (Status:
      INFORMATIONAL) (DOI: 10.17487/RFC1259)
+
+1260 Not Issued.
 
 1261 Transition of Nic Services. S. Williamson, L. Nobile. September 1991.
      (Format: TXT, HTML) (Status: INFORMATIONAL) (DOI: 10.17487/RFC1261)
@@ -6679,6 +6817,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
 1838 Use of the X.500 Directory to support mapping between X.400 and RFC
      822 Addresses. S. Kille. August 1995. (Format: TXT, HTML) (Obsoleted
      by RFC2164) (Status: EXPERIMENTAL) (DOI: 10.17487/RFC1838)
+
+1839 Not Issued.
+
+1840 Not Issued.
 
 1841 PPP Network Control Protocol for LAN Extension. J. Chapman, D. Coli,
      A. Harvey, B. Jensen, K. Rowett. September 1995. (Format: TXT, HTML)
@@ -11845,6 +11987,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
      November 2001. (Format: TXT, HTML) (Status: INFORMATIONAL) (DOI:
      10.17487/RFC3099)
 
+3100 Not Issued.
+
 3101 The OSPF Not-So-Stubby Area (NSSA) Option. P. Murphy. January 2003.
      (Format: TXT, HTML) (Obsoletes RFC1587) (Status: PROPOSED STANDARD)
      (DOI: 10.17487/RFC3101)
@@ -12249,6 +12393,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
      February 2003. (Format: TXT, HTML) (Status: INFORMATIONAL) (DOI:
      10.17487/RFC3199)
 
+3200 Not Issued.
+
 3201 Definitions of Managed Objects for Circuit to Interface Translation.
      R. Steinberger, O. Nicklass. January 2002. (Format: TXT, HTML)
      (Updated by RFC9141) (Status: PROPOSED STANDARD) (DOI:
@@ -12345,6 +12491,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 3222 Terminology for Forwarding Information Base (FIB) based Router
      Performance. G. Trotter. December 2001. (Format: TXT, HTML) (Status:
      INFORMATIONAL) (DOI: 10.17487/RFC3222)
+
+3223 Not Issued.
 
 3224 Vendor Extensions for Service Location Protocol, Version 2. E.
      Guttman. January 2002. (Format: TXT, HTML) (Updates RFC2608) (Status:
@@ -12816,6 +12964,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
      2002. (Format: TXT, HTML) (Updated by RFC5626) (Status: PROPOSED
      STANDARD) (DOI: 10.17487/RFC3327)
 
+3328 Not Issued.
+
 3329 Security Mechanism Agreement for the Session Initiation Protocol
      (SIP). J. Arkko, V. Torvinen, G. Camarillo, A. Niemi, T. Haukka.
      January 2003. (Format: TXT, HTML) (Updated by RFC8996) (Status:
@@ -12833,6 +12983,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
      Adaptation Layer (M3UA). G. Sidebottom, K. Morneault, J. Pastor-
      Balbas. September 2002. (Format: TXT, HTML) (Obsoleted by RFC4666)
      (Status: PROPOSED STANDARD) (DOI: 10.17487/RFC3332)
+
+3333 Not Issued.
 
 3334 Policy-Based Accounting. T. Zseby, S. Zander, C. Carle. October 2002.
      (Format: TXT, HTML) (Status: EXPERIMENTAL) (DOI: 10.17487/RFC3334)
@@ -12900,6 +13052,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
      Working Groups of the Internet Engineering Task Force. M. Rose. August
      2002. (Format: TXT, HTML) (Status: BEST CURRENT PRACTICE) (DOI:
      10.17487/RFC3349)
+
+3350 Not Issued.
 
 3351 User Requirements for the Session Initiation Protocol (SIP) in Support
      of Deaf, Hard of Hearing and Speech-impaired Individuals. N. Charlton,
@@ -13113,6 +13267,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
      Initiation Protocol (SIP) Mapping. G. Camarillo, A. B. Roach, J.
      Peterson, L. Ong. December 2002. (Format: TXT, HTML) (Status: PROPOSED
      STANDARD) (DOI: 10.17487/RFC3398)
+
+3399 Not Issued.
+
+3400 Not Issued.
 
 3401 Dynamic Delegation Discovery System (DDDS) Part One: The Comprehensive
      DDDS. M. Mealling. October 2002. (Format: TXT, HTML) (Obsoletes
@@ -13574,6 +13732,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 3499 Request for Comments Summary RFC Numbers 3400-3499. S. Ginoza.
      December 2003. (Format: TXT, HTML) (Status: INFORMATIONAL) (DOI:
      10.17487/RFC3499)
+
+3500 Not Issued.
 
 3501 INTERNET MESSAGE ACCESS PROTOCOL - VERSION 4rev1. M. Crispin. March
      2003. (Format: TXT, HTML) (Obsoletes RFC2060) (Obsoleted by RFC9051)
@@ -14412,6 +14572,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
      RFC2798) (Updated by RFC4517) (Status: PROPOSED STANDARD) (DOI:
      10.17487/RFC3698)
 
+3699 Not Issued.
+
 3700 Internet Official Protocol Standards. J. Reynolds, S. Ginoza. July
      2004. (Format: TXT, HTML) (Obsoletes RFC3600) (Obsoleted by RFC5000)
      (Status: INTERNET STANDARD) (DOI: 10.17487/RFC3700)
@@ -14845,6 +15007,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
      (Updates RFC2046, RFC3461) (Updated by RFC5337, RFC6533) (Status:
      DRAFT STANDARD) (DOI: 10.17487/RFC3798)
 
+3799 Not Issued.
+
+3800 Not Issued.
+
 3801 Voice Profile for Internet Mail - version 2 (VPIMv2). G. Vaudreuil, G.
      Parsons. June 2004. (Format: TXT, HTML) (Obsoletes RFC2421, RFC2423)
      (Status: DRAFT STANDARD) (DOI: 10.17487/RFC3801)
@@ -15219,6 +15385,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 3888 Message Tracking Model and Requirements. T. Hansen. September 2004.
      (Format: TXT, HTML) (Status: INFORMATIONAL) (DOI: 10.17487/RFC3888)
 
+3889 Not Issued.
+
 3890 A Transport Independent Bandwidth Modifier for the Session Description
      Protocol (SDP). M. Westerlund. September 2004. (Format: TXT, HTML)
      (Status: PROPOSED STANDARD) (DOI: 10.17487/RFC3890)
@@ -15257,6 +15425,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
      October 2004. (Format: TXT, HTML) (Status: PROPOSED STANDARD) (DOI:
      10.17487/RFC3898)
 
+3899 Not Issued.
+
+3900 Not Issued.
+
 3901 DNS IPv6 Transport Operational Guidelines. A. Durand, J. Ihren.
      September 2004. (Format: TXT, HTML) (Status: BEST CURRENT PRACTICE)
      (DOI: 10.17487/RFC3901)
@@ -15280,6 +15452,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
 3906 Calculating Interior Gateway Protocol (IGP) Routes Over Traffic
      Engineering Tunnels. N. Shen, H. Smit. October 2004. (Format: TXT,
      HTML) (Status: INFORMATIONAL) (DOI: 10.17487/RFC3906)
+
+3907 Not Issued.
+
+3908 Not Issued.
 
 3909 Lightweight Directory Access Protocol (LDAP) Cancel Operation. K.
      Zeilenga. October 2004. (Format: TXT, HTML) (Status: PROPOSED
@@ -15667,6 +15843,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
 3998 Internet Printing Protocol (IPP): Job and Printer Administrative
      Operations. C. Kugler, H. Lewis, T. Hastings. March 2005. (Format:
      TXT, HTML) (Status: PROPOSED STANDARD) (DOI: 10.17487/RFC3998)
+
+3999 Not Issued.
+
+4000 Not Issued.
 
 4001 Textual Conventions for Internet Network Addresses. M. Daniele, B.
      Haberman, S. Routhier, J. Schoenwaelder. March 2005. (Format: TXT,
@@ -16096,6 +16276,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
      June 2005. (Format: TXT, HTML) (Status: INFORMATIONAL) (DOI:
      10.17487/RFC4098)
 
+4099 Not Issued.
+
+4100 Not Issued.
+
 4101 Writing Protocol Models. E. Rescorla, IAB. June 2005. (Format: TXT,
      HTML) (Status: INFORMATIONAL) (DOI: 10.17487/RFC4101)
 
@@ -16511,6 +16695,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
      Tessman. November 2005. (Format: TXT, HTML) (Status: INFORMATIONAL)
      (DOI: 10.17487/RFC4198)
 
+4199 Not Issued.
+
+4200 Not Issued.
+
 4201 Link Bundling in MPLS Traffic Engineering (TE). K. Kompella, Y.
      Rekhter, L. Berger. October 2005. (Format: TXT, HTML) (Updates
      RFC3471, RFC3472, RFC3473) (Status: PROPOSED STANDARD) (DOI:
@@ -16650,6 +16838,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 4231 Identifiers and Test Vectors for HMAC-SHA-224, HMAC-SHA-256, HMAC-
      SHA-384, and HMAC-SHA-512. M. Nystrom. December 2005. (Format: TXT,
      HTML) (Status: PROPOSED STANDARD) (DOI: 10.17487/RFC4231)
+
+4232 Not Issued.
 
 4233 Integrated Services Digital Network (ISDN) Q.921-User Adaptation
      Layer. K. Morneault, S. Rengasami, M. Kalla, G. Sidebottom. January
@@ -16931,6 +17121,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
 4298 RTP Payload Format for BroadVoice Speech Codecs. J.-H. Chen, W. Lee,
      J. Thyssen. December 2005. (Format: TXT, HTML) (Status: PROPOSED
      STANDARD) (DOI: 10.17487/RFC4298)
+
+4299 Not Issued.
+
+4300 Not Issued.
 
 4301 Security Architecture for the Internet Protocol. S. Kent, K. Seo.
      December 2005. (Format: TXT, HTML) (Obsoletes RFC2401) (Updates
@@ -17370,6 +17564,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
      April 2006. (Format: TXT, HTML) (Obsoletes RFC2538) (Updated by
      RFC6944) (Status: PROPOSED STANDARD) (DOI: 10.17487/RFC4398)
 
+4399 Not Issued.
+
+4400 Not Issued.
+
 4401 A Pseudo-Random Function (PRF) API Extension for the Generic Security
      Service Application Program Interface (GSS-API). N. Williams. February
      2006. (Format: TXT, HTML) (Status: PROPOSED STANDARD) (DOI:
@@ -17794,6 +17992,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
 
 4498 The Managed Object Aggregation MIB. G. Keeni. May 2006. (Format: TXT,
      HTML) (Status: EXPERIMENTAL) (DOI: 10.17487/RFC4498)
+
+4499 Not Issued.
+
+4500 Not Issued.
 
 4501 Domain Name System Uniform Resource Identifiers. S. Josefsson. May
      2006. (Format: TXT, HTML) (Status: PROPOSED STANDARD) (DOI:
@@ -18229,6 +18431,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
      (E-AC-3) Audio. B. Link. July 2006. (Format: TXT, HTML) (Status:
      PROPOSED STANDARD) (DOI: 10.17487/RFC4598)
 
+4599 Not Issued.
+
+4600 Not Issued.
+
 4601 Protocol Independent Multicast - Sparse Mode (PIM-SM): Protocol
      Specification (Revised). B. Fenner, M. Handley, H. Holbrook, I.
      Kouvelas. August 2006. (Format: TXT, HTML) (Obsoletes RFC2362)
@@ -18395,6 +18601,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
      2006. (Format: TXT, HTML) (Updates RFC3344) (Status: PROPOSED
      STANDARD) (DOI: 10.17487/RFC4636)
 
+4637 Not Issued.
+
 4638 Accommodating a Maximum Transit Unit/Maximum Receive Unit (MTU/MRU)
      Greater Than 1492 in the Point-to-Point Protocol over Ethernet
      (PPPoE). P. Arberg, D. Kourkouzelis, M. Duckett, T. Anschutz, J.
@@ -18480,6 +18688,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 4657 Path Computation Element (PCE) Communication Protocol Generic
      Requirements. J. Ash, J.L. Le Roux. September 2006. (Format: TXT,
      HTML) (Status: INFORMATIONAL) (DOI: 10.17487/RFC4657)
+
+4658 Not Issued.
 
 4659 BGP-MPLS IP Virtual Private Network (VPN) Extension for IPv6 VPN. J.
      De Clercq, D. Ooms, M. Carugi, F. Le Faucheur. September 2006.
@@ -18653,6 +18863,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
      Information Service. E. Gunduz, A. Newton, S. Kerr. October 2006.
      (Format: TXT, HTML) (Status: PROPOSED STANDARD) (DOI:
      10.17487/RFC4698)
+
+4699 Not Issued.
+
+4700 Not Issued.
 
 4701 A DNS Resource Record (RR) for Encoding Dynamic Host Configuration
      Protocol (DHCP) Information (DHCID RR). M. Stapp, T. Lemon, A.
@@ -18872,6 +19086,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
      Giacalone. December 2006. (Format: TXT, HTML) (Obsoletes RFC1850)
      (Status: PROPOSED STANDARD) (DOI: 10.17487/RFC4750)
 
+4751 Not Issued.
+
 4752 The Kerberos V5 ("GSSAPI") Simple Authentication and Security Layer
      (SASL) Mechanism. A. Melnikov. November 2006. (Format: TXT, HTML)
      (Obsoletes RFC2222) (Status: PROPOSED STANDARD) (DOI:
@@ -19071,6 +19287,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
      Routers (6PE). J. De Clercq, D. Ooms, S. Prevost, F. Le Faucheur.
      February 2007. (Format: TXT, HTML) (Status: PROPOSED STANDARD) (DOI:
      10.17487/RFC4798)
+
+4799 Not Issued.
+
+4800 Not Issued.
 
 4801 Definitions of Textual Conventions for Generalized Multiprotocol Label
      Switching (GMPLS) Management. T. Nadeau, A. Farrel. March 2007.
@@ -19497,6 +19717,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
      May 2007. (Format: TXT, HTML) (Status: PROPOSED STANDARD) (DOI:
      10.17487/RFC4898)
 
+4899 Not Issued.
+
+4900 Not Issued.
+
 4901 Protocol Extensions for Header Compression over MPLS. J. Ash, J. Hand,
      A. Malis. June 2007. (Format: TXT, HTML) (Status: PROPOSED STANDARD)
      (DOI: 10.17487/RFC4901)
@@ -19578,6 +19802,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
 4920 Crankback Signaling Extensions for MPLS and GMPLS RSVP-TE. A. Farrel,
      A. Satyanarayana, A. Iwata, N. Fujita, G. Ash. July 2007. (Format:
      TXT, HTML) (Status: PROPOSED STANDARD) (DOI: 10.17487/RFC4920)
+
+4921 Not Issued.
+
+4922 Not Issued.
 
 4923 Quality of Service (QoS) Signaling in a Nested Virtual Private
      Network. F. Baker, P. Bose. August 2007. (Format: TXT, HTML) (Status:
@@ -19855,6 +20083,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 4988 Mobile IPv4 Fast Handovers. R. Koodli, C. Perkins. October 2007.
      (Format: TXT, HTML) (Status: EXPERIMENTAL) (DOI: 10.17487/RFC4988)
 
+4989 Not Issued.
+
 4990 Use of Addresses in Generalized Multiprotocol Label Switching (GMPLS)
      Networks. K. Shiomoto, R. Papneja, R. Rabbat. September 2007. (Format:
      TXT, HTML) (Status: INFORMATIONAL) (DOI: 10.17487/RFC4990)
@@ -19892,6 +20122,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 4998 Evidence Record Syntax (ERS). T. Gondrom, R. Brandner, U. Pordesch.
      August 2007. (Format: TXT, HTML) (Status: PROPOSED STANDARD) (DOI:
      10.17487/RFC4998)
+
+4999 Not Issued.
 
 5000 Internet Official Protocol Standards. RFC Editor. May 2008. (Format:
      TXT, HTML) (Obsoletes RFC3700) (Obsoleted by RFC7100) (Status:
@@ -20320,6 +20552,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
      (Format: TXT, HTML) (Updated by RFC9141) (Status: PROPOSED STANDARD)
      (DOI: 10.17487/RFC5098)
 
+5099 Not Issued.
+
+5100 Not Issued.
+
 5101 Specification of the IP Flow Information Export (IPFIX) Protocol for
      the Exchange of IP Traffic Flow Information. B. Claise. February 2008.
      (Format: TXT, HTML) (Obsoleted by RFC7011) (Status: PROPOSED STANDARD)
@@ -20351,6 +20587,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 5107 DHCP Server Identifier Override Suboption. R. Johnson, J. Kumarasamy,
      K. Kinnear, M. Stapp. February 2008. (Format: TXT, HTML) (Status:
      PROPOSED STANDARD) (DOI: 10.17487/RFC5107)
+
+5108 Not Issued.
 
 5109 RTP Payload Format for Generic Forward Error Correction. A. Li.
      December 2007. (Format: TXT, HTML) (Obsoletes RFC2733, RFC3009)
@@ -20739,6 +20977,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
 5198 Unicode Format for Network Interchange. J. Klensin, M. Padlipsky.
      March 2008. (Format: TXT, HTML) (Obsoletes RFC0698) (Updates RFC0854)
      (Status: PROPOSED STANDARD) (DOI: 10.17487/RFC5198)
+
+5199 Not Issued.
+
+5200 Not Issued.
 
 5201 Host Identity Protocol. R. Moskowitz, P. Nikander, P. Jokela, T.
      Henderson. April 2008. (Format: TXT, HTML) (Obsoleted by RFC7401)
@@ -21158,6 +21400,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
      Takeda, A. Farrel, Y. Ikejiri, JP. Vasseur. August 2008. (Format: TXT,
      HTML) (Status: INFORMATIONAL) (DOI: 10.17487/RFC5298)
 
+5299 Not Issued.
+
+5300 Not Issued.
+
 5301 Dynamic Hostname Exchange Mechanism for IS-IS. D. McPherson, N. Shen.
      October 2008. (Format: TXT, HTML) (Obsoletes RFC2763) (Updated by
      RFC6232) (Status: PROPOSED STANDARD) (DOI: 10.17487/RFC5301)
@@ -21205,6 +21451,14 @@ See the RFC Editor Web page http://www.rfc-editor.org
      TXT, HTML) (Obsoletes RFC3786) (Status: PROPOSED STANDARD) (DOI:
      10.17487/RFC5311)
 
+5312 Not Issued.
+
+5313 Not Issued.
+
+5314 Not Issued.
+
+5315 Not Issued.
+
 5316 ISIS Extensions in Support of Inter-Autonomous System (AS) MPLS and
      GMPLS Traffic Engineering. M. Chen, R. Zhang, X. Duan. December 2008.
      (Format: TXT, HTML) (Obsoleted by RFC9346) (Status: PROPOSED STANDARD)
@@ -21218,6 +21472,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
      Header (P-Header). J. Hautakorpi, G. Camarillo. December 2008.
      (Format: TXT, HTML) (Updated by RFC8217) (Status: INFORMATIONAL) (DOI:
      10.17487/RFC5318)
+
+5319 Not Issued.
 
 5320 The Subnetwork Encapsulation and Adaptation Layer (SEAL). F. Templin.
      February 2010. (Format: TXT, HTML) (Status: EXPERIMENTAL) (DOI:
@@ -21563,6 +21819,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
 5398 Autonomous System (AS) Number Reservation for Documentation Use. G.
      Huston. December 2008. (Format: TXT, HTML) (Status: INFORMATIONAL)
      (DOI: 10.17487/RFC5398)
+
+5399 Not Issued.
+
+5400 Not Issued.
 
 5401 Multicast Negative-Acknowledgment (NACK) Building Blocks. B. Adamson,
      C. Bormann, M. Handley, J. Macker. November 2008. (Format: TXT, HTML)
@@ -21988,6 +22248,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
      Chakeres. March 2009. (Format: TXT, HTML) (Status: PROPOSED STANDARD)
      (DOI: 10.17487/RFC5498)
 
+5499 Not Issued.
+
+5500 Not Issued.
+
 5501 Requirements for Multicast Support in Virtual Private LAN Services. Y.
      Kamite, Y. Wada, Y. Serbest, T. Morin, L. Fang. March 2009. (Format:
      TXT, HTML) (Status: INFORMATIONAL) (DOI: 10.17487/RFC5501)
@@ -22404,6 +22668,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
 
 5598 Internet Mail Architecture. D. Crocker. July 2009. (Format: TXT, HTML)
      (Status: INFORMATIONAL) (DOI: 10.17487/RFC5598)
+
+5599 Not Issued.
+
+5600 Not Issued.
 
 5601 Pseudowire (PW) Management Information Base (MIB). T. Nadeau, D.
      Zelig. July 2009. (Format: TXT, HTML) (Status: PROPOSED STANDARD)
@@ -22826,6 +23094,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
      Algorithms (DSSC). T. Kunz, S. Okunick, U. Pordesch. November 2009.
      (Format: TXT, HTML) (Status: PROPOSED STANDARD) (DOI:
      10.17487/RFC5698)
+
+5699 Not Issued.
+
+5700 Not Issued.
 
 5701 IPv6 Address Specific BGP Extended Community Attribute. Y. Rekhter.
      November 2009. (Format: TXT, HTML) (Updated by RFC7153, RFC7606)
@@ -23262,6 +23534,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
      (Obsoleted by RFC9568) (Status: PROPOSED STANDARD) (DOI:
      10.17487/RFC5798)
 
+5799 Not Issued.
+
+5800 Not Issued.
+
 5801 Using Generic Security Service Application Program Interface (GSS-API)
      Mechanisms in Simple Authentication and Security Layer (SASL): The GS2
      Mechanism Family. S. Josefsson, N. Williams. July 2010. (Format: TXT,
@@ -23296,6 +23572,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 5808 Requirements for a Location-by-Reference Mechanism. R. Marshall. May
      2010. (Format: TXT, HTML) (Status: INFORMATIONAL) (DOI:
      10.17487/RFC5808)
+
+5809 Not Issued.
 
 5810 Forwarding and Control Element Separation (ForCES) Protocol
      Specification. A. Doria, J. Hadi Salim, R. Haas, H. Khosravi, W. Wang,
@@ -23346,6 +23624,12 @@ See the RFC Editor Web page http://www.rfc-editor.org
 5820 Extensions to OSPF to Support Mobile Ad Hoc Networking. A. Roy, M.
      Chandra. March 2010. (Format: TXT, HTML) (Updated by RFC7137) (Status:
      EXPERIMENTAL) (DOI: 10.17487/RFC5820)
+
+5821 Not Issued.
+
+5822 Not Issued.
+
+5823 Not Issued.
 
 5824 Requirements for Supporting Customer Resource ReSerVation Protocol
      (RSVP) and RSVP Traffic Engineering (RSVP-TE) over a BGP/MPLS IP-VPN.
@@ -23671,6 +23955,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
      Media Streams. F. Andreasen, G. Camarillo, D. Oran, D. Wing. July
      2010. (Format: TXT, HTML) (Status: PROPOSED STANDARD) (DOI:
      10.17487/RFC5898)
+
+5899 Not Issued.
+
+5900 Not Issued.
 
 5901 Extensions to the IODEF-Document Class for Reporting Phishing. P.
      Cain, D. Jevans. July 2010. (Format: TXT, HTML) (Status: PROPOSED
@@ -24079,6 +24367,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
 5998 An Extension for EAP-Only Authentication in IKEv2. P. Eronen, H.
      Tschofenig, Y. Sheffer. September 2010. (Format: TXT, HTML) (Updates
      RFC5996) (Status: PROPOSED STANDARD) (DOI: 10.17487/RFC5998)
+
+5999 Not Issued.
+
+6000 Not Issued.
 
 6001 Generalized MPLS (GMPLS) Protocol Extensions for Multi-Layer and
      Multi-Region Networks (MLN/MRN). D. Papadimitriou, M. Vigoureux, K.
@@ -24506,9 +24798,17 @@ See the RFC Editor Web page http://www.rfc-editor.org
      V. Devarapalli, S. Gundavelli, B. Haley. April 2012. (Format: TXT,
      HTML) (Status: PROPOSED STANDARD) (DOI: 10.17487/RFC6098)
 
+6099 Not Issued.
+
+6100 Not Issued.
+
 6101 The Secure Sockets Layer (SSL) Protocol Version 3.0. A. Freier, P.
      Karlton, P. Kocher. August 2011. (Format: TXT, HTML) (Status:
      HISTORIC) (DOI: 10.17487/RFC6101)
+
+6102 Not Issued.
+
+6103 Not Issued.
 
 6104 Rogue IPv6 Router Advertisement Problem Statement. T. Chown, S.
      Venaas. February 2011. (Format: TXT, HTML) (Status: INFORMATIONAL)
@@ -24916,6 +25216,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
      P. Francois, C. Pelsser, Z. Ahmad, A.J. Elizondo Armengol, T. Takeda.
      April 2011. (Format: TXT, HTML) (Status: INFORMATIONAL) (DOI:
      10.17487/RFC6198)
+
+6199 Not Issued.
+
+6200 Not Issued.
 
 6201 Device Reset Characterization. R. Asati, C. Pignataro, F. Calabria, C.
      Olvera. March 2011. (Format: TXT, HTML) (Updates RFC1242, RFC2544)
@@ -25327,6 +25631,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
 6298 Computing TCP's Retransmission Timer. V. Paxson, M. Allman, J. Chu, M.
      Sargent. June 2011. (Format: TXT, HTML) (Obsoletes RFC2988) (Updates
      RFC1122) (Status: PROPOSED STANDARD) (DOI: 10.17487/RFC6298)
+
+6299 Not Issued.
+
+6300 Not Issued.
 
 6301 A Survey of Mobility Support in the Internet. Z. Zhu, R. Wakikawa, L.
      Zhang. July 2011. (Format: TXT, HTML) (Status: INFORMATIONAL) (DOI:
@@ -25752,6 +26060,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
      2011. (Format: TXT, HTML) (Updates RFC2113, RFC2711) (Status: BEST
      CURRENT PRACTICE) (DOI: 10.17487/RFC6398)
 
+6399 Not Issued.
+
+6400 Not Issued.
+
 6401 RSVP Extensions for Admission Priority. F. Le Faucheur, J. Polk, K.
      Carlberg. November 2011. (Format: TXT, HTML) (Status: PROPOSED
      STANDARD) (DOI: 10.17487/RFC6401)
@@ -26171,6 +26483,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
      Kumar, F. Andreasen. March 2012. (Format: TXT, HTML) (Status:
      INFORMATIONAL) (DOI: 10.17487/RFC6498)
 
+6499 Not Issued.
+
+6500 Not Issued.
+
 6501 Conference Information Data Model for Centralized Conferencing (XCON).
      O. Novo, G. Camarillo, D. Morgan, J. Urpalainen. March 2012. (Format:
      TXT, HTML) (Status: PROPOSED STANDARD) (DOI: 10.17487/RFC6501)
@@ -26266,6 +26582,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
      Administrative Messages. M. Kucherawy. January 2012. (Format: TXT,
      HTML) (Obsoletes RFC3462) (Updated by RFC6533) (Status: INTERNET
      STANDARD) (DOI: 10.17487/RFC6522)
+
+6523 Not Issued.
+
+6524 Not Issued.
 
 6525 Stream Control Transmission Protocol (SCTP) Stream Reconfiguration. R.
      Stewart, M. Tuexen, P. Lei. March 2012. (Format: TXT, HTML) (Status:
@@ -26582,6 +26902,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
      (Format: TXT, HTML) (Updates RFC5735) (Status: BEST CURRENT PRACTICE)
      (DOI: 10.17487/RFC6598)
 
+6599 Not Issued.
+
+6600 Not Issued.
+
 6601 Generic Connection Admission Control (GCAC) Algorithm Specification
      for IP/MPLS Networks. G. Ash, D. McDysan. April 2012. (Format: TXT,
      HTML) (Status: EXPERIMENTAL) (DOI: 10.17487/RFC6601)
@@ -26723,6 +27047,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 6633 Deprecation of ICMP Source Quench Messages. F. Gont. May 2012.
      (Format: TXT, HTML) (Updates RFC0792, RFC1122, RFC1812) (Status:
      PROPOSED STANDARD) (DOI: 10.17487/RFC6633)
+
+6634 Not Issued.
 
 6635 RFC Editor Model (Version 2). O. Kolkman, J. Halpern, IAB. June 2012.
      (Format: TXT, HTML) (Obsoletes RFC5620) (Obsoleted by RFC8728)
@@ -26996,6 +27322,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
      Security (TLS) Protocol: TLSA. P. Hoffman, J. Schlyter. August 2012.
      (Format: TXT, HTML) (Updated by RFC7218, RFC7671, RFC8749) (Status:
      PROPOSED STANDARD) (DOI: 10.17487/RFC6698)
+
+6699 Not Issued.
+
+6700 Not Issued.
 
 6701 Sanctions Available for Application to Violators of IETF IPR Policy.
      A. Farrel, P. Resnick. August 2012. (Format: TXT, HTML) (Status:
@@ -27415,6 +27745,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
      Delay Variation Metric Reporting. A. Clark, Q. Wu. November 2012.
      (Format: TXT, HTML) (Status: PROPOSED STANDARD) (DOI:
      10.17487/RFC6798)
+
+6799 Not Issued.
+
+6800 Not Issued.
 
 6801 Pseudo Content Delivery Protocol (CDP) for Protecting Multiple Source
      Flows in the Forward Error Correction (FEC) Framework. U. Kozat, A.
@@ -27845,6 +28179,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
      TXT, HTML) (Updates RFC4204, RFC4207, RFC4209, RFC5818) (Status:
      PROPOSED STANDARD) (DOI: 10.17487/RFC6898)
 
+6899 Not Issued.
+
+6900 Not Issued.
+
 6901 JavaScript Object Notation (JSON) Pointer. P. Bryan, K. Zyp, M.
      Nottingham. April 2013. (Format: TXT, HTML) (Status: PROPOSED
      STANDARD) (DOI: 10.17487/RFC6901)
@@ -28124,6 +28462,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
      L. Fang, N. Bitar, R. Zhang, M. Daikoku, P. Pan. August 2013. (Format:
      TXT, HTML) (Status: INFORMATIONAL) (DOI: 10.17487/RFC6965)
 
+6966 Not Issued.
+
 6967 Analysis of Potential Solutions for Revealing a Host Identifier
      (HOST_ID) in Shared Address Deployments. M. Boucadair, J. Touch, P.
      Levis, R. Penno. June 2013. (Format: TXT, HTML) (Status:
@@ -28249,6 +28589,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
      (Format: TXT, HTML) (Status: PROPOSED STANDARD) (DOI:
      10.17487/RFC6994)
 
+6995 Not Issued.
+
 6996 Autonomous System (AS) Reservation for Private Use. J. Mitchell. July
      2013. (Format: TXT, HTML) (Updates RFC1930) (Status: BEST CURRENT
      PRACTICE) (DOI: 10.17487/RFC6996)
@@ -28262,6 +28604,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
      Route in a Low-Power and Lossy Network. M. Goyal, E. Baccelli, A.
      Brandt, J. Martocci. August 2013. (Format: TXT, HTML) (Status:
      EXPERIMENTAL) (DOI: 10.17487/RFC6998)
+
+6999 Not Issued.
+
+7000 Not Issued.
 
 7001 Message Header Field for Indicating Message Authentication Status. M.
      Kucherawy. September 2013. (Format: TXT, HTML) (Obsoletes RFC5451,
@@ -28688,6 +29034,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 7098 Using the IPv6 Flow Label for Load Balancing in Server Farms. B.
      Carpenter, S. Jiang, W. Tarreau. January 2014. (Format: TXT, HTML)
      (Status: INFORMATIONAL) (DOI: 10.17487/RFC7098)
+
+7099 Not Issued.
 
 7100 Retirement of the "Internet Official Protocol Standards" Summary
      Document. P. Resnick. December 2013. (Format: TXT, HTML) (Obsoletes
@@ -29693,6 +30041,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 7326 Energy Management Framework. J. Parello, B. Claise, B. Schoening, J.
      Quittek. September 2014. (Format: TXT, HTML) (Status: INFORMATIONAL)
      (DOI: 10.17487/RFC7326)
+
+7327 Not Issued.
 
 7328 Writing I-Ds and RFCs Using Pandoc and a Bit of XML. R. Gieben. August
      2014. (Format: TXT, HTML) (Status: INFORMATIONAL) (DOI:
@@ -32229,6 +32579,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 7906 NSA's Cryptographic Message Syntax (CMS) Key Management Attributes. P.
      Timmel, R. Housley, S. Turner. June 2016. (Format: TXT, HTML) (Status:
      INFORMATIONAL) (DOI: 10.17487/RFC7906)
+
+7907 Not Issued.
 
 7908 Problem Definition and Classification of BGP Route Leaks. K. Sriram,
      D. Montgomery, D. McPherson, E. Osterweil, B. Dickson. June 2016.
@@ -34900,6 +35252,10 @@ See the RFC Editor Web page http://www.rfc-editor.org
 8522 Looking Glass Command Set. M. Stubbig. February 2019. (Format: TXT,
      HTML) (Status: INFORMATIONAL) (DOI: 10.17487/RFC8522)
 
+8523 Not Issued.
+
+8524 Not Issued.
+
 8525 YANG Library. A. Bierman, M. Bjorklund, J. Schoenwaelder, K. Watsen,
      R. Wilton. March 2019. (Format: TXT, HTML) (Obsoletes RFC7895)
      (Status: PROPOSED STANDARD) (DOI: 10.17487/RFC8525)
@@ -34946,6 +35302,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
      J. Kotalwar, E. Rosen, Z. Zhang. February 2019. (Format: TXT, HTML)
      (Updates RFC6514, RFC6625, RFC7524, RFC7582, RFC7900) (Status:
      PROPOSED STANDARD) (DOI: 10.17487/RFC8534)
+
+8535 Not Issued.
 
 8536 The Time Zone Information Format (TZif). A. Olson, P. Eggert, K.
      Murchison. February 2019. (Format: TXT, HTML) (Obsoleted by RFC9636)
@@ -35079,6 +35437,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 
 8565 Hypertext Jeopardy Protocol (HTJP/1.0). E. Fokschaner. 1 April 2019.
      (Format: TXT, HTML) (Status: INFORMATIONAL) (DOI: 10.17487/RFC8565)
+
+8566 Not Issued.
 
 8567 Customer Management DNS Resource Records. E. Rye, R. Beverly. 1 April
      2019. (Format: TXT, HTML) (Status: INFORMATIONAL) (DOI:
@@ -35334,6 +35694,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
      Ye, G. Mirsky, A. D'Alessandro, H. Shah. August 2019. (Format: TXT,
      HTML) (Status: PROPOSED STANDARD) (DOI: 10.17487/RFC8625)
 
+8626 Not Issued.
+
 8627 RTP Payload Format for Flexible Forward Error Correction (FEC). M.
      Zanaty, V. Singh, A. Begen, G. Mandyam. July 2019. (Format: TXT, HTML)
      (Status: PROPOSED STANDARD) (DOI: 10.17487/RFC8627)
@@ -35406,8 +35768,16 @@ See the RFC Editor Web page http://www.rfc-editor.org
      2019. (Format: TXT, HTML) (Status: INFORMATIONAL) (DOI:
      10.17487/RFC8643)
 
+8644 Not Issued.
+
 8645 Re-keying Mechanisms for Symmetric Keys. S. Smyshlyaev. August 2019.
      (Format: TXT, HTML) (Status: INFORMATIONAL) (DOI: 10.17487/RFC8645)
+
+8646 Not Issued.
+
+8647 Not Issued.
+
+8648 Not Issued.
 
 8649 Hash Of Root Key Certificate Extension. R. Housley. August 2019.
      (Format: TXT, HTML) (Status: INFORMATIONAL) (DOI: 10.17487/RFC8649)
@@ -36881,6 +37251,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
      M. Hunek, R. Patterson. March 2021. (Format: TXT, HTML) (Status:
      PROPOSED STANDARD) (DOI: 10.17487/RFC8987)
 
+8988 Not Issued.
+
 8989 Additional Criteria for Nominating Committee Eligibility. B.
      Carpenter, S. Farrell. February 2021. (Format: TXT, HTML) (Obsoleted
      by RFC9389) (Status: EXPERIMENTAL) (DOI: 10.17487/RFC8989)
@@ -37468,6 +37840,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 9122 IANA Registry for Sieve Actions. A. Melnikov, K. Murchison. June 2023.
      (Format: TXT, HTML) (Status: PROPOSED STANDARD) (DOI:
      10.17487/RFC9122)
+
+9123 Not Issued.
 
 9124 A Manifest Information Model for Firmware Updates in Internet of
      Things (IoT) Devices. B. Moran, H. Tschofenig, H. Birkholz. January
@@ -38585,6 +38959,8 @@ See the RFC Editor Web page http://www.rfc-editor.org
 9378 In Situ Operations, Administration, and Maintenance (IOAM) Deployment.
      F. Brockners, S. Bhandari, D. Bernier, T. Mizrahi. April 2023.
      (Format: TXT, HTML) (Status: INFORMATIONAL) (DOI: 10.17487/RFC9378)
+
+9379 Not Issued.
 
 9380 Hashing to Elliptic Curves. A. Faz-Hernandez, S. Scott, N. Sullivan,
      R. S. Wahby, C. A. Wood. August 2023. (Format: TXT, HTML) (Status:
