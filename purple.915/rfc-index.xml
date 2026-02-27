@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rfc-index xmlns="https://www.rfc-editor.org/rfc-index" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.rfc-editor.org/rfc-index https://www.rfc-editor.org/rfc-index.xsd">
     <bcp-entry>
+        <doc-id>BCP0001</doc-id>
+    </bcp-entry>
+    <bcp-entry>
+        <doc-id>BCP0002</doc-id>
+    </bcp-entry>
+    <bcp-entry>
         <doc-id>BCP0003</doc-id>
         <is-also>
             <doc-id>RFC1381</doc-id>
@@ -16,22 +22,6 @@
         <doc-id>BCP0005</doc-id>
         <is-also>
             <doc-id>RFC1384</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0006</doc-id>
-        <is-also>
-            <doc-id>RFC2670</doc-id>
-            <doc-id>RFC6855</doc-id>
-            <doc-id>RFC7166</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0006</doc-id>
-        <is-also>
-            <doc-id>RFC2670</doc-id>
-            <doc-id>RFC6855</doc-id>
-            <doc-id>RFC7166</doc-id>
         </is-also>
     </bcp-entry>
     <bcp-entry>
@@ -68,104 +58,6 @@
         </is-also>
     </bcp-entry>
     <bcp-entry>
-        <doc-id>BCP0009</doc-id>
-        <is-also>
-            <doc-id>RFC3580</doc-id>
-            <doc-id>RFC5599</doc-id>
-            <doc-id>RFC6329</doc-id>
-            <doc-id>RFC6952</doc-id>
-            <doc-id>RFC4296</doc-id>
-            <doc-id>RFC7333</doc-id>
-            <doc-id>RFC8692</doc-id>
-            <doc-id>RFC9096</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0009</doc-id>
-        <is-also>
-            <doc-id>RFC3580</doc-id>
-            <doc-id>RFC5599</doc-id>
-            <doc-id>RFC6329</doc-id>
-            <doc-id>RFC6952</doc-id>
-            <doc-id>RFC4296</doc-id>
-            <doc-id>RFC7333</doc-id>
-            <doc-id>RFC8692</doc-id>
-            <doc-id>RFC9096</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0009</doc-id>
-        <is-also>
-            <doc-id>RFC3580</doc-id>
-            <doc-id>RFC5599</doc-id>
-            <doc-id>RFC6329</doc-id>
-            <doc-id>RFC6952</doc-id>
-            <doc-id>RFC4296</doc-id>
-            <doc-id>RFC7333</doc-id>
-            <doc-id>RFC8692</doc-id>
-            <doc-id>RFC9096</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0009</doc-id>
-        <is-also>
-            <doc-id>RFC3580</doc-id>
-            <doc-id>RFC5599</doc-id>
-            <doc-id>RFC6329</doc-id>
-            <doc-id>RFC6952</doc-id>
-            <doc-id>RFC4296</doc-id>
-            <doc-id>RFC7333</doc-id>
-            <doc-id>RFC8692</doc-id>
-            <doc-id>RFC9096</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0009</doc-id>
-        <is-also>
-            <doc-id>RFC3580</doc-id>
-            <doc-id>RFC5599</doc-id>
-            <doc-id>RFC6329</doc-id>
-            <doc-id>RFC6952</doc-id>
-            <doc-id>RFC4296</doc-id>
-            <doc-id>RFC7333</doc-id>
-            <doc-id>RFC8692</doc-id>
-            <doc-id>RFC9096</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0009</doc-id>
-        <is-also>
-            <doc-id>RFC3580</doc-id>
-            <doc-id>RFC5599</doc-id>
-            <doc-id>RFC6329</doc-id>
-            <doc-id>RFC6952</doc-id>
-            <doc-id>RFC4296</doc-id>
-            <doc-id>RFC7333</doc-id>
-            <doc-id>RFC8692</doc-id>
-            <doc-id>RFC9096</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0009</doc-id>
-        <is-also>
-            <doc-id>RFC3580</doc-id>
-            <doc-id>RFC5599</doc-id>
-            <doc-id>RFC6329</doc-id>
-            <doc-id>RFC6952</doc-id>
-            <doc-id>RFC4296</doc-id>
-            <doc-id>RFC7333</doc-id>
-            <doc-id>RFC8692</doc-id>
-            <doc-id>RFC9096</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0010</doc-id>
-        <is-also>
-            <doc-id>RFC8562</doc-id>
-            <doc-id>RFC9248</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
         <doc-id>BCP0010</doc-id>
         <is-also>
             <doc-id>RFC8562</doc-id>
@@ -179,12 +71,7 @@
         </is-also>
     </bcp-entry>
     <bcp-entry>
-        <doc-id>BCP0013</doc-id>
-        <is-also>
-            <doc-id>RFC0042</doc-id>
-            <doc-id>RFC6574</doc-id>
-            <doc-id>RFC9497</doc-id>
-        </is-also>
+        <doc-id>BCP0012</doc-id>
     </bcp-entry>
     <bcp-entry>
         <doc-id>BCP0013</doc-id>
@@ -192,21 +79,6 @@
             <doc-id>RFC0042</doc-id>
             <doc-id>RFC6574</doc-id>
             <doc-id>RFC9497</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0013</doc-id>
-        <is-also>
-            <doc-id>RFC0042</doc-id>
-            <doc-id>RFC6574</doc-id>
-            <doc-id>RFC9497</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0014</doc-id>
-        <is-also>
-            <doc-id>RFC2677</doc-id>
-            <doc-id>RFC8027</doc-id>
         </is-also>
     </bcp-entry>
     <bcp-entry>
@@ -274,33 +146,6 @@
         <doc-id>BCP0024</doc-id>
         <is-also>
             <doc-id>RFC0779</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0025</doc-id>
-        <is-also>
-            <doc-id>RFC3912</doc-id>
-            <doc-id>RFC3724</doc-id>
-            <doc-id>RFC7631</doc-id>
-            <doc-id>RFC8606</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0025</doc-id>
-        <is-also>
-            <doc-id>RFC3912</doc-id>
-            <doc-id>RFC3724</doc-id>
-            <doc-id>RFC7631</doc-id>
-            <doc-id>RFC8606</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0025</doc-id>
-        <is-also>
-            <doc-id>RFC3912</doc-id>
-            <doc-id>RFC3724</doc-id>
-            <doc-id>RFC7631</doc-id>
-            <doc-id>RFC8606</doc-id>
         </is-also>
     </bcp-entry>
     <bcp-entry>
@@ -386,13 +231,6 @@
         </is-also>
     </bcp-entry>
     <bcp-entry>
-        <doc-id>BCP0037</doc-id>
-        <is-also>
-            <doc-id>RFC2751</doc-id>
-            <doc-id>RFC5105</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
         <doc-id>BCP0038</doc-id>
         <is-also>
             <doc-id>RFC2948</doc-id>
@@ -406,23 +244,9 @@
         </is-also>
     </bcp-entry>
     <bcp-entry>
-        <doc-id>BCP0039</doc-id>
-        <is-also>
-            <doc-id>RFC2966</doc-id>
-            <doc-id>RFC9097</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
         <doc-id>BCP0040</doc-id>
         <is-also>
             <doc-id>RFC7565</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0041</doc-id>
-        <is-also>
-            <doc-id>RFC3958</doc-id>
-            <doc-id>RFC6972</doc-id>
         </is-also>
     </bcp-entry>
     <bcp-entry>
@@ -460,13 +284,6 @@
         <doc-id>BCP0046</doc-id>
         <is-also>
             <doc-id>RFC3352</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0047</doc-id>
-        <is-also>
-            <doc-id>RFC4664</doc-id>
-            <doc-id>RFC5556</doc-id>
         </is-also>
     </bcp-entry>
     <bcp-entry>
@@ -586,18 +403,7 @@
         </is-also>
     </bcp-entry>
     <bcp-entry>
-        <doc-id>BCP0065</doc-id>
-        <is-also>
-            <doc-id>RFC3704</doc-id>
-            <doc-id>RFC8815</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0067</doc-id>
-        <is-also>
-            <doc-id>RFC5674</doc-id>
-            <doc-id>RFC7810</doc-id>
-        </is-also>
+        <doc-id>BCP0066</doc-id>
     </bcp-entry>
     <bcp-entry>
         <doc-id>BCP0067</doc-id>
@@ -628,13 +434,6 @@
         <doc-id>BCP0071</doc-id>
         <is-also>
             <doc-id>RFC1490</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0072</doc-id>
-        <is-also>
-            <doc-id>RFC2116</doc-id>
-            <doc-id>RFC9246</doc-id>
         </is-also>
     </bcp-entry>
     <bcp-entry>
@@ -718,13 +517,6 @@
         </is-also>
     </bcp-entry>
     <bcp-entry>
-        <doc-id>BCP0084</doc-id>
-        <is-also>
-            <doc-id>RFC2809</doc-id>
-            <doc-id>RFC8599</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
         <doc-id>BCP0085</doc-id>
         <is-also>
             <doc-id>RFC0545</doc-id>
@@ -746,13 +538,6 @@
         <doc-id>BCP0088</doc-id>
         <is-also>
             <doc-id>RFC2494</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0089</doc-id>
-        <is-also>
-            <doc-id>RFC2137</doc-id>
-            <doc-id>RFC9387</doc-id>
         </is-also>
     </bcp-entry>
     <bcp-entry>
@@ -787,6 +572,9 @@
         </is-also>
     </bcp-entry>
     <bcp-entry>
+        <doc-id>BCP0094</doc-id>
+    </bcp-entry>
+    <bcp-entry>
         <doc-id>BCP0095</doc-id>
         <is-also>
             <doc-id>RFC3722</doc-id>
@@ -796,22 +584,6 @@
         <doc-id>BCP0096</doc-id>
         <is-also>
             <doc-id>RFC3727</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0097</doc-id>
-        <is-also>
-            <doc-id>RFC1231</doc-id>
-            <doc-id>RFC4904</doc-id>
-            <doc-id>RFC7930</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0097</doc-id>
-        <is-also>
-            <doc-id>RFC1231</doc-id>
-            <doc-id>RFC4904</doc-id>
-            <doc-id>RFC7930</doc-id>
         </is-also>
     </bcp-entry>
     <bcp-entry>
@@ -838,22 +610,6 @@
         <doc-id>BCP0100</doc-id>
         <is-also>
             <doc-id>RFC6957</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0101</doc-id>
-        <is-also>
-            <doc-id>RFC8506</doc-id>
-            <doc-id>RFC8405</doc-id>
-            <doc-id>RFC8505</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0101</doc-id>
-        <is-also>
-            <doc-id>RFC8506</doc-id>
-            <doc-id>RFC8405</doc-id>
-            <doc-id>RFC8505</doc-id>
         </is-also>
     </bcp-entry>
     <bcp-entry>
@@ -926,23 +682,22 @@
         </is-also>
     </bcp-entry>
     <bcp-entry>
-        <doc-id>BCP0111</doc-id>
-        <is-also>
-            <doc-id>RFC4145</doc-id>
-            <doc-id>RFC4832</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
         <doc-id>BCP0112</doc-id>
         <is-also>
             <doc-id>RFC4144</doc-id>
         </is-also>
     </bcp-entry>
     <bcp-entry>
+        <doc-id>BCP0113</doc-id>
+    </bcp-entry>
+    <bcp-entry>
         <doc-id>BCP0114</doc-id>
         <is-also>
             <doc-id>RFC0022</doc-id>
         </is-also>
+    </bcp-entry>
+    <bcp-entry>
+        <doc-id>BCP0115</doc-id>
     </bcp-entry>
     <bcp-entry>
         <doc-id>BCP0116</doc-id>
@@ -1008,22 +763,6 @@
         <doc-id>BCP0126</doc-id>
         <is-also>
             <doc-id>RFC4726</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0127</doc-id>
-        <is-also>
-            <doc-id>RFC4722</doc-id>
-            <doc-id>RFC6659</doc-id>
-            <doc-id>RFC7706</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0127</doc-id>
-        <is-also>
-            <doc-id>RFC4722</doc-id>
-            <doc-id>RFC6659</doc-id>
-            <doc-id>RFC7706</doc-id>
         </is-also>
     </bcp-entry>
     <bcp-entry>
@@ -1193,22 +932,6 @@
         </is-also>
     </bcp-entry>
     <bcp-entry>
-        <doc-id>BCP0153</doc-id>
-        <is-also>
-            <doc-id>RFC6476</doc-id>
-            <doc-id>RFC6759</doc-id>
-            <doc-id>RFC8060</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0153</doc-id>
-        <is-also>
-            <doc-id>RFC6476</doc-id>
-            <doc-id>RFC6759</doc-id>
-            <doc-id>RFC8060</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
         <doc-id>BCP0154</doc-id>
         <is-also>
             <doc-id>RFC5629</doc-id>
@@ -1270,23 +993,9 @@
         </is-also>
     </bcp-entry>
     <bcp-entry>
-        <doc-id>BCP0163</doc-id>
-        <is-also>
-            <doc-id>RFC6231</doc-id>
-            <doc-id>RFC7641</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
         <doc-id>BCP0164</doc-id>
         <is-also>
             <doc-id>RFC5728</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0165</doc-id>
-        <is-also>
-            <doc-id>RFC6179</doc-id>
-            <doc-id>RFC7447</doc-id>
         </is-also>
     </bcp-entry>
     <bcp-entry>
@@ -1336,13 +1045,6 @@
         <doc-id>BCP0172</doc-id>
         <is-also>
             <doc-id>RFC6359</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0173</doc-id>
-        <is-also>
-            <doc-id>RFC6209</doc-id>
-            <doc-id>RFC7208</doc-id>
         </is-also>
     </bcp-entry>
     <bcp-entry>
@@ -1426,13 +1128,6 @@
         </is-also>
     </bcp-entry>
     <bcp-entry>
-        <doc-id>BCP0185</doc-id>
-        <is-also>
-            <doc-id>RFC6978</doc-id>
-            <doc-id>RFC9152</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
         <doc-id>BCP0186</doc-id>
         <is-also>
             <doc-id>RFC6995</doc-id>
@@ -1469,6 +1164,9 @@
         </is-also>
     </bcp-entry>
     <bcp-entry>
+        <doc-id>BCP0192</doc-id>
+    </bcp-entry>
+    <bcp-entry>
         <doc-id>BCP0193</doc-id>
         <is-also>
             <doc-id>RFC7241</doc-id>
@@ -1478,13 +1176,6 @@
         <doc-id>BCP0194</doc-id>
         <is-also>
             <doc-id>RFC7295</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0195</doc-id>
-        <is-also>
-            <doc-id>RFC8857</doc-id>
-            <doc-id>RFC9162</doc-id>
         </is-also>
     </bcp-entry>
     <bcp-entry>
@@ -1658,13 +1349,6 @@
         </is-also>
     </bcp-entry>
     <bcp-entry>
-        <doc-id>BCP0222</doc-id>
-        <is-also>
-            <doc-id>RFC8414</doc-id>
-            <doc-id>RFC8415</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
         <doc-id>BCP0223</doc-id>
         <is-also>
             <doc-id>RFC8513</doc-id>
@@ -1680,33 +1364,6 @@
         <doc-id>BCP0225</doc-id>
         <is-also>
             <doc-id>RFC8624</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0226</doc-id>
-        <is-also>
-            <doc-id>RFC8328</doc-id>
-            <doc-id>RFC8360</doc-id>
-            <doc-id>RFC8982</doc-id>
-            <doc-id>RFC9549</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0226</doc-id>
-        <is-also>
-            <doc-id>RFC8328</doc-id>
-            <doc-id>RFC8360</doc-id>
-            <doc-id>RFC8982</doc-id>
-            <doc-id>RFC9549</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0226</doc-id>
-        <is-also>
-            <doc-id>RFC8328</doc-id>
-            <doc-id>RFC8360</doc-id>
-            <doc-id>RFC8982</doc-id>
-            <doc-id>RFC9549</doc-id>
         </is-also>
     </bcp-entry>
     <bcp-entry>
@@ -1818,12 +1475,6 @@
         <doc-id>BCP0243</doc-id>
         <is-also>
             <doc-id>RFC9610</doc-id>
-        </is-also>
-    </bcp-entry>
-    <bcp-entry>
-        <doc-id>BCP0244</doc-id>
-        <is-also>
-            <doc-id>RFC9657</doc-id>
         </is-also>
     </bcp-entry>
     <fyi-entry>
