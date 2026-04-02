@@ -2743,5 +2743,15 @@ BCPs and other RFCs may be obtained from https://www.rfc-editor.org.
 
 
 
+   [BCP245]   Best Current Practice 245,
+              <https://www.rfc-editor.org/info/bcp245>.
+              At the time of writing, this BCP comprises the following:
+
+              , "IETF Community Moderation", BCP 245, RFC 9945,
+              DOI 10.17487/RFC9945, February 2026,
+              <https://www.rfc-editor.org/info/rfc9945>.
+
+
+
 
 
