@@ -5,7 +5,7 @@
                              BCP INDEX
                            -------------
 
-(CREATED ON: 03/31/2026.)
+(CREATED ON: 04/02/2026.)
 
 This file contains citations for all BCPs in numeric order.  The BCPs
 form a sub-series of the RFC document series, specifically those RFCs
@@ -65,8 +65,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp3>.
               At the time of writing, this BCP comprises the following:
 
-              "Variance for The PPP Compression Control Protocol and The PPP
-              Encryption Control Protocol", BCP 3, RFC 1915,
+              F. Kastenholz, "Variance for The PPP Compression Control Protocol
+              and The PPP Encryption Control Protocol", BCP 3, RFC 1915,
               DOI 10.17487/RFC1915, February 1996,
               <https://www.rfc-editor.org/info/rfc1915>.
 
@@ -76,9 +76,10 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp4>.
               At the time of writing, this BCP comprises the following:
 
-              "An Appeal to the Internet Community to Return Unused IP Networks
-              (Prefixes) to the IANA", BCP 4, RFC 1917, DOI 10.17487/RFC1917,
-              February 1996, <https://www.rfc-editor.org/info/rfc1917>.
+              P. Nesser II, "An Appeal to the Internet Community to Return
+              Unused IP Networks (Prefixes) to the IANA", BCP 4, RFC 1917,
+              DOI 10.17487/RFC1917, February 1996,
+              <https://www.rfc-editor.org/info/rfc1917>.
 
 
 
@@ -86,6 +87,7 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp5>.
               At the time of writing, this BCP comprises the following:
 
+              Y. Rekhter, B. Moskowitz, D. Karrenberg, G. J. de Groot, E. Lear,
               "Address Allocation for Private Internets", BCP 5, RFC 1918,
               DOI 10.17487/RFC1918, February 1996,
               <https://www.rfc-editor.org/info/rfc1918>.
@@ -96,16 +98,17 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp6>.
               At the time of writing, this BCP comprises the following:
 
-              "Guidelines for creation, selection, and registration of an
-              Autonomous System (AS)", BCP 6, RFC 1930, DOI 10.17487/RFC1930,
-              March 1996, <https://www.rfc-editor.org/info/rfc1930>.
+              J. Hawkinson, T. Bates, "Guidelines for creation, selection, and
+              registration of an Autonomous System (AS)", BCP 6, RFC 1930,
+              DOI 10.17487/RFC1930, March 1996,
+              <https://www.rfc-editor.org/info/rfc1930>.
 
-              "Autonomous System (AS) Reservation for Private Use", BCP 6,
-              RFC 6996, DOI 10.17487/RFC6996, July 2013,
+              J. Mitchell, "Autonomous System (AS) Reservation for Private Use",
+              BCP 6, RFC 6996, DOI 10.17487/RFC6996, July 2013,
               <https://www.rfc-editor.org/info/rfc6996>.
 
-              "Reservation of Last Autonomous System (AS) Numbers", BCP 6,
-              RFC 7300, DOI 10.17487/RFC7300, July 2014,
+              J. Haas, J. Mitchell, "Reservation of Last Autonomous System (AS)
+              Numbers", BCP 6, RFC 7300, DOI 10.17487/RFC7300, July 2014,
               <https://www.rfc-editor.org/info/rfc7300>.
 
 
@@ -114,8 +117,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp7>.
               At the time of writing, this BCP comprises the following:
 
-              "Implications of Various Address Allocation Policies for Internet
-              Routing", BCP 7, RFC 2008, DOI 10.17487/RFC2008, October 1996,
+              Y. Rekhter, T. Li, "Implications of Various Address Allocation
+              Policies for Internet Routing", BCP 7, RFC 2008,
+              DOI 10.17487/RFC2008, October 1996,
               <https://www.rfc-editor.org/info/rfc2008>.
 
 
@@ -124,8 +128,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp8>.
               At the time of writing, this BCP comprises the following:
 
-              "IRTF Research Group Guidelines and Procedures", BCP 8, RFC 2014,
-              DOI 10.17487/RFC2014, October 1996,
+              A. Weinrib, J. Postel, "IRTF Research Group Guidelines and
+              Procedures", BCP 8, RFC 2014, DOI 10.17487/RFC2014, October 1996,
               <https://www.rfc-editor.org/info/rfc2014>.
 
 
@@ -134,37 +138,38 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp9>.
               At the time of writing, this BCP comprises the following:
 
-              "IETF Stream Documents Require IETF Rough Consensus", BCP 9,
-              RFC 8789, DOI 10.17487/RFC8789, June 2020,
-              <https://www.rfc-editor.org/info/rfc8789>.
+              J. Halpern, Ed., E. Rescorla, Ed., "IETF Stream Documents Require
+              IETF Rough Consensus", BCP 9, RFC 8789, DOI 10.17487/RFC8789, June
+              2020, <https://www.rfc-editor.org/info/rfc8789>.
 
-              "Retirement of the "Internet Official Protocol Standards" Summary
-              Document", BCP 9, RFC 7100, DOI 10.17487/RFC7100, December 2013,
+              P. Resnick, "Retirement of the "Internet Official Protocol
+              Standards" Summary Document", BCP 9, RFC 7100,
+              DOI 10.17487/RFC7100, December 2013,
               <https://www.rfc-editor.org/info/rfc7100>.
 
-              "Reducing the Standards Track to Two Maturity Levels", BCP 9,
-              RFC 6410, DOI 10.17487/RFC6410, October 2011,
-              <https://www.rfc-editor.org/info/rfc6410>.
+              R. Housley, D. Crocker, E. Burger, "Reducing the Standards Track
+              to Two Maturity Levels", BCP 9, RFC 6410, DOI 10.17487/RFC6410,
+              October 2011, <https://www.rfc-editor.org/info/rfc6410>.
 
-              "Responsibility Change for the RFC Series", BCP 9, RFC 9282,
-              DOI 10.17487/RFC9282, June 2022,
+              B. Rosen, "Responsibility Change for the RFC Series", BCP 9,
+              RFC 9282, DOI 10.17487/RFC9282, June 2022,
               <https://www.rfc-editor.org/info/rfc9282>.
 
-              "The Internet Standards Process -- Revision 3", BCP 9, RFC 2026,
-              DOI 10.17487/RFC2026, October 1996,
+              S. Bradner, "The Internet Standards Process -- Revision 3", BCP 9,
+              RFC 2026, DOI 10.17487/RFC2026, October 1996,
               <https://www.rfc-editor.org/info/rfc2026>.
 
-              "Guidance on Interoperation and Implementation Reports for
-              Advancement to Draft Standard", BCP 9, RFC 5657,
-              DOI 10.17487/RFC5657, September 2009,
+              L. Dusseault, R. Sparks, "Guidance on Interoperation and
+              Implementation Reports for Advancement to Draft Standard", BCP 9,
+              RFC 5657, DOI 10.17487/RFC5657, September 2009,
               <https://www.rfc-editor.org/info/rfc5657>.
 
-              "Increasing the Number of Area Directors in an IETF Area", BCP 9,
-              RFC 7475, DOI 10.17487/RFC7475, March 2015,
+              S. Dawkins, "Increasing the Number of Area Directors in an IETF
+              Area", BCP 9, RFC 7475, DOI 10.17487/RFC7475, March 2015,
               <https://www.rfc-editor.org/info/rfc7475>.
 
-              "Characterization of Proposed Standards", BCP 9, RFC 7127,
-              DOI 10.17487/RFC7127, January 2014,
+              O. Kolkman, S. Bradner, S. Turner, "Characterization of Proposed
+              Standards", BCP 9, RFC 7127, DOI 10.17487/RFC7127, January 2014,
               <https://www.rfc-editor.org/info/rfc7127>.
 
 
@@ -173,14 +178,15 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp10>.
               At the time of writing, this BCP comprises the following:
 
-              "Nominating Committee Eligibility", BCP 10, RFC 9389,
+              M. Duke, "Nominating Committee Eligibility", BCP 10, RFC 9389,
               DOI 10.17487/RFC9389, April 2023,
               <https://www.rfc-editor.org/info/rfc9389>.
 
-              "IAB, IESG, IETF Trust, and IETF LLC Selection, Confirmation, and
-              Recall Process: Operation of the IETF Nominating and Recall
-              Committees", BCP 10, RFC 8713, DOI 10.17487/RFC8713, February
-              2020, <https://www.rfc-editor.org/info/rfc8713>.
+              M. Kucherawy, Ed., R. Hinden, Ed., J. Livingood, Ed., "IAB, IESG,
+              IETF Trust, and IETF LLC Selection, Confirmation, and Recall
+              Process: Operation of the IETF Nominating and Recall Committees",
+              BCP 10, RFC 8713, DOI 10.17487/RFC8713, February 2020,
+              <https://www.rfc-editor.org/info/rfc8713>.
 
 
 
@@ -188,8 +194,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp11>.
               At the time of writing, this BCP comprises the following:
 
-              "Entities Involved in the IETF Standards Process", BCP 11,
-              RFC 9281, DOI 10.17487/RFC9281, June 2022,
+              R. Salz, "Entities Involved in the IETF Standards Process",
+              BCP 11, RFC 9281, DOI 10.17487/RFC9281, June 2022,
               <https://www.rfc-editor.org/info/rfc9281>.
 
 
@@ -204,16 +210,17 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp13>.
               At the time of writing, this BCP comprises the following:
 
-              "Multipurpose Internet Mail Extensions (MIME) Part Four:
-              Registration Procedures", BCP 13, RFC 4289, DOI 10.17487/RFC4289,
-              December 2005, <https://www.rfc-editor.org/info/rfc4289>.
+              N. Freed, J. Klensin, "Multipurpose Internet Mail Extensions
+              (MIME) Part Four: Registration Procedures", BCP 13, RFC 4289,
+              DOI 10.17487/RFC4289, December 2005,
+              <https://www.rfc-editor.org/info/rfc4289>.
 
-              "Media Type Specifications and Registration Procedures", BCP 13,
-              RFC 6838, DOI 10.17487/RFC6838, January 2013,
-              <https://www.rfc-editor.org/info/rfc6838>.
+              N. Freed, J. Klensin, T. Hansen, "Media Type Specifications and
+              Registration Procedures", BCP 13, RFC 6838, DOI 10.17487/RFC6838,
+              January 2013, <https://www.rfc-editor.org/info/rfc6838>.
 
-              "Guidelines for the Definition of New Top-Level Media Types",
-              BCP 13, RFC 9694, DOI 10.17487/RFC9694, March 2025,
+              M.J. Dürst, "Guidelines for the Definition of New Top-Level Media
+              Types", BCP 13, RFC 9694, DOI 10.17487/RFC9694, March 2025,
               <https://www.rfc-editor.org/info/rfc9694>.
 
 
@@ -222,12 +229,12 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp14>.
               At the time of writing, this BCP comprises the following:
 
-              "Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words",
-              BCP 14, RFC 8174, DOI 10.17487/RFC8174, May 2017,
+              B. Leiba, "Ambiguity of Uppercase vs Lowercase in RFC 2119 Key
+              Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174, May 2017,
               <https://www.rfc-editor.org/info/rfc8174>.
 
-              "Key words for use in RFCs to Indicate Requirement Levels",
-              BCP 14, RFC 2119, DOI 10.17487/RFC2119, March 1997,
+              S. Bradner, "Key words for use in RFCs to Indicate Requirement
+              Levels", BCP 14, RFC 2119, DOI 10.17487/RFC2119, March 1997,
               <https://www.rfc-editor.org/info/rfc2119>.
 
 
@@ -236,8 +243,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp15>.
               At the time of writing, this BCP comprises the following:
 
-              "Deployment of the Internet White Pages Service", BCP 15,
-              RFC 2148, DOI 10.17487/RFC2148, September 1997,
+              H. Alvestrand, P. Jurg, "Deployment of the Internet White Pages
+              Service", BCP 15, RFC 2148, DOI 10.17487/RFC2148, September 1997,
               <https://www.rfc-editor.org/info/rfc2148>.
 
 
@@ -246,9 +253,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp16>.
               At the time of writing, this BCP comprises the following:
 
-              "Selection and Operation of Secondary DNS Servers", BCP 16,
-              RFC 2182, DOI 10.17487/RFC2182, July 1997,
-              <https://www.rfc-editor.org/info/rfc2182>.
+              R. Elz, R. Bush, S. Bradner, M. Patton, "Selection and Operation
+              of Secondary DNS Servers", BCP 16, RFC 2182, DOI 10.17487/RFC2182,
+              July 1997, <https://www.rfc-editor.org/info/rfc2182>.
 
 
 
@@ -256,8 +263,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp17>.
               At the time of writing, this BCP comprises the following:
 
-              "Use of DNS Aliases for Network Services", BCP 17, RFC 2219,
-              DOI 10.17487/RFC2219, October 1997,
+              M. Hamilton, R. Wright, "Use of DNS Aliases for Network Services",
+              BCP 17, RFC 2219, DOI 10.17487/RFC2219, October 1997,
               <https://www.rfc-editor.org/info/rfc2219>.
 
 
@@ -266,8 +273,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp18>.
               At the time of writing, this BCP comprises the following:
 
-              "IETF Policy on Character Sets and Languages", BCP 18, RFC 2277,
-              DOI 10.17487/RFC2277, January 1998,
+              H. Alvestrand, "IETF Policy on Character Sets and Languages",
+              BCP 18, RFC 2277, DOI 10.17487/RFC2277, January 1998,
               <https://www.rfc-editor.org/info/rfc2277>.
 
 
@@ -276,8 +283,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp19>.
               At the time of writing, this BCP comprises the following:
 
-              "IANA Charset Registration Procedures", BCP 19, RFC 2978,
-              DOI 10.17487/RFC2978, October 2000,
+              N. Freed, J. Postel, "IANA Charset Registration Procedures",
+              BCP 19, RFC 2978, DOI 10.17487/RFC2978, October 2000,
               <https://www.rfc-editor.org/info/rfc2978>.
 
 
@@ -286,8 +293,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp20>.
               At the time of writing, this BCP comprises the following:
 
-              "Classless IN-ADDR.ARPA delegation", BCP 20, RFC 2317,
-              DOI 10.17487/RFC2317, March 1998,
+              H. Eidnes, G. de Groot, P. Vixie, "Classless IN-ADDR.ARPA
+              delegation", BCP 20, RFC 2317, DOI 10.17487/RFC2317, March 1998,
               <https://www.rfc-editor.org/info/rfc2317>.
 
 
@@ -296,9 +303,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp21>.
               At the time of writing, this BCP comprises the following:
 
-              "Expectations for Computer Security Incident Response", BCP 21,
-              RFC 2350, DOI 10.17487/RFC2350, June 1998,
-              <https://www.rfc-editor.org/info/rfc2350>.
+              N. Brownlee, E. Guttman, "Expectations for Computer Security
+              Incident Response", BCP 21, RFC 2350, DOI 10.17487/RFC2350, June
+              1998, <https://www.rfc-editor.org/info/rfc2350>.
 
 
 
@@ -306,8 +313,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp22>.
               At the time of writing, this BCP comprises the following:
 
-              "Guide for Internet Standards Writers", BCP 22, RFC 2360,
-              DOI 10.17487/RFC2360, June 1998,
+              G. Scott, "Guide for Internet Standards Writers", BCP 22,
+              RFC 2360, DOI 10.17487/RFC2360, June 1998,
               <https://www.rfc-editor.org/info/rfc2360>.
 
 
@@ -316,8 +323,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp23>.
               At the time of writing, this BCP comprises the following:
 
-              "Administratively Scoped IP Multicast", BCP 23, RFC 2365,
-              DOI 10.17487/RFC2365, July 1998,
+              D. Meyer, "Administratively Scoped IP Multicast", BCP 23,
+              RFC 2365, DOI 10.17487/RFC2365, July 1998,
               <https://www.rfc-editor.org/info/rfc2365>.
 
 
@@ -326,8 +333,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp24>.
               At the time of writing, this BCP comprises the following:
 
-              "RSVP over ATM Implementation Guidelines", BCP 24, RFC 2379,
-              DOI 10.17487/RFC2379, August 1998,
+              L. Berger, "RSVP over ATM Implementation Guidelines", BCP 24,
+              RFC 2379, DOI 10.17487/RFC2379, August 1998,
               <https://www.rfc-editor.org/info/rfc2379>.
 
 
@@ -336,17 +343,18 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp25>.
               At the time of writing, this BCP comprises the following:
 
-              "Update to the IETF Anti-Harassment Procedures for the Replacement
-              of the IETF Administrative Oversight Committee (IAOC) with the
-              IETF Administration LLC", BCP 25, RFC 8716, DOI 10.17487/RFC8716,
-              February 2020, <https://www.rfc-editor.org/info/rfc8716>.
+              P. Resnick, A. Farrel, "Update to the IETF Anti-Harassment
+              Procedures for the Replacement of the IETF Administrative
+              Oversight Committee (IAOC) with the IETF Administration LLC",
+              BCP 25, RFC 8716, DOI 10.17487/RFC8716, February 2020,
+              <https://www.rfc-editor.org/info/rfc8716>.
 
-              "IETF Working Group Guidelines and Procedures", BCP 25, RFC 2418,
-              DOI 10.17487/RFC2418, September 1998,
+              S. Bradner, "IETF Working Group Guidelines and Procedures",
+              BCP 25, RFC 2418, DOI 10.17487/RFC2418, September 1998,
               <https://www.rfc-editor.org/info/rfc2418>.
 
-              "IETF Anti-Harassment Procedures", BCP 25, RFC 7776,
-              DOI 10.17487/RFC7776, March 2016,
+              P. Resnick, A. Farrel, "IETF Anti-Harassment Procedures", BCP 25,
+              RFC 7776, DOI 10.17487/RFC7776, March 2016,
               <https://www.rfc-editor.org/info/rfc7776>.
 
 
@@ -355,8 +363,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp26>.
               At the time of writing, this BCP comprises the following:
 
-              "Guidelines for Writing an IANA Considerations Section in RFCs",
-              BCP 26, RFC 8126, DOI 10.17487/RFC8126, June 2017,
+              M. Cotton, B. Leiba, T. Narten, "Guidelines for Writing an IANA
+              Considerations Section in RFCs", BCP 26, RFC 8126,
+              DOI 10.17487/RFC8126, June 2017,
               <https://www.rfc-editor.org/info/rfc8126>.
 
 
@@ -365,8 +374,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp27>.
               At the time of writing, this BCP comprises the following:
 
-              "Advancement of MIB specifications on the IETF Standards Track",
-              BCP 27, RFC 2438, DOI 10.17487/RFC2438, October 1998,
+              M. O'Dell, H. Alvestrand, B. Wijnen, S. Bradner, "Advancement of
+              MIB specifications on the IETF Standards Track", BCP 27, RFC 2438,
+              DOI 10.17487/RFC2438, October 1998,
               <https://www.rfc-editor.org/info/rfc2438>.
 
 
@@ -375,8 +385,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp28>.
               At the time of writing, this BCP comprises the following:
 
-              "Enhancing TCP Over Satellite Channels using Standard Mechanisms",
-              BCP 28, RFC 2488, DOI 10.17487/RFC2488, January 1999,
+              M. Allman, D. Glover, L. Sanchez, "Enhancing TCP Over Satellite
+              Channels using Standard Mechanisms", BCP 28, RFC 2488,
+              DOI 10.17487/RFC2488, January 1999,
               <https://www.rfc-editor.org/info/rfc2488>.
 
 
@@ -385,8 +396,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp29>.
               At the time of writing, this BCP comprises the following:
 
-              "Procedure for Defining New DHCP Options", BCP 29, RFC 2489,
-              DOI 10.17487/RFC2489, January 1999,
+              R. Droms, "Procedure for Defining New DHCP Options", BCP 29,
+              RFC 2489, DOI 10.17487/RFC2489, January 1999,
               <https://www.rfc-editor.org/info/rfc2489>.
 
 
@@ -395,8 +406,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp30>.
               At the time of writing, this BCP comprises the following:
 
-              "Anti-Spam Recommendations for SMTP MTAs", BCP 30, RFC 2505,
-              DOI 10.17487/RFC2505, February 1999,
+              G. Lindberg, "Anti-Spam Recommendations for SMTP MTAs", BCP 30,
+              RFC 2505, DOI 10.17487/RFC2505, February 1999,
               <https://www.rfc-editor.org/info/rfc2505>.
 
 
@@ -405,8 +416,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp31>.
               At the time of writing, this BCP comprises the following:
 
-              "Media Feature Tag Registration Procedure", BCP 31, RFC 2506,
-              DOI 10.17487/RFC2506, March 1999,
+              K. Holtman, A. Mutz, T. Hardie, "Media Feature Tag Registration
+              Procedure", BCP 31, RFC 2506, DOI 10.17487/RFC2506, March 1999,
               <https://www.rfc-editor.org/info/rfc2506>.
 
 
@@ -415,8 +426,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp32>.
               At the time of writing, this BCP comprises the following:
 
-              "Reserved Top Level DNS Names", BCP 32, RFC 2606,
-              DOI 10.17487/RFC2606, June 1999,
+              D. Eastlake 3rd, A. Panitz, "Reserved Top Level DNS Names",
+              BCP 32, RFC 2606, DOI 10.17487/RFC2606, June 1999,
               <https://www.rfc-editor.org/info/rfc2606>.
 
 
@@ -425,9 +436,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp33>.
               At the time of writing, this BCP comprises the following:
 
-              "URN Namespace Definition Mechanisms", BCP 33, RFC 2611,
-              DOI 10.17487/RFC2611, June 1999,
-              <https://www.rfc-editor.org/info/rfc2611>.
+              L. Daigle, D. van Gulik, R. Iannella, P. Faltstrom, "URN Namespace
+              Definition Mechanisms", BCP 33, RFC 2611, DOI 10.17487/RFC2611,
+              June 1999, <https://www.rfc-editor.org/info/rfc2611>.
 
 
 
@@ -435,8 +446,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp34>.
               At the time of writing, this BCP comprises the following:
 
-              "Changing the Default for Directed Broadcasts in Routers", BCP 34,
-              RFC 2644, DOI 10.17487/RFC2644, August 1999,
+              D. Senie, "Changing the Default for Directed Broadcasts in
+              Routers", BCP 34, RFC 2644, DOI 10.17487/RFC2644, August 1999,
               <https://www.rfc-editor.org/info/rfc2644>.
 
 
@@ -445,8 +456,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp35>.
               At the time of writing, this BCP comprises the following:
 
-              "Guidelines and Registration Procedures for URI Schemes", BCP 35,
-              RFC 7595, DOI 10.17487/RFC7595, June 2015,
+              D. Thaler, Ed., T. Hansen, T. Hardie, "Guidelines and Registration
+              Procedures for URI Schemes", BCP 35, RFC 7595,
+              DOI 10.17487/RFC7595, June 2015,
               <https://www.rfc-editor.org/info/rfc7595>.
 
 
@@ -455,9 +467,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp36>.
               At the time of writing, this BCP comprises the following:
 
-              "Guidelines for Writers of RTP Payload Format Specifications",
-              BCP 36, RFC 2736, DOI 10.17487/RFC2736, December 1999,
-              <https://www.rfc-editor.org/info/rfc2736>.
+              M. Handley, C. Perkins, "Guidelines for Writers of RTP Payload
+              Format Specifications", BCP 36, RFC 2736, DOI 10.17487/RFC2736,
+              December 1999, <https://www.rfc-editor.org/info/rfc2736>.
 
 
 
@@ -465,12 +477,13 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp37>.
               At the time of writing, this BCP comprises the following:
 
-              "IANA Allocation Guidelines For Values In the Internet Protocol
-              and Related Headers", BCP 37, RFC 2780, DOI 10.17487/RFC2780,
-              March 2000, <https://www.rfc-editor.org/info/rfc2780>.
+              S. Bradner, V. Paxson, "IANA Allocation Guidelines For Values In
+              the Internet Protocol and Related Headers", BCP 37, RFC 2780,
+              DOI 10.17487/RFC2780, March 2000,
+              <https://www.rfc-editor.org/info/rfc2780>.
 
-              "IANA Allocation Guidelines for the Protocol Field", BCP 37,
-              RFC 5237, DOI 10.17487/RFC5237, February 2008,
+              J. Arkko, S. Bradner, "IANA Allocation Guidelines for the Protocol
+              Field", BCP 37, RFC 5237, DOI 10.17487/RFC5237, February 2008,
               <https://www.rfc-editor.org/info/rfc5237>.
 
 
@@ -479,9 +492,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp38>.
               At the time of writing, this BCP comprises the following:
 
-              "Network Ingress Filtering: Defeating Denial of Service Attacks
-              which employ IP Source Address Spoofing", BCP 38, RFC 2827,
-              DOI 10.17487/RFC2827, May 2000,
+              P. Ferguson, D. Senie, "Network Ingress Filtering: Defeating
+              Denial of Service Attacks which employ IP Source Address
+              Spoofing", BCP 38, RFC 2827, DOI 10.17487/RFC2827, May 2000,
               <https://www.rfc-editor.org/info/rfc2827>.
 
 
@@ -490,12 +503,13 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp39>.
               At the time of writing, this BCP comprises the following:
 
-              "Charter of the Internet Architecture Board (IAB)", BCP 39,
-              RFC 2850, DOI 10.17487/RFC2850, May 2000,
+              Internet Architecture Board, B. Carpenter, Ed., "Charter of the
+              Internet Architecture Board (IAB)", BCP 39, RFC 2850,
+              DOI 10.17487/RFC2850, May 2000,
               <https://www.rfc-editor.org/info/rfc2850>.
 
-              "IAB Charter Update for RFC Editor Model", BCP 39, RFC 9283,
-              DOI 10.17487/RFC9283, June 2022,
+              B. Carpenter, Ed., "IAB Charter Update for RFC Editor Model",
+              BCP 39, RFC 9283, DOI 10.17487/RFC9283, June 2022,
               <https://www.rfc-editor.org/info/rfc9283>.
 
 
@@ -504,9 +518,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp40>.
               At the time of writing, this BCP comprises the following:
 
-              "DNS Root Name Service Protocol and Deployment Requirements",
-              BCP 40, RFC 7720, DOI 10.17487/RFC7720, December 2015,
-              <https://www.rfc-editor.org/info/rfc7720>.
+              M. Blanchet, L-J. Liman, "DNS Root Name Service Protocol and
+              Deployment Requirements", BCP 40, RFC 7720, DOI 10.17487/RFC7720,
+              December 2015, <https://www.rfc-editor.org/info/rfc7720>.
 
 
 
@@ -514,11 +528,11 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp41>.
               At the time of writing, this BCP comprises the following:
 
-              "Byte and Packet Congestion Notification", BCP 41, RFC 7141,
-              DOI 10.17487/RFC7141, February 2014,
+              B. Briscoe, J. Manner, "Byte and Packet Congestion Notification",
+              BCP 41, RFC 7141, DOI 10.17487/RFC7141, February 2014,
               <https://www.rfc-editor.org/info/rfc7141>.
 
-              "Congestion Control Principles", BCP 41, RFC 2914,
+              S. Floyd, "Congestion Control Principles", BCP 41, RFC 2914,
               DOI 10.17487/RFC2914, September 2000,
               <https://www.rfc-editor.org/info/rfc2914>.
 
@@ -528,8 +542,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp42>.
               At the time of writing, this BCP comprises the following:
 
-              "Domain Name System (DNS) IANA Considerations", BCP 42, RFC 6895,
-              DOI 10.17487/RFC6895, April 2013,
+              D. Eastlake 3rd, "Domain Name System (DNS) IANA Considerations",
+              BCP 42, RFC 6895, DOI 10.17487/RFC6895, April 2013,
               <https://www.rfc-editor.org/info/rfc6895>.
 
 
@@ -538,9 +552,10 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp43>.
               At the time of writing, this BCP comprises the following:
 
-              "Procedures and IANA Guidelines for Definition of New DHCP Options
-              and Message Types", BCP 43, RFC 2939, DOI 10.17487/RFC2939,
-              September 2000, <https://www.rfc-editor.org/info/rfc2939>.
+              R. Droms, "Procedures and IANA Guidelines for Definition of New
+              DHCP Options and Message Types", BCP 43, RFC 2939,
+              DOI 10.17487/RFC2939, September 2000,
+              <https://www.rfc-editor.org/info/rfc2939>.
 
 
 
@@ -548,8 +563,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp44>.
               At the time of writing, this BCP comprises the following:
 
-              "Use of HTTP State Management", BCP 44, RFC 2964,
-              DOI 10.17487/RFC2964, October 2000,
+              K. Moore, N. Freed, "Use of HTTP State Management", BCP 44,
+              RFC 2964, DOI 10.17487/RFC2964, October 2000,
               <https://www.rfc-editor.org/info/rfc2964>.
 
 
@@ -558,8 +573,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp45>.
               At the time of writing, this BCP comprises the following:
 
-              "IETF Discussion List Charter", BCP 45, RFC 9245,
-              DOI 10.17487/RFC9245, June 2022,
+              L. Eggert, S. Harris, "IETF Discussion List Charter", BCP 45,
+              RFC 9245, DOI 10.17487/RFC9245, June 2022,
               <https://www.rfc-editor.org/info/rfc9245>.
 
 
@@ -568,9 +583,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp46>.
               At the time of writing, this BCP comprises the following:
 
-              "Recommended Internet Service Provider Security Services and
-              Procedures", BCP 46, RFC 3013, DOI 10.17487/RFC3013, November
-              2000, <https://www.rfc-editor.org/info/rfc3013>.
+              T. Killalea, "Recommended Internet Service Provider Security
+              Services and Procedures", BCP 46, RFC 3013, DOI 10.17487/RFC3013,
+              November 2000, <https://www.rfc-editor.org/info/rfc3013>.
 
 
 
@@ -578,12 +593,12 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp47>.
               At the time of writing, this BCP comprises the following:
 
-              "Tags for Identifying Languages", BCP 47, RFC 5646,
-              DOI 10.17487/RFC5646, September 2009,
+              A. Phillips, Ed., M. Davis, Ed., "Tags for Identifying Languages",
+              BCP 47, RFC 5646, DOI 10.17487/RFC5646, September 2009,
               <https://www.rfc-editor.org/info/rfc5646>.
 
-              "Matching of Language Tags", BCP 47, RFC 4647,
-              DOI 10.17487/RFC4647, September 2006,
+              A. Phillips, Ed., M. Davis, Ed., "Matching of Language Tags",
+              BCP 47, RFC 4647, DOI 10.17487/RFC4647, September 2006,
               <https://www.rfc-editor.org/info/rfc4647>.
 
 
@@ -592,8 +607,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp48>.
               At the time of writing, this BCP comprises the following:
 
-              "End-to-end Performance Implications of Slow Links", BCP 48,
-              RFC 3150, DOI 10.17487/RFC3150, July 2001,
+              S. Dawkins, G. Montenegro, M. Kojo, V. Magret, "End-to-end
+              Performance Implications of Slow Links", BCP 48, RFC 3150,
+              DOI 10.17487/RFC3150, July 2001,
               <https://www.rfc-editor.org/info/rfc3150>.
 
 
@@ -602,8 +618,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp49>.
               At the time of writing, this BCP comprises the following:
 
-              "Delegation of IP6.ARPA", BCP 49, RFC 3152, DOI 10.17487/RFC3152,
-              August 2001, <https://www.rfc-editor.org/info/rfc3152>.
+              R. Bush, "Delegation of IP6.ARPA", BCP 49, RFC 3152,
+              DOI 10.17487/RFC3152, August 2001,
+              <https://www.rfc-editor.org/info/rfc3152>.
 
 
 
@@ -611,6 +628,7 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp50>.
               At the time of writing, this BCP comprises the following:
 
+              S. Dawkins, G. Montenegro, M. Kojo, V. Magret, N. Vaidya,
               "End-to-end Performance Implications of Links with Errors",
               BCP 50, RFC 3155, DOI 10.17487/RFC3155, August 2001,
               <https://www.rfc-editor.org/info/rfc3155>.
@@ -621,8 +639,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp51>.
               At the time of writing, this BCP comprises the following:
 
-              "IANA Guidelines for IPv4 Multicast Address Assignments", BCP 51,
-              RFC 5771, DOI 10.17487/RFC5771, March 2010,
+              M. Cotton, L. Vegoda, D. Meyer, "IANA Guidelines for IPv4
+              Multicast Address Assignments", BCP 51, RFC 5771,
+              DOI 10.17487/RFC5771, March 2010,
               <https://www.rfc-editor.org/info/rfc5771>.
 
 
@@ -631,9 +650,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp52>.
               At the time of writing, this BCP comprises the following:
 
-              "Management Guidelines & Operational Requirements for the Address
-              and Routing Parameter Area Domain ("arpa")", BCP 52, RFC 3172,
-              DOI 10.17487/RFC3172, September 2001,
+              G. Huston, Ed., "Management Guidelines & Operational Requirements
+              for the Address and Routing Parameter Area Domain ("arpa")",
+              BCP 52, RFC 3172, DOI 10.17487/RFC3172, September 2001,
               <https://www.rfc-editor.org/info/rfc3172>.
 
 
@@ -642,8 +661,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp53>.
               At the time of writing, this BCP comprises the following:
 
-              "GLOP Addressing in 233/8", BCP 53, RFC 3180,
-              DOI 10.17487/RFC3180, September 2001,
+              D. Meyer, P. Lothberg, "GLOP Addressing in 233/8", BCP 53,
+              RFC 3180, DOI 10.17487/RFC3180, September 2001,
               <https://www.rfc-editor.org/info/rfc3180>.
 
 
@@ -652,8 +671,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp54>.
               At the time of writing, this BCP comprises the following:
 
-              "IETF Guidelines for Conduct", BCP 54, RFC 7154,
-              DOI 10.17487/RFC7154, March 2014,
+              S. Moonesamy, Ed., "IETF Guidelines for Conduct", BCP 54,
+              RFC 7154, DOI 10.17487/RFC7154, March 2014,
               <https://www.rfc-editor.org/info/rfc7154>.
 
 
@@ -662,8 +681,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp55>.
               At the time of writing, this BCP comprises the following:
 
-              "Guidelines for Evidence Collection and Archiving", BCP 55,
-              RFC 3227, DOI 10.17487/RFC3227, February 2002,
+              D. Brezinski, T. Killalea, "Guidelines for Evidence Collection and
+              Archiving", BCP 55, RFC 3227, DOI 10.17487/RFC3227, February 2002,
               <https://www.rfc-editor.org/info/rfc3227>.
 
 
@@ -672,7 +691,7 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp56>.
               At the time of writing, this BCP comprises the following:
 
-              "Building Protocols with HTTP", BCP 56, RFC 9205,
+              M. Nottingham, "Building Protocols with HTTP", BCP 56, RFC 9205,
               DOI 10.17487/RFC9205, June 2022,
               <https://www.rfc-editor.org/info/rfc9205>.
 
@@ -682,9 +701,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp57>.
               At the time of writing, this BCP comprises the following:
 
-              "IANA Considerations for Internet Group Management Protocols",
-              BCP 57, RFC 9778, DOI 10.17487/RFC9778, March 2025,
-              <https://www.rfc-editor.org/info/rfc9778>.
+              B. Haberman, Ed., "IANA Considerations for Internet Group
+              Management Protocols", BCP 57, RFC 9778, DOI 10.17487/RFC9778,
+              March 2025, <https://www.rfc-editor.org/info/rfc9778>.
 
 
 
@@ -692,8 +711,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp58>.
               At the time of writing, this BCP comprises the following:
 
-              "Defining the IETF", BCP 58, RFC 3233, DOI 10.17487/RFC3233,
-              February 2002, <https://www.rfc-editor.org/info/rfc3233>.
+              P. Hoffman, S. Bradner, "Defining the IETF", BCP 58, RFC 3233,
+              DOI 10.17487/RFC3233, February 2002,
+              <https://www.rfc-editor.org/info/rfc3233>.
 
 
 
@@ -701,9 +721,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp59>.
               At the time of writing, this BCP comprises the following:
 
-              "A Transient Prefix for Identifying Profiles under Development by
-              the Working Groups of the Internet Engineering Task Force",
-              BCP 59, RFC 3349, DOI 10.17487/RFC3349, August 2002,
+              M. Rose, "A Transient Prefix for Identifying Profiles under
+              Development by the Working Groups of the Internet Engineering Task
+              Force", BCP 59, RFC 3349, DOI 10.17487/RFC3349, August 2002,
               <https://www.rfc-editor.org/info/rfc3349>.
 
 
@@ -712,8 +732,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp60>.
               At the time of writing, this BCP comprises the following:
 
-              "Inappropriate TCP Resets Considered Harmful", BCP 60, RFC 3360,
-              DOI 10.17487/RFC3360, August 2002,
+              S. Floyd, "Inappropriate TCP Resets Considered Harmful", BCP 60,
+              RFC 3360, DOI 10.17487/RFC3360, August 2002,
               <https://www.rfc-editor.org/info/rfc3360>.
 
 
@@ -722,9 +742,10 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp61>.
               At the time of writing, this BCP comprises the following:
 
-              "Strong Security Requirements for Internet Engineering Task Force
-              Standard Protocols", BCP 61, RFC 3365, DOI 10.17487/RFC3365,
-              August 2002, <https://www.rfc-editor.org/info/rfc3365>.
+              J. Schiller, "Strong Security Requirements for Internet
+              Engineering Task Force Standard Protocols", BCP 61, RFC 3365,
+              DOI 10.17487/RFC3365, August 2002,
+              <https://www.rfc-editor.org/info/rfc3365>.
 
 
 
@@ -732,9 +753,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp62>.
               At the time of writing, this BCP comprises the following:
 
-              "Advice to link designers on link Automatic Repeat reQuest (ARQ)",
-              BCP 62, RFC 3366, DOI 10.17487/RFC3366, September 2002,
-              <https://www.rfc-editor.org/info/rfc3366>.
+              G. Fairhurst, L. Wood, "Advice to link designers on link Automatic
+              Repeat reQuest (ARQ)", BCP 62, RFC 3366, DOI 10.17487/RFC3366,
+              September 2002, <https://www.rfc-editor.org/info/rfc3366>.
 
 
 
@@ -742,9 +763,10 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp63>.
               At the time of writing, this BCP comprises the following:
 
-              "Session Initiation Protocol for Telephones (SIP-T): Context and
-              Architectures", BCP 63, RFC 3372, DOI 10.17487/RFC3372, September
-              2002, <https://www.rfc-editor.org/info/rfc3372>.
+              A. Vemuri, J. Peterson, "Session Initiation Protocol for
+              Telephones (SIP-T): Context and Architectures", BCP 63, RFC 3372,
+              DOI 10.17487/RFC3372, September 2002,
+              <https://www.rfc-editor.org/info/rfc3372>.
 
 
 
@@ -752,9 +774,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp64>.
               At the time of writing, this BCP comprises the following:
 
-              "Internet Assigned Numbers Authority (IANA) Considerations for the
-              Lightweight Directory Access Protocol (LDAP)", BCP 64, RFC 4520,
-              DOI 10.17487/RFC4520, June 2006,
+              K. Zeilenga, "Internet Assigned Numbers Authority (IANA)
+              Considerations for the Lightweight Directory Access Protocol
+              (LDAP)", BCP 64, RFC 4520, DOI 10.17487/RFC4520, June 2006,
               <https://www.rfc-editor.org/info/rfc4520>.
 
 
@@ -763,13 +785,14 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp65>.
               At the time of writing, this BCP comprises the following:
 
-              "Updated Registration Rules for URI.ARPA", BCP 65, RFC 8958,
-              DOI 10.17487/RFC8958, December 2020,
+              T. Hardie, "Updated Registration Rules for URI.ARPA", BCP 65,
+              RFC 8958, DOI 10.17487/RFC8958, December 2020,
               <https://www.rfc-editor.org/info/rfc8958>.
 
-              "Dynamic Delegation Discovery System (DDDS) Part Five: URI.ARPA
-              Assignment Procedures", BCP 65, RFC 3405, DOI 10.17487/RFC3405,
-              October 2002, <https://www.rfc-editor.org/info/rfc3405>.
+              M. Mealling, "Dynamic Delegation Discovery System (DDDS) Part
+              Five: URI.ARPA Assignment Procedures", BCP 65, RFC 3405,
+              DOI 10.17487/RFC3405, October 2002,
+              <https://www.rfc-editor.org/info/rfc3405>.
 
 
 
@@ -783,14 +806,15 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp67>.
               At the time of writing, this BCP comprises the following:
 
-              "DISPATCH-Style Working Groups and the SIP Change Process",
-              BCP 67, RFC 7957, DOI 10.17487/RFC7957, August 2016,
+              B. Campbell, Ed., A. Cooper, B. Leiba, "DISPATCH-Style Working
+              Groups and the SIP Change Process", BCP 67, RFC 7957,
+              DOI 10.17487/RFC7957, August 2016,
               <https://www.rfc-editor.org/info/rfc7957>.
 
-              "Change Process for the Session Initiation Protocol (SIP) and the
-              Real-time Applications and Infrastructure Area", BCP 67, RFC 5727,
-              DOI 10.17487/RFC5727, March 2010,
-              <https://www.rfc-editor.org/info/rfc5727>.
+              J. Peterson, C. Jennings, R. Sparks, "Change Process for the
+              Session Initiation Protocol (SIP) and the Real-time Applications
+              and Infrastructure Area", BCP 67, RFC 5727, DOI 10.17487/RFC5727,
+              March 2010, <https://www.rfc-editor.org/info/rfc5727>.
 
 
 
@@ -798,9 +822,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp68>.
               At the time of writing, this BCP comprises the following:
 
-              "Layer Two Tunneling Protocol (L2TP) Internet Assigned Numbers
-              Authority (IANA) Considerations Update", BCP 68, RFC 3438,
-              DOI 10.17487/RFC3438, December 2002,
+              W. Townsley, "Layer Two Tunneling Protocol (L2TP) Internet
+              Assigned Numbers Authority (IANA) Considerations Update", BCP 68,
+              RFC 3438, DOI 10.17487/RFC3438, December 2002,
               <https://www.rfc-editor.org/info/rfc3438>.
 
 
@@ -809,6 +833,7 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp69>.
               At the time of writing, this BCP comprises the following:
 
+              H. Balakrishnan, V. Padmanabhan, G. Fairhurst, M. Sooriyabandara,
               "TCP Performance Implications of Network Path Asymmetry", BCP 69,
               RFC 3449, DOI 10.17487/RFC3449, December 2002,
               <https://www.rfc-editor.org/info/rfc3449>.
@@ -819,9 +844,10 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp70>.
               At the time of writing, this BCP comprises the following:
 
-              "Guidelines for the Use of Extensible Markup Language (XML) within
-              IETF Protocols", BCP 70, RFC 3470, DOI 10.17487/RFC3470, January
-              2003, <https://www.rfc-editor.org/info/rfc3470>.
+              S. Hollenbeck, M. Rose, L. Masinter, "Guidelines for the Use of
+              Extensible Markup Language (XML) within IETF Protocols", BCP 70,
+              RFC 3470, DOI 10.17487/RFC3470, January 2003,
+              <https://www.rfc-editor.org/info/rfc3470>.
 
 
 
@@ -829,9 +855,10 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp71>.
               At the time of writing, this BCP comprises the following:
 
-              "TCP over Second (2.5G) and Third (3G) Generation Wireless
-              Networks", BCP 71, RFC 3481, DOI 10.17487/RFC3481, February 2003,
-              <https://www.rfc-editor.org/info/rfc3481>.
+              H. Inamura, Ed., G. Montenegro, Ed., R. Ludwig, A. Gurtov, F.
+              Khafizov, "TCP over Second (2.5G) and Third (3G) Generation
+              Wireless Networks", BCP 71, RFC 3481, DOI 10.17487/RFC3481,
+              February 2003, <https://www.rfc-editor.org/info/rfc3481>.
 
 
 
@@ -839,14 +866,14 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp72>.
               At the time of writing, this BCP comprises the following:
 
-              "Security Considerations for Transient Numeric Identifiers
-              Employed in Network Protocols", BCP 72, RFC 9416,
+              F. Gont, I. Arce, "Security Considerations for Transient Numeric
+              Identifiers Employed in Network Protocols", BCP 72, RFC 9416,
               DOI 10.17487/RFC9416, July 2023,
               <https://www.rfc-editor.org/info/rfc9416>.
 
-              "Guidelines for Writing RFC Text on Security Considerations",
-              BCP 72, RFC 3552, DOI 10.17487/RFC3552, July 2003,
-              <https://www.rfc-editor.org/info/rfc3552>.
+              E. Rescorla, B. Korver, "Guidelines for Writing RFC Text on
+              Security Considerations", BCP 72, RFC 3552, DOI 10.17487/RFC3552,
+              July 2003, <https://www.rfc-editor.org/info/rfc3552>.
 
 
 
@@ -854,8 +881,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp73>.
               At the time of writing, this BCP comprises the following:
 
-              "An IETF URN Sub-namespace for Registered Protocol Parameters",
-              BCP 73, RFC 3553, DOI 10.17487/RFC3553, June 2003,
+              M. Mealling, L. Masinter, T. Hardie, G. Klyne, "An IETF URN
+              Sub-namespace for Registered Protocol Parameters", BCP 73,
+              RFC 3553, DOI 10.17487/RFC3553, June 2003,
               <https://www.rfc-editor.org/info/rfc3553>.
 
 
@@ -864,8 +892,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp74>.
               At the time of writing, this BCP comprises the following:
 
-              "Coexistence between Version 1, Version 2, and Version 3 of the
-              Internet-standard Network Management Framework", BCP 74, RFC 3584,
+              R. Frye, D. Levi, S. Routhier, B. Wijnen, "Coexistence between
+              Version 1, Version 2, and Version 3 of the Internet-standard
+              Network Management Framework", BCP 74, RFC 3584,
               DOI 10.17487/RFC3584, August 2003,
               <https://www.rfc-editor.org/info/rfc3584>.
 
@@ -875,6 +904,7 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp75>.
               At the time of writing, this BCP comprises the following:
 
+              A. Johnston, S. Donovan, R. Sparks, C. Cunningham, K. Summers,
               "Session Initiation Protocol (SIP) Basic Call Flow Examples",
               BCP 75, RFC 3665, DOI 10.17487/RFC3665, January 2004,
               <https://www.rfc-editor.org/info/rfc3665>.
@@ -885,6 +915,7 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp76>.
               At the time of writing, this BCP comprises the following:
 
+              A. Johnston, S. Donovan, R. Sparks, C. Cunningham, K. Summers,
               "Session Initiation Protocol (SIP) Public Switched Telephone
               Network (PSTN) Call Flows", BCP 76, RFC 3666,
               DOI 10.17487/RFC3666, January 2004,
@@ -896,8 +927,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp77>.
               At the time of writing, this BCP comprises the following:
 
-              "IETF ISOC Board of Trustee Appointment Procedures", BCP 77,
-              RFC 3677, DOI 10.17487/RFC3677, December 2003,
+              L. Daigle, Ed., Internet Architecture Board, "IETF ISOC Board of
+              Trustee Appointment Procedures", BCP 77, RFC 3677,
+              DOI 10.17487/RFC3677, December 2003,
               <https://www.rfc-editor.org/info/rfc3677>.
 
 
@@ -906,9 +938,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp78>.
               At the time of writing, this BCP comprises the following:
 
-              "Rights Contributors Provide to the IETF Trust", BCP 78, RFC 5378,
-              DOI 10.17487/RFC5378, November 2008,
-              <https://www.rfc-editor.org/info/rfc5378>.
+              S. Bradner, Ed., J. Contreras, Ed., "Rights Contributors Provide
+              to the IETF Trust", BCP 78, RFC 5378, DOI 10.17487/RFC5378,
+              November 2008, <https://www.rfc-editor.org/info/rfc5378>.
 
 
 
@@ -916,8 +948,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp79>.
               At the time of writing, this BCP comprises the following:
 
-              "Intellectual Property Rights in IETF Technology", BCP 79,
-              RFC 8179, DOI 10.17487/RFC8179, May 2017,
+              S. Bradner, J. Contreras, "Intellectual Property Rights in IETF
+              Technology", BCP 79, RFC 8179, DOI 10.17487/RFC8179, May 2017,
               <https://www.rfc-editor.org/info/rfc8179>.
 
 
@@ -926,8 +958,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp80>.
               At the time of writing, this BCP comprises the following:
 
-              "Delegation of E.F.F.3.IP6.ARPA", BCP 80, RFC 3681,
-              DOI 10.17487/RFC3681, January 2004,
+              R. Bush, R. Fink, "Delegation of E.F.F.3.IP6.ARPA", BCP 80,
+              RFC 3681, DOI 10.17487/RFC3681, January 2004,
               <https://www.rfc-editor.org/info/rfc3681>.
 
 
@@ -936,8 +968,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp81>.
               At the time of writing, this BCP comprises the following:
 
-              "The IETF XML Registry", BCP 81, RFC 3688, DOI 10.17487/RFC3688,
-              January 2004, <https://www.rfc-editor.org/info/rfc3688>.
+              M. Mealling, "The IETF XML Registry", BCP 81, RFC 3688,
+              DOI 10.17487/RFC3688, January 2004,
+              <https://www.rfc-editor.org/info/rfc3688>.
 
 
 
@@ -945,8 +978,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp82>.
               At the time of writing, this BCP comprises the following:
 
-              "Assigning Experimental and Testing Numbers Considered Useful",
-              BCP 82, RFC 3692, DOI 10.17487/RFC3692, January 2004,
+              T. Narten, "Assigning Experimental and Testing Numbers Considered
+              Useful", BCP 82, RFC 3692, DOI 10.17487/RFC3692, January 2004,
               <https://www.rfc-editor.org/info/rfc3692>.
 
 
@@ -961,13 +994,13 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp84>.
               At the time of writing, this BCP comprises the following:
 
-              "Ingress Filtering for Multihomed Networks", BCP 84, RFC 3704,
-              DOI 10.17487/RFC3704, March 2004,
+              F. Baker, P. Savola, "Ingress Filtering for Multihomed Networks",
+              BCP 84, RFC 3704, DOI 10.17487/RFC3704, March 2004,
               <https://www.rfc-editor.org/info/rfc3704>.
 
-              "Enhanced Feasible-Path Unicast Reverse Path Forwarding", BCP 84,
-              RFC 8704, DOI 10.17487/RFC8704, February 2020,
-              <https://www.rfc-editor.org/info/rfc8704>.
+              K. Sriram, D. Montgomery, J. Haas, "Enhanced Feasible-Path Unicast
+              Reverse Path Forwarding", BCP 84, RFC 8704, DOI 10.17487/RFC8704,
+              February 2020, <https://www.rfc-editor.org/info/rfc8704>.
 
 
 
@@ -975,7 +1008,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp85>.
               At the time of writing, this BCP comprises the following:
 
-              "Best Current Practices for Third Party Call Control (3pcc) in the
+              J. Rosenberg, J. Peterson, H. Schulzrinne, G. Camarillo, "Best
+              Current Practices for Third Party Call Control (3pcc) in the
               Session Initiation Protocol (SIP)", BCP 85, RFC 3725,
               DOI 10.17487/RFC3725, April 2004,
               <https://www.rfc-editor.org/info/rfc3725>.
@@ -986,9 +1020,10 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp86>.
               At the time of writing, this BCP comprises the following:
 
-              "Determining Strengths For Public Keys Used For Exchanging
-              Symmetric Keys", BCP 86, RFC 3766, DOI 10.17487/RFC3766, April
-              2004, <https://www.rfc-editor.org/info/rfc3766>.
+              H. Orman, P. Hoffman, "Determining Strengths For Public Keys Used
+              For Exchanging Symmetric Keys", BCP 86, RFC 3766,
+              DOI 10.17487/RFC3766, April 2004,
+              <https://www.rfc-editor.org/info/rfc3766>.
 
 
 
@@ -996,6 +1031,7 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp87>.
               At the time of writing, this BCP comprises the following:
 
+              F. Le Faucheur, R. Uppili, A. Vedrenne, P. Merckx, T. Telkamp,
               "Use of Interior Gateway Protocol (IGP) Metric as a second MPLS
               Traffic Engineering (TE) Metric", BCP 87, RFC 3785,
               DOI 10.17487/RFC3785, May 2004,
@@ -1007,8 +1043,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp88>.
               At the time of writing, this BCP comprises the following:
 
-              "IANA Considerations for the Point-to-Point Protocol (PPP)",
-              BCP 88, RFC 3818, DOI 10.17487/RFC3818, June 2004,
+              V. Schryver, "IANA Considerations for the Point-to-Point Protocol
+              (PPP)", BCP 88, RFC 3818, DOI 10.17487/RFC3818, June 2004,
               <https://www.rfc-editor.org/info/rfc3818>.
 
 
@@ -1017,13 +1053,15 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp89>.
               At the time of writing, this BCP comprises the following:
 
-              "Advice for Internet Subnetwork Designers", BCP 89, RFC 3819,
-              DOI 10.17487/RFC3819, July 2004,
-              <https://www.rfc-editor.org/info/rfc3819>.
+              P. Karn, Ed., C. Bormann, G. Fairhurst, D. Grossman, R. Ludwig, J.
+              Mahdavi, G. Montenegro, J. Touch, L. Wood, "Advice for Internet
+              Subnetwork Designers", BCP 89, RFC 3819, DOI 10.17487/RFC3819,
+              July 2004, <https://www.rfc-editor.org/info/rfc3819>.
 
-              "Guidelines for Adding Congestion Notification to Protocols that
-              Encapsulate IP", BCP 89, RFC 9599, DOI 10.17487/RFC9599, August
-              2024, <https://www.rfc-editor.org/info/rfc9599>.
+              B. Briscoe, J. Kaippallimalil, "Guidelines for Adding Congestion
+              Notification to Protocols that Encapsulate IP", BCP 89, RFC 9599,
+              DOI 10.17487/RFC9599, August 2024,
+              <https://www.rfc-editor.org/info/rfc9599>.
 
 
 
@@ -1031,9 +1069,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp90>.
               At the time of writing, this BCP comprises the following:
 
-              "Registration Procedures for Message Header Fields", BCP 90,
-              RFC 3864, DOI 10.17487/RFC3864, September 2004,
-              <https://www.rfc-editor.org/info/rfc3864>.
+              G. Klyne, M. Nottingham, J. Mogul, "Registration Procedures for
+              Message Header Fields", BCP 90, RFC 3864, DOI 10.17487/RFC3864,
+              September 2004, <https://www.rfc-editor.org/info/rfc3864>.
 
 
 
@@ -1041,8 +1079,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp91>.
               At the time of writing, this BCP comprises the following:
 
-              "DNS IPv6 Transport Operational Guidelines", BCP 91, RFC 3901,
-              DOI 10.17487/RFC3901, September 2004,
+              A. Durand, J. Ihren, "DNS IPv6 Transport Operational Guidelines",
+              BCP 91, RFC 3901, DOI 10.17487/RFC3901, September 2004,
               <https://www.rfc-editor.org/info/rfc3901>.
 
 
@@ -1051,9 +1089,10 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp92>.
               At the time of writing, this BCP comprises the following:
 
-              "IESG Procedures for Handling of Independent and IRTF Stream
-              Submissions", BCP 92, RFC 5742, DOI 10.17487/RFC5742, December
-              2009, <https://www.rfc-editor.org/info/rfc5742>.
+              H. Alvestrand, R. Housley, "IESG Procedures for Handling of
+              Independent and IRTF Stream Submissions", BCP 92, RFC 5742,
+              DOI 10.17487/RFC5742, December 2009,
+              <https://www.rfc-editor.org/info/rfc5742>.
 
 
 
@@ -1061,8 +1100,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp93>.
               At the time of writing, this BCP comprises the following:
 
-              "A Model for IETF Process Experiments", BCP 93, RFC 3933,
-              DOI 10.17487/RFC3933, November 2004,
+              J. Klensin, S. Dawkins, "A Model for IETF Process Experiments",
+              BCP 93, RFC 3933, DOI 10.17487/RFC3933, November 2004,
               <https://www.rfc-editor.org/info/rfc3933>.
 
 
@@ -1073,8 +1112,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp95>.
               At the time of writing, this BCP comprises the following:
 
-              "A Mission Statement for the IETF", BCP 95, RFC 3935,
-              DOI 10.17487/RFC3935, October 2004,
+              H. Alvestrand, "A Mission Statement for the IETF", BCP 95,
+              RFC 3935, DOI 10.17487/RFC3935, October 2004,
               <https://www.rfc-editor.org/info/rfc3935>.
 
 
@@ -1083,8 +1122,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp96>.
               At the time of writing, this BCP comprises the following:
 
-              "Procedures for Modifying the Resource reSerVation Protocol
-              (RSVP)", BCP 96, RFC 3936, DOI 10.17487/RFC3936, October 2004,
+              K. Kompella, J. Lang, "Procedures for Modifying the Resource
+              reSerVation Protocol (RSVP)", BCP 96, RFC 3936,
+              DOI 10.17487/RFC3936, October 2004,
               <https://www.rfc-editor.org/info/rfc3936>.
 
 
@@ -1093,17 +1133,18 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp97>.
               At the time of writing, this BCP comprises the following:
 
-              "Handling Normative References to Standards-Track Documents",
-              BCP 97, RFC 4897, DOI 10.17487/RFC4897, June 2007,
+              J. Klensin, S. Hartman, "Handling Normative References to
+              Standards-Track Documents", BCP 97, RFC 4897,
+              DOI 10.17487/RFC4897, June 2007,
               <https://www.rfc-editor.org/info/rfc4897>.
 
-              "Clarifying when Standards Track Documents may Refer Normatively
-              to Documents at a Lower Level", BCP 97, RFC 3967,
-              DOI 10.17487/RFC3967, January 2005,
+              R. Bush, T. Narten, "Clarifying when Standards Track Documents may
+              Refer Normatively to Documents at a Lower Level", BCP 97,
+              RFC 3967, DOI 10.17487/RFC3967, January 2005,
               <https://www.rfc-editor.org/info/rfc3967>.
 
-              "Updating When Standards Track Documents May Refer Normatively to
-              Documents at a Lower Level", BCP 97, RFC 8067,
+              B. Leiba, "Updating When Standards Track Documents May Refer
+              Normatively to Documents at a Lower Level", BCP 97, RFC 8067,
               DOI 10.17487/RFC8067, January 2017,
               <https://www.rfc-editor.org/info/rfc8067>.
 
@@ -1113,10 +1154,10 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp98>.
               At the time of writing, this BCP comprises the following:
 
-              "The Internet Assigned Number Authority (IANA) Header Field
-              Parameter Registry for the Session Initiation Protocol (SIP)",
-              BCP 98, RFC 3968, DOI 10.17487/RFC3968, December 2004,
-              <https://www.rfc-editor.org/info/rfc3968>.
+              G. Camarillo, "The Internet Assigned Number Authority (IANA)
+              Header Field Parameter Registry for the Session Initiation
+              Protocol (SIP)", BCP 98, RFC 3968, DOI 10.17487/RFC3968, December
+              2004, <https://www.rfc-editor.org/info/rfc3968>.
 
 
 
@@ -1124,10 +1165,11 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp99>.
               At the time of writing, this BCP comprises the following:
 
-              "The Internet Assigned Number Authority (IANA) Uniform Resource
-              Identifier (URI) Parameter Registry for the Session Initiation
-              Protocol (SIP)", BCP 99, RFC 3969, DOI 10.17487/RFC3969, December
-              2004, <https://www.rfc-editor.org/info/rfc3969>.
+              G. Camarillo, "The Internet Assigned Number Authority (IANA)
+              Uniform Resource Identifier (URI) Parameter Registry for the
+              Session Initiation Protocol (SIP)", BCP 99, RFC 3969,
+              DOI 10.17487/RFC3969, December 2004,
+              <https://www.rfc-editor.org/info/rfc3969>.
 
 
 
@@ -1135,8 +1177,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp100>.
               At the time of writing, this BCP comprises the following:
 
-              "Early IANA Allocation of Standards Track Code Points", BCP 100,
-              RFC 7120, DOI 10.17487/RFC7120, January 2014,
+              M. Cotton, "Early IANA Allocation of Standards Track Code Points",
+              BCP 100, RFC 7120, DOI 10.17487/RFC7120, January 2014,
               <https://www.rfc-editor.org/info/rfc7120>.
 
 
@@ -1145,17 +1187,19 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp101>.
               At the time of writing, this BCP comprises the following:
 
-              "Update to the Process for Selection of Trustees for the IETF
-              Trust", BCP 101, RFC 8714, DOI 10.17487/RFC8714, February 2020,
+              J. Arkko, T. Hardie, "Update to the Process for Selection of
+              Trustees for the IETF Trust", BCP 101, RFC 8714,
+              DOI 10.17487/RFC8714, February 2020,
               <https://www.rfc-editor.org/info/rfc8714>.
 
-              "IETF Administrative Support Activity 2.0: Consolidated Updates to
-              IETF Administrative Terminology", BCP 101, RFC 8717,
-              DOI 10.17487/RFC8717, February 2020,
+              J. Klensin, Ed., "IETF Administrative Support Activity 2.0:
+              Consolidated Updates to IETF Administrative Terminology", BCP 101,
+              RFC 8717, DOI 10.17487/RFC8717, February 2020,
               <https://www.rfc-editor.org/info/rfc8717>.
 
-              "Structure of the IETF Administrative Support Activity, Version
-              2.0", BCP 101, RFC 8711, DOI 10.17487/RFC8711, February 2020,
+              B. Haberman, J. Hall, J. Livingood, "Structure of the IETF
+              Administrative Support Activity, Version 2.0", BCP 101, RFC 8711,
+              DOI 10.17487/RFC8711, February 2020,
               <https://www.rfc-editor.org/info/rfc8711>.
 
 
@@ -1164,8 +1208,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp102>.
               At the time of writing, this BCP comprises the following:
 
-              "IAB Processes for Management of IETF Liaison Relationships",
-              BCP 102, RFC 4052, DOI 10.17487/RFC4052, April 2005,
+              L. Daigle, Ed., Internet Architecture Board, "IAB Processes for
+              Management of IETF Liaison Relationships", BCP 102, RFC 4052,
+              DOI 10.17487/RFC4052, April 2005,
               <https://www.rfc-editor.org/info/rfc4052>.
 
 
@@ -1174,8 +1219,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp103>.
               At the time of writing, this BCP comprises the following:
 
-              "Procedures for Handling Liaison Statements to and from the IETF",
-              BCP 103, RFC 4053, DOI 10.17487/RFC4053, April 2005,
+              S. Trowbridge, S. Bradner, F. Baker, "Procedures for Handling
+              Liaison Statements to and from the IETF", BCP 103, RFC 4053,
+              DOI 10.17487/RFC4053, April 2005,
               <https://www.rfc-editor.org/info/rfc4053>.
 
 
@@ -1184,8 +1230,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp104>.
               At the time of writing, this BCP comprises the following:
 
-              "Terminology for Describing Internet Connectivity", BCP 104,
-              RFC 4084, DOI 10.17487/RFC4084, May 2005,
+              J. Klensin, "Terminology for Describing Internet Connectivity",
+              BCP 104, RFC 4084, DOI 10.17487/RFC4084, May 2005,
               <https://www.rfc-editor.org/info/rfc4084>.
 
 
@@ -1194,9 +1240,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp105>.
               At the time of writing, this BCP comprises the following:
 
-              "Embedding Globally-Routable Internet Addresses Considered
-              Harmful", BCP 105, RFC 4085, DOI 10.17487/RFC4085, June 2005,
-              <https://www.rfc-editor.org/info/rfc4085>.
+              D. Plonka, "Embedding Globally-Routable Internet Addresses
+              Considered Harmful", BCP 105, RFC 4085, DOI 10.17487/RFC4085, June
+              2005, <https://www.rfc-editor.org/info/rfc4085>.
 
 
 
@@ -1204,8 +1250,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp106>.
               At the time of writing, this BCP comprises the following:
 
-              "Randomness Requirements for Security", BCP 106, RFC 4086,
-              DOI 10.17487/RFC4086, June 2005,
+              D. Eastlake 3rd, J. Schiller, S. Crocker, "Randomness Requirements
+              for Security", BCP 106, RFC 4086, DOI 10.17487/RFC4086, June 2005,
               <https://www.rfc-editor.org/info/rfc4086>.
 
 
@@ -1214,8 +1260,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp107>.
               At the time of writing, this BCP comprises the following:
 
-              "Guidelines for Cryptographic Key Management", BCP 107, RFC 4107,
-              DOI 10.17487/RFC4107, June 2005,
+              S. Bellovin, R. Housley, "Guidelines for Cryptographic Key
+              Management", BCP 107, RFC 4107, DOI 10.17487/RFC4107, June 2005,
               <https://www.rfc-editor.org/info/rfc4107>.
 
 
@@ -1224,8 +1270,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp108>.
               At the time of writing, this BCP comprises the following:
 
-              "IP Performance Metrics (IPPM) Metrics Registry", BCP 108,
-              RFC 4148, DOI 10.17487/RFC4148, August 2005,
+              E. Stephan, "IP Performance Metrics (IPPM) Metrics Registry",
+              BCP 108, RFC 4148, DOI 10.17487/RFC4148, August 2005,
               <https://www.rfc-editor.org/info/rfc4148>.
 
 
@@ -1234,7 +1280,7 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp109>.
               At the time of writing, this BCP comprises the following:
 
-              "Deprecation of "ip6.int"", BCP 109, RFC 4159,
+              G. Huston, "Deprecation of "ip6.int"", BCP 109, RFC 4159,
               DOI 10.17487/RFC4159, August 2005,
               <https://www.rfc-editor.org/info/rfc4159>.
 
@@ -1244,9 +1290,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp110>.
               At the time of writing, this BCP comprises the following:
 
-              "Tunneling Multiplexed Compressed RTP (TCRTP)", BCP 110, RFC 4170,
-              DOI 10.17487/RFC4170, November 2005,
-              <https://www.rfc-editor.org/info/rfc4170>.
+              B. Thompson, T. Koren, D. Wing, "Tunneling Multiplexed Compressed
+              RTP (TCRTP)", BCP 110, RFC 4170, DOI 10.17487/RFC4170, November
+              2005, <https://www.rfc-editor.org/info/rfc4170>.
 
 
 
@@ -1254,12 +1300,12 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp111>.
               At the time of writing, this BCP comprises the following:
 
-              "Guidelines for Authors and Reviewers of MIB Documents", BCP 111,
-              RFC 4181, DOI 10.17487/RFC4181, September 2005,
-              <https://www.rfc-editor.org/info/rfc4181>.
+              C. Heard, Ed., "Guidelines for Authors and Reviewers of MIB
+              Documents", BCP 111, RFC 4181, DOI 10.17487/RFC4181, September
+              2005, <https://www.rfc-editor.org/info/rfc4181>.
 
-              "RFC 4181 Update to Recognize the IETF Trust", BCP 111, RFC 4841,
-              DOI 10.17487/RFC4841, March 2007,
+              C. Heard, Ed., "RFC 4181 Update to Recognize the IETF Trust",
+              BCP 111, RFC 4841, DOI 10.17487/RFC4841, March 2007,
               <https://www.rfc-editor.org/info/rfc4841>.
 
 
@@ -1268,9 +1314,10 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp112>.
               At the time of writing, this BCP comprises the following:
 
-              "Prioritized Treatment of Specific OSPF Version 2 Packets and
-              Congestion Avoidance", BCP 112, RFC 4222, DOI 10.17487/RFC4222,
-              October 2005, <https://www.rfc-editor.org/info/rfc4222>.
+              G. Choudhury, Ed., "Prioritized Treatment of Specific OSPF Version
+              2 Packets and Congestion Avoidance", BCP 112, RFC 4222,
+              DOI 10.17487/RFC4222, October 2005,
+              <https://www.rfc-editor.org/info/rfc4222>.
 
 
 
@@ -1284,8 +1331,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp114>.
               At the time of writing, this BCP comprises the following:
 
-              "BGP Communities for Data Collection", BCP 114, RFC 4384,
-              DOI 10.17487/RFC4384, February 2006,
+              D. Meyer, "BGP Communities for Data Collection", BCP 114,
+              RFC 4384, DOI 10.17487/RFC4384, February 2006,
               <https://www.rfc-editor.org/info/rfc4384>.
 
 
@@ -1296,9 +1343,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp116>.
               At the time of writing, this BCP comprises the following:
 
-              "IANA Allocations for Pseudowire Edge to Edge Emulation (PWE3)",
-              BCP 116, RFC 4446, DOI 10.17487/RFC4446, April 2006,
-              <https://www.rfc-editor.org/info/rfc4446>.
+              L. Martini, "IANA Allocations for Pseudowire Edge to Edge
+              Emulation (PWE3)", BCP 116, RFC 4446, DOI 10.17487/RFC4446, April
+              2006, <https://www.rfc-editor.org/info/rfc4446>.
 
 
 
@@ -1306,8 +1353,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp117>.
               At the time of writing, this BCP comprises the following:
 
-              "Interworking between the Session Initiation Protocol (SIP) and
-              QSIG", BCP 117, RFC 4497, DOI 10.17487/RFC4497, May 2006,
+              J. Elwell, F. Derks, P. Mourot, O. Rousseau, "Interworking between
+              the Session Initiation Protocol (SIP) and QSIG", BCP 117,
+              RFC 4497, DOI 10.17487/RFC4497, May 2006,
               <https://www.rfc-editor.org/info/rfc4497>.
 
 
@@ -1316,8 +1364,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp118>.
               At the time of writing, this BCP comprises the following:
 
-              "Considerations for Lightweight Directory Access Protocol (LDAP)
-              Extensions", BCP 118, RFC 4521, DOI 10.17487/RFC4521, June 2006,
+              K. Zeilenga, "Considerations for Lightweight Directory Access
+              Protocol (LDAP) Extensions", BCP 118, RFC 4521,
+              DOI 10.17487/RFC4521, June 2006,
               <https://www.rfc-editor.org/info/rfc4521>.
 
 
@@ -1326,9 +1375,10 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp119>.
               At the time of writing, this BCP comprises the following:
 
-              "Session Initiation Protocol (SIP) Call Control - Conferencing for
-              User Agents", BCP 119, RFC 4579, DOI 10.17487/RFC4579, August
-              2006, <https://www.rfc-editor.org/info/rfc4579>.
+              A. Johnston, O. Levin, "Session Initiation Protocol (SIP) Call
+              Control - Conferencing for User Agents", BCP 119, RFC 4579,
+              DOI 10.17487/RFC4579, August 2006,
+              <https://www.rfc-editor.org/info/rfc4579>.
 
 
 
@@ -1336,8 +1386,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp120>.
               At the time of writing, this BCP comprises the following:
 
-              "Source-Specific Protocol Independent Multicast in 232/8",
-              BCP 120, RFC 4608, DOI 10.17487/RFC4608, August 2006,
+              D. Meyer, R. Rockell, G. Shepherd, "Source-Specific Protocol
+              Independent Multicast in 232/8", BCP 120, RFC 4608,
+              DOI 10.17487/RFC4608, August 2006,
               <https://www.rfc-editor.org/info/rfc4608>.
 
 
@@ -1346,8 +1397,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp121>.
               At the time of writing, this BCP comprises the following:
 
-              "Multicast Source Discovery Protocol (MSDP) Deployment Scenarios",
-              BCP 121, RFC 4611, DOI 10.17487/RFC4611, August 2006,
+              M. McBride, J. Meylor, D. Meyer, "Multicast Source Discovery
+              Protocol (MSDP) Deployment Scenarios", BCP 121, RFC 4611,
+              DOI 10.17487/RFC4611, August 2006,
               <https://www.rfc-editor.org/info/rfc4611>.
 
 
@@ -1356,9 +1408,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp122>.
               At the time of writing, this BCP comprises the following:
 
-              "Classless Inter-domain Routing (CIDR): The Internet Address
-              Assignment and Aggregation Plan", BCP 122, RFC 4632,
-              DOI 10.17487/RFC4632, August 2006,
+              V. Fuller, T. Li, "Classless Inter-domain Routing (CIDR): The
+              Internet Address Assignment and Aggregation Plan", BCP 122,
+              RFC 4632, DOI 10.17487/RFC4632, August 2006,
               <https://www.rfc-editor.org/info/rfc4632>.
 
 
@@ -1367,8 +1419,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp123>.
               At the time of writing, this BCP comprises the following:
 
-              "Observed DNS Resolution Misbehavior", BCP 123, RFC 4697,
-              DOI 10.17487/RFC4697, October 2006,
+              M. Larson, P. Barber, "Observed DNS Resolution Misbehavior",
+              BCP 123, RFC 4697, DOI 10.17487/RFC4697, October 2006,
               <https://www.rfc-editor.org/info/rfc4697>.
 
 
@@ -1377,8 +1429,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp124>.
               At the time of writing, this BCP comprises the following:
 
-              "Specifying Alternate Semantics for the Explicit Congestion
-              Notification (ECN) Field", BCP 124, RFC 4774,
+              S. Floyd, "Specifying Alternate Semantics for the Explicit
+              Congestion Notification (ECN) Field", BCP 124, RFC 4774,
               DOI 10.17487/RFC4774, November 2006,
               <https://www.rfc-editor.org/info/rfc4774>.
 
@@ -1388,8 +1440,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp125>.
               At the time of writing, this BCP comprises the following:
 
-              "Procedures for Protocol Extensions and Variations", BCP 125,
-              RFC 4775, DOI 10.17487/RFC4775, December 2006,
+              S. Bradner, B. Carpenter, Ed., T. Narten, "Procedures for Protocol
+              Extensions and Variations", BCP 125, RFC 4775,
+              DOI 10.17487/RFC4775, December 2006,
               <https://www.rfc-editor.org/info/rfc4775>.
 
 
@@ -1398,8 +1451,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp126>.
               At the time of writing, this BCP comprises the following:
 
-              "Operation of Anycast Services", BCP 126, RFC 4786,
-              DOI 10.17487/RFC4786, December 2006,
+              J. Abley, K. Lindqvist, "Operation of Anycast Services", BCP 126,
+              RFC 4786, DOI 10.17487/RFC4786, December 2006,
               <https://www.rfc-editor.org/info/rfc4786>.
 
 
@@ -1408,16 +1461,19 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp127>.
               At the time of writing, this BCP comprises the following:
 
+              R. Penno, S. Perreault, M. Boucadair, Ed., S. Sivakumar, K. Naito,
               "Updates to Network Address Translation (NAT) Behavioral
               Requirements", BCP 127, RFC 7857, DOI 10.17487/RFC7857, April
               2016, <https://www.rfc-editor.org/info/rfc7857>.
 
-              "Network Address Translation (NAT) Behavioral Requirements for
-              Unicast UDP", BCP 127, RFC 4787, DOI 10.17487/RFC4787, January
-              2007, <https://www.rfc-editor.org/info/rfc4787>.
+              F. Audet, Ed., C. Jennings, "Network Address Translation (NAT)
+              Behavioral Requirements for Unicast UDP", BCP 127, RFC 4787,
+              DOI 10.17487/RFC4787, January 2007,
+              <https://www.rfc-editor.org/info/rfc4787>.
 
-              "Common Requirements for Carrier-Grade NATs (CGNs)", BCP 127,
-              RFC 6888, DOI 10.17487/RFC6888, April 2013,
+              S. Perreault, Ed., I. Yamagata, S. Miyakawa, A. Nakagawa, H.
+              Ashida, "Common Requirements for Carrier-Grade NATs (CGNs)",
+              BCP 127, RFC 6888, DOI 10.17487/RFC6888, April 2013,
               <https://www.rfc-editor.org/info/rfc6888>.
 
 
@@ -1426,8 +1482,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp128>.
               At the time of writing, this BCP comprises the following:
 
-              "Avoiding Equal Cost Multipath Treatment in MPLS Networks",
-              BCP 128, RFC 4928, DOI 10.17487/RFC4928, June 2007,
+              G. Swallow, S. Bryant, L. Andersson, "Avoiding Equal Cost
+              Multipath Treatment in MPLS Networks", BCP 128, RFC 4928,
+              DOI 10.17487/RFC4928, June 2007,
               <https://www.rfc-editor.org/info/rfc4928>.
 
 
@@ -1436,9 +1493,10 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp129>.
               At the time of writing, this BCP comprises the following:
 
-              "Change Process for Multiprotocol Label Switching (MPLS) and
-              Generalized MPLS (GMPLS) Protocols and Procedures", BCP 129,
-              RFC 4929, DOI 10.17487/RFC4929, June 2007,
+              L. Andersson, Ed., A. Farrel, Ed., "Change Process for
+              Multiprotocol Label Switching (MPLS) and Generalized MPLS (GMPLS)
+              Protocols and Procedures", BCP 129, RFC 4929,
+              DOI 10.17487/RFC4929, June 2007,
               <https://www.rfc-editor.org/info/rfc4929>.
 
 
@@ -1447,8 +1505,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp130>.
               At the time of writing, this BCP comprises the following:
 
-              "IANA Considerations for OSPF", BCP 130, RFC 4940,
-              DOI 10.17487/RFC4940, July 2007,
+              K. Kompella, B. Fenner, "IANA Considerations for OSPF", BCP 130,
+              RFC 4940, DOI 10.17487/RFC4940, July 2007,
               <https://www.rfc-editor.org/info/rfc4940>.
 
 
@@ -1457,8 +1515,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp131>.
               At the time of writing, this BCP comprises the following:
 
-              "Symmetric RTP / RTP Control Protocol (RTCP)", BCP 131, RFC 4961,
-              DOI 10.17487/RFC4961, July 2007,
+              D. Wing, "Symmetric RTP / RTP Control Protocol (RTCP)", BCP 131,
+              RFC 4961, DOI 10.17487/RFC4961, July 2007,
               <https://www.rfc-editor.org/info/rfc4961>.
 
 
@@ -1467,9 +1525,10 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp132>.
               At the time of writing, this BCP comprises the following:
 
-              "Guidance for Authentication, Authorization, and Accounting (AAA)
-              Key Management", BCP 132, RFC 4962, DOI 10.17487/RFC4962, July
-              2007, <https://www.rfc-editor.org/info/rfc4962>.
+              R. Housley, B. Aboba, "Guidance for Authentication, Authorization,
+              and Accounting (AAA) Key Management", BCP 132, RFC 4962,
+              DOI 10.17487/RFC4962, July 2007,
+              <https://www.rfc-editor.org/info/rfc4962>.
 
 
 
@@ -1477,9 +1536,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp133>.
               At the time of writing, this BCP comprises the following:
 
-              "Specifying New Congestion Control Algorithms", BCP 133, RFC 9743,
-              DOI 10.17487/RFC9743, March 2025,
-              <https://www.rfc-editor.org/info/rfc9743>.
+              M. Duke, Ed., G. Fairhurst, Ed., "Specifying New Congestion
+              Control Algorithms", BCP 133, RFC 9743, DOI 10.17487/RFC9743,
+              March 2025, <https://www.rfc-editor.org/info/rfc9743>.
 
 
 
@@ -1487,9 +1546,10 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp134>.
               At the time of writing, this BCP comprises the following:
 
-              "Email Submission Operations: Access and Accountability
-              Requirements", BCP 134, RFC 5068, DOI 10.17487/RFC5068, November
-              2007, <https://www.rfc-editor.org/info/rfc5068>.
+              C. Hutzler, D. Crocker, P. Resnick, E. Allman, T. Finch, "Email
+              Submission Operations: Access and Accountability Requirements",
+              BCP 134, RFC 5068, DOI 10.17487/RFC5068, November 2007,
+              <https://www.rfc-editor.org/info/rfc5068>.
 
 
 
@@ -1497,9 +1557,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp135>.
               At the time of writing, this BCP comprises the following:
 
-              "IP Multicast Requirements for a Network Address Translator (NAT)
-              and a Network Address Port Translator (NAPT)", BCP 135, RFC 5135,
-              DOI 10.17487/RFC5135, February 2008,
+              D. Wing, T. Eckert, "IP Multicast Requirements for a Network
+              Address Translator (NAT) and a Network Address Port Translator
+              (NAPT)", BCP 135, RFC 5135, DOI 10.17487/RFC5135, February 2008,
               <https://www.rfc-editor.org/info/rfc5135>.
 
 
@@ -1508,9 +1568,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp136>.
               At the time of writing, this BCP comprises the following:
 
-              "Secure Connectivity and Mobility Using Mobile IPv4 and IKEv2
-              Mobility and Multihoming (MOBIKE)", BCP 136, RFC 5266,
-              DOI 10.17487/RFC5266, June 2008,
+              V. Devarapalli, P. Eronen, "Secure Connectivity and Mobility Using
+              Mobile IPv4 and IKEv2 Mobility and Multihoming (MOBIKE)", BCP 136,
+              RFC 5266, DOI 10.17487/RFC5266, June 2008,
               <https://www.rfc-editor.org/info/rfc5266>.
 
 
@@ -1519,8 +1579,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp137>.
               At the time of writing, this BCP comprises the following:
 
-              "ASCII Escaping of Unicode Characters", BCP 137, RFC 5137,
-              DOI 10.17487/RFC5137, February 2008,
+              J. Klensin, "ASCII Escaping of Unicode Characters", BCP 137,
+              RFC 5137, DOI 10.17487/RFC5137, February 2008,
               <https://www.rfc-editor.org/info/rfc5137>.
 
 
@@ -1529,8 +1589,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp138>.
               At the time of writing, this BCP comprises the following:
 
-              "A Registry for SMTP Enhanced Mail System Status Codes", BCP 138,
-              RFC 5248, DOI 10.17487/RFC5248, June 2008,
+              T. Hansen, J. Klensin, "A Registry for SMTP Enhanced Mail System
+              Status Codes", BCP 138, RFC 5248, DOI 10.17487/RFC5248, June 2008,
               <https://www.rfc-editor.org/info/rfc5248>.
 
 
@@ -1539,8 +1599,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp139>.
               At the time of writing, this BCP comprises the following:
 
-              "Templates for Internet-Drafts Containing MIB Modules", BCP 139,
-              RFC 5249, DOI 10.17487/RFC5249, July 2008,
+              D. Harrington, Ed., "Templates for Internet-Drafts Containing MIB
+              Modules", BCP 139, RFC 5249, DOI 10.17487/RFC5249, July 2008,
               <https://www.rfc-editor.org/info/rfc5249>.
 
 
@@ -1549,9 +1609,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp140>.
               At the time of writing, this BCP comprises the following:
 
-              "Preventing Use of Recursive Nameservers in Reflector Attacks",
-              BCP 140, RFC 5358, DOI 10.17487/RFC5358, October 2008,
-              <https://www.rfc-editor.org/info/rfc5358>.
+              J. Damas, F. Neves, "Preventing Use of Recursive Nameservers in
+              Reflector Attacks", BCP 140, RFC 5358, DOI 10.17487/RFC5358,
+              October 2008, <https://www.rfc-editor.org/info/rfc5358>.
 
 
 
@@ -1559,9 +1619,10 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp141>.
               At the time of writing, this BCP comprises the following:
 
-              "IANA Considerations and IETF Protocol and Documentation Usage for
-              IEEE 802 Parameters", BCP 141, RFC 9542, DOI 10.17487/RFC9542,
-              April 2024, <https://www.rfc-editor.org/info/rfc9542>.
+              D. Eastlake 3rd, J. Abley, Y. Li, "IANA Considerations and IETF
+              Protocol and Documentation Usage for IEEE 802 Parameters",
+              BCP 141, RFC 9542, DOI 10.17487/RFC9542, April 2024,
+              <https://www.rfc-editor.org/info/rfc9542>.
 
 
 
@@ -1569,7 +1630,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp142>.
               At the time of writing, this BCP comprises the following:
 
-              "NAT Behavioral Requirements for TCP", BCP 142, RFC 5382,
+              S. Guha, Ed., K. Biswas, B. Ford, S. Sivakumar, P. Srisuresh, "NAT
+              Behavioral Requirements for TCP", BCP 142, RFC 5382,
               DOI 10.17487/RFC5382, October 2008,
               <https://www.rfc-editor.org/info/rfc5382>.
 
@@ -1579,9 +1641,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp143>.
               At the time of writing, this BCP comprises the following:
 
-              "Deployment Considerations for Lemonade-Compliant Mobile Email",
-              BCP 143, RFC 5383, DOI 10.17487/RFC5383, October 2008,
-              <https://www.rfc-editor.org/info/rfc5383>.
+              R. Gellens, "Deployment Considerations for Lemonade-Compliant
+              Mobile Email", BCP 143, RFC 5383, DOI 10.17487/RFC5383, October
+              2008, <https://www.rfc-editor.org/info/rfc5383>.
 
 
 
@@ -1589,8 +1651,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp144>.
               At the time of writing, this BCP comprises the following:
 
-              "Session Initiation Protocol Service Examples", BCP 144, RFC 5359,
-              DOI 10.17487/RFC5359, October 2008,
+              A. Johnston, Ed., R. Sparks, C. Cunningham, S. Donovan, K.
+              Summers, "Session Initiation Protocol Service Examples", BCP 144,
+              RFC 5359, DOI 10.17487/RFC5359, October 2008,
               <https://www.rfc-editor.org/info/rfc5359>.
 
 
@@ -1599,8 +1662,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp145>.
               At the time of writing, this BCP comprises the following:
 
-              "UDP Usage Guidelines", BCP 145, RFC 8085, DOI 10.17487/RFC8085,
-              March 2017, <https://www.rfc-editor.org/info/rfc8085>.
+              L. Eggert, G. Fairhurst, G. Shepherd, "UDP Usage Guidelines",
+              BCP 145, RFC 8085, DOI 10.17487/RFC8085, March 2017,
+              <https://www.rfc-editor.org/info/rfc8085>.
 
 
 
@@ -1608,8 +1672,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp146>.
               At the time of writing, this BCP comprises the following:
 
-              "Guidelines for Specifying the Use of IPsec Version 2", BCP 146,
-              RFC 5406, DOI 10.17487/RFC5406, February 2009,
+              S. Bellovin, "Guidelines for Specifying the Use of IPsec Version
+              2", BCP 146, RFC 5406, DOI 10.17487/RFC5406, February 2009,
               <https://www.rfc-editor.org/info/rfc5406>.
 
 
@@ -1618,6 +1682,7 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp147>.
               At the time of writing, this BCP comprises the following:
 
+              M. Hasebe, J. Koshiko, Y. Suzuki, T. Yoshikawa, P. Kyzivat,
               "Example Call Flows of Race Conditions in the Session Initiation
               Protocol (SIP)", BCP 147, RFC 5407, DOI 10.17487/RFC5407, December
               2008, <https://www.rfc-editor.org/info/rfc5407>.
@@ -1628,9 +1693,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp148>.
               At the time of writing, this BCP comprises the following:
 
-              "NAT Behavioral Requirements for ICMP", BCP 148, RFC 5508,
-              DOI 10.17487/RFC5508, April 2009,
-              <https://www.rfc-editor.org/info/rfc5508>.
+              P. Srisuresh, B. Ford, S. Sivakumar, S. Guha, "NAT Behavioral
+              Requirements for ICMP", BCP 148, RFC 5508, DOI 10.17487/RFC5508,
+              April 2009, <https://www.rfc-editor.org/info/rfc5508>.
 
 
 
@@ -1638,8 +1703,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp149>.
               At the time of writing, this BCP comprises the following:
 
-              "Session Initiation Protocol (SIP) Call Control - Transfer",
-              BCP 149, RFC 5589, DOI 10.17487/RFC5589, June 2009,
+              R. Sparks, A. Johnston, Ed., D. Petrie, "Session Initiation
+              Protocol (SIP) Call Control - Transfer", BCP 149, RFC 5589,
+              DOI 10.17487/RFC5589, June 2009,
               <https://www.rfc-editor.org/info/rfc5589>.
 
 
@@ -1648,9 +1714,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp150>.
               At the time of writing, this BCP comprises the following:
 
-              "Network Address Translation (NAT) Behavioral Requirements for the
-              Datagram Congestion Control Protocol", BCP 150, RFC 5597,
-              DOI 10.17487/RFC5597, September 2009,
+              R. Denis-Courmont, "Network Address Translation (NAT) Behavioral
+              Requirements for the Datagram Congestion Control Protocol",
+              BCP 150, RFC 5597, DOI 10.17487/RFC5597, September 2009,
               <https://www.rfc-editor.org/info/rfc5597>.
 
 
@@ -1659,8 +1725,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp151>.
               At the time of writing, this BCP comprises the following:
 
-              "H.248/MEGACO Registration Procedures", BCP 151, RFC 5615,
-              DOI 10.17487/RFC5615, August 2009,
+              C. Groves, Y. Lin, "H.248/MEGACO Registration Procedures",
+              BCP 151, RFC 5615, DOI 10.17487/RFC5615, August 2009,
               <https://www.rfc-editor.org/info/rfc5615>.
 
 
@@ -1669,8 +1735,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp152>.
               At the time of writing, this BCP comprises the following:
 
-              "DNS Proxy Implementation Guidelines", BCP 152, RFC 5625,
-              DOI 10.17487/RFC5625, August 2009,
+              R. Bellis, "DNS Proxy Implementation Guidelines", BCP 152,
+              RFC 5625, DOI 10.17487/RFC5625, August 2009,
               <https://www.rfc-editor.org/info/rfc5625>.
 
 
@@ -1679,14 +1745,17 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp153>.
               At the time of writing, this BCP comprises the following:
 
+              M. Cotton, L. Vegoda, R. Bonica, Ed., B. Haberman,
               "Special-Purpose IP Address Registries", BCP 153, RFC 6890,
               DOI 10.17487/RFC6890, April 2013,
               <https://www.rfc-editor.org/info/rfc6890>.
 
-              "Updates to the Special-Purpose IP Address Registries", BCP 153,
-              RFC 8190, DOI 10.17487/RFC8190, June 2017,
+              R. Bonica, M. Cotton, B. Haberman, L. Vegoda, "Updates to the
+              Special-Purpose IP Address Registries", BCP 153, RFC 8190,
+              DOI 10.17487/RFC8190, June 2017,
               <https://www.rfc-editor.org/info/rfc8190>.
 
+              J. Weil, V. Kuarsingh, C. Donley, C. Liljenstolpe, M. Azinger,
               "IANA-Reserved IPv4 Prefix for Shared Address Space", BCP 153,
               RFC 6598, DOI 10.17487/RFC6598, April 2012,
               <https://www.rfc-editor.org/info/rfc6598>.
@@ -1697,10 +1766,11 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp154>.
               At the time of writing, this BCP comprises the following:
 
-              "Considerations for Civic Addresses in the Presence Information
-              Data Format Location Object (PIDF-LO): Guidelines and IANA
-              Registry Definition", BCP 154, RFC 5774, DOI 10.17487/RFC5774,
-              March 2010, <https://www.rfc-editor.org/info/rfc5774>.
+              K. Wolf, A. Mayrhofer, "Considerations for Civic Addresses in the
+              Presence Information Data Format Location Object (PIDF-LO):
+              Guidelines and IANA Registry Definition", BCP 154, RFC 5774,
+              DOI 10.17487/RFC5774, March 2010,
+              <https://www.rfc-editor.org/info/rfc5774>.
 
 
 
@@ -1708,8 +1778,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp155>.
               At the time of writing, this BCP comprises the following:
 
-              "Nameservers for IPv4 and IPv6 Reverse Zones", BCP 155, RFC 5855,
-              DOI 10.17487/RFC5855, May 2010,
+              J. Abley, T. Manderson, "Nameservers for IPv4 and IPv6 Reverse
+              Zones", BCP 155, RFC 5855, DOI 10.17487/RFC5855, May 2010,
               <https://www.rfc-editor.org/info/rfc5855>.
 
 
@@ -1718,9 +1788,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp156>.
               At the time of writing, this BCP comprises the following:
 
-              "Recommendations for Transport-Protocol Port Randomization",
-              BCP 156, RFC 6056, DOI 10.17487/RFC6056, January 2011,
-              <https://www.rfc-editor.org/info/rfc6056>.
+              M. Larsen, F. Gont, "Recommendations for Transport-Protocol Port
+              Randomization", BCP 156, RFC 6056, DOI 10.17487/RFC6056, January
+              2011, <https://www.rfc-editor.org/info/rfc6056>.
 
 
 
@@ -1728,8 +1798,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp157>.
               At the time of writing, this BCP comprises the following:
 
-              "IPv6 Address Assignment to End Sites", BCP 157, RFC 6177,
-              DOI 10.17487/RFC6177, March 2011,
+              T. Narten, G. Huston, L. Roberts, "IPv6 Address Assignment to End
+              Sites", BCP 157, RFC 6177, DOI 10.17487/RFC6177, March 2011,
               <https://www.rfc-editor.org/info/rfc6177>.
 
 
@@ -1738,8 +1808,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp158>.
               At the time of writing, this BCP comprises the following:
 
-              "RADIUS Design Guidelines", BCP 158, RFC 6158,
-              DOI 10.17487/RFC6158, March 2011,
+              A. DeKok, Ed., G. Weber, "RADIUS Design Guidelines", BCP 158,
+              RFC 6158, DOI 10.17487/RFC6158, March 2011,
               <https://www.rfc-editor.org/info/rfc6158>.
 
 
@@ -1748,8 +1818,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp159>.
               At the time of writing, this BCP comprises the following:
 
-              "Reducing the TIME-WAIT State Using TCP Timestamps", BCP 159,
-              RFC 6191, DOI 10.17487/RFC6191, April 2011,
+              F. Gont, "Reducing the TIME-WAIT State Using TCP Timestamps",
+              BCP 159, RFC 6191, DOI 10.17487/RFC6191, April 2011,
               <https://www.rfc-editor.org/info/rfc6191>.
 
 
@@ -1758,9 +1828,10 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp160>.
               At the time of writing, this BCP comprises the following:
 
-              "An Architecture for Location and Location Privacy in Internet
-              Applications", BCP 160, RFC 6280, DOI 10.17487/RFC6280, July 2011,
-              <https://www.rfc-editor.org/info/rfc6280>.
+              R. Barnes, M. Lepinski, A. Cooper, J. Morris, H. Tschofenig, H.
+              Schulzrinne, "An Architecture for Location and Location Privacy in
+              Internet Applications", BCP 160, RFC 6280, DOI 10.17487/RFC6280,
+              July 2011, <https://www.rfc-editor.org/info/rfc6280>.
 
 
 
@@ -1768,8 +1839,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp161>.
               At the time of writing, this BCP comprises the following:
 
-              "Guidelines for the Use of the "OAM" Acronym in the IETF",
-              BCP 161, RFC 6291, DOI 10.17487/RFC6291, June 2011,
+              L. Andersson, H. van Helvoort, R. Bonica, D. Romascanu, S.
+              Mansfield, "Guidelines for the Use of the "OAM" Acronym in the
+              IETF", BCP 161, RFC 6291, DOI 10.17487/RFC6291, June 2011,
               <https://www.rfc-editor.org/info/rfc6291>.
 
 
@@ -1778,8 +1850,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp162>.
               At the time of writing, this BCP comprises the following:
 
-              "Logging Recommendations for Internet-Facing Servers", BCP 162,
-              RFC 6302, DOI 10.17487/RFC6302, June 2011,
+              A. Durand, I. Gashinsky, D. Lee, S. Sheppard, "Logging
+              Recommendations for Internet-Facing Servers", BCP 162, RFC 6302,
+              DOI 10.17487/RFC6302, June 2011,
               <https://www.rfc-editor.org/info/rfc6302>.
 
 
@@ -1788,11 +1861,12 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp163>.
               At the time of writing, this BCP comprises the following:
 
-              "Adding 100.64.0.0/10 Prefixes to the IPv4 Locally-Served DNS
-              Zones Registry", BCP 163, RFC 7793, DOI 10.17487/RFC7793, May
-              2016, <https://www.rfc-editor.org/info/rfc7793>.
+              M. Andrews, "Adding 100.64.0.0/10 Prefixes to the IPv4
+              Locally-Served DNS Zones Registry", BCP 163, RFC 7793,
+              DOI 10.17487/RFC7793, May 2016,
+              <https://www.rfc-editor.org/info/rfc7793>.
 
-              "Locally Served DNS Zones", BCP 163, RFC 6303,
+              M. Andrews, "Locally Served DNS Zones", BCP 163, RFC 6303,
               DOI 10.17487/RFC6303, July 2011,
               <https://www.rfc-editor.org/info/rfc6303>.
 
@@ -1802,8 +1876,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp164>.
               At the time of writing, this BCP comprises the following:
 
-              "IANA Considerations for Network Layer Protocol Identifiers",
-              BCP 164, RFC 6328, DOI 10.17487/RFC6328, July 2011,
+              D. Eastlake 3rd, "IANA Considerations for Network Layer Protocol
+              Identifiers", BCP 164, RFC 6328, DOI 10.17487/RFC6328, July 2011,
               <https://www.rfc-editor.org/info/rfc6328>.
 
 
@@ -1812,10 +1886,11 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp165>.
               At the time of writing, this BCP comprises the following:
 
-              "Recommendations on Using Assigned Transport Port Numbers",
-              BCP 165, RFC 7605, DOI 10.17487/RFC7605, August 2015,
+              J. Touch, "Recommendations on Using Assigned Transport Port
+              Numbers", BCP 165, RFC 7605, DOI 10.17487/RFC7605, August 2015,
               <https://www.rfc-editor.org/info/rfc7605>.
 
+              M. Cotton, L. Eggert, J. Touch, M. Westerlund, S. Cheshire,
               "Internet Assigned Numbers Authority (IANA) Procedures for the
               Management of the Service Name and Transport Protocol Port Number
               Registry", BCP 165, RFC 6335, DOI 10.17487/RFC6335, August 2011,
@@ -1827,9 +1902,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp166>.
               At the time of writing, this BCP comprises the following:
 
-              "Terminology Used in Internationalization in the IETF", BCP 166,
-              RFC 6365, DOI 10.17487/RFC6365, September 2011,
-              <https://www.rfc-editor.org/info/rfc6365>.
+              P. Hoffman, J. Klensin, "Terminology Used in Internationalization
+              in the IETF", BCP 166, RFC 6365, DOI 10.17487/RFC6365, September
+              2011, <https://www.rfc-editor.org/info/rfc6365>.
 
 
 
@@ -1837,8 +1912,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp167>.
               At the time of writing, this BCP comprises the following:
 
-              "DomainKeys Identified Mail (DKIM) and Mailing Lists", BCP 167,
-              RFC 6377, DOI 10.17487/RFC6377, September 2011,
+              M. Kucherawy, "DomainKeys Identified Mail (DKIM) and Mailing
+              Lists", BCP 167, RFC 6377, DOI 10.17487/RFC6377, September 2011,
               <https://www.rfc-editor.org/info/rfc6377>.
 
 
@@ -1847,8 +1922,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp168>.
               At the time of writing, this BCP comprises the following:
 
-              "IP Router Alert Considerations and Usage", BCP 168, RFC 6398,
-              DOI 10.17487/RFC6398, October 2011,
+              F. Le Faucheur, Ed., "IP Router Alert Considerations and Usage",
+              BCP 168, RFC 6398, DOI 10.17487/RFC6398, October 2011,
               <https://www.rfc-editor.org/info/rfc6398>.
 
 
@@ -1857,9 +1932,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp169>.
               At the time of writing, this BCP comprises the following:
 
-              "Unique Origin Autonomous System Numbers (ASNs) per Node for
-              Globally Anycasted Services", BCP 169, RFC 6382,
-              DOI 10.17487/RFC6382, October 2011,
+              D. McPherson, R. Donnelly, F. Scalzo, "Unique Origin Autonomous
+              System Numbers (ASNs) per Node for Globally Anycasted Services",
+              BCP 169, RFC 6382, DOI 10.17487/RFC6382, October 2011,
               <https://www.rfc-editor.org/info/rfc6382>.
 
 
@@ -1868,9 +1943,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp170>.
               At the time of writing, this BCP comprises the following:
 
-              "Guidelines for Considering New Performance Metric Development",
-              BCP 170, RFC 6390, DOI 10.17487/RFC6390, October 2011,
-              <https://www.rfc-editor.org/info/rfc6390>.
+              A. Clark, B. Claise, "Guidelines for Considering New Performance
+              Metric Development", BCP 170, RFC 6390, DOI 10.17487/RFC6390,
+              October 2011, <https://www.rfc-editor.org/info/rfc6390>.
 
 
 
@@ -1878,8 +1953,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp171>.
               At the time of writing, this BCP comprises the following:
 
-              "Time to Remove Filters for Previously Unallocated IPv4 /8s",
-              BCP 171, RFC 6441, DOI 10.17487/RFC6441, November 2011,
+              L. Vegoda, "Time to Remove Filters for Previously Unallocated IPv4
+              /8s", BCP 171, RFC 6441, DOI 10.17487/RFC6441, November 2011,
               <https://www.rfc-editor.org/info/rfc6441>.
 
 
@@ -1888,9 +1963,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp172>.
               At the time of writing, this BCP comprises the following:
 
-              "Recommendation for Not Using AS_SET and AS_CONFED_SET in BGP",
-              BCP 172, RFC 6472, DOI 10.17487/RFC6472, December 2011,
-              <https://www.rfc-editor.org/info/rfc6472>.
+              W. Kumari, K. Sriram, "Recommendation for Not Using AS_SET and
+              AS_CONFED_SET in BGP", BCP 172, RFC 6472, DOI 10.17487/RFC6472,
+              December 2011, <https://www.rfc-editor.org/info/rfc6472>.
 
 
 
@@ -1898,13 +1973,15 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp173>.
               At the time of writing, this BCP comprises the following:
 
-              "Certificate Policy (CP) for the Resource Public Key
-              Infrastructure (RPKI)", BCP 173, RFC 6484, DOI 10.17487/RFC6484,
-              February 2012, <https://www.rfc-editor.org/info/rfc6484>.
+              S. Kent, D. Kong, K. Seo, R. Watro, "Certificate Policy (CP) for
+              the Resource Public Key Infrastructure (RPKI)", BCP 173, RFC 6484,
+              DOI 10.17487/RFC6484, February 2012,
+              <https://www.rfc-editor.org/info/rfc6484>.
 
-              "Template for a Certification Practice Statement (CPS) for the
-              Resource PKI (RPKI)", BCP 173, RFC 7382, DOI 10.17487/RFC7382,
-              April 2015, <https://www.rfc-editor.org/info/rfc7382>.
+              S. Kent, D. Kong, K. Seo, "Template for a Certification Practice
+              Statement (CPS) for the Resource PKI (RPKI)", BCP 173, RFC 7382,
+              DOI 10.17487/RFC7382, April 2015,
+              <https://www.rfc-editor.org/info/rfc7382>.
 
 
 
@@ -1912,9 +1989,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp174>.
               At the time of writing, this BCP comprises the following:
 
-              "Certification Authority (CA) Key Rollover in the Resource Public
-              Key Infrastructure (RPKI)", BCP 174, RFC 6489,
-              DOI 10.17487/RFC6489, February 2012,
+              G. Huston, G. Michaelson, S. Kent, "Certification Authority (CA)
+              Key Rollover in the Resource Public Key Infrastructure (RPKI)",
+              BCP 174, RFC 6489, DOI 10.17487/RFC6489, February 2012,
               <https://www.rfc-editor.org/info/rfc6489>.
 
 
@@ -1923,8 +2000,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp175>.
               At the time of writing, this BCP comprises the following:
 
-              "Procedures for Maintaining the Time Zone Database", BCP 175,
-              RFC 6557, DOI 10.17487/RFC6557, February 2012,
+              E. Lear, P. Eggert, "Procedures for Maintaining the Time Zone
+              Database", BCP 175, RFC 6557, DOI 10.17487/RFC6557, February 2012,
               <https://www.rfc-editor.org/info/rfc6557>.
 
 
@@ -1933,8 +2010,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp176>.
               At the time of writing, this BCP comprises the following:
 
-              "IP Performance Metrics (IPPM) Standard Advancement Testing",
-              BCP 176, RFC 6576, DOI 10.17487/RFC6576, March 2012,
+              R. Geib, Ed., A. Morton, R. Fardid, A. Steinmitz, "IP Performance
+              Metrics (IPPM) Standard Advancement Testing", BCP 176, RFC 6576,
+              DOI 10.17487/RFC6576, March 2012,
               <https://www.rfc-editor.org/info/rfc6576>.
 
 
@@ -1943,8 +2021,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp177>.
               At the time of writing, this BCP comprises the following:
 
-              "IPv6 Support Required for All IP-Capable Nodes", BCP 177,
-              RFC 6540, DOI 10.17487/RFC6540, April 2012,
+              W. George, C. Donley, C. Liljenstolpe, L. Howard, "IPv6 Support
+              Required for All IP-Capable Nodes", BCP 177, RFC 6540,
+              DOI 10.17487/RFC6540, April 2012,
               <https://www.rfc-editor.org/info/rfc6540>.
 
 
@@ -1953,8 +2032,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp178>.
               At the time of writing, this BCP comprises the following:
 
-              "Deprecating the "X-" Prefix and Similar Constructs in Application
-              Protocols", BCP 178, RFC 6648, DOI 10.17487/RFC6648, June 2012,
+              P. Saint-Andre, D. Crocker, M. Nottingham, "Deprecating the "X-"
+              Prefix and Similar Constructs in Application Protocols", BCP 178,
+              RFC 6648, DOI 10.17487/RFC6648, June 2012,
               <https://www.rfc-editor.org/info/rfc6648>.
 
 
@@ -1963,9 +2043,10 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp179>.
               At the time of writing, this BCP comprises the following:
 
-              "Deprecate DES, RC4-HMAC-EXP, and Other Weak Cryptographic
-              Algorithms in Kerberos", BCP 179, RFC 6649, DOI 10.17487/RFC6649,
-              July 2012, <https://www.rfc-editor.org/info/rfc6649>.
+              L. Hornquist Astrand, T. Yu, "Deprecate DES, RC4-HMAC-EXP, and
+              Other Weak Cryptographic Algorithms in Kerberos", BCP 179,
+              RFC 6649, DOI 10.17487/RFC6649, July 2012,
+              <https://www.rfc-editor.org/info/rfc6649>.
 
 
 
@@ -1973,7 +2054,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp180>.
               At the time of writing, this BCP comprises the following:
 
-              "DHCPv6 Redundancy Deployment Considerations", BCP 180, RFC 6853,
+              J. Brzozowski, J. Tremblay, J. Chen, T. Mrugalski, "DHCPv6
+              Redundancy Deployment Considerations", BCP 180, RFC 6853,
               DOI 10.17487/RFC6853, February 2013,
               <https://www.rfc-editor.org/info/rfc6853>.
 
@@ -1983,9 +2065,10 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp181>.
               At the time of writing, this BCP comprises the following:
 
-              "Best Current Practice for Communications Services in Support of
-              Emergency Calling", BCP 181, RFC 6881, DOI 10.17487/RFC6881, March
-              2013, <https://www.rfc-editor.org/info/rfc6881>.
+              B. Rosen, J. Polk, "Best Current Practice for Communications
+              Services in Support of Emergency Calling", BCP 181, RFC 6881,
+              DOI 10.17487/RFC6881, March 2013,
+              <https://www.rfc-editor.org/info/rfc6881>.
 
 
 
@@ -1993,9 +2076,10 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp182>.
               At the time of writing, this BCP comprises the following:
 
-              "Algorithm Agility Procedure for the Resource Public Key
-              Infrastructure (RPKI)", BCP 182, RFC 6916, DOI 10.17487/RFC6916,
-              April 2013, <https://www.rfc-editor.org/info/rfc6916>.
+              R. Gagliano, S. Kent, S. Turner, "Algorithm Agility Procedure for
+              the Resource Public Key Infrastructure (RPKI)", BCP 182, RFC 6916,
+              DOI 10.17487/RFC6916, April 2013,
+              <https://www.rfc-editor.org/info/rfc6916>.
 
 
 
@@ -2003,8 +2087,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp183>.
               At the time of writing, this BCP comprises the following:
 
-              "A Uniform Resource Name (URN) Namespace for Examples", BCP 183,
-              RFC 6963, DOI 10.17487/RFC6963, May 2013,
+              P. Saint-Andre, "A Uniform Resource Name (URN) Namespace for
+              Examples", BCP 183, RFC 6963, DOI 10.17487/RFC6963, May 2013,
               <https://www.rfc-editor.org/info/rfc6963>.
 
 
@@ -2013,9 +2097,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp184>.
               At the time of writing, this BCP comprises the following:
 
-              "Guidelines for Authors and Reviewers of IP Flow Information
-              Export (IPFIX) Information Elements", BCP 184, RFC 7013,
-              DOI 10.17487/RFC7013, September 2013,
+              B. Trammell, B. Claise, "Guidelines for Authors and Reviewers of
+              IP Flow Information Export (IPFIX) Information Elements", BCP 184,
+              RFC 7013, DOI 10.17487/RFC7013, September 2013,
               <https://www.rfc-editor.org/info/rfc7013>.
 
 
@@ -2024,11 +2108,13 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp185>.
               At the time of writing, this BCP comprises the following:
 
-              "Origin Validation Operation Based on the Resource Public Key
-              Infrastructure (RPKI)", BCP 185, RFC 7115, DOI 10.17487/RFC7115,
-              January 2014, <https://www.rfc-editor.org/info/rfc7115>.
+              R. Bush, "Origin Validation Operation Based on the Resource Public
+              Key Infrastructure (RPKI)", BCP 185, RFC 7115,
+              DOI 10.17487/RFC7115, January 2014,
+              <https://www.rfc-editor.org/info/rfc7115>.
 
-              "The Use of maxLength in the Resource Public Key Infrastructure
+              Y. Gilad, S. Goldberg, K. Sriram, J. Snijders, B. Maddison, "The
+              Use of maxLength in the Resource Public Key Infrastructure
               (RPKI)", BCP 185, RFC 9319, DOI 10.17487/RFC9319, October 2022,
               <https://www.rfc-editor.org/info/rfc9319>.
 
@@ -2038,8 +2124,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp186>.
               At the time of writing, this BCP comprises the following:
 
-              "Recommendations on Filtering of IPv4 Packets Containing IPv4
-              Options", BCP 186, RFC 7126, DOI 10.17487/RFC7126, February 2014,
+              F. Gont, R. Atkinson, C. Pignataro, "Recommendations on Filtering
+              of IPv4 Packets Containing IPv4 Options", BCP 186, RFC 7126,
+              DOI 10.17487/RFC7126, February 2014,
               <https://www.rfc-editor.org/info/rfc7126>.
 
 
@@ -2048,6 +2135,7 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp187>.
               At the time of writing, this BCP comprises the following:
 
+              D. Hankins, T. Mrugalski, M. Siodelski, S. Jiang, S. Krishnan,
               "Guidelines for Creating New DHCPv6 Options", BCP 187, RFC 7227,
               DOI 10.17487/RFC7227, May 2014,
               <https://www.rfc-editor.org/info/rfc7227>.
@@ -2058,8 +2146,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp188>.
               At the time of writing, this BCP comprises the following:
 
-              "Pervasive Monitoring Is an Attack", BCP 188, RFC 7258,
-              DOI 10.17487/RFC7258, May 2014,
+              S. Farrell, H. Tschofenig, "Pervasive Monitoring Is an Attack",
+              BCP 188, RFC 7258, DOI 10.17487/RFC7258, May 2014,
               <https://www.rfc-editor.org/info/rfc7258>.
 
 
@@ -2068,9 +2156,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp189>.
               At the time of writing, this BCP comprises the following:
 
-              "An Acceptable Use Policy for New ICMP Types and Codes", BCP 189,
-              RFC 7279, DOI 10.17487/RFC7279, May 2014,
-              <https://www.rfc-editor.org/info/rfc7279>.
+              M. Shore, C. Pignataro, "An Acceptable Use Policy for New ICMP
+              Types and Codes", BCP 189, RFC 7279, DOI 10.17487/RFC7279, May
+              2014, <https://www.rfc-editor.org/info/rfc7279>.
 
 
 
@@ -2078,7 +2166,7 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp190>.
               At the time of writing, this BCP comprises the following:
 
-              "URI Design and Ownership", BCP 190, RFC 8820,
+              M. Nottingham, "URI Design and Ownership", BCP 190, RFC 8820,
               DOI 10.17487/RFC8820, June 2020,
               <https://www.rfc-editor.org/info/rfc8820>.
 
@@ -2088,8 +2176,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp191>.
               At the time of writing, this BCP comprises the following:
 
-              "IANA Considerations for Connectivity Fault Management (CFM) Code
-              Points", BCP 191, RFC 7319, DOI 10.17487/RFC7319, July 2014,
+              D. Eastlake 3rd, "IANA Considerations for Connectivity Fault
+              Management (CFM) Code Points", BCP 191, RFC 7319,
+              DOI 10.17487/RFC7319, July 2014,
               <https://www.rfc-editor.org/info/rfc7319>.
 
 
@@ -2100,9 +2189,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp193>.
               At the time of writing, this BCP comprises the following:
 
-              "Diameter Applications Design Guidelines", BCP 193, RFC 7423,
-              DOI 10.17487/RFC7423, November 2014,
-              <https://www.rfc-editor.org/info/rfc7423>.
+              L. Morand, Ed., V. Fajardo, H. Tschofenig, "Diameter Applications
+              Design Guidelines", BCP 193, RFC 7423, DOI 10.17487/RFC7423,
+              November 2014, <https://www.rfc-editor.org/info/rfc7423>.
 
 
 
@@ -2110,8 +2199,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp194>.
               At the time of writing, this BCP comprises the following:
 
-              "BGP Operations and Security", BCP 194, RFC 7454,
-              DOI 10.17487/RFC7454, February 2015,
+              J. Durand, I. Pepelnjak, G. Doering, "BGP Operations and
+              Security", BCP 194, RFC 7454, DOI 10.17487/RFC7454, February 2015,
               <https://www.rfc-editor.org/info/rfc7454>.
 
 
@@ -2120,13 +2209,14 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp195>.
               At the time of writing, this BCP comprises the following:
 
-              "Recommendations for Secure Use of Transport Layer Security (TLS)
-              and Datagram Transport Layer Security (DTLS)", BCP 195, RFC 9325,
+              Y. Sheffer, P. Saint-Andre, T. Fossati, "Recommendations for
+              Secure Use of Transport Layer Security (TLS) and Datagram
+              Transport Layer Security (DTLS)", BCP 195, RFC 9325,
               DOI 10.17487/RFC9325, November 2022,
               <https://www.rfc-editor.org/info/rfc9325>.
 
-              "Deprecating TLS 1.0 and TLS 1.1", BCP 195, RFC 8996,
-              DOI 10.17487/RFC8996, March 2021,
+              K. Moriarty, S. Farrell, "Deprecating TLS 1.0 and TLS 1.1",
+              BCP 195, RFC 8996, DOI 10.17487/RFC8996, March 2021,
               <https://www.rfc-editor.org/info/rfc8996>.
 
 
@@ -2135,9 +2225,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp196>.
               At the time of writing, this BCP comprises the following:
 
-              "Deprecating the Anycast Prefix for 6to4 Relay Routers", BCP 196,
-              RFC 7526, DOI 10.17487/RFC7526, May 2015,
-              <https://www.rfc-editor.org/info/rfc7526>.
+              O. Troan, B. Carpenter, Ed., "Deprecating the Anycast Prefix for
+              6to4 Relay Routers", BCP 196, RFC 7526, DOI 10.17487/RFC7526, May
+              2015, <https://www.rfc-editor.org/info/rfc7526>.
 
 
 
@@ -2145,9 +2235,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp197>.
               At the time of writing, this BCP comprises the following:
 
-              "IETF Recommendations Regarding Active Queue Management", BCP 197,
-              RFC 7567, DOI 10.17487/RFC7567, July 2015,
-              <https://www.rfc-editor.org/info/rfc7567>.
+              F. Baker, Ed., G. Fairhurst, Ed., "IETF Recommendations Regarding
+              Active Queue Management", BCP 197, RFC 7567, DOI 10.17487/RFC7567,
+              July 2015, <https://www.rfc-editor.org/info/rfc7567>.
 
 
 
@@ -2155,8 +2245,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp198>.
               At the time of writing, this BCP comprises the following:
 
-              "IPv6 Prefix Length Recommendation for Forwarding", BCP 198,
-              RFC 7608, DOI 10.17487/RFC7608, July 2015,
+              M. Boucadair, A. Petrescu, F. Baker, "IPv6 Prefix Length
+              Recommendation for Forwarding", BCP 198, RFC 7608,
+              DOI 10.17487/RFC7608, July 2015,
               <https://www.rfc-editor.org/info/rfc7608>.
 
 
@@ -2165,8 +2256,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp199>.
               At the time of writing, this BCP comprises the following:
 
-              "DHCPv6-Shield: Protecting against Rogue DHCPv6 Servers", BCP 199,
-              RFC 7610, DOI 10.17487/RFC7610, August 2015,
+              F. Gont, W. Liu, G. Van de Velde, "DHCPv6-Shield: Protecting
+              against Rogue DHCPv6 Servers", BCP 199, RFC 7610,
+              DOI 10.17487/RFC7610, August 2015,
               <https://www.rfc-editor.org/info/rfc7610>.
 
 
@@ -2175,9 +2267,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp200>.
               At the time of writing, this BCP comprises the following:
 
-              "IAB and IESG Statement on Cryptographic Technology and the
-              Internet", BCP 200, RFC 1984, DOI 10.17487/RFC1984, August 1996,
-              <https://www.rfc-editor.org/info/rfc1984>.
+              IAB, IESG, "IAB and IESG Statement on Cryptographic Technology and
+              the Internet", BCP 200, RFC 1984, DOI 10.17487/RFC1984, August
+              1996, <https://www.rfc-editor.org/info/rfc1984>.
 
 
 
@@ -2185,8 +2277,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp201>.
               At the time of writing, this BCP comprises the following:
 
-              "Guidelines for Cryptographic Algorithm Agility and Selecting
-              Mandatory-to-Implement Algorithms", BCP 201, RFC 7696,
+              R. Housley, "Guidelines for Cryptographic Algorithm Agility and
+              Selecting Mandatory-to-Implement Algorithms", BCP 201, RFC 7696,
               DOI 10.17487/RFC7696, November 2015,
               <https://www.rfc-editor.org/info/rfc7696>.
 
@@ -2196,9 +2288,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp202>.
               At the time of writing, this BCP comprises the following:
 
-              "Reducing Energy Consumption of Router Advertisements", BCP 202,
-              RFC 7772, DOI 10.17487/RFC7772, February 2016,
-              <https://www.rfc-editor.org/info/rfc7772>.
+              A. Yourtchenko, L. Colitti, "Reducing Energy Consumption of Router
+              Advertisements", BCP 202, RFC 7772, DOI 10.17487/RFC7772, February
+              2016, <https://www.rfc-editor.org/info/rfc7772>.
 
 
 
@@ -2206,8 +2298,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp203>.
               At the time of writing, this BCP comprises the following:
 
-              "Changing the Registration Policy for the NETCONF Capability URNs
-              Registry", BCP 203, RFC 7803, DOI 10.17487/RFC7803, February 2016,
+              B. Leiba, "Changing the Registration Policy for the NETCONF
+              Capability URNs Registry", BCP 203, RFC 7803,
+              DOI 10.17487/RFC7803, February 2016,
               <https://www.rfc-editor.org/info/rfc7803>.
 
 
@@ -2216,7 +2309,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp204>.
               At the time of writing, this BCP comprises the following:
 
-              "Host Address Availability Recommendations", BCP 204, RFC 7934,
+              L. Colitti, V. Cerf, S. Cheshire, D. Schinazi, "Host Address
+              Availability Recommendations", BCP 204, RFC 7934,
               DOI 10.17487/RFC7934, July 2016,
               <https://www.rfc-editor.org/info/rfc7934>.
 
@@ -2226,8 +2320,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp205>.
               At the time of writing, this BCP comprises the following:
 
-              "Improving Awareness of Running Code: The Implementation Status
-              Section", BCP 205, RFC 7942, DOI 10.17487/RFC7942, July 2016,
+              Y. Sheffer, A. Farrel, "Improving Awareness of Running Code: The
+              Implementation Status Section", BCP 205, RFC 7942,
+              DOI 10.17487/RFC7942, July 2016,
               <https://www.rfc-editor.org/info/rfc7942>.
 
 
@@ -2236,9 +2331,10 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp206>.
               At the time of writing, this BCP comprises the following:
 
-              "Problem Statement and Architecture for Information Exchange
-              between Interconnected Traffic-Engineered Networks", BCP 206,
-              RFC 7926, DOI 10.17487/RFC7926, July 2016,
+              A. Farrel, Ed., J. Drake, N. Bitar, G. Swallow, D. Ceccarelli, X.
+              Zhang, "Problem Statement and Architecture for Information
+              Exchange between Interconnected Traffic-Engineered Networks",
+              BCP 206, RFC 7926, DOI 10.17487/RFC7926, July 2016,
               <https://www.rfc-editor.org/info/rfc7926>.
 
 
@@ -2247,9 +2343,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp207>.
               At the time of writing, this BCP comprises the following:
 
-              "DNSSEC Roadblock Avoidance", BCP 207, RFC 8027,
-              DOI 10.17487/RFC8027, November 2016,
-              <https://www.rfc-editor.org/info/rfc8027>.
+              W. Hardaker, O. Gudmundsson, S. Krishnaswamy, "DNSSEC Roadblock
+              Avoidance", BCP 207, RFC 8027, DOI 10.17487/RFC8027, November
+              2016, <https://www.rfc-editor.org/info/rfc8027>.
 
 
 
@@ -2257,8 +2353,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp208>.
               At the time of writing, this BCP comprises the following:
 
-              "Network Transport Circuit Breakers", BCP 208, RFC 8084,
-              DOI 10.17487/RFC8084, March 2017,
+              G. Fairhurst, "Network Transport Circuit Breakers", BCP 208,
+              RFC 8084, DOI 10.17487/RFC8084, March 2017,
               <https://www.rfc-editor.org/info/rfc8084>.
 
 
@@ -2267,9 +2363,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp209>.
               At the time of writing, this BCP comprises the following:
 
-              "Initializing a DNS Resolver with Priming Queries", BCP 209,
-              RFC 9609, DOI 10.17487/RFC9609, February 2025,
-              <https://www.rfc-editor.org/info/rfc9609>.
+              P. Koch, M. Larson, P. Hoffman, "Initializing a DNS Resolver with
+              Priming Queries", BCP 209, RFC 9609, DOI 10.17487/RFC9609,
+              February 2025, <https://www.rfc-editor.org/info/rfc9609>.
 
 
 
@@ -2277,8 +2373,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp210>.
               At the time of writing, this BCP comprises the following:
 
-              "Minimal IPv6 over the TSCH Mode of IEEE 802.15.4e (6TiSCH)
-              Configuration", BCP 210, RFC 8180, DOI 10.17487/RFC8180, May 2017,
+              X. Vilajosana, Ed., K. Pister, T. Watteyne, "Minimal IPv6 over the
+              TSCH Mode of IEEE 802.15.4e (6TiSCH) Configuration", BCP 210,
+              RFC 8180, DOI 10.17487/RFC8180, May 2017,
               <https://www.rfc-editor.org/info/rfc8180>.
 
 
@@ -2287,7 +2384,7 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp211>.
               At the time of writing, this BCP comprises the following:
 
-              "BGPsec Operational Considerations", BCP 211, RFC 8207,
+              R. Bush, "BGPsec Operational Considerations", BCP 211, RFC 8207,
               DOI 10.17487/RFC8207, September 2017,
               <https://www.rfc-editor.org/info/rfc8207>.
 
@@ -2297,8 +2394,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp212>.
               At the time of writing, this BCP comprises the following:
 
-              "OAuth 2.0 for Native Apps", BCP 212, RFC 8252,
-              DOI 10.17487/RFC8252, October 2017,
+              W. Denniss, J. Bradley, "OAuth 2.0 for Native Apps", BCP 212,
+              RFC 8252, DOI 10.17487/RFC8252, October 2017,
               <https://www.rfc-editor.org/info/rfc8252>.
 
 
@@ -2307,8 +2404,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp213>.
               At the time of writing, this BCP comprises the following:
 
-              "Use of Multicast across Inter-domain Peering Points", BCP 213,
-              RFC 8313, DOI 10.17487/RFC8313, January 2018,
+              P. Tarapore, Ed., R. Sayko, G. Shepherd, T. Eckert, Ed., R.
+              Krishnan, "Use of Multicast across Inter-domain Peering Points",
+              BCP 213, RFC 8313, DOI 10.17487/RFC8313, January 2018,
               <https://www.rfc-editor.org/info/rfc8313>.
 
 
@@ -2317,8 +2415,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp214>.
               At the time of writing, this BCP comprises the following:
 
-              "Mitigating the Negative Impact of Maintenance through BGP Session
-              Culling", BCP 214, RFC 8327, DOI 10.17487/RFC8327, March 2018,
+              W. Hargrave, M. Griswold, J. Snijders, N. Hilliard, "Mitigating
+              the Negative Impact of Maintenance through BGP Session Culling",
+              BCP 214, RFC 8327, DOI 10.17487/RFC8327, March 2018,
               <https://www.rfc-editor.org/info/rfc8327>.
 
 
@@ -2327,8 +2426,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp215>.
               At the time of writing, this BCP comprises the following:
 
-              "YANG Tree Diagrams", BCP 215, RFC 8340, DOI 10.17487/RFC8340,
-              March 2018, <https://www.rfc-editor.org/info/rfc8340>.
+              M. Bjorklund, L. Berger, Ed., "YANG Tree Diagrams", BCP 215,
+              RFC 8340, DOI 10.17487/RFC8340, March 2018,
+              <https://www.rfc-editor.org/info/rfc8340>.
 
 
 
@@ -2336,9 +2436,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp216>.
               At the time of writing, this BCP comprises the following:
 
-              "Guidelines for Authors and Reviewers of Documents Containing YANG
-              Data Models", BCP 216, RFC 9907, DOI 10.17487/RFC9907, March 2026,
-              <https://www.rfc-editor.org/info/rfc9907>.
+              , "Guidelines for Authors and Reviewers of Documents Containing
+              YANG Data Models", BCP 216, RFC 9907, DOI 10.17487/RFC9907, March
+              2026, <https://www.rfc-editor.org/info/rfc9907>.
 
 
 
@@ -2346,9 +2446,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp217>.
               At the time of writing, this BCP comprises the following:
 
-              "Guidelines for Multihomed and IPv4/IPv6 Dual-Stack Interactive
-              Connectivity Establishment (ICE)", BCP 217, RFC 8421,
-              DOI 10.17487/RFC8421, July 2018,
+              P. Martinsen, T. Reddy, P. Patil, "Guidelines for Multihomed and
+              IPv4/IPv6 Dual-Stack Interactive Connectivity Establishment
+              (ICE)", BCP 217, RFC 8421, DOI 10.17487/RFC8421, July 2018,
               <https://www.rfc-editor.org/info/rfc8421>.
 
 
@@ -2357,8 +2457,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp218>.
               At the time of writing, this BCP comprises the following:
 
-              "Deprecate Triple-DES (3DES) and RC4 in Kerberos", BCP 218,
-              RFC 8429, DOI 10.17487/RFC8429, October 2018,
+              B. Kaduk, M. Short, "Deprecate Triple-DES (3DES) and RC4 in
+              Kerberos", BCP 218, RFC 8429, DOI 10.17487/RFC8429, October 2018,
               <https://www.rfc-editor.org/info/rfc8429>.
 
 
@@ -2367,8 +2467,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp219>.
               At the time of writing, this BCP comprises the following:
 
-              "DNS Terminology", BCP 219, RFC 9499, DOI 10.17487/RFC9499, March
-              2024, <https://www.rfc-editor.org/info/rfc9499>.
+              P. Hoffman, K. Fujiwara, "DNS Terminology", BCP 219, RFC 9499,
+              DOI 10.17487/RFC9499, March 2024,
+              <https://www.rfc-editor.org/info/rfc9499>.
 
 
 
@@ -2376,8 +2477,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp220>.
               At the time of writing, this BCP comprises the following:
 
-              "IPv6 Node Requirements", BCP 220, RFC 8504, DOI 10.17487/RFC8504,
-              January 2019, <https://www.rfc-editor.org/info/rfc8504>.
+              T. Chown, J. Loughney, T. Winters, "IPv6 Node Requirements",
+              BCP 220, RFC 8504, DOI 10.17487/RFC8504, January 2019,
+              <https://www.rfc-editor.org/info/rfc8504>.
 
 
 
@@ -2385,9 +2487,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp221>.
               At the time of writing, this BCP comprises the following:
 
-              "Registration Data Access Protocol (RDAP) Object Tagging",
-              BCP 221, RFC 8521, DOI 10.17487/RFC8521, November 2018,
-              <https://www.rfc-editor.org/info/rfc8521>.
+              S. Hollenbeck, A. Newton, "Registration Data Access Protocol
+              (RDAP) Object Tagging", BCP 221, RFC 8521, DOI 10.17487/RFC8521,
+              November 2018, <https://www.rfc-editor.org/info/rfc8521>.
 
 
 
@@ -2395,14 +2497,14 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp222>.
               At the time of writing, this BCP comprises the following:
 
-              "Scoped Interpretation of DNS Resource Records through
+              D. Crocker, "Scoped Interpretation of DNS Resource Records through
               "Underscored" Naming of Attribute Leaves", BCP 222, RFC 8552,
               DOI 10.17487/RFC8552, March 2019,
               <https://www.rfc-editor.org/info/rfc8552>.
 
-              "DNS Attrleaf Changes: Fixing Specifications That Use Underscored
-              Node Names", BCP 222, RFC 8553, DOI 10.17487/RFC8553, March 2019,
-              <https://www.rfc-editor.org/info/rfc8553>.
+              D. Crocker, "DNS Attrleaf Changes: Fixing Specifications That Use
+              Underscored Node Names", BCP 222, RFC 8553, DOI 10.17487/RFC8553,
+              March 2019, <https://www.rfc-editor.org/info/rfc8553>.
 
 
 
@@ -2410,9 +2512,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp223>.
               At the time of writing, this BCP comprises the following:
 
-              "Network Time Protocol Best Current Practices", BCP 223, RFC 8633,
-              DOI 10.17487/RFC8633, July 2019,
-              <https://www.rfc-editor.org/info/rfc8633>.
+              D. Reilly, H. Stenn, D. Sibold, "Network Time Protocol Best
+              Current Practices", BCP 223, RFC 8633, DOI 10.17487/RFC8633, July
+              2019, <https://www.rfc-editor.org/info/rfc8633>.
 
 
 
@@ -2420,8 +2522,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp224>.
               At the time of writing, this BCP comprises the following:
 
-              "BGPsec Router Certificate Rollover", BCP 224, RFC 8634,
-              DOI 10.17487/RFC8634, August 2019,
+              B. Weis, R. Gagliano, K. Patel, "BGPsec Router Certificate
+              Rollover", BCP 224, RFC 8634, DOI 10.17487/RFC8634, August 2019,
               <https://www.rfc-editor.org/info/rfc8634>.
 
 
@@ -2430,9 +2532,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp225>.
               At the time of writing, this BCP comprises the following:
 
-              "JSON Web Token Best Current Practices", BCP 225, RFC 8725,
-              DOI 10.17487/RFC8725, February 2020,
-              <https://www.rfc-editor.org/info/rfc8725>.
+              Y. Sheffer, D. Hardt, M. Jones, "JSON Web Token Best Current
+              Practices", BCP 225, RFC 8725, DOI 10.17487/RFC8725, February
+              2020, <https://www.rfc-editor.org/info/rfc8725>.
 
 
 
@@ -2440,20 +2542,20 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp226>.
               At the time of writing, this BCP comprises the following:
 
-              "Considerations for Cancellation of IETF Meetings", BCP 226,
-              RFC 9137, DOI 10.17487/RFC9137, October 2021,
+              M. Duke, "Considerations for Cancellation of IETF Meetings",
+              BCP 226, RFC 9137, DOI 10.17487/RFC9137, October 2021,
               <https://www.rfc-editor.org/info/rfc9137>.
 
-              "IETF Plenary Meeting Venue Selection Process", BCP 226, RFC 8718,
-              DOI 10.17487/RFC8718, February 2020,
+              E. Lear, Ed., "IETF Plenary Meeting Venue Selection Process",
+              BCP 226, RFC 8718, DOI 10.17487/RFC8718, February 2020,
               <https://www.rfc-editor.org/info/rfc8718>.
 
-              "High-Level Guidance for the Meeting Policy of the IETF", BCP 226,
-              RFC 8719, DOI 10.17487/RFC8719, February 2020,
+              S. Krishnan, "High-Level Guidance for the Meeting Policy of the
+              IETF", BCP 226, RFC 8719, DOI 10.17487/RFC8719, February 2020,
               <https://www.rfc-editor.org/info/rfc8719>.
 
-              "IETF Meeting Venue Requirements Review", BCP 226, RFC 9712,
-              DOI 10.17487/RFC9712, January 2025,
+              J. Daley, S. Turner, "IETF Meeting Venue Requirements Review",
+              BCP 226, RFC 9712, DOI 10.17487/RFC9712, January 2025,
               <https://www.rfc-editor.org/info/rfc9712>.
 
 
@@ -2462,8 +2564,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp227>.
               At the time of writing, this BCP comprises the following:
 
-              "Deprecating RC4 in Secure Shell (SSH)", BCP 227, RFC 8758,
-              DOI 10.17487/RFC8758, April 2020,
+              L. Velvindron, "Deprecating RC4 in Secure Shell (SSH)", BCP 227,
+              RFC 8758, DOI 10.17487/RFC8758, April 2020,
               <https://www.rfc-editor.org/info/rfc8758>.
 
 
@@ -2472,8 +2574,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp228>.
               At the time of writing, this BCP comprises the following:
 
-              "Best Practices for Securing RTP Media Signaled with SIP",
-              BCP 228, RFC 8862, DOI 10.17487/RFC8862, January 2021,
+              J. Peterson, R. Barnes, R. Housley, "Best Practices for Securing
+              RTP Media Signaled with SIP", BCP 228, RFC 8862,
+              DOI 10.17487/RFC8862, January 2021,
               <https://www.rfc-editor.org/info/rfc8862>.
 
 
@@ -2482,8 +2585,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp229>.
               At the time of writing, this BCP comprises the following:
 
-              "Deprecating Any-Source Multicast (ASM) for Interdomain
-              Multicast", BCP 229, RFC 8815, DOI 10.17487/RFC8815, August 2020,
+              M. Abrahamsson, T. Chown, L. Giuliano, T. Eckert, "Deprecating
+              Any-Source Multicast (ASM) for Interdomain Multicast", BCP 229,
+              RFC 8815, DOI 10.17487/RFC8815, August 2020,
               <https://www.rfc-editor.org/info/rfc8815>.
 
 
@@ -2492,7 +2596,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp230>.
               At the time of writing, this BCP comprises the following:
 
-              "IP Fragmentation Considered Fragile", BCP 230, RFC 8900,
+              R. Bonica, F. Baker, G. Huston, R. Hinden, O. Troan, F. Gont, "IP
+              Fragmentation Considered Fragile", BCP 230, RFC 8900,
               DOI 10.17487/RFC8900, September 2020,
               <https://www.rfc-editor.org/info/rfc8900>.
 
@@ -2502,9 +2607,10 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp231>.
               At the time of writing, this BCP comprises the following:
 
-              "A Common Operational Problem in DNS Servers: Failure to
-              Communicate", BCP 231, RFC 8906, DOI 10.17487/RFC8906, September
-              2020, <https://www.rfc-editor.org/info/rfc8906>.
+              M. Andrews, R. Bellis, "A Common Operational Problem in DNS
+              Servers: Failure to Communicate", BCP 231, RFC 8906,
+              DOI 10.17487/RFC8906, September 2020,
+              <https://www.rfc-editor.org/info/rfc8906>.
 
 
 
@@ -2512,6 +2618,7 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp232>.
               At the time of writing, this BCP comprises the following:
 
+              S. Dickinson, B. Overeinder, R. van Rijswijk-Deij, A. Mankin,
               "Recommendations for DNS Privacy Service Operators", BCP 232,
               RFC 8932, DOI 10.17487/RFC8932, October 2020,
               <https://www.rfc-editor.org/info/rfc8932>.
@@ -2522,8 +2629,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp233>.
               At the time of writing, this BCP comprises the following:
 
-              "Requirements for Time-Based Loss Detection", BCP 233, RFC 8961,
-              DOI 10.17487/RFC8961, November 2020,
+              M. Allman, "Requirements for Time-Based Loss Detection", BCP 233,
+              RFC 8961, DOI 10.17487/RFC8961, November 2020,
               <https://www.rfc-editor.org/info/rfc8961>.
 
 
@@ -2532,9 +2639,10 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp234>.
               At the time of writing, this BCP comprises the following:
 
-              "Improving the Reaction of Customer Edge Routers to IPv6
-              Renumbering Events", BCP 234, RFC 9096, DOI 10.17487/RFC9096,
-              August 2021, <https://www.rfc-editor.org/info/rfc9096>.
+              F. Gont, J. Žorž, R. Patterson, B. Volz, "Improving the Reaction
+              of Customer Edge Routers to IPv6 Renumbering Events", BCP 234,
+              RFC 9096, DOI 10.17487/RFC9096, August 2021,
+              <https://www.rfc-editor.org/info/rfc9096>.
 
 
 
@@ -2542,9 +2650,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp235>.
               At the time of writing, this BCP comprises the following:
 
-              "DNS Transport over TCP - Operational Requirements", BCP 235,
-              RFC 9210, DOI 10.17487/RFC9210, March 2022,
-              <https://www.rfc-editor.org/info/rfc9210>.
+              J. Kristoff, D. Wessels, "DNS Transport over TCP - Operational
+              Requirements", BCP 235, RFC 9210, DOI 10.17487/RFC9210, March
+              2022, <https://www.rfc-editor.org/info/rfc9210>.
 
 
 
@@ -2552,8 +2660,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp236>.
               At the time of writing, this BCP comprises the following:
 
-              "Guidance for NSEC3 Parameter Settings", BCP 236, RFC 9276,
-              DOI 10.17487/RFC9276, August 2022,
+              W. Hardaker, V. Dukhovni, "Guidance for NSEC3 Parameter Settings",
+              BCP 236, RFC 9276, DOI 10.17487/RFC9276, August 2022,
               <https://www.rfc-editor.org/info/rfc9276>.
 
 
@@ -2562,7 +2670,7 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp237>.
               At the time of writing, this BCP comprises the following:
 
-              "DNS Security Extensions (DNSSEC)", BCP 237, RFC 9364,
+              P. Hoffman, "DNS Security Extensions (DNSSEC)", BCP 237, RFC 9364,
               DOI 10.17487/RFC9364, February 2023,
               <https://www.rfc-editor.org/info/rfc9364>.
 
@@ -2572,9 +2680,10 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp238>.
               At the time of writing, this BCP comprises the following:
 
-              "Avoiding Route Origin Authorizations (ROAs) Containing Multiple
-              IP Prefixes", BCP 238, RFC 9455, DOI 10.17487/RFC9455, August
-              2023, <https://www.rfc-editor.org/info/rfc9455>.
+              Z. Yan, R. Bush, G. Geng, T. de Kock, J. Yao, "Avoiding Route
+              Origin Authorizations (ROAs) Containing Multiple IP Prefixes",
+              BCP 238, RFC 9455, DOI 10.17487/RFC9455, August 2023,
+              <https://www.rfc-editor.org/info/rfc9455>.
 
 
 
@@ -2582,8 +2691,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp239>.
               At the time of writing, this BCP comprises the following:
 
-              "Open Participation Principle regarding Remote Registration Fee",
-              BCP 239, RFC 9501, DOI 10.17487/RFC9501, December 2023,
+              M. Kühlewind, J. Reed, R. Salz, "Open Participation Principle
+              regarding Remote Registration Fee", BCP 239, RFC 9501,
+              DOI 10.17487/RFC9501, December 2023,
               <https://www.rfc-editor.org/info/rfc9501>.
 
 
@@ -2592,7 +2702,8 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp240>.
               At the time of writing, this BCP comprises the following:
 
-              "Best Current Practice for OAuth 2.0 Security", BCP 240, RFC 9700,
+              T. Lodderstedt, J. Bradley, A. Labunets, D. Fett, "Best Current
+              Practice for OAuth 2.0 Security", BCP 240, RFC 9700,
               DOI 10.17487/RFC9700, January 2025,
               <https://www.rfc-editor.org/info/rfc9700>.
 
@@ -2602,9 +2713,10 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp241>.
               At the time of writing, this BCP comprises the following:
 
-              "Operational Considerations for Use of DNS in Internet of Things
-              (IoT) Devices", BCP 241, RFC 9726, DOI 10.17487/RFC9726, March
-              2025, <https://www.rfc-editor.org/info/rfc9726>.
+              M. Richardson, W. Pan, "Operational Considerations for Use of DNS
+              in Internet of Things (IoT) Devices", BCP 241, RFC 9726,
+              DOI 10.17487/RFC9726, March 2025,
+              <https://www.rfc-editor.org/info/rfc9726>.
 
 
 
@@ -2612,8 +2724,9 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp242>.
               At the time of writing, this BCP comprises the following:
 
-              "Clarification of IPv6 Address Allocation Policy", BCP 242,
-              RFC 9812, DOI 10.17487/RFC9812, October 2025,
+              B. Carpenter, S. Krishnan, D. Farmer, "Clarification of IPv6
+              Address Allocation Policy", BCP 242, RFC 9812,
+              DOI 10.17487/RFC9812, October 2025,
               <https://www.rfc-editor.org/info/rfc9812>.
 
 
@@ -2622,9 +2735,10 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp243>.
               At the time of writing, this BCP comprises the following:
 
-              "Operational Considerations for Using TLS Pre-Shared Keys
-              (TLS-PSKs) with RADIUS", BCP 243, RFC 9813, DOI 10.17487/RFC9813,
-              July 2025, <https://www.rfc-editor.org/info/rfc9813>.
+              A. DeKok, "Operational Considerations for Using TLS Pre-Shared
+              Keys (TLS-PSKs) with RADIUS", BCP 243, RFC 9813,
+              DOI 10.17487/RFC9813, July 2025,
+              <https://www.rfc-editor.org/info/rfc9813>.
 
 
 
@@ -2632,10 +2746,10 @@ RFC Editor Web page http://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp244>.
               At the time of writing, this BCP comprises the following:
 
-              "Best Practices for Deletion of Domain and Host Objects in the
-              Extensible Provisioning Protocol (EPP)", BCP 244, RFC 9874,
-              DOI 10.17487/RFC9874, September 2025,
-              <https://www.rfc-editor.org/info/rfc9874>.
+              S. Hollenbeck, W. Carroll, G. Akiwate, "Best Practices for
+              Deletion of Domain and Host Objects in the Extensible Provisioning
+              Protocol (EPP)", BCP 244, RFC 9874, DOI 10.17487/RFC9874,
+              September 2025, <https://www.rfc-editor.org/info/rfc9874>.
 
 
 
