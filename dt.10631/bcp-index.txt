@@ -128,23 +128,6 @@ BCPs and other RFCs may be obtained from https://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp9>.
               At the time of writing, this BCP comprises the following:
 
-              J. Halpern, Ed., E. Rescorla, Ed., "IETF Stream Documents Require
-              IETF Rough Consensus", BCP 9, RFC 8789, DOI 10.17487/RFC8789, June
-              2020, <https://www.rfc-editor.org/info/rfc8789>.
-
-              P. Resnick, "Retirement of the "Internet Official Protocol
-              Standards" Summary Document", BCP 9, RFC 7100,
-              DOI 10.17487/RFC7100, December 2013,
-              <https://www.rfc-editor.org/info/rfc7100>.
-
-              R. Housley, D. Crocker, E. Burger, "Reducing the Standards Track
-              to Two Maturity Levels", BCP 9, RFC 6410, DOI 10.17487/RFC6410,
-              October 2011, <https://www.rfc-editor.org/info/rfc6410>.
-
-              B. Rosen, "Responsibility Change for the RFC Series", BCP 9,
-              RFC 9282, DOI 10.17487/RFC9282, June 2022,
-              <https://www.rfc-editor.org/info/rfc9282>.
-
               S. Bradner, "The Internet Standards Process -- Revision 3", BCP 9,
               RFC 2026, DOI 10.17487/RFC2026, October 1996,
               <https://www.rfc-editor.org/info/rfc2026>.
@@ -154,13 +137,30 @@ BCPs and other RFCs may be obtained from https://www.rfc-editor.org.
               RFC 5657, DOI 10.17487/RFC5657, September 2009,
               <https://www.rfc-editor.org/info/rfc5657>.
 
-              S. Dawkins, "Increasing the Number of Area Directors in an IETF
-              Area", BCP 9, RFC 7475, DOI 10.17487/RFC7475, March 2015,
-              <https://www.rfc-editor.org/info/rfc7475>.
+              R. Housley, D. Crocker, E. Burger, "Reducing the Standards Track
+              to Two Maturity Levels", BCP 9, RFC 6410, DOI 10.17487/RFC6410,
+              October 2011, <https://www.rfc-editor.org/info/rfc6410>.
+
+              P. Resnick, "Retirement of the "Internet Official Protocol
+              Standards" Summary Document", BCP 9, RFC 7100,
+              DOI 10.17487/RFC7100, December 2013,
+              <https://www.rfc-editor.org/info/rfc7100>.
 
               O. Kolkman, S. Bradner, S. Turner, "Characterization of Proposed
               Standards", BCP 9, RFC 7127, DOI 10.17487/RFC7127, January 2014,
               <https://www.rfc-editor.org/info/rfc7127>.
+
+              S. Dawkins, "Increasing the Number of Area Directors in an IETF
+              Area", BCP 9, RFC 7475, DOI 10.17487/RFC7475, March 2015,
+              <https://www.rfc-editor.org/info/rfc7475>.
+
+              J. Halpern, Ed., E. Rescorla, Ed., "IETF Stream Documents Require
+              IETF Rough Consensus", BCP 9, RFC 8789, DOI 10.17487/RFC8789, June
+              2020, <https://www.rfc-editor.org/info/rfc8789>.
+
+              B. Rosen, "Responsibility Change for the RFC Series", BCP 9,
+              RFC 9282, DOI 10.17487/RFC9282, June 2022,
+              <https://www.rfc-editor.org/info/rfc9282>.
 
 
 
@@ -168,15 +168,15 @@ BCPs and other RFCs may be obtained from https://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp10>.
               At the time of writing, this BCP comprises the following:
 
-              M. Duke, "Nominating Committee Eligibility", BCP 10, RFC 9389,
-              DOI 10.17487/RFC9389, April 2023,
-              <https://www.rfc-editor.org/info/rfc9389>.
-
               M. Kucherawy, Ed., R. Hinden, Ed., J. Livingood, Ed., "IAB, IESG,
               IETF Trust, and IETF LLC Selection, Confirmation, and Recall
               Process: Operation of the IETF Nominating and Recall Committees",
               BCP 10, RFC 8713, DOI 10.17487/RFC8713, February 2020,
               <https://www.rfc-editor.org/info/rfc8713>.
+
+              M. Duke, "Nominating Committee Eligibility", BCP 10, RFC 9389,
+              DOI 10.17487/RFC9389, April 2023,
+              <https://www.rfc-editor.org/info/rfc9389>.
 
 
 
@@ -219,13 +219,13 @@ BCPs and other RFCs may be obtained from https://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp14>.
               At the time of writing, this BCP comprises the following:
 
-              B. Leiba, "Ambiguity of Uppercase vs Lowercase in RFC 2119 Key
-              Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174, May 2017,
-              <https://www.rfc-editor.org/info/rfc8174>.
-
               S. Bradner, "Key words for use in RFCs to Indicate Requirement
               Levels", BCP 14, RFC 2119, DOI 10.17487/RFC2119, March 1997,
               <https://www.rfc-editor.org/info/rfc2119>.
+
+              B. Leiba, "Ambiguity of Uppercase vs Lowercase in RFC 2119 Key
+              Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174, May 2017,
+              <https://www.rfc-editor.org/info/rfc8174>.
 
 
 
@@ -333,12 +333,6 @@ BCPs and other RFCs may be obtained from https://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp25>.
               At the time of writing, this BCP comprises the following:
 
-              P. Resnick, A. Farrel, "Update to the IETF Anti-Harassment
-              Procedures for the Replacement of the IETF Administrative
-              Oversight Committee (IAOC) with the IETF Administration LLC",
-              BCP 25, RFC 8716, DOI 10.17487/RFC8716, February 2020,
-              <https://www.rfc-editor.org/info/rfc8716>.
-
               S. Bradner, "IETF Working Group Guidelines and Procedures",
               BCP 25, RFC 2418, DOI 10.17487/RFC2418, September 1998,
               <https://www.rfc-editor.org/info/rfc2418>.
@@ -346,6 +340,12 @@ BCPs and other RFCs may be obtained from https://www.rfc-editor.org.
               P. Resnick, A. Farrel, "IETF Anti-Harassment Procedures", BCP 25,
               RFC 7776, DOI 10.17487/RFC7776, March 2016,
               <https://www.rfc-editor.org/info/rfc7776>.
+
+              P. Resnick, A. Farrel, "Update to the IETF Anti-Harassment
+              Procedures for the Replacement of the IETF Administrative
+              Oversight Committee (IAOC) with the IETF Administration LLC",
+              BCP 25, RFC 8716, DOI 10.17487/RFC8716, February 2020,
+              <https://www.rfc-editor.org/info/rfc8716>.
 
 
 
@@ -518,13 +518,13 @@ BCPs and other RFCs may be obtained from https://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp41>.
               At the time of writing, this BCP comprises the following:
 
-              B. Briscoe, J. Manner, "Byte and Packet Congestion Notification",
-              BCP 41, RFC 7141, DOI 10.17487/RFC7141, February 2014,
-              <https://www.rfc-editor.org/info/rfc7141>.
-
               S. Floyd, "Congestion Control Principles", BCP 41, RFC 2914,
               DOI 10.17487/RFC2914, September 2000,
               <https://www.rfc-editor.org/info/rfc2914>.
+
+              B. Briscoe, J. Manner, "Byte and Packet Congestion Notification",
+              BCP 41, RFC 7141, DOI 10.17487/RFC7141, February 2014,
+              <https://www.rfc-editor.org/info/rfc7141>.
 
 
 
@@ -583,13 +583,13 @@ BCPs and other RFCs may be obtained from https://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp47>.
               At the time of writing, this BCP comprises the following:
 
-              A. Phillips, Ed., M. Davis, Ed., "Tags for Identifying Languages",
-              BCP 47, RFC 5646, DOI 10.17487/RFC5646, September 2009,
-              <https://www.rfc-editor.org/info/rfc5646>.
-
               A. Phillips, Ed., M. Davis, Ed., "Matching of Language Tags",
               BCP 47, RFC 4647, DOI 10.17487/RFC4647, September 2006,
               <https://www.rfc-editor.org/info/rfc4647>.
+
+              A. Phillips, Ed., M. Davis, Ed., "Tags for Identifying Languages",
+              BCP 47, RFC 5646, DOI 10.17487/RFC5646, September 2009,
+              <https://www.rfc-editor.org/info/rfc5646>.
 
 
 
@@ -775,14 +775,14 @@ BCPs and other RFCs may be obtained from https://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp65>.
               At the time of writing, this BCP comprises the following:
 
-              T. Hardie, "Updated Registration Rules for URI.ARPA", BCP 65,
-              RFC 8958, DOI 10.17487/RFC8958, December 2020,
-              <https://www.rfc-editor.org/info/rfc8958>.
-
               M. Mealling, "Dynamic Delegation Discovery System (DDDS) Part
               Five: URI.ARPA Assignment Procedures", BCP 65, RFC 3405,
               DOI 10.17487/RFC3405, October 2002,
               <https://www.rfc-editor.org/info/rfc3405>.
+
+              T. Hardie, "Updated Registration Rules for URI.ARPA", BCP 65,
+              RFC 8958, DOI 10.17487/RFC8958, December 2020,
+              <https://www.rfc-editor.org/info/rfc8958>.
 
 
 
@@ -796,15 +796,15 @@ BCPs and other RFCs may be obtained from https://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp67>.
               At the time of writing, this BCP comprises the following:
 
-              B. Campbell, Ed., A. Cooper, B. Leiba, "DISPATCH-Style Working
-              Groups and the SIP Change Process", BCP 67, RFC 7957,
-              DOI 10.17487/RFC7957, August 2016,
-              <https://www.rfc-editor.org/info/rfc7957>.
-
               J. Peterson, C. Jennings, R. Sparks, "Change Process for the
               Session Initiation Protocol (SIP) and the Real-time Applications
               and Infrastructure Area", BCP 67, RFC 5727, DOI 10.17487/RFC5727,
               March 2010, <https://www.rfc-editor.org/info/rfc5727>.
+
+              B. Campbell, Ed., A. Cooper, B. Leiba, "DISPATCH-Style Working
+              Groups and the SIP Change Process", BCP 67, RFC 7957,
+              DOI 10.17487/RFC7957, August 2016,
+              <https://www.rfc-editor.org/info/rfc7957>.
 
 
 
@@ -856,14 +856,14 @@ BCPs and other RFCs may be obtained from https://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp72>.
               At the time of writing, this BCP comprises the following:
 
+              E. Rescorla, B. Korver, "Guidelines for Writing RFC Text on
+              Security Considerations", BCP 72, RFC 3552, DOI 10.17487/RFC3552,
+              July 2003, <https://www.rfc-editor.org/info/rfc3552>.
+
               F. Gont, I. Arce, "Security Considerations for Transient Numeric
               Identifiers Employed in Network Protocols", BCP 72, RFC 9416,
               DOI 10.17487/RFC9416, July 2023,
               <https://www.rfc-editor.org/info/rfc9416>.
-
-              E. Rescorla, B. Korver, "Guidelines for Writing RFC Text on
-              Security Considerations", BCP 72, RFC 3552, DOI 10.17487/RFC3552,
-              July 2003, <https://www.rfc-editor.org/info/rfc3552>.
 
 
 
@@ -1123,15 +1123,15 @@ BCPs and other RFCs may be obtained from https://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp97>.
               At the time of writing, this BCP comprises the following:
 
-              J. Klensin, S. Hartman, "Handling Normative References to
-              Standards-Track Documents", BCP 97, RFC 4897,
-              DOI 10.17487/RFC4897, June 2007,
-              <https://www.rfc-editor.org/info/rfc4897>.
-
               R. Bush, T. Narten, "Clarifying when Standards Track Documents may
               Refer Normatively to Documents at a Lower Level", BCP 97,
               RFC 3967, DOI 10.17487/RFC3967, January 2005,
               <https://www.rfc-editor.org/info/rfc3967>.
+
+              J. Klensin, S. Hartman, "Handling Normative References to
+              Standards-Track Documents", BCP 97, RFC 4897,
+              DOI 10.17487/RFC4897, June 2007,
+              <https://www.rfc-editor.org/info/rfc4897>.
 
               B. Leiba, "Updating When Standards Track Documents May Refer
               Normatively to Documents at a Lower Level", BCP 97, RFC 8067,
@@ -1177,6 +1177,11 @@ BCPs and other RFCs may be obtained from https://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp101>.
               At the time of writing, this BCP comprises the following:
 
+              B. Haberman, J. Hall, J. Livingood, "Structure of the IETF
+              Administrative Support Activity, Version 2.0", BCP 101, RFC 8711,
+              DOI 10.17487/RFC8711, February 2020,
+              <https://www.rfc-editor.org/info/rfc8711>.
+
               J. Arkko, T. Hardie, "Update to the Process for Selection of
               Trustees for the IETF Trust", BCP 101, RFC 8714,
               DOI 10.17487/RFC8714, February 2020,
@@ -1186,11 +1191,6 @@ BCPs and other RFCs may be obtained from https://www.rfc-editor.org.
               Consolidated Updates to IETF Administrative Terminology", BCP 101,
               RFC 8717, DOI 10.17487/RFC8717, February 2020,
               <https://www.rfc-editor.org/info/rfc8717>.
-
-              B. Haberman, J. Hall, J. Livingood, "Structure of the IETF
-              Administrative Support Activity, Version 2.0", BCP 101, RFC 8711,
-              DOI 10.17487/RFC8711, February 2020,
-              <https://www.rfc-editor.org/info/rfc8711>.
 
 
 
@@ -1451,11 +1451,6 @@ BCPs and other RFCs may be obtained from https://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp127>.
               At the time of writing, this BCP comprises the following:
 
-              R. Penno, S. Perreault, M. Boucadair, Ed., S. Sivakumar, K. Naito,
-              "Updates to Network Address Translation (NAT) Behavioral
-              Requirements", BCP 127, RFC 7857, DOI 10.17487/RFC7857, April
-              2016, <https://www.rfc-editor.org/info/rfc7857>.
-
               F. Audet, Ed., C. Jennings, "Network Address Translation (NAT)
               Behavioral Requirements for Unicast UDP", BCP 127, RFC 4787,
               DOI 10.17487/RFC4787, January 2007,
@@ -1465,6 +1460,11 @@ BCPs and other RFCs may be obtained from https://www.rfc-editor.org.
               Ashida, "Common Requirements for Carrier-Grade NATs (CGNs)",
               BCP 127, RFC 6888, DOI 10.17487/RFC6888, April 2013,
               <https://www.rfc-editor.org/info/rfc6888>.
+
+              R. Penno, S. Perreault, M. Boucadair, Ed., S. Sivakumar, K. Naito,
+              "Updates to Network Address Translation (NAT) Behavioral
+              Requirements", BCP 127, RFC 7857, DOI 10.17487/RFC7857, April
+              2016, <https://www.rfc-editor.org/info/rfc7857>.
 
 
 
@@ -1735,6 +1735,11 @@ BCPs and other RFCs may be obtained from https://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp153>.
               At the time of writing, this BCP comprises the following:
 
+              J. Weil, V. Kuarsingh, C. Donley, C. Liljenstolpe, M. Azinger,
+              "IANA-Reserved IPv4 Prefix for Shared Address Space", BCP 153,
+              RFC 6598, DOI 10.17487/RFC6598, April 2012,
+              <https://www.rfc-editor.org/info/rfc6598>.
+
               M. Cotton, L. Vegoda, R. Bonica, Ed., B. Haberman,
               "Special-Purpose IP Address Registries", BCP 153, RFC 6890,
               DOI 10.17487/RFC6890, April 2013,
@@ -1744,11 +1749,6 @@ BCPs and other RFCs may be obtained from https://www.rfc-editor.org.
               Special-Purpose IP Address Registries", BCP 153, RFC 8190,
               DOI 10.17487/RFC8190, June 2017,
               <https://www.rfc-editor.org/info/rfc8190>.
-
-              J. Weil, V. Kuarsingh, C. Donley, C. Liljenstolpe, M. Azinger,
-              "IANA-Reserved IPv4 Prefix for Shared Address Space", BCP 153,
-              RFC 6598, DOI 10.17487/RFC6598, April 2012,
-              <https://www.rfc-editor.org/info/rfc6598>.
 
 
 
@@ -1851,14 +1851,14 @@ BCPs and other RFCs may be obtained from https://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp163>.
               At the time of writing, this BCP comprises the following:
 
+              M. Andrews, "Locally Served DNS Zones", BCP 163, RFC 6303,
+              DOI 10.17487/RFC6303, July 2011,
+              <https://www.rfc-editor.org/info/rfc6303>.
+
               M. Andrews, "Adding 100.64.0.0/10 Prefixes to the IPv4
               Locally-Served DNS Zones Registry", BCP 163, RFC 7793,
               DOI 10.17487/RFC7793, May 2016,
               <https://www.rfc-editor.org/info/rfc7793>.
-
-              M. Andrews, "Locally Served DNS Zones", BCP 163, RFC 6303,
-              DOI 10.17487/RFC6303, July 2011,
-              <https://www.rfc-editor.org/info/rfc6303>.
 
 
 
@@ -1876,15 +1876,15 @@ BCPs and other RFCs may be obtained from https://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp165>.
               At the time of writing, this BCP comprises the following:
 
-              J. Touch, "Recommendations on Using Assigned Transport Port
-              Numbers", BCP 165, RFC 7605, DOI 10.17487/RFC7605, August 2015,
-              <https://www.rfc-editor.org/info/rfc7605>.
-
               M. Cotton, L. Eggert, J. Touch, M. Westerlund, S. Cheshire,
               "Internet Assigned Numbers Authority (IANA) Procedures for the
               Management of the Service Name and Transport Protocol Port Number
               Registry", BCP 165, RFC 6335, DOI 10.17487/RFC6335, August 2011,
               <https://www.rfc-editor.org/info/rfc6335>.
+
+              J. Touch, "Recommendations on Using Assigned Transport Port
+              Numbers", BCP 165, RFC 7605, DOI 10.17487/RFC7605, August 2015,
+              <https://www.rfc-editor.org/info/rfc7605>.
 
 
 
@@ -2199,15 +2199,15 @@ BCPs and other RFCs may be obtained from https://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp195>.
               At the time of writing, this BCP comprises the following:
 
+              K. Moriarty, S. Farrell, "Deprecating TLS 1.0 and TLS 1.1",
+              BCP 195, RFC 8996, DOI 10.17487/RFC8996, March 2021,
+              <https://www.rfc-editor.org/info/rfc8996>.
+
               Y. Sheffer, P. Saint-Andre, T. Fossati, "Recommendations for
               Secure Use of Transport Layer Security (TLS) and Datagram
               Transport Layer Security (DTLS)", BCP 195, RFC 9325,
               DOI 10.17487/RFC9325, November 2022,
               <https://www.rfc-editor.org/info/rfc9325>.
-
-              K. Moriarty, S. Farrell, "Deprecating TLS 1.0 and TLS 1.1",
-              BCP 195, RFC 8996, DOI 10.17487/RFC8996, March 2021,
-              <https://www.rfc-editor.org/info/rfc8996>.
 
 
 
@@ -2532,10 +2532,6 @@ BCPs and other RFCs may be obtained from https://www.rfc-editor.org.
               <https://www.rfc-editor.org/info/bcp226>.
               At the time of writing, this BCP comprises the following:
 
-              M. Duke, "Considerations for Cancellation of IETF Meetings",
-              BCP 226, RFC 9137, DOI 10.17487/RFC9137, October 2021,
-              <https://www.rfc-editor.org/info/rfc9137>.
-
               E. Lear, Ed., "IETF Plenary Meeting Venue Selection Process",
               BCP 226, RFC 8718, DOI 10.17487/RFC8718, February 2020,
               <https://www.rfc-editor.org/info/rfc8718>.
@@ -2543,6 +2539,10 @@ BCPs and other RFCs may be obtained from https://www.rfc-editor.org.
               S. Krishnan, "High-Level Guidance for the Meeting Policy of the
               IETF", BCP 226, RFC 8719, DOI 10.17487/RFC8719, February 2020,
               <https://www.rfc-editor.org/info/rfc8719>.
+
+              M. Duke, "Considerations for Cancellation of IETF Meetings",
+              BCP 226, RFC 9137, DOI 10.17487/RFC9137, October 2021,
+              <https://www.rfc-editor.org/info/rfc9137>.
 
               J. Daley, S. Turner, "IETF Meeting Venue Requirements Review",
               BCP 226, RFC 9712, DOI 10.17487/RFC9712, January 2025,
