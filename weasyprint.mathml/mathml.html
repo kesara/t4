@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>WeasyPrint MathML test</title>
+  </head>
+  <body>
+    <h2>Area of a Circle</h2>
+    <p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+              <mi>π<!-- p --></mi>
+              <mo>⁢<!-- &InvisibleTimes; --></mo>
+              <msup>
+                <mi>r</mi>
+                <mn>2</mn>
+              </msup>
+      </math>
+      </p>
+      <h2>Quadratic Equation</h2>
+      <p>
+        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+          <mi>a</mi>
+          <msup>
+            <mi>x</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mn>2</mn>
+            </mrow>
+          </msup>
+          <mo>+</mo>
+          <mi>b</mi>
+          <mi>x</mi>
+          <mo>+</mo>
+          <mi>c</mi>
+          <mo>=</mo>
+          <mn>0</mn>
+        </math>
+        </p>
+        <h2>Quadratic Formula</h2>
+        <p>
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+          <mrow>
+            <mi>x</mi>
+            <mo>=</mo>
+            <mfrac>
+              <mrow>
+                <mrow>
+                  <mo>-</mo>
+                  <mi>b</mi>
+                </mrow>
+                <mo>±</mo>
+                <msqrt>
+                  <mrow>
+                    <msup>
+                      <mi>b</mi>
+                      <mn>2</mn>
+                    </msup>
+                    <mo>-</mo>
+                    <mrow>
+                      <mn>4</mn>
+                      <mo>⁢</mo>
+                      <mi>a</mi>
+                      <mo>⁢</mo>
+                      <mi>c</mi>
+                    </mrow>
+                  </mrow>
+                </msqrt>
+              </mrow>
+              <mrow>
+                <mn>2</mn>
+                <mo>⁢</mo>
+                <mi>a</mi>
+              </mrow>
+            </mfrac>
+          </mrow>
+          </math>
+          </p>
+          <h2>Embedded Table</h2>
+          <p>
+            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mrow>
+              <mi>A</mi>
+              <mo>=</mo>
+              <mfenced open="[" close="]">
+                <mtable>
+                  <mtr>
+                     <mtd><mi>x</mi></mtd>
+                     <mtd><mi>y</mi></mtd>
+                  </mtr>
+                  <mtr>
+                     <mtd><mi>z</mi></mtd>
+                     <mtd><mi>w</mi></mtd>
+                  </mtr>
+                </mtable>
+              </mfenced>
+            </mrow>
+            </math>
+            </p>
+            <h2>Semantics (MathML tag - with content markup annotation)</h2>
+            <p>
+            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mrow>
+            <semantics>
+              <mrow>
+                <msubsup>
+                  <mo>∫</mo>
+                  <mn>1</mn>
+                  <mi>t</mi>
+                </msubsup>
+                <mfrac>
+                  <mrow>
+                    <mo>ⅆ</mo>
+                    <mi>x</mi>
+                  </mrow>
+                  <mi>x</mi>
+                </mfrac>
+              </mrow>
+              <annotation-xml encoding="MathML-Content">
+                <apply>
+                  <int></int>
+                  <bvar><ci>x</ci></bvar>
+                  <lowlimit><cn>1</cn></lowlimit>
+                  <uplimit><ci>t</ci></uplimit>
+                  <apply>
+                    <divide></divide>
+                    <cn>1</cn>
+                    <ci>x</ci>
+                  </apply>
+                </apply>
+              </annotation-xml>
+            </semantics>
+            </mrow>
+            </math>
+            </p>
+            <h2>Polynomial Equation (with mstyle)</h2>
+            <p>
+              <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" title="a x^2+b x+c=0">
+              <mstyle mathcolor="blue" fontfamily="serif" displaystyle="true">
+              <mi>
+              a
+              </mi>
+              <msup>
+              <mi>
+              x
+              </mi>
+              <mn>
+              2
+              </mn>
+              </msup>
+              <mo>
+              +
+              </mo>
+              <mi>
+              b
+              </mi>
+              <mi>
+              x
+              </mi>
+              <mo>
+              +
+              </mo>
+              <mi>
+              c
+              </mi>
+              <mo>
+              =
+              </mo>
+              <mn>
+              0
+              </mn>
+              </mstyle>
+              </math>
+              </p>
+              <h2>Complex Equation</h2>
+              <p>
+                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                <mn>
+                2
+                </mn>
+                <mo>
+                ⁢
+                </mo>
+                <mi>
+                x
+                </mi>
+                <mo>
+                ×
+                </mo>
+                <mo>
+                -
+                </mo>
+                <mfrac>
+                <mrow>
+                <mi>
+                1
+                </mi>
+                </mrow>
+                <mn>
+                16
+                </mn>
+                </mfrac>
+                <mo>
+                +
+                </mo>
+                <msup>
+                <mrow>
+                <mo>
+                −
+                </mo>
+                <mn>
+                5
+                </mn>
+                </mrow>
+                <mn>
+                2
+                </mn>
+                </msup>
+                <mo>
+                =
+                </mo>
+                <mn>
+                24
+                </mn>
+                <mo>
+                ⁤
+                </mo>
+                <mfrac>
+                <mn>
+                15
+                </mn>
+                <mn>
+                16
+                </mn>
+                </mfrac>
+                </math>
+                </p>
+                <h2>E Equals MC Squared in Table (not currently working with speech in MathCAT, but displays in Braille)</h2>
+                <p>
+                  <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                  <mtable>
+                    <mlabeledtr id="e-is-m-c-square">
+                      <mtd>
+                      <mtext></mtext>
+                      </mtd>
+                        <mrow>
+                         <mi>E</mi>
+                         <mo>=</mo>
+                         <mrow>
+                         <mtd>
+                          <mi>m</mi>
+                          <mo>⁢<!--INVISIBLE TIMES--></mo>
+                          <msup>
+                           <mi>c</mi>
+                           <mn>2</mn>
+                          </msup>
+                          </mtd></mrow>
+                       </mrow>
+                      
+                    </mlabeledtr>
+                  </mtable>
+                  </math>
+                  </p>
+                  <h2>Broken Fences</h2>
+                  <p>
+                    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                    <mo>{</mo>
+                    <mo>[</mo>
+                    <mi>a</mi>
+                    <mo>+</mo>
+                    <mi>b</mi>
+                    <mo>+</mo>
+                    <mi>c</mi>
+                    <mo>)</mo>
+                    <mo>-</mo>
+                    <mi>d</mi>
+                    <mo>}</mo>
+                    </math>
+                    </p>
+                    <h2>Fenced 1</h2>
+                    <p>
+                      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                      <mfenced>
+                        <mrow>
+                          <mi> a </mi>
+                          <mo> + </mo>
+                          <mi> b </mi>
+                        </mrow>
+                      </mfenced>
+                      </math>
+                      </p>
+                      <h2>GroupAligned</h2>
+                      <p>
+                        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                        <mtable groupalign="{decimalpoint left left decimalpoint left left decimalpoint}">
+                          <mtr>
+                            <mtd>
+                              <mrow>
+                                <mrow>
+                                  <mrow>
+                                    <maligngroup></maligngroup>
+                                    <mn> 8.44 </mn>
+                                    <mo> ⁢<!--INVISIBLE TIMES--> </mo>
+                                    <maligngroup></maligngroup>
+                                    <mi> x </mi>
+                                  </mrow>
+                                  <maligngroup></maligngroup>
+                                  <mo> + </mo>
+                                  <mrow>
+                                    <maligngroup></maligngroup>
+                                    <mn> 55 </mn>
+                                    <mo> ⁢<!--INVISIBLE TIMES--> </mo>
+                                    <maligngroup></maligngroup>
+                                    <mi> y </mi>
+                                  </mrow>
+                                </mrow>
+                              <maligngroup></maligngroup>
+                              <mo> = </mo>
+                              <maligngroup></maligngroup>
+                              <mn> 0 </mn>
+                            </mrow>
+                            </mtd>
+                          </mtr>
+                          <mtr>
+                            <mtd>
+                              <mrow>
+                                <mrow>
+                                  <!--mrow-->
+                                    <maligngroup></maligngroup>
+                                    <mn> 3.1 </mn>
+                                    <mo> ⁢<!--INVISIBLE TIMES--> </mo>
+                                    <maligngroup></maligngroup>
+                                    <mi> x </mi>
+                                  <!--/mrow-->
+                                  <maligngroup></maligngroup>
+                                  <mo> - </mo>
+                                  <mrow>
+                                    <maligngroup></maligngroup>
+                                    <mn> 0.7 </mn>
+                                    <mo> ⁢<!--INVISIBLE TIMES--> </mo>
+                                    <maligngroup></maligngroup>
+                                    <mi> y </mi>
+                                  </mrow>
+                                </mrow>
+                                <maligngroup></maligngroup>
+                                <mo> = </mo>
+                                <maligngroup></maligngroup>
+                                <mrow>
+                                  <mo> - </mo>
+                                  <mn> 1.1 </mn>
+                                </mrow>
+                              </mrow>
+                            </mtd>
+                          </mtr>
+                        </mtable>
+                        </math>
+                        </p>
+                        <h2>Sine Function</h2>
+                        <p>
+                          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                          <semantics>
+                            <mrow>
+                              <mrow>
+                                <mi>sin</mi>
+                                <mo>⁡<!--FUNCTION APPLICATION--></mo>
+                                <mfenced><mi>x</mi></mfenced>
+                              </mrow>
+                              <mo>+</mo>
+                              <mn>5</mn>
+                            </mrow>
+                            <annotation-xml cd="mathmlkeys" name="contentequiv" encoding="MathML-Content">
+                              <apply>
+                                <plus></plus>
+                                <apply><sin></sin><ci>x</ci></apply>
+                                <cn>5</cn>
+                              </apply>
+                            </annotation-xml>
+                            <annotation encoding="application/x-tex">
+                              \sin x + 5
+                            </annotation>
+                          </semantics>
+                          </math>
+                          </p>
+                          <h2>Enclosed</h2>
+                          <p>
+                            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                            <menclose notation="circle box">
+                              <mi> x </mi><mo> + </mo><mi> y </mi>
+                            </menclose>
+                            </math>
+                            </p>
+                            <h2>Cubed Root of x</h2>
+                            <p>
+                              <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                              <mrow>
+                                <mroot>
+                                  <mi>x</mi>
+                                  <mn>3</mn>
+                                </mroot>
+                              </mrow>
+                              </math>
+                              </p>
+                              <h2>Fourth Root of 64</h2>
+                              <p>
+                                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                                <mrow>
+                                  <mroot>
+                                    <mi>64</mi>
+                                    <mn>4</mn>
+                                  </mroot>
+                                </mrow>
+                                </math>
+                                </p>
+                                <h2>Cubed Root of x +1</h2>
+                                <p>
+                                  <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                                  <mrow>
+                                    <mroot>
+                                      <mi>x</mi>
+                                      <mn>3</mn>
+                                    </mroot>
+                                    <mo>+</mo>
+                                    <mi>1</mi>
+                                  </mrow>
+                                  </math>
+                                  </p>
+                                  <h2>Fifth Root of x</h2>
+                                  <p>
+                                    <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                                    <mrow>
+                                      <mroot>
+                                        <mi>x</mi>
+                                        <mn>5</mn>
+                                      </mroot>
+                                    </mrow>
+                                    </math>
+                                    </p>
+                                    <h2>Minus one Third Root of the Quanity x Plus 1</h2>
+    <p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mroot>
+          <mrow>
+            <mi>x</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+          <mfrac>
+            <mrow>
+              <mo>−</mo>
+              <mn>1</mn>
+            </mrow>
+            <mn>3</mn>
+          </mfrac>
+        </mroot>
+      </math>
+      </p>
+      <h2>Cauchy's Integral Formula</h2>
+      <p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mi>f</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">(</mo>
+          <mi>a</mi>
+          <mo stretchy="false">)</mo>
+        </mrow>
+        <mo>=</mo>
+        <mfrac>
+          <mn>1</mn>
+          <mrow>
+            <mn>2</mn>
+            <mi>π</mi>
+            <mi>i</mi>
+          </mrow>
+        </mfrac>
+        <mo data-mjx-texclass="OP">∮</mo>
+        <mfrac>
+          <mrow>
+            <mi>f</mi>
+            <mo stretchy="false">(</mo>
+            <mi>z</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mrow>
+            <mi>z</mi>
+            <mo>−</mo>
+            <mi>a</mi>
+          </mrow>
+        </mfrac>
+        <mi>d</mi>
+        <mi>z</mi>
+      </math>
+      </p>
+      <h2>Double Angle Formula for Cosines</h2>
+      <p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mi>cos</mi>
+        <mo data-mjx-texclass="NONE">⁡</mo>
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">(</mo>
+          <mi>θ</mi>
+          <mo>+</mo>
+          <mi>φ</mi>
+          <mo stretchy="false">)</mo>
+        </mrow>
+        <mo>=</mo>
+        <mi>cos</mi>
+        <mo data-mjx-texclass="NONE">⁡</mo>
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">(</mo>
+          <mi>θ</mi>
+          <mo stretchy="false">)</mo>
+        </mrow>
+        <mi>cos</mi>
+        <mo data-mjx-texclass="NONE">⁡</mo>
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">(</mo>
+          <mi>φ</mi>
+          <mo stretchy="false">)</mo>
+        </mrow>
+        <mo>−</mo>
+        <mi>sin</mi>
+        <mo data-mjx-texclass="NONE">⁡</mo>
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">(</mo>
+          <mi>θ</mi>
+          <mo stretchy="false">)</mo>
+        </mrow>
+        <mi>sin</mi>
+        <mo data-mjx-texclass="NONE">⁡</mo>
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">(</mo>
+          <mi>φ</mi>
+          <mo stretchy="false">)</mo>
+        </mrow>
+      </math>
+      </p>
+      <h2>Parentheses for Exponents and Logs</h2>
+      <p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">(</mo>
+          <mn>4</mn>
+          <msup>
+            <mi>x</mi>
+            <mrow data-mjx-texclass="ORD">
+              <mfrac>
+                <mn>1</mn>
+                <mn>4</mn>
+              </mfrac>
+            </mrow>
+          </msup>
+          <mo stretchy="false">)</mo>
+        </mrow>
+        <msup>
+          <mrow data-mjx-texclass="ORD">
+            <mo stretchy="false">(</mo>
+            <mn>9</mn>
+            <mi>x</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mrow data-mjx-texclass="ORD">
+            <mfrac>
+              <mn>1</mn>
+              <mn>2</mn>
+            </mfrac>
+          </mrow>
+        </msup>
+      </math>
+      </p>
+      <h2>Log Base 2</h2>
+      <p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <msub>
+          <mi>log</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo data-mjx-texclass="NONE">⁡</mo>
+        <mi>x</mi>
+      </math>
+      </p>
+      <h2>Natural Log of E Equals 1</h2>
+      <p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mi>ln</mi>
+        <mo data-mjx-texclass="NONE">⁡</mo>
+        <mi>e</mi>
+        <mo>=</mo>
+        <mn>1</mn>
+      </math>
+      </p>
+      <h2>Volume of a Sphere</h2>
+      <p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mi>V</mi>
+        <mo>=</mo>
+        <mfrac>
+          <mn>4</mn>
+          <mn>3</mn>
+        </mfrac>
+        <mi>π</mi>
+        <msup>
+          <mi>r</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>3</mn>
+          </mrow>
+        </msup>
+      </math>
+      </p>
+      <h2>Subscript Arithmetic</h2>
+      <p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <msub>
+          <mi>x</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>x</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>−</mo>
+        <msub>
+          <mi>x</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>3</mn>
+          </mrow>
+        </msub>
+      </math>
+      </p>
+      <h2>The Circle Formula</h2>
+      <p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <msup>
+          <mi>sin</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo data-mjx-texclass="NONE">⁡</mo>
+        <mi>x</mi>
+        <mo>+</mo>
+        <msup>
+          <mi>cos</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo data-mjx-texclass="NONE">⁡</mo>
+        <mi>y</mi>
+        <mo>=</mo>
+        <mn>1</mn>
+      </math>
+      </p>
+      <h2>A Curl Vector Field</h2>
+      <p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <msup>
+          <mi mathvariant="normal">∇</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mo stretchy="false">→</mo>
+          </mrow>
+        </msup>
+        <mo>⋅</mo>
+        <msup>
+          <mi>F</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mo stretchy="false">→</mo>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">(</mo>
+          <mfrac>
+            <mrow>
+              <mi>∂</mi>
+              <msub>
+                <mi>F</mi>
+                <mrow data-mjx-texclass="ORD">
+                  <mi>z</mi>
+                </mrow>
+              </msub>
+            </mrow>
+            <mrow>
+              <mi>∂</mi>
+              <mi>y</mi>
+            </mrow>
+          </mfrac>
+          <mo>−</mo>
+          <mfrac>
+            <mrow>
+              <mi>∂</mi>
+              <msub>
+                <mi>F</mi>
+                <mrow data-mjx-texclass="ORD">
+                  <mi>y</mi>
+                </mrow>
+              </msub>
+            </mrow>
+            <mrow>
+              <mi>∂</mi>
+              <mi>z</mi>
+            </mrow>
+          </mfrac>
+          <mo stretchy="false">)</mo>
+        </mrow>
+        <mi>i</mi>
+        <mo>+</mo>
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">(</mo>
+          <mfrac>
+            <mrow>
+              <mi>∂</mi>
+              <msub>
+                <mi>F</mi>
+                <mrow data-mjx-texclass="ORD">
+                  <mi>x</mi>
+                </mrow>
+              </msub>
+            </mrow>
+            <mrow>
+              <mi>∂</mi>
+              <mi>z</mi>
+            </mrow>
+          </mfrac>
+          <mo>−</mo>
+          <mfrac>
+            <mrow>
+              <mi>∂</mi>
+              <msub>
+                <mi>F</mi>
+                <mrow data-mjx-texclass="ORD">
+                  <mi>z</mi>
+                </mrow>
+              </msub>
+            </mrow>
+            <mrow>
+              <mi>∂</mi>
+              <mi>x</mi>
+            </mrow>
+          </mfrac>
+          <mo stretchy="false">)</mo>
+        </mrow>
+        <mi>j</mi>
+        <mo>+</mo>
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">(</mo>
+          <mfrac>
+            <mrow>
+              <mi>∂</mi>
+              <msub>
+                <mi>F</mi>
+                <mrow data-mjx-texclass="ORD">
+                  <mi>y</mi>
+                </mrow>
+              </msub>
+            </mrow>
+            <mrow>
+              <mi>∂</mi>
+              <mi>x</mi>
+            </mrow>
+          </mfrac>
+          <mo>−</mo>
+          <mfrac>
+            <mrow>
+              <mi>∂</mi>
+              <msub>
+                <mi>F</mi>
+                <mrow data-mjx-texclass="ORD">
+                  <mi>x</mi>
+                </mrow>
+              </msub>
+            </mrow>
+            <mrow>
+              <mi>∂</mi>
+              <mi>y</mi>
+            </mrow>
+          </mfrac>
+          <mo stretchy="false">)</mo>
+        </mrow>
+        <mi>k</mi>
+      </math>
+      </p>
+        <h2>Triangle Shape</h2>
+      <p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mi>A</mi>
+        <mi>B</mi>
+        <mi>C</mi>
+        <mo>△</mo>
+      </math>
+      </p>
+      <h2>Arc Symbol</h2>
+      <p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mover>
+          <mrow>
+            <mi>A</mi>
+            <mi>B</mi>
+          </mrow>
+          <mrow data-mjx-texclass="ORD">
+            <mtext>⌒</mtext>
+          </mrow>
+        </mover>
+      </math>
+      </p>
+        <h2>Left Arrow Symbol</h2>
+      <p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mover>
+          <mrow>
+            <mi>A</mi>
+            <mi>B</mi>
+          </mrow>
+          <mrow data-mjx-texclass="ORD">
+            <mo stretchy="false">←</mo>
+          </mrow>
+        </mover>
+      </math>
+      </p>
+      <h2>Special Division Sign</h2>
+      <p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mn>10</mn>
+        <mo>∵</mo>
+        <mn>5</mn>
+      </math>
+      </p>
+        <h2> Limit of x Goes to Infinity of f of x</h2>
+      <p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mi>l</mi>
+        <mi>i</mi>
+        <msub>
+          <mi>m</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mi>x</mi>
+            <mo stretchy="false">→</mo>
+            <mi mathvariant="normal">∞</mi>
+          </mrow>
+        </msub>
+        <mi>f</mi>
+        <mrow data-mjx-texclass="ORD">
+          <mo stretchy="false">(</mo>
+          <mi>x</mi>
+          <mo stretchy="false">)</mo>
+        </mrow>
+      </math>
+      </p>
+      <h2>Area of a Sphere</h2>
+      <p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mi>A</mi>
+        <mo>=</mo>
+        <mn>4</mn>
+        <mi>π</mi>
+        <msup>
+          <mi>r</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+      </math>
+      Trig Functions of a Right Triangle (B A C),  including inverse functions
+      </p><p>
+       <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mi>sin</mi>
+        <mo data-mjx-texclass="NONE">⁡</mo>
+        <mi>A</mi>
+        <mo>=</mo>
+        <mfrac>
+          <mi>A</mi>
+          <mi>C</mi>
+        </mfrac>
+      </math>
+      </p>
+      <p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mi>cos</mi>
+        <mo data-mjx-texclass="NONE">⁡</mo>
+        <mi>A</mi>
+        <mo>=</mo>
+        <mfrac>
+          <mi>B</mi>
+          <mi>C</mi>
+        </mfrac>
+      </math>
+      </p>
+      <p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <msup>
+          <mi>sin</mi>
+          <mrow data-mjx-texclass="ORD">
+            <mo>−</mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+        <mo data-mjx-texclass="NONE">⁡</mo>
+        <mi>x</mi>
+        <mo>=</mo>
+        <mi>a</mi>
+        <mi>r</mi>
+        <mi>c</mi>
+        <mi>s</mi>
+        <mi>i</mi>
+        <mi>n</mi>
+        <mi>x</mi>
+      </math>
+      </p>
+      <p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mi>tan</mi>
+        <mo data-mjx-texclass="NONE">⁡</mo>
+        <mi>θ</mi>
+        <mo>=</mo>
+        <mfrac>
+          <mi>A</mi>
+          <mi>B</mi>
+        </mfrac>
+      </math>
+      </p>
+      <p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mi>cot</mi>
+        <mo data-mjx-texclass="NONE">⁡</mo>
+        <mi>A</mi>
+        <mo>=</mo>
+        <mfrac>
+          <mi>B</mi>
+          <mi>A</mi>
+        </mfrac>
+      </math>
+      </p>
+      <p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mi>sec</mi>
+        <mo data-mjx-texclass="NONE">⁡</mo>
+        <mi>A</mi>
+        <mo>=</mo>
+        <mfrac>
+          <mi>C</mi>
+          <mi>A</mi>
+        </mfrac>
+      </math>
+      </p>
+      <p>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mi>csc</mi>
+        <mo data-mjx-texclass="NONE">⁡</mo>
+        <mi>A</mi>
+        <mo>=</mo>
+        <mfrac>
+          <mi>C</mi>
+          <mi>B</mi>
+        </mfrac>
+      </math>
+      </p>
+  </body>
+</html>
